@@ -1,26 +1,31 @@
 import Link from "next/link"
 import { ArrowRight, Mail, MapPin, Phone } from "lucide-react"
+import Image from "next/image"
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-black/80 border-t border-purple-900/30">
+    <footer className="bg-black/80 border-t border-brand-purple-500/30">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center mb-6">
               <div className="relative h-10 w-10 mr-2">
-                <div className="absolute inset-0 rounded-full bg-purple-600/20 blur-md"></div>
+                <div className="absolute inset-0 rounded-full bg-[#d4af37]/20 blur-md"></div>
                 <div className="relative h-full w-full flex items-center justify-center">
-                  <div className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-teal-400">
-                    UI
-                  </div>
+                  <Image
+                    src="/images/logo.png"
+                    alt="Uday IKSA Logo"
+                    width={40}
+                    height={40}
+                    className="object-contain"
+                  />
                 </div>
               </div>
               <span className="text-lg font-bold">
-                <span className="text-purple-500">Uday</span>
-                <span className="text-teal-500">IKSA</span>
+                <span className="text-[#d4af37]">Uday</span>
+                <span className="text-[#d4af37]">IKSA</span>
               </span>
             </div>
 
@@ -31,24 +36,24 @@ export default function Footer() {
 
             <div className="space-y-3">
               <div className="flex items-start">
-                <MapPin className="h-5 w-5 text-purple-500 mr-3 mt-0.5" />
+                <MapPin className="h-5 w-5 text-brand-purple-500 mr-3 mt-0.5" />
                 <span className="text-gray-300">Uday IKSA Pvt Ltd, Hubli, Karnataka, India</span>
               </div>
 
               <div className="flex items-center">
-                <Phone className="h-5 w-5 text-purple-500 mr-3" />
+                <Phone className="h-5 w-5 text-brand-purple-500 mr-3" />
                 <span className="text-gray-300">+91 8792182631</span>
               </div>
 
               <div className="flex items-center">
-                <Mail className="h-5 w-5 text-purple-500 mr-3" />
+                <Mail className="h-5 w-5 text-brand-purple-500 mr-3" />
                 <span className="text-gray-300">info@udayiksa.com</span>
               </div>
             </div>
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-6 gradient-text">Quick Links</h3>
+            <h3 className="text-lg font-bold mb-6 brand-gradient-text">Quick Links</h3>
             <ul className="space-y-3">
               <li>
                 <Link href="/" className="text-gray-300 hover:text-white transition-colors">
@@ -84,7 +89,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-6 gradient-text">Our Solutions</h3>
+            <h3 className="text-lg font-bold mb-6 brand-gradient-text">Our Solutions</h3>
             <ul className="space-y-3">
               <li>
                 <Link href="/innovations/nanosun" className="text-gray-300 hover:text-white transition-colors">
@@ -115,7 +120,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-6 gradient-text">Newsletter</h3>
+            <h3 className="text-lg font-bold mb-6 brand-gradient-text">Newsletter</h3>
             <p className="text-gray-400 mb-4">
               Subscribe to our newsletter for the latest updates on sustainable lighting and ventilation solutions.
             </p>
@@ -125,11 +130,11 @@ export default function Footer() {
                 <input
                   type="email"
                   placeholder="Your email address"
-                  className="w-full px-4 py-3 bg-black/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-white pr-10"
+                  className="w-full px-4 py-3 bg-black/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-purple-500 text-white pr-10"
                 />
                 <button
                   type="submit"
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 text-purple-500 hover:text-purple-400"
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 text-brand-purple-500 hover:text-brand-purple-400"
                 >
                   <ArrowRight className="h-5 w-5" />
                 </button>

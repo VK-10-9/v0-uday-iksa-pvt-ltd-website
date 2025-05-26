@@ -2,8 +2,9 @@
 
 import { motion } from "framer-motion"
 import { ArrowRight, Mail, Phone, MapPin, Send, MessageSquare } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import { useState } from "react"
+// Import the HoverButton component
+import { HoverButton } from "@/components/ui/hover-button"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -74,7 +75,7 @@ export default function ContactPage() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h1 className="text-4xl md:text-6xl font-bold gradient-text mb-6">Get In Touch</h1>
+            <h1 className="text-4xl md:text-6xl font-bold brand-gradient-text mb-6">Get In Touch</h1>
             <p className="text-xl text-gray-300 mb-8">
               Ready to transform your space with natural daylight and ventilation? Contact us today.
             </p>
@@ -92,7 +93,7 @@ export default function ContactPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-6">Send Us a Message</h2>
+              <h2 className="text-3xl md:text-4xl font-bold brand-gradient-text mb-6">Send Us a Message</h2>
               <p className="text-gray-300 mb-8">
                 Have questions about our products or services? Fill out the form below and our team will get back to you
                 as soon as possible.
@@ -125,7 +126,7 @@ export default function ContactPage() {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-black/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-white"
+                        className="w-full px-4 py-3 bg-black/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-purple-500 text-white"
                         placeholder="John Doe"
                       />
                     </div>
@@ -141,7 +142,7 @@ export default function ContactPage() {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-black/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-white"
+                        className="w-full px-4 py-3 bg-black/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-purple-500 text-white"
                         placeholder="your.email@example.com"
                       />
                     </div>
@@ -158,7 +159,7 @@ export default function ContactPage() {
                         type="tel"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-black/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-white"
+                        className="w-full px-4 py-3 bg-black/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-purple-500 text-white"
                         placeholder="+91 98765 43210"
                       />
                     </div>
@@ -173,7 +174,7 @@ export default function ContactPage() {
                         type="text"
                         value={formData.company}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-black/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-white"
+                        className="w-full px-4 py-3 bg-black/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-purple-500 text-white"
                         placeholder="Your Company Ltd."
                       />
                     </div>
@@ -190,17 +191,14 @@ export default function ContactPage() {
                       required
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-black/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-white"
+                      className="w-full px-4 py-3 bg-black/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-purple-500 text-white"
                       placeholder="Tell us about your project or inquiry..."
                     ></textarea>
                   </div>
 
-                  <Button
-                    type="submit"
-                    className="w-full bg-gradient-to-r from-purple-600 to-teal-500 hover:from-purple-700 hover:to-teal-600 text-white py-3"
-                  >
+                  <HoverButton type="submit" className="w-full text-white py-3 bg-brand-gradient">
                     Send Message <Send className="ml-2 h-4 w-4" />
-                  </Button>
+                  </HoverButton>
                 </form>
               )}
             </motion.div>
@@ -211,18 +209,18 @@ export default function ContactPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-6">Contact Information</h2>
+              <h2 className="text-3xl md:text-4xl font-bold brand-gradient-text mb-6">Contact Information</h2>
               <p className="text-gray-300 mb-8">
                 Reach out to us directly through any of the following channels or visit one of our offices.
               </p>
 
               <div className="space-y-8">
-                <div className="bg-black/30 backdrop-blur-sm p-6 rounded-2xl border border-purple-900/30 glow-border">
-                  <h3 className="text-xl font-bold gradient-text mb-4">Head Office</h3>
+                <div className="bg-black/30 backdrop-blur-sm p-6 rounded-2xl border border-brand-purple-500/30 brand-glow">
+                  <h3 className="text-xl font-bold brand-gradient-text mb-4">Head Office</h3>
 
                   <div className="space-y-4">
                     <div className="flex items-start">
-                      <MapPin className="h-5 w-5 text-purple-500 mr-3 mt-1" />
+                      <MapPin className="h-5 w-5 text-brand-purple-500 mr-3 mt-1" />
                       <div>
                         <p className="font-medium text-white">Address</p>
                         <p className="text-gray-300">Uday IKSA Pvt Ltd, Hubli, Karnataka, India</p>
@@ -230,7 +228,7 @@ export default function ContactPage() {
                     </div>
 
                     <div className="flex items-start">
-                      <Phone className="h-5 w-5 text-purple-500 mr-3 mt-1" />
+                      <Phone className="h-5 w-5 text-brand-purple-500 mr-3 mt-1" />
                       <div>
                         <p className="font-medium text-white">Phone</p>
                         <p className="text-gray-300">+91 8792182631</p>
@@ -238,7 +236,7 @@ export default function ContactPage() {
                     </div>
 
                     <div className="flex items-start">
-                      <Mail className="h-5 w-5 text-purple-500 mr-3 mt-1" />
+                      <Mail className="h-5 w-5 text-brand-purple-500 mr-3 mt-1" />
                       <div>
                         <p className="font-medium text-white">Email</p>
                         <p className="text-gray-300">info@udayiksa.com</p>
@@ -247,23 +245,23 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="bg-black/30 backdrop-blur-sm p-6 rounded-2xl border border-purple-900/30 glow-border">
-                  <h3 className="text-xl font-bold gradient-text mb-4">Office Locations</h3>
+                <div className="bg-black/30 backdrop-blur-sm p-6 rounded-2xl border border-brand-purple-500/30 brand-glow">
+                  <h3 className="text-xl font-bold brand-gradient-text mb-4">Office Locations</h3>
 
                   <div className="space-y-6">
                     {officeLocations.map((office, index) => (
                       <div key={index} className="pb-4 border-b border-gray-800 last:border-0 last:pb-0">
-                        <h4 className="font-bold text-teal-400 mb-2">{office.city} Office</h4>
+                        <h4 className="font-bold text-brand-teal-400 mb-2">{office.city} Office</h4>
                         <p className="text-gray-300 mb-2 flex items-start">
-                          <MapPin className="h-4 w-4 text-purple-500 mr-2 mt-1 flex-shrink-0" />
+                          <MapPin className="h-4 w-4 text-brand-purple-500 mr-2 mt-1 flex-shrink-0" />
                           <span>{office.address}</span>
                         </p>
                         <p className="text-gray-300 mb-2 flex items-center">
-                          <Phone className="h-4 w-4 text-purple-500 mr-2" />
+                          <Phone className="h-4 w-4 text-brand-purple-500 mr-2" />
                           <span>{office.phone}</span>
                         </p>
                         <p className="text-gray-300 flex items-center">
-                          <Mail className="h-4 w-4 text-purple-500 mr-2" />
+                          <Mail className="h-4 w-4 text-brand-purple-500 mr-2" />
                           <span>{office.email}</span>
                         </p>
                       </div>
@@ -280,15 +278,15 @@ export default function ContactPage() {
       <section className="py-20 relative bg-black/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 gradient-text">Find Us</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 brand-gradient-text">Find Us</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Visit our headquarters or one of our regional offices across India.
             </p>
           </div>
 
-          <div className="relative h-[500px] rounded-2xl overflow-hidden border border-purple-900/30 glow-border">
+          <div className="relative h-[500px] rounded-2xl overflow-hidden border border-brand-purple-500/30 brand-glow">
             {/* This would be replaced with an actual map in a real implementation */}
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-teal-900/20"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-brand-purple-500/20 to-brand-teal-500/20"></div>
             <div className="absolute inset-0 grid-pattern opacity-30"></div>
             <div className="absolute inset-0 flex items-center justify-center">
               <p className="text-gray-400 text-center">
@@ -305,7 +303,7 @@ export default function ContactPage() {
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 gradient-text">Quick Contact</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 brand-gradient-text">Quick Contact</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Need immediate assistance? Reach out through one of these channels.
             </p>
@@ -313,14 +311,14 @@ export default function ContactPage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <motion.div
-              className="bg-black/30 backdrop-blur-sm p-8 rounded-2xl border border-purple-900/30 glow-border text-center"
+              className="bg-black/30 backdrop-blur-sm p-8 rounded-2xl border border-brand-purple-500/30 brand-glow text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
               whileHover={{ y: -10, boxShadow: "0 0 20px rgba(138, 43, 226, 0.4)" }}
             >
-              <div className="bg-gradient-to-br from-purple-600 to-teal-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="bg-brand-gradient w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Phone className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold mb-4">Call Us</h3>
@@ -329,21 +327,21 @@ export default function ContactPage() {
               </p>
               <a
                 href="tel:+918792182631"
-                className="text-purple-400 hover:text-purple-300 inline-flex items-center font-medium"
+                className="text-brand-purple-400 hover:text-purple-300 inline-flex items-center font-medium"
               >
                 +91 8792182631 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </motion.div>
 
             <motion.div
-              className="bg-black/30 backdrop-blur-sm p-8 rounded-2xl border border-purple-900/30 glow-border text-center"
+              className="bg-black/30 backdrop-blur-sm p-8 rounded-2xl border border-brand-purple-500/30 brand-glow text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
               whileHover={{ y: -10, boxShadow: "0 0 20px rgba(138, 43, 226, 0.4)" }}
             >
-              <div className="bg-gradient-to-br from-purple-600 to-teal-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="bg-brand-gradient w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Mail className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold mb-4">Email Us</h3>
@@ -352,28 +350,28 @@ export default function ContactPage() {
               </p>
               <a
                 href="mailto:info@udayiksa.com"
-                className="text-purple-400 hover:text-purple-300 inline-flex items-center font-medium"
+                className="text-brand-purple-400 hover:text-purple-300 inline-flex items-center font-medium"
               >
                 info@udayiksa.com <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </motion.div>
 
             <motion.div
-              className="bg-black/30 backdrop-blur-sm p-8 rounded-2xl border border-purple-900/30 glow-border text-center"
+              className="bg-black/30 backdrop-blur-sm p-8 rounded-2xl border border-brand-purple-500/30 brand-glow text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 }}
               whileHover={{ y: -10, boxShadow: "0 0 20px rgba(138, 43, 226, 0.4)" }}
             >
-              <div className="bg-gradient-to-br from-purple-600 to-teal-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="bg-brand-gradient w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <MessageSquare className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold mb-4">Live Chat</h3>
               <p className="text-gray-300 mb-6">
                 Chat with our support team in real-time during business hours for immediate assistance.
               </p>
-              <button className="text-purple-400 hover:text-purple-300 inline-flex items-center font-medium">
+              <button className="text-brand-purple-400 hover:text-purple-300 inline-flex items-center font-medium">
                 Start Chat <ArrowRight className="ml-2 h-4 w-4" />
               </button>
             </motion.div>
@@ -384,17 +382,14 @@ export default function ContactPage() {
       {/* CTA Section */}
       <section className="py-20 relative bg-gradient-to-r from-purple-900/50 to-teal-900/50">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 glow-text">Ready to Transform Your Space?</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 brand-gradient-text">Ready to Transform Your Space?</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Contact us today to discuss how our natural daylight and ventilation solutions can improve your building
             while reducing energy costs.
           </p>
-          <Button
-            size="lg"
-            className="bg-gradient-to-r from-purple-600 to-teal-500 hover:from-purple-700 hover:to-teal-600 text-white rounded-full px-8"
-          >
+          <HoverButton className="text-white text-xl px-12 py-5 bg-brand-gradient">
             Schedule a Consultation <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          </HoverButton>
         </div>
       </section>
     </main>

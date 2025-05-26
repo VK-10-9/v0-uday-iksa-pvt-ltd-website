@@ -9,6 +9,9 @@ export const metadata = {
   title: "Uday IKSA - Natural Daylight & Ventilation Solutions",
   description:
     "Leading manufacturer of natural daylight and ventilation systems in India. Award-winning solutions for sustainable and healthy living environments.",
+  icons: {
+    icon: "/images/logo.png",
+  },
     generator: 'v0.dev'
 }
 

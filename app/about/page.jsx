@@ -20,7 +20,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h1 className="text-4xl md:text-6xl font-bold gradient-text mb-6">About Uday IKSA</h1>
+            <h1 className="text-4xl md:text-6xl font-bold brand-gradient-text mb-6">About Uday IKSA</h1>
             <p className="text-xl text-gray-300 mb-8">
               A leading manufacturer in natural daylight and ventilation engineering, serving India for over 15 years
               with innovative and sustainable solutions.
@@ -39,7 +39,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-6">Our Story</h2>
+              <h2 className="text-3xl md:text-4xl font-bold brand-gradient-text mb-6">Our Story</h2>
               <p className="text-gray-300 mb-4">
                 Founded in 2008, Uday IKSA began with a vision to revolutionize how buildings harness natural resources
                 for lighting and ventilation. What started as a small team of innovators has grown into a leading
@@ -57,7 +57,7 @@ export default function AboutPage() {
 
               <div className="flex flex-wrap gap-4">
                 <div className="flex items-center">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-teal-500 flex items-center justify-center mr-3">
+                  <div className="w-12 h-12 rounded-full bg-brand-gradient flex items-center justify-center mr-3">
                     <Building2 className="h-6 w-6 text-white" />
                   </div>
                   <div>
@@ -67,7 +67,7 @@ export default function AboutPage() {
                 </div>
 
                 <div className="flex items-center">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-teal-500 flex items-center justify-center mr-3">
+                  <div className="w-12 h-12 rounded-full bg-brand-gradient flex items-center justify-center mr-3">
                     <Users className="h-6 w-6 text-white" />
                   </div>
                   <div>
@@ -77,7 +77,7 @@ export default function AboutPage() {
                 </div>
 
                 <div className="flex items-center">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-teal-500 flex items-center justify-center mr-3">
+                  <div className="w-12 h-12 rounded-full bg-brand-gradient flex items-center justify-center mr-3">
                     <Lightbulb className="h-6 w-6 text-white" />
                   </div>
                   <div>
@@ -95,7 +95,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 to-teal-900/30 z-10 rounded-2xl"></div>
+              <div className="absolute inset-0 from-brand-purple-500/20 to-brand-teal-500/20 z-10 rounded-2xl bg-gradient-to-r"></div>
               <Image
                 src="/placeholder.svg?height=800&width=600"
                 alt="Uday IKSA Headquarters"
@@ -111,7 +111,7 @@ export default function AboutPage() {
       <section id="vision" className="py-20 relative bg-black/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 gradient-text">Vision & Mission</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 brand-gradient-text">Vision & Mission</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Guiding principles that drive our innovation and commitment to sustainability.
             </p>
@@ -119,14 +119,14 @@ export default function AboutPage() {
 
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
-              className="bg-black/30 backdrop-blur-sm p-8 rounded-2xl border border-purple-900/30 glow-border h-full"
+              className="bg-black/30 backdrop-blur-sm p-8 rounded-2xl border border-brand-purple-500/30 brand-glow h-full"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
               whileHover={{ y: -10, boxShadow: "0 0 20px rgba(138, 43, 226, 0.4)" }}
             >
-              <div className="bg-gradient-to-br from-purple-600 to-teal-500 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              <div className="bg-brand-gradient w-16 h-16 rounded-full flex items-center justify-center mb-6">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-8 w-8 text-white"
@@ -156,14 +156,14 @@ export default function AboutPage() {
             </motion.div>
 
             <motion.div
-              className="bg-black/30 backdrop-blur-sm p-8 rounded-2xl border border-purple-900/30 glow-border h-full"
+              className="bg-black/30 backdrop-blur-sm p-8 rounded-2xl border border-brand-purple-500/30 brand-glow h-full"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
               whileHover={{ y: -10, boxShadow: "0 0 20px rgba(138, 43, 226, 0.4)" }}
             >
-              <div className="bg-gradient-to-br from-purple-600 to-teal-500 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              <div className="bg-brand-gradient w-16 h-16 rounded-full flex items-center justify-center mb-6">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-8 w-8 text-white"
@@ -212,7 +212,7 @@ export default function AboutPage() {
       <section id="team" className="py-20 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 gradient-text">Our Leadership Team</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 brand-gradient-text">Our Leadership Team</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Meet the visionaries and experts driving innovation at Uday IKSA.
             </p>
@@ -259,7 +259,7 @@ export default function AboutPage() {
             ].map((member, index) => (
               <motion.div
                 key={index}
-                className="bg-black/30 backdrop-blur-sm rounded-2xl overflow-hidden border border-purple-900/30"
+                className="bg-black/30 backdrop-blur-sm rounded-2xl overflow-hidden border border-brand-purple-500/30"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -271,8 +271,8 @@ export default function AboutPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold gradient-text">{member.name}</h3>
-                  <p className="text-teal-400 mb-3">{member.position}</p>
+                  <h3 className="text-xl font-bold brand-gradient-text">{member.name}</h3>
+                  <p className="text-brand-teal-400 mb-3">{member.position}</p>
                   <p className="text-gray-300">{member.bio}</p>
                 </div>
               </motion.div>
@@ -284,21 +284,18 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="py-20 relative bg-gradient-to-r from-purple-900/50 to-teal-900/50">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 glow-text">Join Our Journey</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 brand-gradient-text">Join Our Journey</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Be part of our mission to transform spaces with sustainable natural lighting and ventilation solutions.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-purple-600 to-teal-500 hover:from-purple-700 hover:to-teal-600 text-white rounded-full px-8"
-            >
+            <Button size="lg" className="bg-brand-gradient hover:opacity-90 text-white rounded-full px-8">
               View Our Innovations
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-purple-500 text-purple-500 hover:bg-purple-500/10 rounded-full px-8"
+              className="border-brand-purple-500 text-brand-purple-500 hover:bg-purple-500/10 rounded-full px-8"
             >
               Join Our Team
             </Button>

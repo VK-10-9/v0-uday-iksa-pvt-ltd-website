@@ -1,65 +1,65 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowRight, Building, Globe, Calendar, CheckCircle } from "lucide-react"
+import { ArrowRight, Hotel, Globe, Calendar, CheckCircle } from "lucide-react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
-export default function CommercialProjectsPage() {
+export default function HospitalityProjectsPage() {
   const projects = [
     {
-      name: "Infosys Tech Park",
-      location: "Bangalore, Karnataka",
-      year: "2022",
-      description:
-        "Comprehensive natural ventilation and daylighting solution for a modern office complex, creating a healthier work environment for 2,000+ employees.",
-      results: [
-        "40% reduction in lighting energy costs",
-        "Improved employee satisfaction scores",
-        "Enhanced indoor air quality",
-        "LEED Platinum certification achieved",
-      ],
-      image: "/placeholder.svg?height=500&width=800",
-    },
-    {
-      name: "Phoenix Mall Expansion",
+      name: "Taj Palace Hotel",
       location: "Mumbai, Maharashtra",
-      year: "2021",
-      description:
-        "Strategic implementation of NANOSUN skylights throughout a major retail space, enhancing the shopping experience while reducing operational costs.",
-      results: [
-        "35% energy savings on lighting",
-        "Increased foot traffic in daylit areas",
-        "Improved retail sales performance",
-        "Enhanced visual merchandising effectiveness",
-      ],
-      image: "/placeholder.svg?height=500&width=800",
-    },
-    {
-      name: "Taj Hotel Renovation",
-      location: "Delhi, NCR",
       year: "2023",
       description:
-        "Elegant integration of natural daylighting systems in the hotel's atrium and common areas, balancing aesthetics with energy efficiency.",
+        "Elegant integration of natural daylighting systems in luxury hotel spaces, enhancing guest experience while achieving 30% energy savings in common areas.",
       results: [
-        "30% reduction in energy consumption",
-        "Improved guest satisfaction ratings",
-        "Enhanced architectural features",
-        "Seamless integration with existing design",
+        "30% energy savings in common areas",
+        "Enhanced guest satisfaction scores",
+        "Improved ambiance in lobbies and restaurants",
+        "Reduced operational costs significantly",
       ],
       image: "/placeholder.svg?height=500&width=800",
     },
     {
-      name: "WTC Office Tower",
-      location: "Chennai, Tamil Nadu",
+      name: "ITC Grand Resort",
+      location: "Goa",
+      year: "2022",
+      description:
+        "Comprehensive natural lighting and ventilation solution for a luxury beach resort, creating perfect ambiance while maintaining energy efficiency.",
+      results: [
+        "35% reduction in lighting costs",
+        "Improved indoor air quality",
+        "Enhanced natural lighting in spa areas",
+        "Sustainable tourism practices implemented",
+      ],
+      image: "/placeholder.svg?height=500&width=800",
+    },
+    {
+      name: "Oberoi Business Hotel",
+      location: "Bangalore, Karnataka",
+      year: "2021",
+      description:
+        "Strategic implementation of NANOSUN systems in business hotel conference rooms and common areas, balancing professional requirements with guest comfort.",
+      results: [
+        "40% energy cost reduction",
+        "Better conference room lighting",
+        "Improved guest room comfort",
+        "Enhanced business traveler satisfaction",
+      ],
+      image: "/placeholder.svg?height=500&width=800",
+    },
+    {
+      name: "Radisson Resort Complex",
+      location: "Udaipur, Rajasthan",
       year: "2020",
       description:
-        "Custom daylighting and ventilation solution for a 20-story office tower, addressing the challenges of height, wind exposure, and tropical climate.",
+        "Custom daylighting solution for heritage-style resort, preserving architectural aesthetics while introducing modern sustainable lighting technology.",
       results: [
-        "45% reduction in HVAC costs",
-        "Improved thermal comfort across all floors",
-        "Enhanced workplace productivity",
-        "Significant carbon footprint reduction",
+        "25% energy savings achieved",
+        "Preserved heritage architecture",
+        "Enhanced guest experience",
+        "Sustainable hospitality practices",
       ],
       image: "/placeholder.svg?height=500&width=800",
     },
@@ -79,10 +79,10 @@ export default function CommercialProjectsPage() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h1 className="text-4xl md:text-6xl font-bold gradient-text mb-6">Commercial, Corporate & Industry</h1>
+            <h1 className="text-4xl md:text-6xl font-bold gradient-text mb-6">Hospitality Projects</h1>
             <p className="text-xl text-gray-300 mb-8">
-              Transforming corporate offices, manufacturing facilities, and industrial complexes with energy-efficient
-              natural lighting and ventilation solutions.
+              Creating exceptional guest experiences in hotels, resorts, and hospitality venues through premium natural
+              lighting solutions.
             </p>
           </motion.div>
         </div>
@@ -98,30 +98,29 @@ export default function CommercialProjectsPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-6">Commercial & Industrial Excellence</h2>
+              <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-6">Hospitality Excellence</h2>
               <p className="text-gray-300 mb-4">
-                Our commercial projects demonstrate how natural daylighting and ventilation can transform office
-                buildings, retail spaces, hotels, and other commercial environments into more sustainable, comfortable,
-                and productive spaces.
+                Our hospitality projects showcase how natural daylighting can enhance guest experiences while delivering
+                significant operational savings for hotels, resorts, and hospitality venues.
               </p>
               <p className="text-gray-300 mb-4">
-                We understand the unique requirements of commercial spaces, from aesthetic considerations to operational
-                efficiency. Our solutions are designed to enhance the user experience while delivering significant
-                energy savings and environmental benefits.
+                We understand the unique requirements of hospitality environments, from creating the perfect ambiance to
+                maintaining energy efficiency. Our solutions are designed to enhance guest satisfaction while reducing
+                operational costs.
               </p>
               <p className="text-gray-300 mb-6">
-                With over 85 commercial projects completed, we have the expertise to handle projects of any scale and
-                complexity, from small retail outlets to massive office complexes.
+                With over 35 hospitality projects completed, we have the expertise to handle luxury hotels, business
+                hotels, resorts, and boutique properties of any scale.
               </p>
 
               <div className="flex flex-wrap gap-4">
                 <div className="flex items-center">
                   <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-teal-500 flex items-center justify-center mr-3">
-                    <Building className="h-6 w-6 text-white" />
+                    <Hotel className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <p className="font-bold">85+</p>
-                    <p className="text-sm text-gray-400">Commercial Projects</p>
+                    <p className="font-bold">35+</p>
+                    <p className="text-sm text-gray-400">Hospitality Projects</p>
                   </div>
                 </div>
 
@@ -141,7 +140,7 @@ export default function CommercialProjectsPage() {
                     </svg>
                   </div>
                   <div>
-                    <p className="font-bold">40%</p>
+                    <p className="font-bold">32%</p>
                     <p className="text-sm text-gray-400">Avg. Energy Savings</p>
                   </div>
                 </div>
@@ -158,7 +157,7 @@ export default function CommercialProjectsPage() {
               <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 to-teal-900/30 z-10 rounded-2xl"></div>
               <Image
                 src="/placeholder.svg?height=800&width=600"
-                alt="Commercial Project Overview"
+                alt="Hospitality Project Overview"
                 fill
                 className="object-cover"
               />
@@ -171,11 +170,9 @@ export default function CommercialProjectsPage() {
       <section className="py-20 relative bg-black/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 gradient-text">
-              Featured Commercial & Industrial Projects
-            </h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 gradient-text">Featured Hospitality Projects</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Explore some of our most impactful commercial implementations.
+              Explore our most impactful implementations in the hospitality sector.
             </p>
           </div>
 
@@ -297,13 +294,12 @@ export default function CommercialProjectsPage() {
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                 </svg>
                 <p className="text-gray-300 text-lg mb-4">
-                  "The daylighting solution provided by Uday IKSA has completely transformed our office environment. Our
-                  employees consistently report higher satisfaction with their workspace, and we've seen measurable
-                  improvements in productivity. The energy savings have been substantial, and the installation process
-                  was smooth and professional."
+                  "The natural lighting systems installed by Uday IKSA have transformed our hotel's ambiance. Our guests
+                  consistently comment on the beautiful natural light in our common areas, and we've seen significant
+                  energy savings. The installation was completed with minimal disruption to our operations."
                 </p>
-                <p className="font-bold gradient-text">Anita Sharma</p>
-                <p className="text-sm text-gray-400">Facilities Director, Infosys Tech Park</p>
+                <p className="font-bold gradient-text">Priya Sharma</p>
+                <p className="text-sm text-gray-400">General Manager, Taj Palace Hotel</p>
               </div>
             </div>
           </div>
@@ -313,10 +309,10 @@ export default function CommercialProjectsPage() {
       {/* CTA Section */}
       <section className="py-20 relative bg-gradient-to-r from-purple-900/50 to-teal-900/50">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 glow-text">Elevate Your Commercial Space</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 glow-text">Enhance Your Hospitality Experience</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Contact us today to discuss how our natural daylight and ventilation solutions can transform your commercial
-            building while reducing energy costs.
+            Contact us today to discuss how our natural daylight and ventilation solutions can improve guest
+            satisfaction while reducing operational costs.
           </p>
           <Button
             size="lg"

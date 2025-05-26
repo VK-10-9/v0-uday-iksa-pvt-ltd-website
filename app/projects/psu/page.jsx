@@ -1,65 +1,65 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowRight, Building, Globe, Calendar, CheckCircle } from "lucide-react"
+import { ArrowRight, Building2, Globe, Calendar, CheckCircle } from "lucide-react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
-export default function CommercialProjectsPage() {
+export default function PSUProjectsPage() {
   const projects = [
     {
-      name: "Infosys Tech Park",
-      location: "Bangalore, Karnataka",
-      year: "2022",
+      name: "NTPC Power Plant Complex",
+      location: "Uttar Pradesh",
+      year: "2023",
       description:
-        "Comprehensive natural ventilation and daylighting solution for a modern office complex, creating a healthier work environment for 2,000+ employees.",
+        "Comprehensive natural lighting solution for India's largest power generation company, covering administrative buildings and control rooms across 75,000 sq. ft.",
       results: [
-        "40% reduction in lighting energy costs",
-        "Improved employee satisfaction scores",
-        "Enhanced indoor air quality",
-        "LEED Platinum certification achieved",
+        "40% reduction in energy consumption",
+        "Improved working conditions for 500+ employees",
+        "Enhanced safety in control rooms",
+        "Government sustainability compliance achieved",
       ],
       image: "/placeholder.svg?height=500&width=800",
     },
     {
-      name: "Phoenix Mall Expansion",
+      name: "Indian Railways Headquarters",
+      location: "New Delhi",
+      year: "2022",
+      description:
+        "Strategic implementation of NANOSUN and NANOVENT systems across multiple railway administrative buildings, creating sustainable government workspaces.",
+      results: [
+        "35% energy savings on lighting",
+        "Improved air quality in offices",
+        "Enhanced employee productivity",
+        "Reduced carbon footprint significantly",
+      ],
+      image: "/placeholder.svg?height=500&width=800",
+    },
+    {
+      name: "ONGC Regional Office",
       location: "Mumbai, Maharashtra",
       year: "2021",
       description:
-        "Strategic implementation of NANOSUN skylights throughout a major retail space, enhancing the shopping experience while reducing operational costs.",
-      results: [
-        "35% energy savings on lighting",
-        "Increased foot traffic in daylit areas",
-        "Improved retail sales performance",
-        "Enhanced visual merchandising effectiveness",
-      ],
-      image: "/placeholder.svg?height=500&width=800",
-    },
-    {
-      name: "Taj Hotel Renovation",
-      location: "Delhi, NCR",
-      year: "2023",
-      description:
-        "Elegant integration of natural daylighting systems in the hotel's atrium and common areas, balancing aesthetics with energy efficiency.",
-      results: [
-        "30% reduction in energy consumption",
-        "Improved guest satisfaction ratings",
-        "Enhanced architectural features",
-        "Seamless integration with existing design",
-      ],
-      image: "/placeholder.svg?height=500&width=800",
-    },
-    {
-      name: "WTC Office Tower",
-      location: "Chennai, Tamil Nadu",
-      year: "2020",
-      description:
-        "Custom daylighting and ventilation solution for a 20-story office tower, addressing the challenges of height, wind exposure, and tropical climate.",
+        "Custom daylighting and ventilation solution for oil and gas sector offices, addressing specific requirements for technical workspaces and meeting rooms.",
       results: [
         "45% reduction in HVAC costs",
-        "Improved thermal comfort across all floors",
-        "Enhanced workplace productivity",
-        "Significant carbon footprint reduction",
+        "Better visibility for technical drawings",
+        "Improved meeting room environments",
+        "Sustainable energy practices implemented",
+      ],
+      image: "/placeholder.svg?height=500&width=800",
+    },
+    {
+      name: "BHEL Manufacturing Unit",
+      location: "Bhopal, Madhya Pradesh",
+      year: "2020",
+      description:
+        "Large-scale natural lighting implementation for heavy engineering manufacturing facility, balancing industrial requirements with energy efficiency.",
+      results: [
+        "30% energy cost reduction",
+        "Enhanced manufacturing floor visibility",
+        "Improved worker safety metrics",
+        "Sustainable manufacturing practices",
       ],
       image: "/placeholder.svg?height=500&width=800",
     },
@@ -79,10 +79,10 @@ export default function CommercialProjectsPage() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h1 className="text-4xl md:text-6xl font-bold gradient-text mb-6">Commercial, Corporate & Industry</h1>
+            <h1 className="text-4xl md:text-6xl font-bold gradient-text mb-6">PSU Projects</h1>
             <p className="text-xl text-gray-300 mb-8">
-              Transforming corporate offices, manufacturing facilities, and industrial complexes with energy-efficient
-              natural lighting and ventilation solutions.
+              Partnering with Public Sector Undertakings to deliver sustainable lighting and ventilation solutions for
+              government facilities.
             </p>
           </motion.div>
         </div>
@@ -98,30 +98,29 @@ export default function CommercialProjectsPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-6">Commercial & Industrial Excellence</h2>
+              <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-6">PSU Excellence</h2>
               <p className="text-gray-300 mb-4">
-                Our commercial projects demonstrate how natural daylighting and ventilation can transform office
-                buildings, retail spaces, hotels, and other commercial environments into more sustainable, comfortable,
-                and productive spaces.
+                Our PSU projects demonstrate our capability to work with India's largest public sector organizations,
+                delivering sustainable solutions that meet government standards and compliance requirements.
               </p>
               <p className="text-gray-300 mb-4">
-                We understand the unique requirements of commercial spaces, from aesthetic considerations to operational
-                efficiency. Our solutions are designed to enhance the user experience while delivering significant
-                energy savings and environmental benefits.
+                We understand the unique challenges of government facilities, from budget constraints to regulatory
+                compliance. Our solutions are designed to deliver maximum value while meeting all necessary standards
+                and certifications.
               </p>
               <p className="text-gray-300 mb-6">
-                With over 85 commercial projects completed, we have the expertise to handle projects of any scale and
-                complexity, from small retail outlets to massive office complexes.
+                With over 45 PSU projects completed, we have established ourselves as a trusted partner for government
+                organizations seeking sustainable infrastructure solutions.
               </p>
 
               <div className="flex flex-wrap gap-4">
                 <div className="flex items-center">
                   <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-teal-500 flex items-center justify-center mr-3">
-                    <Building className="h-6 w-6 text-white" />
+                    <Building2 className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <p className="font-bold">85+</p>
-                    <p className="text-sm text-gray-400">Commercial Projects</p>
+                    <p className="font-bold">45+</p>
+                    <p className="text-sm text-gray-400">PSU Projects</p>
                   </div>
                 </div>
 
@@ -141,7 +140,7 @@ export default function CommercialProjectsPage() {
                     </svg>
                   </div>
                   <div>
-                    <p className="font-bold">40%</p>
+                    <p className="font-bold">38%</p>
                     <p className="text-sm text-gray-400">Avg. Energy Savings</p>
                   </div>
                 </div>
@@ -158,7 +157,7 @@ export default function CommercialProjectsPage() {
               <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 to-teal-900/30 z-10 rounded-2xl"></div>
               <Image
                 src="/placeholder.svg?height=800&width=600"
-                alt="Commercial Project Overview"
+                alt="PSU Project Overview"
                 fill
                 className="object-cover"
               />
@@ -171,11 +170,9 @@ export default function CommercialProjectsPage() {
       <section className="py-20 relative bg-black/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 gradient-text">
-              Featured Commercial & Industrial Projects
-            </h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 gradient-text">Featured PSU Projects</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Explore some of our most impactful commercial implementations.
+              Explore our most impactful implementations with government organizations.
             </p>
           </div>
 
@@ -297,13 +294,12 @@ export default function CommercialProjectsPage() {
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                 </svg>
                 <p className="text-gray-300 text-lg mb-4">
-                  "The daylighting solution provided by Uday IKSA has completely transformed our office environment. Our
-                  employees consistently report higher satisfaction with their workspace, and we've seen measurable
-                  improvements in productivity. The energy savings have been substantial, and the installation process
-                  was smooth and professional."
+                  "Uday IKSA's implementation at our power plant has exceeded expectations. The natural lighting systems
+                  have significantly reduced our energy consumption while improving working conditions for our staff.
+                  Their understanding of PSU requirements and compliance standards made the entire process seamless."
                 </p>
-                <p className="font-bold gradient-text">Anita Sharma</p>
-                <p className="text-sm text-gray-400">Facilities Director, Infosys Tech Park</p>
+                <p className="font-bold gradient-text">Rajesh Kumar</p>
+                <p className="text-sm text-gray-400">General Manager, NTPC</p>
               </div>
             </div>
           </div>
@@ -313,10 +309,10 @@ export default function CommercialProjectsPage() {
       {/* CTA Section */}
       <section className="py-20 relative bg-gradient-to-r from-purple-900/50 to-teal-900/50">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 glow-text">Elevate Your Commercial Space</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 glow-text">Partner with Us for Your PSU Project</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Contact us today to discuss how our natural daylight and ventilation solutions can transform your commercial
-            building while reducing energy costs.
+            Contact us today to discuss how our natural daylight and ventilation solutions can meet your government
+            facility requirements while achieving significant energy savings.
           </p>
           <Button
             size="lg"

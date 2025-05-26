@@ -12,7 +12,7 @@ export default function InstitutionalProjectsPage() {
       location: "Delhi, NCR",
       year: "2022",
       description:
-        "Integration of NANOSUN and NANOVENT systems across multiple educational buildings, showcasing sustainable design principles for 5,000+ students and faculty.",
+        "Integration of NANOSUN and NANOVENT systems across multiple educational buildings, showcasing sustainable design principles for 5,000+ students and faculty. Improved learning environment and reduced energy consumption.",
       results: [
         "45% reduction in energy consumption",
         "Improved student concentration and performance",
@@ -26,7 +26,7 @@ export default function InstitutionalProjectsPage() {
       location: "Chennai, Tamil Nadu",
       year: "2021",
       description:
-        "Custom daylighting solution for a healthcare facility, designed to enhance patient recovery environments while meeting strict hygiene and operational requirements.",
+        "Custom daylighting solution for a healthcare facility, designed to enhance patient recovery environments while meeting strict hygiene and operational requirements. Promotes faster healing and reduces reliance on artificial lighting.",
       results: [
         "30% energy savings on lighting",
         "Improved patient recovery metrics",
@@ -40,7 +40,7 @@ export default function InstitutionalProjectsPage() {
       location: "Kharagpur, West Bengal",
       year: "2023",
       description:
-        "State-of-the-art natural lighting and ventilation systems for a research facility, creating optimal conditions for scientific work while demonstrating sustainability principles.",
+        "State-of-the-art natural lighting and ventilation systems for a research facility, creating optimal conditions for scientific work while demonstrating sustainability principles. Fosters innovation and reduces operational costs.",
       results: [
         "40% reduction in HVAC costs",
         "Improved research environment quality",
@@ -54,7 +54,7 @@ export default function InstitutionalProjectsPage() {
       location: "Pune, Maharashtra",
       year: "2020",
       description:
-        "Careful integration of daylighting systems in a historic library building, balancing preservation requirements with modern sustainability goals.",
+        "Careful integration of daylighting systems in a historic library building, balancing preservation requirements with modern sustainability goals. Preserves architectural heritage while enhancing user experience.",
       results: [
         "35% energy savings",
         "Preservation of historic architecture",
@@ -79,9 +79,10 @@ export default function InstitutionalProjectsPage() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h1 className="text-4xl md:text-6xl font-bold gradient-text mb-6">Institutional Projects</h1>
+            <h1 className="text-4xl md:text-6xl font-bold gradient-text mb-6">Institutional, Education & Hospital</h1>
             <p className="text-xl text-gray-300 mb-8">
-              Enhancing learning and healthcare environments with natural daylight and fresh air circulation.
+              Enhancing learning environments, healthcare facilities, and institutional buildings with natural daylight
+              and fresh air circulation for better outcomes.
             </p>
           </motion.div>
         </div>
@@ -97,7 +98,9 @@ export default function InstitutionalProjectsPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-6">Institutional Excellence</h2>
+              <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-6">
+                Institutional, Education & Healthcare Excellence
+              </h2>
               <p className="text-gray-300 mb-4">
                 Our institutional projects showcase how natural daylighting and ventilation can transform educational
                 facilities, healthcare centers, and other public institutions into more sustainable, healthy, and
@@ -170,7 +173,9 @@ export default function InstitutionalProjectsPage() {
       <section className="py-20 relative bg-black/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 gradient-text">Featured Institutional Projects</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 gradient-text">
+              Featured Institutional, Education & Healthcare Projects
+            </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Explore some of our most impactful institutional implementations.
             </p>

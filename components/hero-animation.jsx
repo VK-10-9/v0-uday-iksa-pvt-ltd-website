@@ -136,7 +136,7 @@ export default function HeroAnimation() {
           transition={{ duration: 1, delay: 0.5 }}
         >
           <motion.div
-            className="text-6xl font-bold gradient-text mb-4"
+            className="text-5xl md:text-6xl font-bold gradient-text mb-4"
             animate={{
               textShadow: [
                 "0 0 10px rgba(138, 43, 226, 0.5)",
@@ -150,10 +150,10 @@ export default function HeroAnimation() {
               repeatType: "reverse",
             }}
           >
-            NANOSUN
+            Our Innovations
           </motion.div>
           <motion.div
-            className="text-2xl text-teal-400"
+            className="text-xl md:text-2xl text-teal-400"
             animate={{
               textShadow: [
                 "0 0 5px rgba(43, 226, 202, 0.5)",
@@ -168,7 +168,7 @@ export default function HeroAnimation() {
               delay: 0.5,
             }}
           >
-            Natural Daylight Systems
+            Sustainable Solutions for Tomorrow
           </motion.div>
         </motion.div>
       </div>

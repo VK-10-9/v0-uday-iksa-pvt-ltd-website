@@ -51,7 +51,7 @@ export default function InnovationsPage() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h1 className="text-4xl md:text-6xl font-bold gradient-text mb-6">Our Innovations</h1>
+            <h1 className="text-4xl md:text-6xl font-bold brand-gradient-text mb-6">Our Innovations</h1>
             <p className="text-xl text-gray-300 mb-8">
               Pioneering sustainable solutions that harness natural resources for better, healthier, and more
               energy-efficient environments.
@@ -70,7 +70,7 @@ export default function InnovationsPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-6">Transforming Spaces Naturally</h2>
+              <h2 className="text-3xl md:text-4xl font-bold brand-gradient-text mb-6">Transforming Spaces Naturally</h2>
               <p className="text-gray-300 mb-4">
                 At Uday IKSA, innovation is at the heart of everything we do. Our team of engineers and designers work
                 tirelessly to develop solutions that maximize the use of natural resources while minimizing
@@ -87,7 +87,7 @@ export default function InnovationsPage() {
 
               <div className="flex flex-wrap gap-4">
                 <div className="flex items-center">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-teal-500 flex items-center justify-center mr-3">
+                  <div className="w-12 h-12 rounded-full bg-brand-gradient flex items-center justify-center mr-3">
                     <Lightbulb className="h-6 w-6 text-white" />
                   </div>
                   <div>
@@ -97,7 +97,7 @@ export default function InnovationsPage() {
                 </div>
 
                 <div className="flex items-center">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-teal-500 flex items-center justify-center mr-3">
+                  <div className="w-12 h-12 rounded-full bg-brand-gradient flex items-center justify-center mr-3">
                     <BarChart className="h-6 w-6 text-white" />
                   </div>
                   <div>
@@ -115,7 +115,7 @@ export default function InnovationsPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 to-teal-900/30 z-10 rounded-2xl"></div>
+              <div className="absolute inset-0 from-brand-purple-500/20 to-brand-teal-500/20 z-10 rounded-2xl bg-gradient-to-r"></div>
               <Image
                 src="/placeholder.svg?height=800&width=600"
                 alt="Uday IKSA Innovation Lab"
@@ -139,7 +139,7 @@ export default function InnovationsPage() {
                 {index % 2 === 0 ? (
                   <>
                     <div className="relative h-[400px] rounded-2xl overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 to-teal-900/30 z-10 rounded-2xl"></div>
+                      <div className="absolute inset-0 from-brand-purple-500/20 to-brand-teal-500/20 z-10 rounded-2xl bg-gradient-to-r"></div>
                       <Image
                         src={innovation.image || "/placeholder.svg"}
                         alt={innovation.name}
@@ -149,13 +149,13 @@ export default function InnovationsPage() {
                     </div>
 
                     <div>
-                      <div className="bg-gradient-to-br from-purple-600 to-teal-500 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                      <div className="bg-brand-gradient w-16 h-16 rounded-full flex items-center justify-center mb-6">
                         <innovation.icon className="h-8 w-8 text-white" />
                       </div>
-                      <h3 className="text-3xl font-bold gradient-text mb-4">{innovation.name}</h3>
+                      <h3 className="text-3xl font-bold brand-gradient-text mb-4">{innovation.name}</h3>
                       <p className="text-gray-300 mb-6">{innovation.description}</p>
                       <Link href={innovation.link}>
-                        <Button className="bg-gradient-to-r from-purple-600 to-teal-500 hover:from-purple-700 hover:to-teal-600 text-white">
+                        <Button className="bg-brand-gradient hover:opacity-90 text-white">
                           Learn More <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                       </Link>
@@ -164,20 +164,20 @@ export default function InnovationsPage() {
                 ) : (
                   <>
                     <div>
-                      <div className="bg-gradient-to-br from-purple-600 to-teal-500 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                      <div className="bg-brand-gradient w-16 h-16 rounded-full flex items-center justify-center mb-6">
                         <innovation.icon className="h-8 w-8 text-white" />
                       </div>
-                      <h3 className="text-3xl font-bold gradient-text mb-4">{innovation.name}</h3>
+                      <h3 className="text-3xl font-bold brand-gradient-text mb-4">{innovation.name}</h3>
                       <p className="text-gray-300 mb-6">{innovation.description}</p>
                       <Link href={innovation.link}>
-                        <Button className="bg-gradient-to-r from-purple-600 to-teal-500 hover:from-purple-700 hover:to-teal-600 text-white">
+                        <Button className="bg-brand-gradient hover:opacity-90 text-white">
                           Learn More <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                       </Link>
                     </div>
 
                     <div className="relative h-[400px] rounded-2xl overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 to-teal-900/30 z-10 rounded-2xl"></div>
+                      <div className="absolute inset-0 from-brand-purple-500/20 to-brand-teal-500/20 z-10 rounded-2xl bg-gradient-to-r"></div>
                       <Image
                         src={innovation.image || "/placeholder.svg"}
                         alt={innovation.name}
@@ -196,15 +196,12 @@ export default function InnovationsPage() {
       {/* CTA Section */}
       <section className="py-20 relative bg-gradient-to-r from-purple-900/50 to-teal-900/50">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 glow-text">Ready to Transform Your Space?</h2>
+          <h2 className="text-3xl md:text-5xl font-bold brand-gradient-text mb-6">Ready to Transform Your Space?</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Discover how our innovative solutions can bring natural light and fresh air to your building while reducing
             energy costs.
           </p>
-          <Button
-            size="lg"
-            className="bg-gradient-to-r from-purple-600 to-teal-500 hover:from-purple-700 hover:to-teal-600 text-white rounded-full px-8"
-          >
+          <Button size="lg" className="bg-brand-gradient hover:opacity-90 text-white rounded-full px-8">
             Contact Us Today <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
