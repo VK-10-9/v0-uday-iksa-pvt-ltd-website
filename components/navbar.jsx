@@ -2,18 +2,16 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Menu, Search, Bell } from "lucide-react"
+import { Menu, Bell } from "lucide-react"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import DesktopNav from "@/components/navbar/desktop-nav"
 import MobileMenu from "@/components/navbar/mobile-menu"
-import SearchModal from "@/components/navbar/search-modal"
 import NotificationPanel from "@/components/navbar/notification-panel"
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [isSearchOpen, setIsSearchOpen] = useState(false)
   const [isNotificationOpen, setIsNotificationOpen] = useState(false)
   const [active, setActive] = useState(null)
 
@@ -29,18 +27,20 @@ export default function Navbar() {
   return (
     <>
       <motion.header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          isScrolled ? "py-2 backdrop-blur-xl bg-black/80 border-b border-white/10" : "py-4 bg-transparent"
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 shadow-lg ${
+          isScrolled ? "py-2 backdrop-blur-xl bg-black/80 border-b border-white/10 shadow-xl" : "py-4 bg-transparent"
         }`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
+        role="banner"
+        aria-label="Main header"
       >
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between">
+          <nav className="flex items-center justify-between" role="navigation" aria-label="Main navigation">
             {/* Enhanced Logo */}
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Link href="/" className="flex items-center z-60 relative group">
+              <Link href="/" className="flex items-center z-60 relative group" tabIndex={0} aria-label="Home">
                 <div className="relative h-12 w-12 mr-3">
                   <motion.div
                     className={`absolute inset-0 rounded-full bg-gradient-to-r from-purple-500/30 to-pink-500/30 blur-md transition-all duration-300 group-hover:from-purple-500/50 group-hover:to-pink-500/50`}
@@ -78,22 +78,15 @@ export default function Navbar() {
 
             {/* Action Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
-              {/* Search Button */}
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={() => setIsSearchOpen(true)}
-                className="p-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300"
-              >
-                <Search className="h-4 w-4" />
-              </motion.button>
-
               {/* Notification Button */}
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setIsNotificationOpen(!isNotificationOpen)}
-                className="relative p-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300"
+                className="relative p-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
+                aria-label="Open notifications"
+                aria-haspopup="true"
+                aria-expanded={isNotificationOpen}
               >
                 <Bell className="h-4 w-4" />
                 <span className="absolute -top-1 -right-1 h-3 w-3 bg-red-500 rounded-full animate-pulse" />
@@ -103,7 +96,9 @@ export default function Navbar() {
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
                   href="/contact"
-                  className="px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-medium hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-purple-500/25"
+                  className="px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-medium hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-purple-500/25 focus:outline-none focus:ring-2 focus:ring-pink-400"
+                  tabIndex={0}
+                  aria-label="Contact us"
                 >
                   Get Started
                 </Link>
@@ -112,24 +107,23 @@ export default function Navbar() {
 
             {/* Mobile Menu Button */}
             <motion.button
-              className="lg:hidden text-white z-60 relative p-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20"
+              className="lg:hidden text-white z-60 relative p-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 focus:outline-none focus:ring-2 focus:ring-purple-400"
               onClick={() => setIsMobileMenuOpen(true)}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
+              aria-label="Open mobile menu"
+              aria-haspopup="true"
+              aria-expanded={isMobileMenuOpen}
             >
               <Menu className="h-6 w-6" />
             </motion.button>
-          </div>
+          </nav>
         </div>
-
-        
       </motion.header>
 
       {/* Mobile Menu */}
       <MobileMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
 
-      {/* Search Modal */}
-      <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
 
       {/* Notification Panel */}
       <NotificationPanel isOpen={isNotificationOpen} onClose={() => setIsNotificationOpen(false)} />

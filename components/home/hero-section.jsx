@@ -20,13 +20,13 @@ export default function HeroSection() {
       <HeroBackground mousePosition={mousePosition} />
 
       {/* Main Content */}
-      <div className="relative z-10 min-h-screen max-w-[1600px] mx-auto px-6 lg:px-12">
-        <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-16 min-h-screen items-center py-20">
+      <div className="relative z-30 min-h-screen max-w-[1600px] mx-auto px-6 lg:px-12 bg-transparent">
+        <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-20 min-h-[60vh] items-center py-24">
           {/* Left Column - Main Content */}
           <div className="space-y-12">
             <AwardBadge />
             <HeroHeading />
-            <HeroStats />
+            {/* <HeroStats /> removed as requested */}
           </div>
 
           {/* Right Column - Product Showcase */}
