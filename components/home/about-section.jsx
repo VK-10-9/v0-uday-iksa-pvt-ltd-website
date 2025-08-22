@@ -5,40 +5,43 @@ import { Sun, Award, Users, Building2, Target, Eye, Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
-export default function AboutSection() {
-  const stats = [
-    { icon: Building2, number: "500+", label: "Projects Delivered", color: "text-purple-400" },
-    { icon: Users, number: "15+", label: "Years of Excellence", color: "text-teal-400" },
-    { icon: Award, number: "10+", label: "Industry Awards", color: "text-yellow-400" },
-  ]
 
-  const values = [
-    {
-      icon: Eye,
-      title: "Vision",
-      description:
-        "Creating a world where sustainable and healthy living is accessible to all through innovative natural daylight and ventilation engineering.",
-      gradient: "from-purple-500 to-pink-500",
-    },
-    {
-      icon: Target,
-      title: "Mission",
-      description:
-        "Continuously upgrading our products to match modernizing structures, developing fine engineered solutions that are technician-friendly and aesthetic.",
-      gradient: "from-teal-500 to-blue-500",
-    },
-    {
-      icon: Heart,
-      title: "Values",
-      description:
-        "Upholding the highest standards of ethics, recognizing our profound impact on individuals, communities, and society through sustainable innovation.",
-      gradient: "from-orange-500 to-red-500",
-    },
-  ]
+// Stats and company values for About section
+const stats = [
+  { icon: Building2, number: "500+", label: "Projects Delivered", color: "text-purple-400" },
+  { icon: Users, number: "15+", label: "Years of Excellence", color: "text-teal-400" },
+  { icon: Award, number: "10+", label: "Industry Awards", color: "text-yellow-400" },
+]
+
+const values = [
+  {
+    icon: Eye,
+    title: "Vision",
+    description:
+      "Creating a world where sustainable and healthy living is accessible to all through innovative natural daylight and ventilation engineering.",
+    gradient: "from-purple-500 to-pink-500",
+  },
+  {
+    icon: Target,
+    title: "Mission",
+    description:
+      "Continuously upgrading our products to match modernizing structures, developing fine engineered solutions that are technician-friendly and aesthetic.",
+    gradient: "from-teal-500 to-blue-500",
+  },
+  {
+    icon: Heart,
+    title: "Values",
+    description:
+      "Upholding the highest standards of ethics, recognizing our profound impact on individuals, communities, and society through sustainable innovation.",
+    gradient: "from-orange-500 to-red-500",
+  },
+]
+
+export default function AboutSection() {
 
   return (
     <section id="about" className="py-32 relative bg-gradient-to-b from-slate-950 to-slate-900">
-      {/* Background Elements */}
+      {/* Animated background elements for visual interest */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
           className="absolute top-20 right-20 w-72 h-72 bg-purple-500/5 rounded-full blur-3xl"
@@ -53,7 +56,7 @@ export default function AboutSection() {
       </div>
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
-        {/* Section Header */}
+        {/* Section header: title and intro */}
         <motion.div
           className="text-center mb-20"
           initial={{ opacity: 0, y: 50 }}
@@ -86,7 +89,7 @@ export default function AboutSection() {
           </p>
         </motion.div>
 
-        {/* Stats Section */}
+        {/* Stats: projects, years, awards */}
         <motion.div
           className="grid md:grid-cols-3 gap-8 mb-20"
           initial={{ opacity: 0, y: 30 }}
@@ -117,7 +120,7 @@ export default function AboutSection() {
           ))}
         </motion.div>
 
-        {/* Values Grid */}
+        {/* Company values: vision, mission, values */}
         <div className="grid lg:grid-cols-3 gap-8 mb-20">
           {values.map((value, index) => (
             <motion.div
@@ -146,7 +149,7 @@ export default function AboutSection() {
           ))}
         </div>
 
-        {/* CTA Section */}
+        {/* CTA: links to About and Contact */}
         <motion.div
           className="text-center"
           initial={{ opacity: 0, y: 30 }}

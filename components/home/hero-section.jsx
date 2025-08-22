@@ -7,29 +7,30 @@ import { products } from "@/lib/data/products"
 import HeroBackground from "@/components/hero/HeroBackground"
 import AwardBadge from "@/components/hero/AwardBadge"
 import HeroHeading from "@/components/hero/HeroHeading"
-import HeroStats from "@/components/hero/HeroStats"
 import ProductShowcase from "@/components/hero/ProductShowcase"
 
 export default function HeroSection() {
+  // State for hovered and active product in the showcase
   const [hoveredProduct, setHoveredProduct] = useState(null)
   const mousePosition = useMouseTracking()
   const [activeProduct, setActiveProduct] = useProductRotation(products.length)
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      {/* Animated background that responds to mouse movement */}
       <HeroBackground mousePosition={mousePosition} />
 
-      {/* Main Content */}
+      {/* Main content grid: left (info), right (product showcase) */}
       <div className="relative z-30 min-h-screen max-w-[1600px] mx-auto px-6 lg:px-12 bg-transparent">
         <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-20 min-h-[60vh] items-center py-24">
-          {/* Left Column - Main Content */}
+          {/* Left: Company badge and heading */}
           <div className="space-y-12">
             <AwardBadge />
             <HeroHeading />
-            {/* <HeroStats /> removed as requested */}
+            {/* HeroStats removed as requested for cleaner UI */}
           </div>
 
-          {/* Right Column - Product Showcase */}
+          {/* Right: Interactive product showcase */}
           <div className="relative">
             <ProductShowcase
               activeProduct={activeProduct}
