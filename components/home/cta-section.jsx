@@ -93,7 +93,7 @@ export default function CTASection() {
                   </HoverButton>
                 </Link>
 
-                <Link href="/innovations" className="block">
+                <Link href="/products" className="block">
                   <button className="w-full sm:w-auto flex items-center justify-center gap-4 px-16 py-6 border-2 border-white/10 hover:border-brand-orange-500/50 rounded-2xl text-white text-xl font-black uppercase tracking-widest transition-all duration-300 group backdrop-blur-md">
                     <Sparkles className="h-6 w-6 text-brand-orange-500" />
                     <span>Explore Tech</span>

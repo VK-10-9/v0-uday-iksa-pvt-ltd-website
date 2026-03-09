@@ -62,7 +62,7 @@ export default function InnovationsSection() {
           </motion.div>
 
           <h2 className="text-5xl lg:text-8xl font-black mb-8 text-white uppercase tracking-tighter leading-none">
-            Strategic <span className="brand-gradient-text">Innovations</span>
+            Strategic <span className="brand-gradient-text">Products</span>
           </h2>
 
           <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-medium">
@@ -172,7 +172,7 @@ export default function InnovationsSection() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center relative z-10">
-              <Link href="/innovations">
+              <Link href="/products">
                 <button className="px-12 py-5 bg-white text-black hover:bg-brand-orange-500 hover:text-white transition-all duration-500 rounded-2xl text-sm font-black uppercase tracking-widest shadow-xl shadow-white/5">
                   Full Tech Stack
                   <ArrowRight className="ml-3 h-5 w-5" />

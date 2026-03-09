@@ -170,7 +170,7 @@ export default function SolutionsOverview() {
                         </div>
 
                         <div className="pt-8">
-                            <Link href="/innovations">
+                            <Link href="/products">
                                 <Button size="lg" className="bg-brand-orange-500 text-white hover:bg-white hover:text-black rounded-2xl px-12 py-8 text-sm font-black uppercase tracking-widest shadow-2xl shadow-brand-orange-500/20 transition-all duration-500 flex items-center gap-4 group">
                                     Compare Our Sky Lights <ArrowRight className="h-5 w-5 group-hover:translate-x-2 transition-transform" />
                                 </Button>
@@ -193,7 +193,7 @@ export default function SolutionsOverview() {
                     <p className="text-2xl text-gray-400 font-medium max-w-4xl mx-auto mb-12">
                         Designed, manufactured, and installed by our experts in Hubballi for businesses and families across India.
                     </p>
-                    <Link href="/innovations">
+                    <Link href="/products">
                         <Button variant="outline" className="border-white/20 text-white hover:bg-brand-orange-500 hover:border-brand-orange-500 rounded-2xl px-12 py-8 text-sm font-black uppercase tracking-widest transition-all">
                             View All Our Systems
                         </Button>

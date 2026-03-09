@@ -55,8 +55,8 @@ export default function MobileMenu({ isOpen, onClose }) {
       color: "text-brand-amber-500",
     },
     {
-      name: "Innovations",
-      href: "/innovations",
+      name: "Products",
+      href: "/products",
       icon: <Lightbulb className="h-5 w-5" />,
       color: "text-brand-orange-400",
     },

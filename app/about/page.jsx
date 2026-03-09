@@ -187,7 +187,7 @@ export default function AboutPage() {
               Join 500+ buildings that have already switched to natural sky light and ventilation.
             </p>
             <div className="flex flex-wrap justify-center gap-6 relative z-10">
-              <Link href="/innovations">
+              <Link href="/products">
                 <HoverButton className="bg-white text-black hover:bg-black hover:text-white px-12 py-5 rounded-2xl font-black uppercase tracking-widest transition-colors mb-4 sm:mb-0">
                   See Our Systems <ArrowRight className="ml-3 h-5 w-5" />
                 </HoverButton>

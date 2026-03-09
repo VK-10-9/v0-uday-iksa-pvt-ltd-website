@@ -366,7 +366,7 @@ export default function ContactPage() {
             <p className="text-xl text-white/80 max-w-3xl mx-auto mb-12 leading-relaxed relative z-10 font-medium">
               Join 500+ buildings that have already switched to natural sky light and ventilation.
             </p>
-            <Link href="/innovations">
+            <Link href="/products">
               <HoverButton className="bg-white text-black hover:bg-black hover:text-white transition-colors text-lg px-12 py-5 rounded-2xl font-black relative z-10 uppercase tracking-widest">
                 See Our Systems <ArrowRight className="ml-3 h-6 w-6" />
               </HoverButton>

@@ -6,7 +6,7 @@ import { Search, X, Clock, TrendingUp, ArrowRight, Sparkles } from "lucide-react
 import Link from "next/link"
 
 const searchSuggestions = [
-  { title: "NANOSUN Daylight Systems", type: "Industrial Product", href: "/innovations" },
+  { title: "NANOSUN Daylight Systems", type: "Industrial Product", href: "/products" },
   { title: "Industrial Portfolio", type: "Projects", href: "/projects" },
   { title: "About Uday IKSA", type: "Corporate", href: "/about" },
   { title: "Contact Engineering", type: "Support", href: "/contact" },

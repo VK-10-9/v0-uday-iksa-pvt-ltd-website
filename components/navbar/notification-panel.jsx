@@ -20,7 +20,7 @@ const notifications = [
     title: "Tech Update",
     message: "NANOSUN 3.0 Engineering documentation now available.",
     time: "1 day ago",
-    href: "/innovations",
+    href: "/products",
     unread: true,
   },
   {

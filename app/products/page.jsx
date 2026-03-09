@@ -34,7 +34,7 @@ export default function InnovationsPage() {
       subtitle: "Future Systems",
       description: "Our ongoing commitment to industrial innovation through specialized research in natural building physics and sustainable materials.",
       image: "/images/research-lab.jpg",
-      link: "/innovations/research",
+      link: "/products/research",
       icon: Lightbulb,
     }
   ]

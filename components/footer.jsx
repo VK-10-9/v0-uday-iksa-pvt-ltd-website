@@ -98,11 +98,11 @@ export default function Footer() {
             <h3 className="text-xs font-black text-white mb-10 uppercase tracking-[0.3em] pl-4 border-l-2 border-brand-orange-500">Core Systems</h3>
             <ul className="space-y-6">
               {[
-                { name: 'NANOSUN DAYLIGHT', href: '/innovations' },
-                { name: 'NANOVENT VENTILATION', href: '/innovations' },
-                { name: 'SKYTUBE TUBULAR', href: '/innovations' },
-                { name: 'CUSTOM ENGINEERING', href: '/innovations' },
-                { name: 'OPTIMIZATION SERVICES', href: '/innovations' },
+                { name: 'NANOSUN DAYLIGHT', href: '/products' },
+                { name: 'NANOVENT VENTILATION', href: '/products' },
+                { name: 'SKYTUBE TUBULAR', href: '/products' },
+                { name: 'CUSTOM ENGINEERING', href: '/products' },
+                { name: 'OPTIMIZATION SERVICES', href: '/products' },
               ].map((item) => (
                 <li key={item.name}>
                   <Link

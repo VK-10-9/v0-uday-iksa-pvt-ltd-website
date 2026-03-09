@@ -77,7 +77,7 @@ export default function DesktopNav({ active, setActive }) {
           </div>
         </MenuItem>
 
-        <MenuItem setActive={setActive} active={active} item="Innovations">
+        <MenuItem setActive={setActive} active={active} item="Products">
           <div className="text-sm grid p-8 w-[920px]">
             <div className="text-[10px] font-black text-gray-500 uppercase tracking-[0.3em] mb-10 pb-4 border-b border-white/5">Industrial Product Line</div>
             <div className="grid grid-cols-2 gap-x-16 gap-y-12">
@@ -94,7 +94,7 @@ export default function DesktopNav({ active, setActive }) {
 
             <div className="pt-12 mt-12 border-t border-white/5">
               <Link
-                href="/innovations"
+                href="/products"
                 className="flex items-center justify-between group"
               >
                 <span className="font-black tracking-[0.3em] uppercase text-[10px] text-brand-orange-400">View Comprehensive Solutions</span>
