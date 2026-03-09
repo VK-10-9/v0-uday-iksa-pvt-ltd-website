@@ -113,7 +113,7 @@ export default function NanoventPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-40">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -131,6 +131,49 @@ export default function NanoventPage() {
               </motion.div>
             ))}
           </div>
+
+          {/* Premium Technical Architecture Grid */}
+          <motion.div
+            className="bg-white/[0.03] border border-white/5 rounded-[60px] overflow-hidden"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="p-12 border-b border-white/5 flex flex-col md:flex-row justify-between items-end gap-6">
+              <div>
+                <h3 className="text-3xl font-black text-white uppercase tracking-tighter mb-2">Aerodynamic Architecture</h3>
+                <p className="text-brand-orange-500 font-black uppercase tracking-[0.4em] text-[10px]">Industrial Air-Exchange Standards</p>
+              </div>
+              <div className="flex gap-4">
+                <div className="text-right">
+                  <p className="text-white font-black text-2xl leading-none">2450</p>
+                  <p className="text-[8px] text-gray-500 uppercase font-black tracking-widest">m³/h (Max Extraction)</p>
+                </div>
+                <div className="w-px h-10 bg-white/10" />
+                <div className="text-right">
+                  <p className="text-white font-black text-2xl leading-none">240km/h</p>
+                  <p className="text-[8px] text-gray-500 uppercase font-black tracking-widest">Wind Resilience</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 divide-x divide-y divide-white/5">
+              {[
+                { label: "Ventiation Dynamics", value: "Stack-Effect Optimized", sub: "Passive air extraction using building thermal gradients" },
+                { label: "Material Engineering", value: "Naval-Grade Shell", sub: "Corrosion-proof fiberglass and aluminum construction" },
+                { label: "Operational Safety", value: "Hurricane Tested", sub: "Certified performance at extreme wind velocities" },
+                { label: "Maintenance", value: "Self-Cleaning Profile", sub: "No moving parts, no mechanical lubricaton required" },
+                { label: "Control Systems", value: "Smart Damper Ready", sub: "Compatible with automated building management systems" },
+                { label: "Sustainable Impact", value: "Carbon-Neutral Flow", sub: "Offsets hundreds of tons of CO2 over a 15-year life" },
+              ].map((spec, i) => (
+                <div key={i} className="p-12 hover:bg-white/[0.02] transition-colors group">
+                  <p className="text-gray-600 font-bold uppercase tracking-widest text-[9px] mb-4 group-hover:text-brand-orange-500 transition-colors">{spec.label}</p>
+                  <p className="text-white font-black uppercase tracking-tight text-xl mb-2">{spec.value}</p>
+                  <p className="text-gray-500 text-[10px] leading-tight font-medium">{spec.sub}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
 

@@ -113,6 +113,49 @@ export default function InnovationsPage() {
         </div>
       </section>
 
+      {/* Engineering Standards (Inspired by LAMILUX) */}
+      <section className="py-40 relative px-6 lg:px-12 bg-slate-900/30 border-y border-white/5">
+        <div className="container mx-auto">
+          <div className="text-center mb-24">
+            <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter mb-4">The Standard of <span className="brand-gradient-text">Excellence</span></h2>
+            <p className="text-gray-500 font-medium uppercase tracking-[0.3em] text-[10px]">Global Quality Benchmarks</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-12">
+            {[
+              {
+                title: "Thermal Precision",
+                desc: "Every module is engineered for zero thermal bridging, maintaining consistent indoor climates regardless of external extreme temperatures.",
+                metric: "0.6 Uw Optimized"
+              },
+              {
+                title: "Structural Rigidity",
+                desc: "Tested against extreme wind-loads and snow-drift scenarios. Our frames utilize aeronautical-grade alloys for permanent integrity.",
+                metric: "EN 12101 Compliant"
+              },
+              {
+                title: "Spectral Clarity",
+                desc: "Our prismatic lenses are designed to filter out 99.9% of harmful UV and IR, delivering the pure visible spectrum for human well-being.",
+                metric: "99% UV/IR Decoupled"
+              }
+            ].map((std, i) => (
+              <motion.div
+                key={i}
+                className="p-10 bg-white/[0.02] rounded-[40px] border border-white/5 hover:border-brand-orange-500/30 transition-all"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+              >
+                <div className="text-brand-orange-500 font-black text-3xl mb-4 tracking-tighter">{std.metric}</div>
+                <h4 className="text-white font-black uppercase tracking-wider text-sm mb-4">{std.title}</h4>
+                <p className="text-gray-500 text-xs leading-relaxed font-medium">{std.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA Section */}
       <section className="py-40 relative px-6 lg:px-12">
         <div className="container mx-auto">

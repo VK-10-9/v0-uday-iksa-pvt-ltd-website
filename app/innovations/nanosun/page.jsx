@@ -114,7 +114,7 @@ export default function NanosunPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-40">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -132,6 +132,49 @@ export default function NanosunPage() {
               </motion.div>
             ))}
           </div>
+
+          {/* Premium Technical Specs Table (Inspired by LAMILUX) */}
+          <motion.div
+            className="bg-white/[0.03] border border-white/5 rounded-[60px] overflow-hidden"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="p-12 border-b border-white/5 flex flex-col md:flex-row justify-between items-end gap-6">
+              <div>
+                <h3 className="text-3xl font-black text-white uppercase tracking-tighter mb-2">Technical Architecture</h3>
+                <p className="text-brand-orange-500 font-black uppercase tracking-[0.4em] text-[10px]">Precision Metrics & Standards</p>
+              </div>
+              <div className="flex gap-4">
+                <div className="text-right">
+                  <p className="text-white font-black text-2xl leading-none">0.63</p>
+                  <p className="text-[8px] text-gray-500 uppercase font-black tracking-widest">W/m²K (U-Value)</p>
+                </div>
+                <div className="w-px h-10 bg-white/10" />
+                <div className="text-right">
+                  <p className="text-white font-black text-2xl leading-none">39dB</p>
+                  <p className="text-[8px] text-gray-500 uppercase font-black tracking-widest">Sound Reduction</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 divide-x divide-y divide-white/5">
+              {[
+                { label: "Thermal Conductivity", value: "Thermal Bridge-Free Construction", sub: "Uw Values optimized for high productivity" },
+                { label: "Solar Energy Protection", value: "99% UV/IR Decoupling", sub: "G-values engineered for equatorial heat paths" },
+                { label: "Structural Integrity", value: "Structural Glazing Design", sub: "Tested for high wind-load and snow-drift safety" },
+                { label: "Material Excellence", value: "Aeronautical Grade Aluminum", sub: "Corrosion-proof, maintenance-free industrial frame" },
+                { label: "Digital Precision", value: "BIM-Ready Assets", sub: "Instant integration for international architects" },
+                { label: "Installation Safety", value: "Fully Pre-Assembled", sub: "Rapid on-roof deployment with leak-proof seals" },
+              ].map((spec, i) => (
+                <div key={i} className="p-12 hover:bg-white/[0.02] transition-colors group">
+                  <p className="text-gray-600 font-bold uppercase tracking-widest text-[9px] mb-4 group-hover:text-brand-orange-500 transition-colors">{spec.label}</p>
+                  <p className="text-white font-black uppercase tracking-tight text-xl mb-2">{spec.value}</p>
+                  <p className="text-gray-500 text-[10px] leading-tight font-medium">{spec.sub}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
 
