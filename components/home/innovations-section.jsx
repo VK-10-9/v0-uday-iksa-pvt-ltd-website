@@ -66,7 +66,7 @@ export default function InnovationsSection() {
           </h2>
 
           <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-medium">
-            Advanced daylighting and ventilation ecosystems engineered for specialized industrial and commercial complexes.
+            Advanced light and air systems engineered for modern homes and industrial complexes.
           </p>
         </motion.div>
 
@@ -124,11 +124,11 @@ export default function InnovationsSection() {
                         >
                           <div className="grid gap-3">
                             {product.features.map((feature, idx) => (
-                              <div key={idx} className="flex items-center gap-3">
-                                <div className="p-1 rounded-md bg-brand-orange-500/20 text-brand-orange-500">
+                              <div key={idx} className="flex items-center gap-3 group/feat">
+                                <div className="p-1 rounded-md bg-brand-orange-500/20 text-brand-orange-500 group-hover/feat:bg-brand-orange-500 group-hover/feat:text-white transition-colors">
                                   <ShieldCheck className="h-3 w-3" />
                                 </div>
-                                <span className="text-[10px] text-gray-200 uppercase font-black tracking-widest leading-none">{feature}</span>
+                                <span className="text-[10px] text-gray-200 uppercase font-black tracking-widest leading-none">{feature.title}</span>
                               </div>
                             ))}
                           </div>

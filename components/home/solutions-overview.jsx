@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Sun, Wind, CheckCircle2, Factory, Sparkles, ArrowRight } from "lucide-react"
+import { Sun, Wind, CheckCircle2, Factory, Sparkles, ArrowRight, Building2, Home } from "lucide-react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
@@ -24,7 +24,7 @@ export default function SolutionsOverview() {
 
             <div className="container mx-auto relative z-10">
                 <div className="grid lg:grid-cols-2 gap-24 items-center">
-                    {/* Left Side: Images Grid (Inspired by Slide 1) */}
+                    {/* Left Side: Images Grid */}
                     <div className="relative">
                         <div className="grid grid-cols-2 gap-4">
                             <motion.div
@@ -48,8 +48,8 @@ export default function SolutionsOverview() {
                                 transition={{ delay: 0.2 }}
                             >
                                 <Image
-                                    src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80"
-                                    alt="Roof Ventilation"
+                                    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80"
+                                    alt="Modern Home Skylight"
                                     fill
                                     className="object-cover"
                                 />
@@ -91,46 +91,64 @@ export default function SolutionsOverview() {
                                 viewport={{ once: true }}
                                 className="inline-flex items-center gap-3 bg-brand-orange-500/10 border border-brand-orange-500/20 rounded-full px-8 py-2.5 mb-10"
                             >
-                                <Factory className="h-4 w-4 text-brand-orange-500" />
-                                <span className="text-[10px] font-black text-brand-orange-400 uppercase tracking-[0.4em]">Integrated Engineering</span>
+                                <div className="flex -space-x-2">
+                                    <Home className="h-4 w-4 text-brand-orange-500" />
+                                    <Building2 className="h-4 w-4 text-brand-orange-500 bg-slate-950 rounded-full" />
+                                </div>
+                                <span className="text-[10px] font-black text-brand-orange-400 uppercase tracking-[0.4em]">Home & Company Solutions</span>
                             </motion.div>
                             <h2 className="text-6xl lg:text-8xl font-black text-white uppercase tracking-tighter leading-[0.9] mb-8">
-                                Harnessing <span className="brand-gradient-text">Daylight</span> <br /> & Ventilation
+                                Pure Light <br /><span className="brand-gradient-text">Anywhere</span>
                             </h2>
                             <p className="text-2xl text-gray-400 font-medium leading-relaxed max-w-xl">
-                                Advanced solar harvesting and natural cooling systems—precision engineered for Industrial, Commercial, and Greentech Infrastructure.
+                                Whether it's a massive factory floor or your favorite reading nook at home—we bring the sun inside.
                             </p>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <motion.div
-                                className="col-span-full bg-white/[0.03] border border-white/5 p-6 rounded-3xl mb-4"
+                                className="col-span-full bg-white/[0.03] border border-white/5 p-10 rounded-[40px] mb-4"
                                 initial={{ opacity: 0, y: 10 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                             >
-                                <h4 className="text-brand-orange-500 font-black uppercase tracking-[0.2em] text-[10px] mb-3">Smart Optical System</h4>
-                                <div className="grid grid-cols-3 gap-4 text-center">
-                                    <div>
-                                        <div className="text-white font-bold text-xs mb-1">Capture</div>
-                                        <div className="text-[10px] text-gray-500 uppercase">Optical Collector</div>
+                                <h4 className="text-brand-orange-500 font-black uppercase tracking-[0.2em] text-[10px] mb-8">How we light your space</h4>
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                                    <div className="space-y-4">
+                                        <div className="text-white font-black uppercase text-sm tracking-widest flex items-center gap-2">
+                                            <span className="bg-brand-orange-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-[10px]">1</span>
+                                            Collect
+                                        </div>
+                                        <div className="text-[11px] text-gray-500 leading-relaxed">
+                                            A clear, unbreakable dome on your roof collects the sunlight from every direction.
+                                        </div>
                                     </div>
-                                    <div>
-                                        <div className="text-white font-bold text-xs mb-1">Direct</div>
-                                        <div className="text-[10px] text-gray-500 uppercase">Light Reflector</div>
+                                    <div className="space-y-4">
+                                        <div className="text-white font-black uppercase text-sm tracking-widest flex items-center gap-2">
+                                            <span className="bg-brand-orange-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-[10px]">2</span>
+                                            Move
+                                        </div>
+                                        <div className="text-[11px] text-gray-500 leading-relaxed">
+                                            A highly reflective pipe moves that light downward—even through your ceiling or attic.
+                                        </div>
                                     </div>
-                                    <div>
-                                        <div className="text-white font-bold text-xs mb-1">Diffuse</div>
-                                        <div className="text-[10px] text-gray-500 uppercase">Optical Diffuser</div>
+                                    <div className="space-y-4">
+                                        <div className="text-white font-black uppercase text-sm tracking-widest flex items-center gap-2">
+                                            <span className="bg-brand-orange-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-[10px]">3</span>
+                                            Spread
+                                        </div>
+                                        <div className="text-[11px] text-gray-500 leading-relaxed">
+                                            A soft glass panel at the ceiling spreads the light evenly so your whole room glows beautifully.
+                                        </div>
                                     </div>
                                 </div>
                             </motion.div>
 
                             {[
-                                { title: "Patented Tech", description: "Exclusive solar harvesting technology with 99% light transmission." },
-                                { title: "Eco-Friendly", description: "Zero-electricity operation reducing carbon footprints significantly." },
-                                { title: "Well-being", description: "Maintaining circadian rhythms for better workplace productivity." },
-                                { title: "Leak-Proof", description: "Precision-engineered industrial seals for zero-maintenance life." },
+                                { title: "No Electricity", description: "Nature provides the light for free—your lights stay off all day, at home or work." },
+                                { title: "Pure Comfort", description: "Blocks heat and UV rays—so your space stays cool and your furniture doesn't fade." },
+                                { title: "Lifetime Leak-Proof", description: "Precision seals for metal roofs or concrete. Zero rain enters your building." },
+                                { title: "Health First", description: "Natural light helps you focus better at work and sleep better at home." },
                             ].map((feature, idx) => (
                                 <motion.div
                                     key={idx}
@@ -154,14 +172,14 @@ export default function SolutionsOverview() {
                         <div className="pt-8">
                             <Link href="/innovations">
                                 <Button size="lg" className="bg-brand-orange-500 text-white hover:bg-white hover:text-black rounded-2xl px-12 py-8 text-sm font-black uppercase tracking-widest shadow-2xl shadow-brand-orange-500/20 transition-all duration-500 flex items-center gap-4 group">
-                                    Explore Solutions <ArrowRight className="h-5 w-5 group-hover:translate-x-2 transition-transform" />
+                                    Compare Our Sky Lights <ArrowRight className="h-5 w-5 group-hover:translate-x-2 transition-transform" />
                                 </Button>
                             </Link>
                         </div>
                     </div>
                 </div>
 
-                {/* Local Highlight (Inspired by Slide 3) */}
+                {/* Local Highlight */}
                 <motion.div
                     className="mt-40 bg-white/[0.03] backdrop-blur-2xl border border-white/5 p-12 lg:p-20 rounded-[80px] text-center relative group overflow-hidden"
                     initial={{ opacity: 0, y: 50 }}
@@ -170,14 +188,16 @@ export default function SolutionsOverview() {
                 >
                     <div className="absolute top-0 right-0 w-96 h-96 bg-brand-amber-500/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
                     <h3 className="text-4xl lg:text-6xl font-black text-white uppercase tracking-tighter mb-8 leading-tight">
-                        Brighten Your Space with <span className="brand-gradient-text">Nano-Sun</span>
+                        Built for <span className="brand-gradient-text">Homes & Factories</span>
                     </h3>
                     <p className="text-2xl text-gray-400 font-medium max-w-4xl mx-auto mb-12">
-                        Naturally in Hubli & North Karnataka—pioneering the future of green architecture in our home region and beyond.
+                        Designed, manufactured, and installed by our experts in Hubballi for businesses and families across India.
                     </p>
-                    <Button variant="outline" className="border-white/20 text-white hover:bg-brand-orange-500 hover:border-brand-orange-500 rounded-2xl px-12 py-8 text-sm font-black uppercase tracking-widest transition-all">
-                        Know More About Nano-Sun
-                    </Button>
+                    <Link href="/innovations">
+                        <Button variant="outline" className="border-white/20 text-white hover:bg-brand-orange-500 hover:border-brand-orange-500 rounded-2xl px-12 py-8 text-sm font-black uppercase tracking-widest transition-all">
+                            View All Our Systems
+                        </Button>
+                    </Link>
                 </motion.div>
             </div>
         </section>

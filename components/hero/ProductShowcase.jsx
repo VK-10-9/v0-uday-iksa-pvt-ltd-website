@@ -54,17 +54,19 @@ export default function ProductShowcase({ activeProduct, setActiveProduct, hover
               </span>
             </div>
             <p className="text-gray-200 text-lg max-w-lg leading-relaxed">{currentProduct.description}</p>
-            <div className="flex gap-6 pt-2">
-              <div className="space-y-1">
-                <span className="text-brand-orange-400 text-xs font-bold uppercase tracking-widest">Efficiency</span>
-                <p className="text-white font-bold text-lg">{currentProduct.stats}</p>
+            {currentProduct.stats && (
+              <div className="flex gap-10 pt-4 flex-wrap">
+                {currentProduct.stats.slice(0, 2).map((stat, i) => (
+                  <div key={i} className="flex items-center gap-4">
+                    <div className="w-1 h-8 bg-brand-orange-500 rounded-full" />
+                    <div>
+                      <p className="text-[10px] font-black text-brand-orange-400 uppercase tracking-widest leading-none mb-1.5">{stat.label}</p>
+                      <p className="text-white font-black text-lg leading-none tracking-tight">{stat.value}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <div className="w-px h-10 bg-white/10" />
-              <div className="space-y-1">
-                <span className="text-brand-amber-400 text-xs font-bold uppercase tracking-widest">Core Benefit</span>
-                <p className="text-white font-bold text-lg">{currentProduct.benefit}</p>
-              </div>
-            </div>
+            )}
           </motion.div>
         </div>
       </motion.div>

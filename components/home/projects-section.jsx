@@ -7,9 +7,9 @@ import Link from "next/link"
 
 export default function ProjectsSection() {
   const projects = [
+    { name: "Luxury Villa, Hubballi", type: "Residential", location: [15.3647, 75.1240] },
     { name: "Industrial Complex, Mumbai", type: "Industrial", location: [19.076, 72.8777] },
     { name: "Tech Park, Bangalore", type: "Commercial", location: [12.9716, 77.5946] },
-    { name: "Educational Campus, Delhi", type: "Institutional", location: [28.7041, 77.1025] },
     { name: "Manufacturing Plant, Chennai", type: "Industrial", location: [13.0827, 80.2707] },
     { name: "Corporate Headquarters, Hyderabad", type: "Commercial", location: [17.385, 78.4867] },
   ]
@@ -32,7 +32,7 @@ export default function ProjectsSection() {
             Strategic <span className="brand-gradient-text">Presence</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Leading the sustainable energy transition across major industrial hubs and commercial centers throughout the subcontinent.
+            Leading the sustainable energy transition across homes, offices, and major industrial hubs throughout India.
           </p>
         </div>
 

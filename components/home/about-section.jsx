@@ -8,7 +8,7 @@ import Link from "next/link"
 export default function AboutSection() {
   const stats = [
     { icon: Building2, number: "500+", label: "Projects Delivered", color: "text-brand-orange-500" },
-    { icon: Users, number: "15+", label: "Years Excellence", color: "text-brand-amber-500" },
+    { icon: Users, number: "15+", label: "Years in Business", color: "text-brand-amber-500" },
     { icon: Award, number: "10+", label: "Industry Awards", color: "text-brand-yellow-500" },
   ]
 
@@ -17,20 +17,20 @@ export default function AboutSection() {
       icon: Eye,
       title: "Vision",
       description:
-        "Democratizing sustainable architecture by providing highly-engineered natural lighting and ventilation ecosystems.",
+        "A future where every building in India uses the sun's free energy — instead of paying for artificial light.",
       gradient: "from-brand-orange-500 to-brand-red-600",
     },
     {
       title: "Mission",
       description:
-        "Continuously upgrading our engineering frameworks to deliver technician-friendly, aesthetic, and high-performance solutions.",
+        "To make natural daylighting and ventilation easy, affordable, and accessible for every type of building — from a small home to a large factory.",
       icon: Target,
       gradient: "from-brand-amber-500 to-brand-orange-500",
     },
     {
       title: "Values",
       description:
-        "Upholding the highest ethical standards in engineering, recognizing our impact on communities and the environment.",
+        "Honest engineering. What we promise, we deliver — safely, sustainably, and with care for the people who use our products.",
       icon: Heart,
       gradient: "from-brand-red-500 to-brand-orange-600",
     },
@@ -54,25 +54,26 @@ export default function AboutSection() {
           >
             <div className="inline-flex items-center gap-3 bg-white/5 border border-white/10 rounded-full px-8 py-2.5 mb-10 backdrop-blur-md">
               <Sparkles className="h-4 w-4 text-brand-orange-500" />
-              <h2 className="text-[10px] font-black text-gray-400 uppercase tracking-[0.4em]">Inside Uday IKSA</h2>
+              <h2 className="text-[10px] font-black text-gray-400 uppercase tracking-[0.4em]">The Uday IKSA Story</h2>
             </div>
-            <h2 className="text-6xl md:text-8xl font-black text-white mb-10 tracking-tighter uppercase leading-none">
-              Welcome to <br /> <span className="brand-gradient-text text-7xl md:text-9xl">Uday IKSA</span>
+            <h2 className="text-4xl md:text-7xl font-black text-white mb-10 tracking-tighter uppercase leading-none">
+              Lighting Up <br /> <span className="brand-gradient-text">India, Naturally</span>
             </h2>
             <div className="space-y-6 text-gray-400 text-lg leading-relaxed font-medium mb-12 max-w-xl">
               <p>
-                Uday Iksa Pvt Ltd, based in Hubli, India, is a leading company in the manufacturing industry, specializing in
-                <span className="text-white"> natural daylight and ventilation solutions</span>. With over 15 years of experience, we have made a significant impact on green energy sectors across India.
+                Uday IKSA started with one simple idea: <span className="text-white">buildings shouldn't need to burn electricity</span> just to stay bright during the day.
               </p>
               <p>
-                We offer end-to-end solutions—from design and manufacturing to installation and implementation of
-                <span className="text-brand-orange-400"> NANOSUN</span> and <span className="text-brand-red-400"> NANOVENT</span> systems.
+                Based in Hubballi, Karnataka, we design and manufacture <span className="text-white font-bold">natural sky lights</span> and <span className="text-white font-bold">roof ventilation systems</span> that are installed across India — in factories, warehouses, schools, hospitals, offices, and even homes.
+              </p>
+              <p className="text-sm">
+                Trusted by <span className="text-brand-orange-400 font-black">500+ customers</span>, from small workshops to giants like Tata, HAL, and Indian Railways.
               </p>
             </div>
             <div className="flex flex-wrap gap-8">
               <Link href="/about">
-                <Button size="lg" className="bg-white text-black hover:bg-brand-orange-500 hover:text-white rounded-2xl px-12 py-8 text-sm font-black uppercase tracking-widest shadow-2xl shadow-white/5">
-                  About Our Journey <ArrowRight className="ml-3 h-5 w-5" />
+                <Button size="lg" className="bg-white text-black hover:bg-brand-orange-500 hover:text-white rounded-2xl px-12 py-8 text-xs font-black uppercase tracking-widest shadow-2xl shadow-white/5">
+                  Our Story & Journey <ArrowRight className="ml-3 h-5 w-5" />
                 </Button>
               </Link>
             </div>

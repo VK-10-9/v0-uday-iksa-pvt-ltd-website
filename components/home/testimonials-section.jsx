@@ -11,42 +11,42 @@ export default function TestimonialsSection() {
   const testimonials = [
     {
       id: 1,
-      name: "Rajesh Kumar",
-      position: "Operations Director",
-      company: "Tata Steel",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Rajesh",
+      name: "Krishnappa",
+      position: "Senior Engineer",
+      company: "Bharat Electronics Limited (BEL)",
+      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Krishnappa",
       rating: 5,
       testimonial:
-        "The implementation of Uday IKSA's daylighting systems in our manufacturing facility has been transformative. Not only have we seen significant energy savings, but our workers report a more comfortable and productive environment. The installation was smooth and professional.",
-      project: "Manufacturing Plant",
-      savings: "35% Energy Reduction",
-      impact: "Production Efficiency Boosted"
+        "We installed NANOSUN in our production facility and stopped using tube lights during the day entirely. The difference in our electricity bill was visible from the first month. The installation team was clean and professional.",
+      project: "Production Facility",
+      savings: "Zero Day-Light Bills",
+      impact: "Visible ROI Month 1"
     },
     {
       id: 2,
-      name: "Priya Sharma",
-      position: "Facilities Manager",
-      company: "Infosys Tech Park",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Priya",
+      name: "Indushekhar",
+      position: "Director",
+      company: "Volvo Groups",
+      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Indushekhar",
       rating: 5,
       testimonial:
-        "The daylighting solution provided by Uday IKSA has completely transformed our office environment. Our employees consistently report higher satisfaction with their workspace, and we've seen measurable improvements in productivity. The energy savings have been substantial.",
-      project: "Office Complex",
-      savings: "40% Lighting Costs Saved",
-      impact: "Employee Wellness Improved"
+        "Uday IKSA understood our building's requirements and gave us a solution that fit perfectly. The natural light has made our workspace noticeably better — and the installation was done without disrupting our operations.",
+      project: "Corporate Workspace",
+      savings: "Custom Engineering",
+      impact: "Uninterrupted Operations"
     },
     {
       id: 3,
-      name: "Dr. Sunil Verma",
-      position: "Director",
-      company: "National Science Campus",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sunil",
+      name: "Satish",
+      position: "Engineering Head",
+      company: "Exedy Clutch India Pvt Ltd",
+      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Satish",
       rating: 5,
       testimonial:
-        "The implementation of Uday IKSA's natural lighting systems in our campus buildings has had a profound impact on our learning environment. Students and faculty alike report higher levels of alertness and satisfaction. The energy savings have been substantial.",
-      project: "Educational Campus",
-      savings: "45% Energy Efficiency",
-      impact: "Learning Environment Enhanced"
+        "Our workers are happier. The light feels natural and comfortable, not harsh. And yes — the energy savings are real. We'd recommend Uday IKSA to any manufacturing company.",
+      project: "Manufacturing Hub",
+      savings: "Measurable Energy Drop",
+      impact: "Workforce Well-being"
     },
   ]
 

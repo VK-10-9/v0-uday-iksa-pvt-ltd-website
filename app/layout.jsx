@@ -14,9 +14,9 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 })
 
 export const metadata = {
-  title: "Uday IKSA - Natural Daylight & Ventilation Solutions",
+  title: "Uday IKSA - Natural Sky Lights & Roof Ventilation",
   description:
-    "Leading manufacturer of natural daylight and ventilation systems in India. Award-winning solutions for sustainable and healthy living environments.",
+    "Leading manufacturer of high-performance natural sky lights and roof ventilation systems in India. Stop paying for light and air that nature gives you for free.",
   icons: {
     icon: "/images/logo.png",
   },

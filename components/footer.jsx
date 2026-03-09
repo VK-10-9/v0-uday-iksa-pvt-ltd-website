@@ -35,27 +35,40 @@ export default function Footer() {
               </div>
             </Link>
 
-            <p className="text-gray-400 text-lg leading-relaxed font-medium">
-              India's premier manufacturer of high-performance natural daylight and ventilation systems. Pioneering industrial carbon reduction for over 15 years.
+            <p className="text-gray-400 text-base leading-relaxed font-medium">
+              India's trusted manufacturer of natural daylighting and ventilation systems. Our patented NANOSUN™ and NANOVENT® products are installed across 500+ buildings in 50+ cities.
             </p>
 
             <div className="space-y-6 pt-4">
               <div className="flex items-start gap-4 group/item cursor-pointer">
-                <div className="bg-white/5 p-3 rounded-xl text-brand-orange-500 group-hover/item:bg-brand-orange-500 group-hover/item:text-white transition-all duration-300 shadow-lg">
+                <div className="bg-white/5 p-3 rounded-xl text-brand-orange-500 group-hover/item:bg-brand-orange-500 group-hover/item:text-white transition-all duration-300 shadow-lg shrink-0">
                   <MapPin className="h-5 w-5" />
                 </div>
-                <p className="text-gray-400 text-sm group-hover/item:text-white transition-colors leading-tight">Uday IKSA Pvt Ltd,<br />Hubli, Karnataka, India</p>
+                <div>
+                  <p className="text-gray-400 text-xs font-black uppercase tracking-widest mb-1">Headquarters</p>
+                  <p className="text-gray-500 text-xs group-hover/item:text-white transition-colors leading-tight font-medium">#147, 4th Phase, Akshay Colony, Vidyanagar, Hubballi – 580021</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4 group/item cursor-pointer">
+                <div className="bg-white/5 p-3 rounded-xl text-brand-orange-500 group-hover/item:bg-brand-orange-500 group-hover/item:text-white transition-all duration-300 shadow-lg shrink-0">
+                  <MapPin className="h-5 w-5" />
+                </div>
+                <div>
+                  <p className="text-gray-400 text-xs font-black uppercase tracking-widest mb-1">Factory</p>
+                  <p className="text-gray-500 text-xs group-hover/item:text-white transition-colors leading-tight font-medium">C-391, Gokul Industrial Estate, 2nd Gate Gokul Road, Hubballi – 580030</p>
+                </div>
               </div>
 
               <a href="tel:+918792182631" className="flex items-center gap-4 group/item">
-                <div className="bg-white/5 p-3 rounded-xl text-brand-orange-500 group-hover/item:bg-brand-orange-500 group-hover/item:text-white transition-all duration-300 shadow-lg">
+                <div className="bg-white/5 p-3 rounded-xl text-brand-orange-500 group-hover/item:bg-brand-orange-500 group-hover/item:text-white transition-all duration-300 shadow-lg shrink-0">
                   <Phone className="h-5 w-5" />
                 </div>
-                <span className="text-gray-400 text-sm group-hover/item:text-white transition-colors font-bold">+91 8792182631</span>
+                <span className="text-gray-400 text-sm group-hover/item:text-white transition-colors font-bold">+91 87921 82631</span>
               </a>
 
               <a href="mailto:info@udayiksa.com" className="flex items-center gap-4 group/item">
-                <div className="bg-white/5 p-3 rounded-xl text-brand-orange-500 group-hover/item:bg-brand-orange-500 group-hover/item:text-white transition-all duration-300 shadow-lg">
+                <div className="bg-white/5 p-3 rounded-xl text-brand-orange-500 group-hover/item:bg-brand-orange-500 group-hover/item:text-white transition-all duration-300 shadow-lg shrink-0">
                   <Mail className="h-5 w-5" />
                 </div>
                 <span className="text-gray-400 text-sm group-hover/item:text-white transition-colors font-bold uppercase tracking-widest">info@udayiksa.com</span>

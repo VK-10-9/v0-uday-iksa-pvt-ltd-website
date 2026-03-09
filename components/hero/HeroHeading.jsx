@@ -17,7 +17,7 @@ export default function HeroHeading() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
         >
-          Engineering
+          Let Sunlight
         </motion.span>
         <motion.span
           className="block brand-gradient-text"
@@ -25,7 +25,7 @@ export default function HeroHeading() {
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ delay: 0.8, duration: 0.8, ease: "backOut" }}
         >
-          Tomorrow
+          Do The
         </motion.span>
         <motion.span
           className="block text-white"
@@ -33,7 +33,7 @@ export default function HeroHeading() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 1, duration: 0.8, ease: "easeOut" }}
         >
-          Naturally
+          Work
         </motion.span>
       </h1>
 
@@ -44,17 +44,15 @@ export default function HeroHeading() {
         transition={{ delay: 1.2, duration: 0.8 }}
       >
         <p className="text-xl lg:text-2xl text-gray-400 leading-relaxed font-medium">
-          Pioneering sustainable industrial architecture with{" "}
-          <span className="text-white font-black underline decoration-brand-orange-500/50 underline-offset-8">award-winning</span> natural daylight
-          and ventilation solutions.
+          Stop paying for light that nature gives you for free. <span className="text-white font-black">Uday IKSA</span> brings natural sunlight and fresh air into your factory, office, home, or school — no electricity, no running costs, no compromise.
         </p>
 
         <div className="flex items-center justify-center gap-4 text-xs font-black uppercase tracking-[0.3em]">
-          <span className="text-brand-orange-500">Scaleable</span>
+          <span className="text-brand-orange-500">No Electricity</span>
           <span className="text-gray-600">•</span>
-          <span className="text-brand-amber-500">Sustainable</span>
+          <span className="text-brand-amber-500">Zero Running Cost</span>
           <span className="text-gray-600">•</span>
-          <span className="text-brand-yellow-500">Industrial</span>
+          <span className="text-brand-yellow-500">High Impact</span>
         </div>
       </motion.div>
     </motion.div>

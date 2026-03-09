@@ -73,7 +73,7 @@ export default function CTASection() {
                 </h2>
 
                 <p className="text-xl lg:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-medium">
-                  Join 500+ industrial leaders who have optimized their workspace with our award-winning sustainable building tech.
+                  Join 500+ businesses and homeowners who have optimized their living and working spaces with our award-winning tech.
                 </p>
               </motion.div>
 

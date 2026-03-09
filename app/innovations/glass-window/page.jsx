@@ -1,57 +1,51 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowRight, Sun, Zap, ShieldCheck, Building, Sparkles, Layout, Eye, Cpu } from "lucide-react"
+import { ArrowRight, Sun, ShieldCheck, Zap, Sparkles, CheckCircle2, Layout, Eye, Cpu, ThermometerSnowflake, Volume2, Home, Building, Hotel } from "lucide-react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { HoverButton } from "@/components/ui/hover-button"
 
 export default function GlassWindowPage() {
-    const features = [
+    const coreFeatures = [
         {
-            title: "Triple-Glazed Thermal",
-            description: "Advanced argon-filled triple glazing with low-E coating for world-class thermal insulation and sound-proofing.",
+            title: "Crystal Clear Insulation",
+            subtitle: "Like a Solid Wall",
+            description: "Advanced glazing that provides world-class heat and sound insulation. Keeps your AC cooling inside and the city noise outside, while giving you a perfect view.",
             icon: Layout,
+            points: ["Triple-Glazed Option", "Argon Gas Filled", "Blocks 80%+ Heat"]
         },
         {
-            title: "Self-Sustaining",
-            description:
-                "Integrated solar-photovoltaic cells power the motor and control logic. Zero external wiring required.",
-            icon: Sun,
-        },
-        {
-            title: "Smart Rain-Guard",
-            description: "Haptic rain sensors trigger automatic closure within 200ms of moisture detection, protecting interiors.",
+            title: "Smart Rain Sensors",
+            subtitle: "Worry-Free Living",
+            description: "Integrated sensors that automatically close your windows at the first drop of rain. Your furniture and floors stay dry even if you're not home.",
             icon: Cpu,
+            points: ["200ms Response Time", "Automated Closing", "Smart Home Ready"]
         },
         {
-            title: "Zero Frame Visual",
-            description: "Proprietary flush-glass design that vanishes into the roofline for the ultimate architectural aesthetic.",
-            icon: Eye,
-        },
+            title: "Silent Comfort",
+            subtitle: "Peace and Quiet",
+            description: "Block out traffic, construction, and neighbor noise. Our acoustic glass creates a sanctuary inside your busy home or office.",
+            icon: Volume2,
+            points: ["Up to 39dB Reduction", "Deep Sound Isolation", "Calm Interiors"]
+        }
     ]
 
-    const applications = [
-        {
-            name: "Luxury Hotels",
-            image: "/images/nanosun-app-1.jpg",
-            description: "Premium flat-roof skylights for penthouses and atria requiring high aesthetic fidelity.",
-        },
-        {
-            name: "Corporate HQs",
-            image: "/images/nanosun-app-2.jpg",
-            description: "Automated natural lighting for executive floors and high-end boardrooms.",
-        },
-        {
-            name: "Modern Residential",
-            image: "/images/nanosun-app-3.jpg",
-            description: "Bringing high-tech smart architecture to luxury homes with remote-controlled sky windows.",
-        },
+    const technicalSpecs = [
+        { label: "Insulation (U-Value)", value: "Up to 0.63 W/m²K" },
+        { label: "Outside Noise Reduction", value: "Up to 39 dB" },
+        { label: "Frame Material", value: "Thermally Broken Aluminium" },
+        { label: "Safety Level", value: "Toughened Fall-Proof Glass" },
+        { label: "Fresh Air Mode", value: "Auto-Opening up to 90°" },
+        { label: "Weather Seal", value: "Triple Sealing System" },
+        { label: "Durability", value: "High Wind-Load Certified" },
+        { label: "Energy Impact", value: "Reduces AC Bills Significantly" },
     ]
 
     return (
         <main className="pt-24 bg-slate-950">
-            {/* Glass Window Hero */}
+            {/* Hero Section */}
             <section className="relative py-40 overflow-hidden px-6 lg:px-12">
                 <div className="absolute inset-0 bg-brand-orange-500/5 blur-[120px] rounded-full transform translate-y-1/2" />
                 <div className="container mx-auto relative z-10">
@@ -59,43 +53,44 @@ export default function GlassWindowPage() {
                         <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
                             <div className="inline-flex items-center gap-3 bg-white/5 border border-white/10 rounded-full px-8 py-2.5 mb-10 backdrop-blur-md">
                                 <Layout className="h-4 w-4 text-brand-orange-500" />
-                                <h2 className="text-[10px] font-black text-gray-400 uppercase tracking-[0.3em]">Architectural Series</h2>
+                                <h2 className="text-[10px] font-black text-gray-400 uppercase tracking-widest leading-none">Premium Series (iWINDOW)</h2>
                             </div>
-                            <h1 className="text-6xl md:text-9xl font-black text-white mb-10 tracking-tighter uppercase leading-none">
-                                iWINDOW <br /> <span className="brand-gradient-text">SMART GLASS</span>
+                            <h1 className="text-5xl md:text-8xl font-black text-white mb-10 tracking-tighter uppercase leading-[0.9]">
+                                Luxury <br /> <span className="brand-gradient-text">Glass Windows</span>
                             </h1>
                             <p className="text-xl text-gray-400 mb-16 leading-relaxed max-w-2xl font-medium">
-                                The pinnacle of high-tech architectural glazing. Autonomous, solar-powered flat-roof windows with intelligent weather sensing and world-class thermal performance.
+                                Flat-roof glass systems designed for luxury bungalows and designer offices. See the world without feeling the heat. Smart, silent, and beautifully integrated into your architecture.
                             </p>
                             <div className="flex flex-wrap gap-6">
-                                <Link href="/contact" className="block w-full sm:w-auto">
-                                    <Button size="lg" className="w-full sm:w-auto bg-white text-black hover:bg-brand-orange-500 hover:text-white rounded-2xl px-16 py-8 text-sm font-black uppercase tracking-[0.2em] shadow-2xl shadow-white/5 active:scale-95 group">
-                                        Pre-Order Suite <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-2 transition-transform" />
-                                    </Button>
+                                <Link href="/contact">
+                                    <HoverButton className="bg-white text-black hover:bg-brand-orange-500 hover:text-white rounded-2xl px-16 py-8 text-sm font-black uppercase tracking-widest shadow-2xl transition-all">
+                                        Plan My Project <ArrowRight className="ml-3 h-5 w-5" />
+                                    </HoverButton>
                                 </Link>
-                                <button className="w-full sm:w-auto px-16 py-8 border-2 border-white/10 hover:border-brand-orange-500/50 text-white transition-all duration-300 rounded-2xl text-[10px] font-black uppercase tracking-[0.3em] backdrop-blur-md active:scale-95">
-                                    U-Value reports
-                                </button>
+                                <div className="flex items-center gap-3 bg-white/5 border border-white/10 rounded-2xl px-8 py-4 backdrop-blur-md">
+                                    <Hotel className="h-5 w-5 text-brand-orange-400" />
+                                    <span className="text-[10px] font-black text-white uppercase tracking-widest leading-none">The Ultimate View</span>
+                                </div>
                             </div>
                         </motion.div>
 
                         <motion.div
-                            className="relative h-[650px] rounded-[80px] overflow-hidden border border-white/10 shadow-2xl group"
+                            className="relative h-[650px] rounded-[80px] overflow-hidden border border-white/10 shadow-3xl group"
                             initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 1 }}
                         >
                             <Image
-                                src="/images/glass-window-hero.jpg"
-                                alt="iWINDOW SMART GLASS Technology"
+                                src="/images/iwindow-structural.png"
+                                alt="iWINDOW Glass Window"
                                 fill
                                 className="object-cover transition-transform duration-1000 group-hover:scale-105"
                             />
-                            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-slate-950 to-transparent p-12 flex items-end">
-                                <div className="bg-slate-900/60 backdrop-blur-2xl border border-white/10 p-10 rounded-[48px] w-full">
-                                    <Cpu className="h-8 w-8 text-brand-orange-400 mb-6" />
-                                    <p className="text-xl font-black text-white uppercase tracking-tighter mb-2">Autonomous Logic</p>
-                                    <p className="text-gray-400 text-sm font-medium">Self-operating system with deep-learning weather adaptation.</p>
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60" />
+                            <div className="absolute bottom-12 left-12 right-12">
+                                <div className="bg-white/5 backdrop-blur-3xl border border-white/10 p-10 rounded-[48px]">
+                                    <p className="text-3xl font-black text-white uppercase tracking-tighter mb-2">Smart View</p>
+                                    <p className="text-gray-400 text-sm font-medium">Advanced glazing that thinks for itself. Automated for comfort and safety.</p>
                                 </div>
                             </div>
                         </motion.div>
@@ -103,78 +98,81 @@ export default function GlassWindowPage() {
                 </div>
             </section>
 
-            {/* Luxury Engineering */}
+            {/* Application Highlights */}
+            <section className="py-40 relative px-6 lg:px-12 bg-slate-900/10">
+                <div className="container mx-auto">
+                    <div className="text-center mb-32">
+                        <h2 className="text-4xl md:text-6xl font-black text-white mb-6 uppercase tracking-tighter leading-none">Designed for <span className="brand-gradient-text">Excellence</span></h2>
+                        <p className="text-xl text-gray-500 max-w-2xl mx-auto font-medium">Where standard windows fail, iWINDOW delivers high-performance clarity.</p>
+                    </div>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 text-center">
+                        {[
+                            { label: "Luxury Homes", icon: Home, desc: "Perfect for designer bungalows with flat-roof living areas." },
+                            { label: "Modern Offices", icon: Building, desc: "Quiet, comfortable workspaces with plenty of natural light." },
+                            { label: "Premium Hotels", icon: Hotel, desc: "Wider views with zero maintenance and energy efficiency." },
+                        ].map((app, i) => (
+                            <motion.div
+                                key={i}
+                                className="space-y-6 group"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: i * 0.1 }}
+                            >
+                                <div className="w-20 h-20 mx-auto rounded-3xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-brand-orange-500 transition-colors duration-500">
+                                    <app.icon className="h-10 w-10 text-brand-orange-500 group-hover:text-white transition-all" />
+                                </div>
+                                <h4 className="text-white font-black text-2xl uppercase tracking-tighter">{app.label}</h4>
+                                <p className="text-gray-500 text-sm font-medium leading-relaxed">{app.desc}</p>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Benefits Section */}
             <section className="py-40 relative px-6 lg:px-12 bg-slate-950/50">
                 <div className="container mx-auto">
-                    <div className="max-w-4xl mb-32">
-                        <h2 className="text-4xl md:text-7xl font-black text-white mb-10 uppercase tracking-tighter leading-none">High-Fidelity Tech</h2>
-                        <p className="text-xl text-gray-400 leading-relaxed font-medium">
-                            iWINDOW represents the intersection of sustainable energy and luxury design. By utilizing triple-glazing technology and argon insulation, we've created a sky-window that provides the transparency of air with the thermal insulation of a solid wall.
-                        </p>
+                    <div className="text-center mb-32">
+                        <h2 className="text-4xl md:text-7xl font-black text-white mb-6 uppercase tracking-tighter leading-none">Pure <span className="brand-gradient-text">Performance</span></h2>
+                        <p className="text-xl text-gray-500 max-w-2xl mx-auto font-medium">European engineering standards meets practical smart home features.</p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {features.map((feature, index) => (
+                    <div className="grid lg:grid-cols-3 gap-10">
+                        {coreFeatures.map((feature, idx) => (
                             <motion.div
-                                key={index}
-                                className="bg-white/[0.02] backdrop-blur-md p-10 rounded-[48px] border border-white/5 group hover:bg-white/[0.05] hover:border-white/10 transition-all duration-500"
+                                key={idx}
+                                className="bg-white/[0.03] border border-white/5 p-12 rounded-[60px] hover:bg-white/[0.05] transition-all group"
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                transition={{ delay: idx * 0.1 }}
                             >
-                                <div className="bg-brand-orange-500/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
-                                    <feature.icon className="h-8 w-8 text-brand-orange-500" />
+                                <div className="bg-brand-orange-500/10 w-20 h-20 rounded-3xl flex items-center justify-center mb-10 group-hover:bg-brand-orange-500 group-hover:rotate-6 transition-all duration-500">
+                                    <feature.icon className="h-10 w-10 text-brand-orange-500 group-hover:text-white" />
                                 </div>
-                                <h3 className="text-lg font-black text-white mb-4 uppercase tracking-widest">{feature.title}</h3>
-                                <p className="text-gray-500 text-sm font-medium leading-relaxed group-hover:text-gray-400 transition-colors">{feature.description}</p>
+                                <h3 className="text-[10px] font-black text-brand-orange-500 uppercase tracking-widest mb-4 leading-none">{feature.subtitle}</h3>
+                                <h4 className="text-3xl font-black text-white uppercase tracking-tighter mb-8 leading-none">{feature.title}</h4>
+                                <p className="text-gray-400 mb-10 text-sm leading-relaxed font-medium">{feature.description}</p>
+                                <div className="space-y-4 pt-10 border-t border-white/5">
+                                    {feature.points.map((point, i) => (
+                                        <div key={i} className="flex items-center gap-3 text-xs font-black text-gray-500 uppercase tracking-widest">
+                                            <CheckCircle2 className="h-4 w-4 text-brand-orange-500" />
+                                            {point}
+                                        </div>
+                                    ))}
+                                </div>
                             </motion.div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Showcase */}
+            {/* Final CTA */}
             <section className="py-40 relative px-6 lg:px-12 bg-slate-950">
-                <div className="container mx-auto">
-                    <div className="text-center mb-32">
-                        <h2 className="text-5xl md:text-8xl font-black mb-10 text-white uppercase tracking-tighter leading-none">Bespoke <span className="brand-gradient-text">Views</span></h2>
-                        <p className="text-[10px] font-black text-gray-600 uppercase tracking-[0.5em]">High-End Deployments</p>
-                    </div>
-
-                    <div className="grid md:grid-cols-3 gap-10">
-                        {applications.map((application, index) => (
-                            <motion.div
-                                key={index}
-                                className="relative h-[600px] rounded-[60px] overflow-hidden group border border-white/5 shadow-2xl"
-                                initial={{ opacity: 0, scale: 0.95 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                            >
-                                <Image
-                                    src={application.image || "/placeholder.svg"}
-                                    alt={application.name}
-                                    fill
-                                    className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-110"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity" />
-                                <div className="relative z-10 h-full flex flex-col justify-end p-12">
-                                    <h3 className="text-3xl font-black text-white uppercase tracking-tighter mb-4">{application.name}</h3>
-                                    <p className="text-gray-400 text-sm font-medium leading-relaxed mb-8 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700">{application.description}</p>
-                                    <div className="h-1.5 w-16 bg-brand-orange-500 rounded-full shadow-lg shadow-brand-orange-500/50" />
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Engineering CTA */}
-            <section className="py-40 relative px-6 lg:px-12 bg-slate-950 border-t border-white/5">
-                <div className="container mx-auto">
+                <div className="container mx-auto text-center">
                     <motion.div
-                        className="bg-brand-gradient p-24 lg:p-40 rounded-[100px] text-center shadow-2xl shadow-brand-orange-500/20 relative overflow-hidden"
+                        className="bg-brand-gradient p-24 lg:p-40 rounded-[100px] shadow-2xl shadow-brand-orange-500/20 relative overflow-hidden"
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
@@ -182,13 +180,13 @@ export default function GlassWindowPage() {
                         <div className="absolute inset-0 bg-grid-white/[0.05] pointer-events-none" />
                         <Sparkles className="h-20 w-20 text-white/30 mx-auto mb-10 animate-pulse" />
                         <h2 className="text-5xl md:text-9xl font-black text-white mb-10 tracking-tighter uppercase leading-none relative z-10">Ascend to Luxury</h2>
-                        <p className="text-xl text-white/90 max-w-3xl mx-auto mb-16 leading-relaxed relative z-10 font-black uppercase tracking-[0.4em] text-xs opacity-90">
-                            Triple-Glazed Excellence • Solar-Powered Logic • Zero Rain Risk
+                        <p className="text-xl text-white/90 max-w-3xl mx-auto mb-16 leading-relaxed relative z-10 font-bold uppercase tracking-widest text-sm opacity-90 font-medium">
+                            The perfect architectural finish for your flat-roof home or office. <br />Experience the power of smart glass.
                         </p>
                         <div className="flex flex-wrap justify-center gap-10 relative z-10">
                             <Link href="/contact" className="block w-full sm:w-auto">
-                                <Button size="lg" className="w-full sm:w-auto bg-white text-black hover:bg-black hover:text-white transition-all duration-300 rounded-3xl px-20 py-10 text-xl font-black shadow-2xl shadow-white/10 uppercase tracking-[0.3em]">
-                                    Book Project Review <ArrowRight className="ml-4 h-8 w-8" />
+                                <Button size="lg" className="w-full sm:w-auto bg-white text-black hover:bg-black hover:text-white transition-all duration-300 rounded-3xl px-20 py-10 text-xl font-black shadow-2xl shadow-white/10 uppercase tracking-widest">
+                                    Get a Full Quote <ArrowRight className="ml-4 h-8 w-8" />
                                 </Button>
                             </Link>
                         </div>

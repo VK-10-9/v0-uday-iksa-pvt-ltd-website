@@ -12,32 +12,32 @@ import {
 export default function FAQSection() {
     const faqs = [
         {
-            question: "What is Nano Sun day light harvesting?",
-            answer: "The Nano Sun Circular Daylight PEB model from Udayiksa Pvt Ltd is the most efficient natural daylighting system in the market today. It collects ambient visible daylight using an optical dome, which reflects the light into a highly reflective circular pipe. The daylight is then diffused evenly throughout the space using an optical diffuser.",
+            question: "Will the light be too bright or cause glare?",
+            answer: "Not at all. Our diffuser at the ceiling spreads the light softly and evenly — like a cloudy sky, not direct sunlight. No squinting, no shadows.",
         },
         {
-            question: "Where is day light application used?",
-            answer: "Day light can be used in various applications like Residential buildings, Apartments, Industries, Schools, Hospitals, and commercial warehouses.",
+            question: "Does it let in heat along with the light?",
+            answer: "No. The dome filters out most of the infrared (heat) and UV rays. Only comfortable, visible light comes through — so your space doesn't get hotter.",
         },
         {
-            question: "Can day lighting be brought at POP/False ceiling level?",
-            answer: "Yes, our highly reflective tubes can bring natural light down up to 7-8 meters from the roof level to the false ceiling level without significant loss of intensity.",
+            question: "Will it leak during rains?",
+            answer: "We design every installation to be completely leak-proof. We've been doing this for 15+ years — our systems are tested for Indian monsoon conditions.",
         },
         {
-            question: "Is it possible to fix day lighting on side walls?",
-            answer: "Yes, we can fix it using 45/90 degree bends to redirect natural light from side walls into the interior spaces.",
+            question: "Can it reach rooms on lower floors?",
+            answer: "Yes! With angled pipes and bends, we can bring daylight down up to 7–8 metres. Even underground rooms and basements are possible.",
         },
         {
-            question: "Does it transmit heat along with light?",
-            answer: "No, our systems are designed to harvest only visible light while filtering out UV and IR rays, providing cool, natural illumination without increasing the building's heat load.",
+            question: "Can I install it on an RCC / concrete roof?",
+            answer: "Absolutely. Our NANOSUN RCC model is specifically designed to be built into the slab during construction or retrofitted later.",
         },
         {
-            question: "Is it possible to fix on RCC building?",
-            answer: "Yes, we can fix it at the time of the slab casting or even retroactively with proper core cutting and sealing techniques.",
+            question: "Can it be fixed to a side wall instead of the roof?",
+            answer: "Yes — we use 45° and 90° bends to redirect light through a wall if needed.",
         },
         {
-            question: "Does water leak through after installing?",
-            answer: "No, our installation process is systematically designed with industrial-grade flashing and sealants to ensure a 100% leak-proof system.",
+            question: "Where all can this be used?",
+            answer: "Factories, warehouses, homes, apartments, schools, hospitals, hotels, resorts, offices, airports — essentially any building that has a roof!",
         },
     ]
 
@@ -61,10 +61,10 @@ export default function FAQSection() {
                     </motion.div>
 
                     <h2 className="text-5xl lg:text-7xl font-black text-white uppercase tracking-tighter mb-6 leading-none">
-                        Common <span className="brand-gradient-text">Inquiries</span>
+                        Got Questions? <br /><span className="brand-gradient-text">We've Got Answers.</span>
                     </h2>
                     <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed font-medium">
-                        Everything you need to know about integrating natural daylighting and ventilation into your infrastructure.
+                        Everything you need to know about bringing nature into your building.
                     </p>
                 </div>
 

@@ -21,10 +21,10 @@ export default function ProjectsPage() {
             className="text-center max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-8xl font-black text-white mb-8 tracking-tighter uppercase">
-              Industrial <span className="brand-gradient-text">Portfolio</span>
+              Engineering <br /><span className="brand-gradient-text">Impact</span>
             </h1>
-            <p className="text-xl text-gray-400 mb-12 leading-relaxed">
-              Showcase of high-performance natural daylight and ventilation engineering across India's premier industrial and commercial complexes.
+            <p className="text-xl text-gray-400 mb-12 leading-relaxed font-medium">
+              A comprehensive portfolio of high-performance prismatic daylighting and aerodynamic ventilation systems deployed across India's most demanding industrial environments.
             </p>
           </motion.div>
         </div>
@@ -34,10 +34,10 @@ export default function ProjectsPage() {
       <section className="py-20 relative px-6">
         <div className="container mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter mb-6">Sector Expertise</h2>
-            <div className="h-1 w-20 bg-brand-orange-500 rounded-full mx-auto mb-8"></div>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              Deep specialized knowledge across PSU, Commercial, Institutional, and Hospitality infrastructure.
+            <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter mb-6">Industrial Specialization</h2>
+            <div className="h-1 w-24 bg-brand-orange-500 rounded-full mx-auto mb-8"></div>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-medium">
+              Precision engineering adapted for PSU, Industrial, Institutional, and Bespoke Hospitality infrastructure.
             </p>
           </div>
 
@@ -53,9 +53,9 @@ export default function ProjectsPage() {
       <section className="py-40 relative bg-white/[0.02]">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="text-center mb-24">
-            <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter mb-6">Landmark Implementations</h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              Highlighting the engineering precision that sets Uday IKSA apart in the market.
+            <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter mb-6">Landmark Deployments</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-medium">
+              Case studies in high-precision engineering and atmospheric optimization.
             </p>
           </div>
 
@@ -71,16 +71,16 @@ export default function ProjectsPage() {
       <section className="py-40 relative px-6">
         <div className="container mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter mb-6">Impact In Numbers</h2>
+            <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter mb-6">Operational <span className="brand-gradient-text">Efficiency</span></h2>
             <div className="h-1 w-20 bg-brand-orange-500 rounded-full mx-auto"></div>
           </div>
 
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              { number: "285+", label: "Total Projects", icon: Globe2, color: "text-brand-orange-500" },
-              { number: "40%", label: "Avg. Energy Savings", icon: Zap, color: "text-brand-amber-400" },
-              { number: "15+", label: "Years Excellence", icon: ShieldCheck, color: "text-brand-orange-500" },
-              { number: "50+", label: "Major Cities", icon: BarChart3, color: "text-brand-yellow-400" },
+              { number: "285+", label: "Verified Deployments", icon: Globe2, color: "text-brand-orange-500" },
+              { number: "40%", label: "Thermal Load Reduction", icon: Zap, color: "text-brand-amber-400" },
+              { number: "15+", label: "Years Engineering", icon: ShieldCheck, color: "text-brand-orange-500" },
+              { number: "50+", label: "Industrial Hubs", icon: BarChart3, color: "text-brand-yellow-400" },
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -106,16 +106,16 @@ export default function ProjectsPage() {
       <section className="py-20 relative px-6">
         <div className="container mx-auto">
           <motion.div
-            className="bg-brand-gradient p-20 rounded-[60px] text-center shadow-2xl shadow-brand-orange-500/20 relative overflow-hidden"
+            className="bg-brand-gradient p-20 rounded-[80px] text-center shadow-2xl shadow-brand-orange-500/20 relative overflow-hidden"
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-4xl md:text-7xl font-black text-white mb-8 tracking-tighter uppercase relative z-10">Start Your Transition</h2>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto mb-12 leading-relaxed relative z-10 font-medium">
-              Join the hundreds of industrial leaders who have optimized their workspace with Uday IKSA's award-winning solutions.
+            <h2 className="text-4xl md:text-7xl font-black text-white mb-8 tracking-tighter uppercase relative z-10">Scale Sustainable Impact</h2>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto mb-12 leading-relaxed relative z-10 font-bold uppercase tracking-widest text-xs opacity-80">
+              Audit Your Asset • Verify ROI • Deploy Global Tech
             </p>
-            <Button size="lg" className="bg-white text-black hover:bg-black hover:text-white transition-all duration-300 rounded-2xl px-12 py-8 text-xl font-black relative z-10 shadow-2xl">
-              CONSULT AN ENGINEER <ArrowRight className="ml-3 h-6 w-6" />
+            <Button size="lg" className="bg-white text-black hover:bg-black hover:text-white transition-all duration-300 rounded-2xl px-16 py-8 text-xl font-black relative z-10 shadow-2xl uppercase tracking-widest">
+              Consult an Engineer <ArrowRight className="ml-3 h-6 w-6" />
             </Button>
           </motion.div>
         </div>
