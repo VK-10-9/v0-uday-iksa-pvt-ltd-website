@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { ArrowRight, Mail, Phone, MapPin, Send, MessageSquare, Globe } from "lucide-react"
 import { useState } from "react"
+import Link from "next/link"
 import { HoverButton } from "@/components/ui/hover-button"
 
 export default function ContactPage() {
