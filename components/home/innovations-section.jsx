@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, AnimatePresence } from "framer-motion"
-import { ArrowRight, Sun, Wind, Lightbulb, Zap, Leaf, Check, Building2, Layout, ShieldAlert, Sparkles, ShieldCheck } from "lucide-react"
+import { ArrowRight, Sun, Wind, Lightbulb, Zap, Leaf, Check, Building2, Sparkles, ShieldCheck } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -14,8 +14,6 @@ const iconMap = {
   Wind: Wind,
   Lightbulb: Lightbulb,
   Building2: Building2,
-  Layout: Layout,
-  ShieldAlert: ShieldAlert,
 }
 
 export default function InnovationsSection() {
