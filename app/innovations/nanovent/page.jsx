@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowRight, Wind, ShieldCheck, Zap, Sparkles, CheckCircle2, ThermometerSun, Gauge, Waves, Baby, Home, School, Building } from "lucide-react"
+import { ArrowRight, Wind, ShieldCheck, Zap, Sparkles, CheckCircle2, ThermometerSun, Gauge, Waves, Baby, Home, School, Building, Construction } from "lucide-react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
