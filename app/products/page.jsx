@@ -51,10 +51,10 @@ export default function InnovationsPage() {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md:text-8xl font-black text-white mb-8 tracking-tighter uppercase leading-[0.85]">
+            <h1 className="text-4xl md:text-6xl lg:text-8xl font-black text-white mb-8 tracking-tighter uppercase leading-[0.85]">
               Bring Nature <br /><span className="brand-gradient-text">Into Your Building</span>
             </h1>
-            <p className="text-xl text-gray-400 mb-12 leading-relaxed max-w-2xl mx-auto font-medium">
+            <p className="text-lg md:text-xl text-gray-400 mb-12 leading-relaxed max-w-2xl mx-auto font-medium px-4">
               We design and manufacture systems that use sunlight and wind to light and cool your space — perfectly. No electricity, no compromise.
             </p>
           </motion.div>
@@ -74,7 +74,7 @@ export default function InnovationsPage() {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.8 }}
               >
-                <div className={`relative h-[600px] rounded-[60px] overflow-hidden group shadow-2xl shadow-brand-orange-500/10 border border-white/5 ${index % 2 !== 0 ? 'lg:order-2' : ''}`}>
+                <div className={`relative h-[350px] md:h-[600px] rounded-[40px] md:rounded-[60px] overflow-hidden group shadow-2xl shadow-brand-orange-500/10 border border-white/5 ${index % 2 !== 0 ? 'lg:order-2' : ''}`}>
                   <div className="absolute inset-0 bg-gradient-to-tr from-brand-orange-500/20 to-transparent z-10" />
                   <Image
                     src={innovation.image}
@@ -92,9 +92,9 @@ export default function InnovationsPage() {
 
                 <div className="space-y-10">
                   <div className="space-y-8">
-                    <h3 className="text-5xl md:text-7xl font-black text-white leading-[0.9] tracking-tighter uppercase leading-none">{innovation.name}</h3>
+                    <h3 className="text-3xl md:text-5xl lg:text-7xl font-black text-white leading-[0.9] tracking-tighter uppercase">{innovation.name}</h3>
                     <div className="h-1 w-24 bg-brand-orange-500 rounded-full" />
-                    <p className="text-xl text-gray-400 leading-relaxed font-medium">
+                    <p className="text-lg md:text-xl text-gray-400 leading-relaxed font-medium">
                       {innovation.description}
                     </p>
                   </div>
@@ -160,20 +160,20 @@ export default function InnovationsPage() {
       <section className="py-40 relative px-6 lg:px-12">
         <div className="container mx-auto text-center">
           <motion.div
-            className="bg-brand-gradient p-20 lg:p-32 rounded-[80px] shadow-2xl shadow-brand-orange-500/20 relative overflow-hidden"
+            className="bg-brand-gradient p-10 md:p-20 lg:p-32 rounded-[60px] md:rounded-[80px] shadow-2xl shadow-brand-orange-500/20 relative overflow-hidden"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
           >
             <div className="absolute inset-0 bg-grid-white/[0.05] pointer-events-none" />
-            <h2 className="text-5xl md:text-8xl font-black text-white mb-10 tracking-tighter uppercase leading-tight relative z-10">Ready to <br />Transform?</h2>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto mb-16 leading-relaxed relative z-10 font-medium">
+            <h2 className="text-3xl md:text-6xl lg:text-8xl font-black text-white mb-10 tracking-tighter uppercase leading-tight relative z-10">Ready to <br />Transform?</h2>
+            <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-16 leading-relaxed relative z-10 font-medium">
               See how much you can save by letting sunlight do the work.
             </p>
             <div className="flex flex-wrap justify-center gap-8 relative z-10">
               <Link href="/contact" className="block w-full sm:w-auto">
-                <HoverButton className="w-full sm:w-auto bg-white text-black hover:bg-black hover:text-white transition-all duration-300 rounded-2xl px-16 py-8 text-lg font-black uppercase tracking-widest shadow-2xl">
-                  Get a Free Estimate <ArrowRight className="ml-3 h-6 w-6" />
+                <HoverButton className="w-full sm:w-auto bg-white text-black hover:bg-black hover:text-white transition-all duration-300 rounded-2xl px-12 md:px-16 py-6 md:py-8 text-sm md:text-lg font-black uppercase tracking-widest shadow-2xl">
+                  Get a Free Estimate <ArrowRight className="ml-3 h-5 md:h-6 w-5 md:w-6" />
                 </HoverButton>
               </Link>
             </div>

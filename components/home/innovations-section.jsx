@@ -20,7 +20,7 @@ export default function InnovationsSection() {
   const [hoveredProduct, setHoveredProduct] = useState(null)
 
   return (
-    <section className="py-40 relative bg-slate-950 overflow-hidden">
+    <section className="py-20 md:py-40 relative bg-slate-950 overflow-hidden">
       {/* Background Atmosphere */}
       <div className="absolute inset-0">
         <motion.div
@@ -59,7 +59,7 @@ export default function InnovationsSection() {
             <span className="text-[10px] font-black text-brand-orange-400 uppercase tracking-[0.2em]">Engineering Excellence</span>
           </motion.div>
 
-          <h2 className="text-5xl lg:text-8xl font-black mb-8 text-white uppercase tracking-tighter leading-none">
+          <h2 className="text-4xl md:text-6xl lg:text-8xl font-black mb-8 text-white uppercase tracking-tighter leading-none">
             Strategic <span className="brand-gradient-text">Products</span>
           </h2>
 
@@ -75,7 +75,7 @@ export default function InnovationsSection() {
             return (
               <motion.div
                 key={product.id}
-                className={`relative group cursor-pointer bg-white/[0.03] backdrop-blur-md rounded-[48px] border border-white/10 overflow-hidden h-[500px] transition-all duration-700 shadow-2xl hover:shadow-brand-orange-500/10`}
+                className={`relative group cursor-pointer bg-white/[0.03] backdrop-blur-md rounded-[48px] border border-white/10 overflow-hidden h-[400px] md:h-[500px] transition-all duration-700 shadow-2xl hover:shadow-brand-orange-500/10`}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -96,7 +96,7 @@ export default function InnovationsSection() {
                 </div>
 
                 {/* Content Overlay */}
-                <div className="relative z-10 h-full flex flex-col justify-end p-10">
+                <div className="relative z-10 h-full flex flex-col justify-end p-6 md:p-10">
                   {/* Category Badge */}
                   <div className="absolute top-10 right-10 flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full">
                     <IconComponent className="h-4 w-4 text-brand-orange-400" />

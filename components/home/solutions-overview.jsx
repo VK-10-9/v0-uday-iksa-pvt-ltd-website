@@ -15,7 +15,7 @@ export default function SolutionsOverview() {
     ]
 
     return (
-        <section id="solutions" className="py-40 relative bg-slate-950 px-6 lg:px-12 overflow-hidden">
+        <section id="solutions" className="py-20 md:py-40 relative bg-slate-950 px-6 lg:px-12 overflow-hidden">
             {/* Background Orbs */}
             <div className="absolute inset-0">
                 <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-brand-orange-500/10 rounded-full blur-[140px]" />
@@ -97,10 +97,10 @@ export default function SolutionsOverview() {
                                 </div>
                                 <span className="text-[10px] font-black text-brand-orange-400 uppercase tracking-[0.4em]">Home & Company Solutions</span>
                             </motion.div>
-                            <h2 className="text-6xl lg:text-8xl font-black text-white uppercase tracking-tighter leading-[0.9] mb-8">
+                            <h2 className="text-4xl md:text-6xl lg:text-8xl font-black text-white uppercase tracking-tighter leading-[0.9] mb-8">
                                 Pure Light <br /><span className="brand-gradient-text">Anywhere</span>
                             </h2>
-                            <p className="text-2xl text-gray-400 font-medium leading-relaxed max-w-xl">
+                            <p className="text-lg md:text-2xl text-gray-400 font-medium leading-relaxed max-w-xl">
                                 Whether it's a massive factory floor or your favorite reading nook at home—we bring the sun inside.
                             </p>
                         </div>
@@ -133,11 +133,11 @@ export default function SolutionsOverview() {
                                         </div>
                                     </div>
                                     <div className="space-y-4">
-                                        <div className="text-white font-black uppercase text-sm tracking-widest flex items-center gap-2">
-                                            <span className="bg-brand-orange-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-[10px]">3</span>
+                                        <div className="text-white font-black uppercase text-xs md:text-sm tracking-widest flex items-center gap-2">
+                                            <span className="bg-brand-orange-500 text-white w-5 h-5 md:w-6 md:h-6 rounded-full flex items-center justify-center text-[10px]">3</span>
                                             Spread
                                         </div>
-                                        <div className="text-[11px] text-gray-500 leading-relaxed">
+                                        <div className="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">
                                             A soft glass panel at the ceiling spreads the light evenly so your whole room glows beautifully.
                                         </div>
                                     </div>
@@ -181,16 +181,16 @@ export default function SolutionsOverview() {
 
                 {/* Local Highlight */}
                 <motion.div
-                    className="mt-40 bg-white/[0.03] backdrop-blur-2xl border border-white/5 p-12 lg:p-20 rounded-[80px] text-center relative group overflow-hidden"
+                    className="mt-20 md:mt-40 bg-white/[0.03] backdrop-blur-2xl border border-white/5 p-8 md:p-12 lg:p-20 rounded-[40px] md:rounded-[80px] text-center relative group overflow-hidden"
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
                     <div className="absolute top-0 right-0 w-96 h-96 bg-brand-amber-500/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
-                    <h3 className="text-4xl lg:text-6xl font-black text-white uppercase tracking-tighter mb-8 leading-tight">
+                    <h3 className="text-3xl lg:text-6xl font-black text-white uppercase tracking-tighter mb-8 leading-tight">
                         Built for <span className="brand-gradient-text">Homes & Factories</span>
                     </h3>
-                    <p className="text-2xl text-gray-400 font-medium max-w-4xl mx-auto mb-12">
+                    <p className="text-lg md:text-2xl text-gray-400 font-medium max-w-4xl mx-auto mb-12 px-4">
                         Designed, manufactured, and installed by our experts in Hubballi for businesses and families across India.
                     </p>
                     <Link href="/products">

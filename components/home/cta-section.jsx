@@ -7,7 +7,7 @@ import { HoverButton } from "@/components/ui/hover-button"
 
 export default function CTASection() {
   return (
-    <section className="py-40 relative bg-slate-950 overflow-hidden">
+    <section className="py-20 md:py-40 relative bg-slate-950 overflow-hidden">
       {/* Enhanced Background */}
       <div className="absolute inset-0">
         {/* Animated Gradient Mesh */}
@@ -42,7 +42,7 @@ export default function CTASection() {
         <div className="max-w-6xl mx-auto">
           {/* Main CTA Card */}
           <motion.div
-            className="relative bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-[60px] p-16 lg:p-24 overflow-hidden shadow-2xl shadow-brand-orange-500/10"
+            className="relative bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-[40px] md:rounded-[60px] p-10 md:p-16 lg:p-24 overflow-hidden shadow-2xl shadow-brand-orange-500/10"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -66,13 +66,13 @@ export default function CTASection() {
                   <span className="text-xs font-black text-brand-orange-400 uppercase tracking-[0.2em]">Ready to Transition?</span>
                 </div>
 
-                <h2 className="text-5xl lg:text-8xl font-black mb-8 tracking-tighter leading-none uppercase">
+                <h2 className="text-3xl md:text-6xl lg:text-8xl font-black mb-8 tracking-tighter leading-none uppercase">
                   <span className="text-white">Start Your</span>
                   <br />
                   <span className="brand-gradient-text">Energy Revolution</span>
                 </h2>
 
-                <p className="text-xl lg:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-medium">
+                <p className="text-lg md:text-xl lg:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-medium px-4">
                   Join 500+ businesses and homeowners who have optimized their living and working spaces with our award-winning tech.
                 </p>
               </motion.div>
@@ -85,19 +85,19 @@ export default function CTASection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                <Link href="/contact" className="block">
-                  <HoverButton className="w-full sm:w-auto bg-white text-black hover:bg-black hover:text-white text-xl font-black px-16 py-6 rounded-2xl transition-all shadow-xl shadow-white/5 uppercase tracking-widest">
-                    <Calendar className="mr-3 h-6 w-6" />
+                <Link href="/contact" className="block w-full sm:w-auto">
+                  <HoverButton className="w-full sm:w-auto bg-white text-black hover:bg-black hover:text-white text-base md:text-xl font-black px-12 md:px-16 py-5 md:py-6 rounded-2xl transition-all shadow-xl shadow-white/5 uppercase tracking-widest">
+                    <Calendar className="mr-3 h-5 w-5 md:h-6 md:w-6" />
                     Consult Now
-                    <ArrowRight className="ml-3 h-6 w-6" />
+                    <ArrowRight className="ml-3 h-5 w-5 md:h-6 md:w-6" />
                   </HoverButton>
                 </Link>
 
-                <Link href="/products" className="block">
-                  <button className="w-full sm:w-auto flex items-center justify-center gap-4 px-16 py-6 border-2 border-white/10 hover:border-brand-orange-500/50 rounded-2xl text-white text-xl font-black uppercase tracking-widest transition-all duration-300 group backdrop-blur-md">
-                    <Sparkles className="h-6 w-6 text-brand-orange-500" />
+                <Link href="/products" className="block w-full sm:w-auto">
+                  <button className="w-full sm:w-auto flex items-center justify-center gap-4 px-12 md:px-16 py-5 md:py-6 border-2 border-white/10 hover:border-brand-orange-500/50 rounded-2xl text-white text-base md:text-xl font-black uppercase tracking-widest transition-all duration-300 group backdrop-blur-md">
+                    <Sparkles className="h-5 w-5 md:h-6 md:w-6 text-brand-orange-500" />
                     <span>Explore Tech</span>
-                    <ArrowRight className="h-6 w-6 group-hover:translate-x-2 transition-transform" />
+                    <ArrowRight className="h-5 w-5 md:h-6 md:w-6 group-hover:translate-x-2 transition-transform" />
                   </button>
                 </Link>
               </motion.div>
@@ -110,23 +110,23 @@ export default function CTASection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
-                <div className="bg-white/[0.05] p-8 rounded-[32px] border border-white/10 flex items-center gap-6 group hover:border-brand-orange-500/40 transition-all duration-500">
-                  <div className="w-16 h-16 rounded-2xl bg-brand-orange-500/10 flex items-center justify-center group-hover:bg-brand-orange-500 transition-all duration-500">
-                    <Phone className="h-8 w-8 text-brand-orange-500 group-hover:text-white" />
+                <div className="bg-white/[0.05] p-6 md:p-8 rounded-[24px] md:rounded-[32px] border border-white/10 flex flex-col md:flex-row items-center gap-4 md:gap-6 group hover:border-brand-orange-500/40 transition-all duration-500">
+                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-brand-orange-500/10 flex items-center justify-center group-hover:bg-brand-orange-500 transition-all duration-500">
+                    <Phone className="h-6 w-6 md:h-8 md:w-8 text-brand-orange-500 group-hover:text-white" />
                   </div>
-                  <div className="text-left">
+                  <div className="text-center md:text-left">
                     <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-1">Direct Line</p>
-                    <p className="text-white text-lg font-black tracking-tight">+91 8792182631</p>
+                    <p className="text-white text-base md:text-lg font-black tracking-tight">+91 8792182631</p>
                   </div>
                 </div>
 
-                <div className="bg-white/[0.05] p-8 rounded-[32px] border border-white/10 flex items-center gap-6 group hover:border-brand-orange-500/40 transition-all duration-500">
-                  <div className="w-16 h-16 rounded-2xl bg-brand-orange-500/10 flex items-center justify-center group-hover:bg-brand-orange-500 transition-all duration-500">
-                    <Mail className="h-8 w-8 text-brand-orange-500 group-hover:text-white" />
+                <div className="bg-white/[0.05] p-6 md:p-8 rounded-[24px] md:rounded-[32px] border border-white/10 flex flex-col md:flex-row items-center gap-4 md:gap-6 group hover:border-brand-orange-500/40 transition-all duration-500">
+                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-brand-orange-500/10 flex items-center justify-center group-hover:bg-brand-orange-500 transition-all duration-500">
+                    <Mail className="h-6 w-6 md:h-8 md:w-8 text-brand-orange-500 group-hover:text-white" />
                   </div>
-                  <div className="text-left">
+                  <div className="text-center md:text-left">
                     <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-1">Engineering Support</p>
-                    <p className="text-white text-lg font-black tracking-tight">info@udayiksa.com</p>
+                    <p className="text-white text-base md:text-lg font-black tracking-tight">info@udayiksa.com</p>
                   </div>
                 </div>
               </motion.div>
@@ -139,10 +139,10 @@ export default function CTASection() {
                 viewport={{ once: true }}
                 transition={{ duration: 1, delay: 0.8 }}
               >
-                <p className="text-gray-500 text-xs font-black uppercase tracking-[0.3em] mb-10">Trusted By National Industrial Giants</p>
-                <div className="flex flex-wrap justify-center items-center gap-16 opacity-40 hover:opacity-100 transition-opacity duration-700">
+                <p className="text-gray-500 text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.3em] mb-8 md:mb-10">Trusted By National Industrial Giants</p>
+                <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-40 hover:opacity-100 transition-opacity duration-700">
                   {["TATA STEEL", "INFOSYS", "APOLLO", "IIT-M", "MAHINDRA"].map((company, index) => (
-                    <span key={index} className="text-white text-xl font-black tracking-[0.4em] italic">{company}</span>
+                    <span key={index} className="text-white text-sm md:text-xl font-black tracking-[0.4em] italic">{company}</span>
                   ))}
                 </div>
               </motion.div>

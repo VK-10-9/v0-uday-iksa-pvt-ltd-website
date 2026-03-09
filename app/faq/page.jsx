@@ -196,7 +196,7 @@ export default function FAQPage() {
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-5xl md:text-8xl font-black text-white uppercase tracking-tighter mb-8 leading-none"
+                        className="text-4xl md:text-6xl lg:text-8xl font-black text-white uppercase tracking-tighter mb-8 leading-none"
                     >
                         Got Questions? <br /><span className="brand-gradient-text">We've Got Answers.</span>
                     </motion.h1>
@@ -204,7 +204,7 @@ export default function FAQPage() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-medium"
+                        className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-medium px-4"
                     >
                         15+ years of installations means we've heard every question. Here are the most common ones — answered honestly and in plain language.
                     </motion.p>
@@ -223,7 +223,7 @@ export default function FAQPage() {
                                 <div className="p-4 bg-brand-orange-500/10 rounded-2xl border border-brand-orange-500/20">
                                     {category.icon}
                                 </div>
-                                <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter">
+                                <h2 className="text-2xl md:text-5xl font-black text-white uppercase tracking-tighter">
                                     {category.title}
                                 </h2>
                             </motion.div>
@@ -240,12 +240,12 @@ export default function FAQPage() {
                                         >
                                             <AccordionItem
                                                 value={`item-${catIdx}-${index}`}
-                                                className="border border-white/5 bg-white/[0.02] rounded-[32px] overflow-hidden px-8 hover:bg-white/[0.04] transition-all group"
+                                                className="border border-white/5 bg-white/[0.02] rounded-[24px] md:rounded-[32px] overflow-hidden px-6 md:px-8 hover:bg-white/[0.04] transition-all group"
                                             >
-                                                <AccordionTrigger className="text-left text-lg md:text-xl font-bold text-white uppercase tracking-tight py-8 hover:no-underline [&[data-state=open]>svg]:rotate-180">
+                                                <AccordionTrigger className="text-left text-base md:text-xl font-bold text-white uppercase tracking-tight py-6 md:py-8 hover:no-underline [&[data-state=open]>svg]:rotate-180">
                                                     <span className="flex-1 pr-4 group-hover:text-brand-orange-400 transition-colors">{faq.question}</span>
                                                 </AccordionTrigger>
-                                                <AccordionContent className="text-gray-400 text-base md:text-lg leading-relaxed pb-8 font-medium">
+                                                <AccordionContent className="text-gray-400 text-sm md:text-lg leading-relaxed pb-6 md:pb-8 font-medium">
                                                     {faq.answer}
                                                 </AccordionContent>
                                             </AccordionItem>
@@ -259,25 +259,25 @@ export default function FAQPage() {
 
                 {/* Still Have a Question Section */}
                 <section className="mt-40 pt-20 border-t border-white/10">
-                    <div className="bg-brand-mesh p-16 md:p-24 rounded-[60px] relative overflow-hidden text-center">
+                    <div className="bg-brand-mesh p-10 md:p-24 rounded-[40px] md:rounded-[60px] relative overflow-hidden text-center">
                         <div className="absolute inset-0 bg-brand-orange-500/10 backdrop-blur-3xl" />
                         <div className="relative z-10">
-                            <h2 className="text-4xl md:text-7xl font-black text-white uppercase tracking-tighter mb-8 leading-none">
+                            <h2 className="text-3xl md:text-7xl font-black text-white uppercase tracking-tighter mb-8 leading-none">
                                 Didn't Find <br /><span className="text-brand-orange-500">Your Answer?</span>
                             </h2>
-                            <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-16 font-medium">
+                            <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-12 md:mb-16 font-medium px-4">
                                 Call us directly — our team is available Monday to Saturday, 9am to 6pm. We're happy to answer any question about your specific building, roof type, or requirement.
                             </p>
 
                             <div className="flex flex-wrap justify-center gap-6">
-                                <a href="tel:+918792182631">
-                                    <Button size="lg" className="bg-white text-black hover:bg-brand-orange-500 hover:text-white rounded-[24px] px-12 py-8 text-lg font-black uppercase tracking-widest shadow-2xl transition-all h-20">
-                                        <Phone className="mr-3 h-6 w-6" /> Call +91 8792182631
+                                <a href="tel:+918792182631" className="w-full sm:w-auto">
+                                    <Button size="lg" className="w-full bg-white text-black hover:bg-brand-orange-500 hover:text-white rounded-[24px] px-8 md:px-12 py-6 md:py-8 text-base md:text-lg font-black uppercase tracking-widest shadow-2xl transition-all h-16 md:h-20">
+                                        <Phone className="mr-3 h-5 w-5 md:h-6 md:w-6" /> Call +91 8792182631
                                     </Button>
                                 </a>
-                                <Link href="/contact">
-                                    <Button size="lg" className="bg-transparent border-2 border-white/20 hover:border-brand-orange-500 text-white hover:bg-white/5 rounded-[24px] px-12 py-8 text-lg font-black uppercase tracking-widest transition-all h-20">
-                                        <Mail className="mr-3 h-6 w-6" /> Send Us a Message
+                                <Link href="/contact" className="w-full sm:w-auto">
+                                    <Button size="lg" className="w-full bg-transparent border-2 border-white/20 hover:border-brand-orange-500 text-white hover:bg-white/5 rounded-[24px] px-8 md:px-12 py-6 md:py-8 text-base md:text-lg font-black uppercase tracking-widest transition-all h-16 md:h-20">
+                                        <Mail className="mr-3 h-5 w-5 md:h-6 md:w-6" /> Send Message
                                     </Button>
                                 </Link>
                             </div>

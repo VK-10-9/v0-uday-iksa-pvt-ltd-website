@@ -181,26 +181,26 @@ export default function NanosunPage() {
                 <Sun className="h-4 w-4 text-brand-orange-400" />
                 <h2 className="text-[10px] font-black text-gray-400 uppercase tracking-[0.3em]">Natural Sky Light (NANOSUN)</h2>
               </div>
-              <h1 className="text-5xl md:text-8xl font-black text-white mb-10 tracking-tighter uppercase leading-[0.9]">
+              <h1 className="text-4xl md:text-6xl lg:text-8xl font-black text-white mb-10 tracking-tighter uppercase leading-[0.9]">
                 NANOSUN™ PEB <br /> <span className="brand-gradient-text">Circular Daylight</span>
               </h1>
-              <p className="text-xl text-gray-400 mb-16 leading-relaxed max-w-2xl font-medium">
+              <p className="text-lg md:text-xl text-gray-400 mb-16 leading-relaxed max-w-2xl font-medium">
                 Natural Sunlight for Your Factory or Warehouse — All Day, <span className="text-white font-bold">No Electricity</span>. Designed specifically for metal roofs to bring pure, comfortable light without the heat.
               </p>
               <div className="flex flex-wrap gap-6">
                 <Link href="/contact">
-                  <HoverButton className="bg-white text-black hover:bg-brand-orange-500 hover:text-white rounded-2xl px-16 py-8 text-sm font-black uppercase tracking-widest shadow-2xl transition-all">
+                  <HoverButton className="bg-white text-black hover:bg-brand-orange-500 hover:text-white rounded-2xl px-10 md:px-16 py-6 md:py-8 text-xs md:text-sm font-black uppercase tracking-widest shadow-2xl transition-all">
                     Get Free Assessment <ArrowRight className="ml-3 h-5 w-5" />
                   </HoverButton>
                 </Link>
-                <button className="px-16 py-8 border-2 border-white/10 hover:border-brand-orange-500/50 text-white transition-all duration-300 rounded-2xl text-[10px] font-black uppercase tracking-widest backdrop-blur-md">
+                <button className="px-10 md:px-16 py-6 md:py-8 border-2 border-white/10 hover:border-brand-orange-500/50 text-white transition-all duration-300 rounded-2xl text-[10px] font-black uppercase tracking-widest backdrop-blur-md">
                   Download Catalogue
                 </button>
               </div>
             </motion.div>
 
             <motion.div
-              className="relative h-[650px] rounded-[80px] overflow-hidden border border-white/10 shadow-3xl group"
+              className="relative h-[400px] md:h-[650px] rounded-[60px] md:rounded-[80px] overflow-hidden border border-white/10 shadow-3xl group"
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1 }}
@@ -212,10 +212,10 @@ export default function NanosunPage() {
                 className="object-cover transition-transform duration-1000 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60" />
-              <div className="absolute bottom-12 left-12 right-12">
-                <div className="bg-white/5 backdrop-blur-3xl border border-white/10 p-10 rounded-[48px]">
-                  <p className="text-3xl font-black text-white uppercase tracking-tighter mb-2">Zero Power</p>
-                  <p className="text-gray-400 text-sm font-medium">Harvesting the sun to light up massive industrial floorplates.</p>
+              <div className="absolute bottom-6 md:bottom-12 left-6 md:left-12 right-6 md:right-12">
+                <div className="bg-white/5 backdrop-blur-3xl border border-white/10 p-6 md:p-10 rounded-[40px] md:rounded-[48px]">
+                  <p className="text-2xl md:text-3xl font-black text-white uppercase tracking-tighter mb-2">Zero Power</p>
+                  <p className="text-gray-400 text-xs md:text-sm font-medium">Harvesting the sun to light up massive industrial floorplates.</p>
                 </div>
               </div>
             </motion.div>
@@ -226,9 +226,9 @@ export default function NanosunPage() {
       {/* What's Inside Section */}
       <section className="py-40 relative px-6 lg:px-12 bg-slate-950/50">
         <div className="container mx-auto">
-          <div className="text-center mb-32">
-            <h2 className="text-4xl md:text-7xl font-black text-white mb-6 uppercase tracking-tighter leading-none">What's Inside <span className="brand-gradient-text">Every Unit</span></h2>
-            <p className="text-xl text-gray-500 max-w-2xl mx-auto font-medium">Three high-performance components working together to bring nature deep into your space.</p>
+          <div className="text-center mb-24 md:mb-32 px-4">
+            <h2 className="text-3xl md:text-5xl lg:text-7xl font-black text-white mb-6 uppercase tracking-tighter leading-none">What's Inside <span className="brand-gradient-text">Every Unit</span></h2>
+            <p className="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto font-medium">Three high-performance components working together to bring nature deep into your space.</p>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-10">
@@ -245,8 +245,8 @@ export default function NanosunPage() {
                   <component.icon className="h-10 w-10 text-brand-orange-500 group-hover:text-white" />
                 </div>
                 <h3 className="text-[10px] font-black text-brand-orange-500 uppercase tracking-widest mb-4 leading-none">{component.subtitle}</h3>
-                <h4 className="text-3xl font-black text-white uppercase tracking-tighter mb-8 leading-none">{component.title}</h4>
-                <p className="text-gray-400 mb-10 text-sm leading-relaxed font-medium">{component.description}</p>
+                <h4 className="text-2xl md:text-3xl font-black text-white uppercase tracking-tighter mb-8 leading-none">{component.title}</h4>
+                <p className="text-gray-400 mb-10 text-xs md:text-sm leading-relaxed font-medium">{component.description}</p>
                 <div className="space-y-4 pt-10 border-t border-white/5">
                   {component.points.map((point, i) => (
                     <div key={i} className="flex items-center gap-3 text-xs font-black text-gray-500 uppercase tracking-widest">
@@ -284,8 +284,8 @@ export default function NanosunPage() {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-24 items-start pb-20 border-b border-white/5 mb-20">
             <div>
-              <h2 className="text-6xl md:text-8xl font-black text-white uppercase tracking-tighter leading-none mb-10">Choose <br /><span className="brand-gradient-text">Your Size</span></h2>
-              <p className="text-xl text-gray-400 max-w-xl font-medium leading-relaxed">
+              <h2 className="text-4xl md:text-8xl font-black text-white uppercase tracking-tighter leading-none mb-10">Choose <br /><span className="brand-gradient-text">Your Size</span></h2>
+              <p className="text-lg md:text-xl text-gray-400 max-w-xl font-medium leading-relaxed">
                 Every building is different — that's why we offer 8 sizes optimized for different roof heights and coverage areas.
               </p>
             </div>
@@ -294,8 +294,8 @@ export default function NanosunPage() {
                 <button
                   key={size.id}
                   onClick={() => setActiveSize(size.name)}
-                  className={`px-8 py-5 rounded-2xl text-[10px] font-black uppercase tracking-widest transition-all ${activeSize === size.name
-                    ? "bg-brand-orange-500 text-white shadow-xl shadow-brand-orange-500/20 scale-105"
+                  className={`px-4 md:px-8 py-3 md:py-5 rounded-2xl text-[9px] md:text-[10px] font-black uppercase tracking-widest transition-all ${activeSize === size.name
+                    ? "bg-brand-orange-500 text-white shadow-xl shadow-brand-orange-500/20 md:scale-105"
                     : "bg-white/5 text-gray-400 hover:bg-white/10"
                     }`}
                 >
@@ -320,8 +320,8 @@ export default function NanosunPage() {
                       <span className="w-1.5 h-1.5 rounded-full bg-brand-orange-500 animate-pulse" />
                       <span className="text-[10px] font-black text-white uppercase tracking-widest">{size.name}</span>
                     </div>
-                    <h3 className="text-4xl lg:text-5xl font-black text-white uppercase tracking-tighter">Best For: <br /><span className="text-gray-400">{size.bestFor}</span></h3>
-                    <p className="text-xl text-gray-500 leading-relaxed font-medium">{size.description}</p>
+                    <h3 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter">Best For: <br /><span className="text-gray-400">{size.bestFor}</span></h3>
+                    <p className="text-lg md:text-xl text-gray-500 leading-relaxed font-medium">{size.description}</p>
 
                     <Link href="/contact">
                       <Button size="lg" className="bg-white text-black hover:bg-brand-orange-500 hover:text-white rounded-2xl px-12 py-8 text-xs font-black uppercase tracking-widest shadow-2xl shadow-white/5 group">
@@ -340,7 +340,7 @@ export default function NanosunPage() {
                           }`}
                       >
                         <span className="text-[10px] font-black text-gray-500 uppercase tracking-widest">{spec.label}</span>
-                        <span className={`text-xl font-black ${spec.highlight ? "text-brand-orange-400" : "text-white"}`}>{spec.value}</span>
+                        <span className={`text-lg md:text-xl font-black ${spec.highlight ? "text-brand-orange-400" : "text-white"}`}>{spec.value}</span>
                       </div>
                     ))}
                   </div>
@@ -362,9 +362,9 @@ export default function NanosunPage() {
                 fill
                 className="object-cover transition-transform duration-1000 group-hover:scale-105"
               />
-              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-slate-950 to-transparent p-12 flex flex-col justify-end">
-                <p className="text-5xl font-black text-white uppercase tracking-tighter mb-4">Built To Last</p>
-                <p className="text-gray-400 font-medium">Engineered for the harshest Indian monsoons and summer heat.</p>
+              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-slate-950 to-transparent p-8 md:p-12 flex flex-col justify-end">
+                <p className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4">Built To Last</p>
+                <p className="text-gray-400 text-sm md:text-base font-medium">Engineered for the harshest Indian monsoons and summer heat.</p>
               </div>
             </div>
 
@@ -373,7 +373,7 @@ export default function NanosunPage() {
                 <ShieldCheck className="h-4 w-4 text-brand-orange-500" />
                 <h2 className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Global Engineering Standards</h2>
               </div>
-              <h2 className="text-4xl md:text-6xl font-black text-white mb-10 uppercase tracking-tighter leading-tight">Common Specifications <br /><span className="brand-gradient-text">(All Sizes)</span></h2>
+              <h2 className="text-3xl md:text-6xl font-black text-white mb-10 uppercase tracking-tighter leading-tight">Common Specifications <br /><span className="brand-gradient-text">(All Sizes)</span></h2>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-8">
                 {commonSpecs.map((spec, i) => (
@@ -392,21 +392,21 @@ export default function NanosunPage() {
       <section className="py-40 relative px-6 lg:px-12 bg-slate-950 border-t border-white/5">
         <div className="container mx-auto">
           <motion.div
-            className="bg-brand-gradient p-24 lg:p-40 rounded-[100px] text-center shadow-2xl shadow-brand-orange-500/20 relative overflow-hidden"
+            className="bg-brand-gradient p-12 md:p-24 lg:p-40 rounded-[60px] md:rounded-[100px] text-center shadow-2xl shadow-brand-orange-500/20 relative overflow-hidden"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
           >
             <div className="absolute inset-0 bg-grid-white/[0.05] pointer-events-none" />
-            <Sparkles className="h-20 w-20 text-white/30 mx-auto mb-10 animate-pulse" />
-            <h2 className="text-5xl md:text-8xl font-black text-white mb-10 tracking-tighter uppercase leading-tight relative z-10">Scale Sustainable</h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-16 leading-relaxed relative z-10 font-bold uppercase tracking-widest text-sm opacity-90 leading-relaxed font-medium">
+            <Sparkles className="h-12 md:h-20 w-12 md:w-20 text-white/30 mx-auto mb-10 animate-pulse" />
+            <h2 className="text-3xl md:text-6xl lg:text-8xl font-black text-white mb-10 tracking-tighter uppercase leading-tight relative z-10">Scale Sustainable</h2>
+            <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-16 leading-relaxed relative z-10 font-bold uppercase tracking-widest text-xs opacity-90 leading-relaxed font-medium">
               Not sure which size is right for you? <br />Tell us your roof height and we'll calculate the exact units you need.
             </p>
             <div className="flex flex-wrap justify-center gap-10 relative z-10">
               <Link href="/contact" className="block w-full sm:w-auto">
-                <Button size="lg" className="w-full sm:w-auto bg-white text-black hover:bg-black hover:text-white transition-all duration-300 rounded-3xl px-20 py-10 text-xl font-black shadow-2xl shadow-white/10 uppercase tracking-widest">
-                  Get Free Assessment <ArrowRight className="ml-4 h-8 w-8" />
+                <Button size="lg" className="w-full sm:w-auto bg-white text-black hover:bg-black hover:text-white transition-all duration-300 rounded-3xl px-12 md:px-20 py-6 md:py-10 text-lg md:text-xl font-black shadow-2xl shadow-white/10 uppercase tracking-widest">
+                  Get Free Assessment <ArrowRight className="ml-4 h-6 md:h-8 w-6 md:w-8" />
                 </Button>
               </Link>
             </div>
