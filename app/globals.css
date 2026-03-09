@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Brand Colors from Palette (RGB) */
+  --brand-orange: 244 121 32;
+  --brand-red: 196 18 48;
+  --brand-amber: 251 191 36;
+  --brand-yellow: 255 204 0;
+
+  /* System Colors */
+  --background: 240 10% 2%;
+  --foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 244 121 32;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 196 18 48;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --accent: 251 191 36;
+  --accent-foreground: 0 0% 0%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --ring: 244 121 32;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
+  }
+}
+
+@layer components {
+
+  /* Brand Gradient Text */
+  .brand-gradient-text {
+    @apply bg-brand-gradient bg-clip-text text-transparent;
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease-in-out infinite;
+  }
+
+  /* Brand Gradient Background */
+  .brand-gradient-bg {
+    @apply bg-brand-gradient;
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease-in-out infinite;
+  }
+
+  /* Glow Effects */
+  .brand-glow {
+    box-shadow: 0 0 20px rgba(244, 121, 32, 0.3), 0 0 40px rgba(196, 18, 48, 0.2), 0 0 60px rgba(251, 191, 36, 0.1);
+  }
+
+  .brand-glow-hover:hover {
+    box-shadow: 0 0 30px rgba(244, 121, 32, 0.4), 0 0 60px rgba(196, 18, 48, 0.3), 0 0 90px rgba(251, 191, 36, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+  /* Brand Border */
+  .brand-border {
+    border-image: linear-gradient(135deg, #f47920, #c41230, #fbbf24, #ffcc00) 1;
+  }
+
+  /* Glass Morphism with Brand Colors */
+  .brand-glass {
+    @apply backdrop-blur-xl bg-black/20;
+    border: 1px solid rgba(244, 121, 32, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  /* Animated Background Patterns */
+  .brand-mesh {
+    background: radial-gradient(circle at 20% 80%, rgba(244, 121, 32, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(196, 18, 48, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(251, 191, 36, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 60% 60%, rgba(255, 204, 0, 0.15) 0%, transparent 50%);
+  }
+
+  /* Brand Glass Morphism */
+  .brand-glass-premium {
+    @apply backdrop-blur-xl bg-black/40 border border-white/10;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  /* Glow Effects */
+  .glow-border {
+    border: 1px solid rgba(244, 121, 32, 0.2);
+    box-shadow: 0 0 15px rgba(244, 121, 32, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .glow-border:hover {
+    border: 1px solid rgba(244, 121, 32, 0.4);
+    box-shadow: 0 0 25px rgba(244, 121, 32, 0.2);
+  }
+
+  /* Particle Effects */
+  .brand-particles::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle at 25% 25%, rgba(244, 121, 32, 0.8) 1px, transparent 1px),
+      radial-gradient(circle at 75% 75%, rgba(196, 18, 48, 0.8) 1px, transparent 1px),
+      radial-gradient(circle at 50% 50%, rgba(251, 191, 36, 0.8) 1px, transparent 1px);
+    background-size: 50px 50px, 60px 60px, 40px 40px;
+    animation: float 20s linear infinite;
+    opacity: 0.3;
+  }
+}
+
+@layer utilities {
+
+  /* Text Utilities */
+  .text-brand-gradient {
+    @apply brand-gradient-text;
+  }
+
+  /* Background Utilities */
+  .bg-brand-mesh {
+    @apply brand-mesh;
+  }
+
+  /* Interactive States */
+  .hover-brand-glow {
+    @apply brand-glow-hover;
+  }
+
+  /* Animation Utilities */
+  .animate-brand-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-brand-pulse {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+}
+
+/* Custom Scrollbar with Brand Colors */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #f47920, #c41230, #fbbf24, #ffcc00);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #ea580c, #b91c1c, #d97706, #ca8a04);
+}
+
+/* Selection Colors */
+::selection {
+  background: rgba(244, 121, 32, 0.3);
+  color: white;
+}
+
+::-moz-selection {
+  background: rgba(244, 121, 32, 0.3);
+  color: white;
+}
