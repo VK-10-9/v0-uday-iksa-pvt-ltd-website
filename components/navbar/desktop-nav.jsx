@@ -146,6 +146,36 @@ export default function DesktopNav({ active, setActive }) {
           </div>
         </MenuItem>
 
+        <MenuItem setActive={setActive} active={active} item="FAQ">
+          <div className="flex flex-col space-y-6 text-sm w-96 p-4">
+            <div className="text-[10px] font-black text-gray-500 uppercase tracking-widest border-b border-white/5 pb-2">Common Questions</div>
+            <div className="space-y-4">
+              <div className="space-y-2">
+                <p className="text-white font-bold text-xs uppercase tracking-tight">Does it let in heat?</p>
+                <p className="text-gray-500 text-[10px] leading-relaxed">No. Our dome filters out infrared (heat) and UV rays, only bringing in comfortable light.</p>
+              </div>
+              <div className="space-y-2">
+                <p className="text-white font-bold text-xs uppercase tracking-tight">Will it leak during rains?</p>
+                <p className="text-gray-500 text-[10px] leading-relaxed">Every installation is 100% leak-proof and tested for Indian monsoon conditions.</p>
+              </div>
+              <div className="space-y-2">
+                <p className="text-white font-bold text-xs uppercase tracking-tight">Where can it be used?</p>
+                <p className="text-gray-500 text-[10px] leading-relaxed">Factories, warehouses, homes, schools—essentially any building with a roof!</p>
+              </div>
+            </div>
+
+            <div className="pt-4 border-t border-white/10">
+              <Link
+                href="/faq"
+                className="flex items-center justify-between group"
+              >
+                <span className="font-black text-[10px] uppercase tracking-widest text-brand-orange-400">View All Questions</span>
+                <ExternalLink className="h-4 w-4 text-brand-orange-400 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </div>
+        </MenuItem>
+
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Link
             href="/awards"
