@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Building2, Users, Lightbulb, ChevronRight, Target, Eye, Heart, ArrowRight } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { HoverButton } from "@/components/ui/hover-button"
 
