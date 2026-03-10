@@ -8,9 +8,9 @@ export default function HeroHeading() {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.4, duration: 1 }}
-      className="space-y-10 text-center"
+      className="space-y-6 md:space-y-8 text-left"
     >
-      <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-black leading-[0.9] md:leading-[0.85] tracking-tighter uppercase flex flex-col items-center">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[0.9] md:leading-[0.85] tracking-tighter uppercase flex flex-col items-start">
         <motion.span
           className="block text-white"
           initial={{ opacity: 0, x: -50 }}
@@ -38,18 +38,18 @@ export default function HeroHeading() {
       </h1>
 
       <motion.div
-        className="max-w-4xl mx-auto space-y-6"
+        className="max-w-2xl space-y-4 md:space-y-6"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2, duration: 0.8 }}
       >
-        <p className="text-lg md:text-xl lg:text-2xl text-gray-400 leading-relaxed font-medium px-4 md:px-0">
-          Stop paying for light that nature gives you for free. <span className="text-white font-black">Uday IKSA</span> brings natural sunlight and fresh air into your factory, office, home, or school — no electricity, no running costs, no compromise.
+        <p className="text-lg md:text-xl text-gray-400 leading-relaxed font-medium">
+          Stop paying for light that nature gives you for free. <span className="text-white font-black">Uday IKSA</span> brings natural sunlight and fresh air into your factory, office, home, or school.
         </p>
 
-        <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4 text-[10px] md:text-xs font-black uppercase tracking-[0.2em] md:tracking-[0.3em]">
+        <div className="flex flex-wrap items-center gap-3 md:gap-4 text-[10px] md:text-xs font-black uppercase tracking-[0.2em] md:tracking-[0.3em]">
           <span className="text-brand-orange-500 whitespace-nowrap">No Electricity</span>
-          <span className="text-gray-600 hidden sm:inline">•</span>
+          <span className="text-gray-600">•</span>
           <span className="text-brand-amber-500 whitespace-nowrap">Zero Running Cost</span>
           <span className="text-gray-600 hidden sm:inline">•</span>
           <span className="text-brand-yellow-500 whitespace-nowrap">High Impact</span>

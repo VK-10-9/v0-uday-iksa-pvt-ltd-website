@@ -13,7 +13,7 @@ export default function ProductShowcase({ activeProduct, setActiveProduct, hover
     <div className="relative space-y-12">
       {/* Featured Image Frame */}
       <motion.div
-        className="relative h-[320px] sm:h-[400px] md:h-[480px] w-full rounded-3xl overflow-hidden brand-glass-premium border-2 border-brand-orange-500/30 group"
+        className="relative h-[280px] sm:h-[350px] md:h-[420px] w-full rounded-3xl overflow-hidden brand-glass-premium border-2 border-brand-orange-500/30 group"
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
@@ -72,20 +72,20 @@ export default function ProductShowcase({ activeProduct, setActiveProduct, hover
       </motion.div>
 
       {/* Product Selection Pills */}
-      <div className="flex flex-wrap gap-4 justify-center">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
         {products.map((product, index) => (
           <motion.button
             key={product.id}
             onClick={() => setActiveProduct(index)}
-            className={`px-8 py-4 rounded-2xl font-bold transition-all duration-500 flex items-center gap-3 ${activeProduct === index
-              ? "bg-brand-orange-500 text-white shadow-xl shadow-brand-orange-500/30 scale-105"
+            className={`px-4 py-2.5 rounded-xl font-bold transition-all duration-500 flex items-center gap-2.5 ${activeProduct === index
+              ? "bg-brand-orange-500 text-white shadow-lg shadow-brand-orange-500/20 scale-105"
               : "bg-white/5 text-gray-400 hover:bg-white/10 border border-white/5"
-              } px-4 py-3 md:px-8 md:py-4 text-xs md:text-sm`}
-            whileHover={{ y: -5 }}
-            whileTap={{ scale: 0.95 }}
+              } text-[10px] md:text-xs uppercase tracking-wider`}
+            whileHover={{ y: -3 }}
+            whileTap={{ scale: 0.98 }}
           >
-            <span className={`w-2 h-2 rounded-full ${activeProduct === index ? "bg-white" : "bg-gray-600"} ${activeProduct === index ? "animate-pulse" : ""}`} />
-            {product.name}
+            <span className={`w-1.5 h-1.5 rounded-full ${activeProduct === index ? "bg-white" : "bg-gray-600"} ${activeProduct === index ? "animate-pulse" : ""}`} />
+            <span className="truncate">{product.name}</span>
           </motion.button>
         ))}
       </div>
