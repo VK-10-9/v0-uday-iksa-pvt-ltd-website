@@ -71,7 +71,7 @@ export default function FAQPage() {
                 },
                 {
                     question: "Can it be installed on my type of roof?",
-                    answer: "Most likely yes. We have models for Metal / PEB sheet roofs (NANOSUN™ PEB), Flat concrete (RCC) slabs (NANOSUN™ RCC), Mangalore or modern tile roofs (NANOSUN™ Tiles), and Rooms with false / POP ceilings (NANOSUN™ False Ceiling). If you're unsure, just call us or book a site visit — we'll assess your roof and recommend the right product.",
+                    answer: "Most likely yes. We have models for Metal / PEB sheet roofs (NANOSUN™ PEB), Flat concrete (RCC) slabs (NANOSUN™ RCC), and Mangalore or modern tile roofs (NANOSUN™ Tiles). If you're unsure, just call us or book a site visit — we'll assess your roof and recommend the right product.",
                 },
                 {
                     question: "Can it be installed on an existing building or only during construction?",
@@ -87,7 +87,7 @@ export default function FAQPage() {
                 },
                 {
                     question: "I have a false ceiling (POP / gypsum). Will it still work?",
-                    answer: "Yes. The NANOSUN™ False Ceiling model is specifically designed for this. The reflector pipe passes through the false ceiling cavity and the diffuser panel sits flush with your finished ceiling — it looks exactly like a premium recessed light fitting. No pipes visible inside the room.",
+                    answer: "Yes. Our standard systems can be integrated with false ceilings. The reflector pipe passes through the false ceiling cavity and the diffuser panel sits flush with your finished ceiling — it looks exactly like a premium recessed light fitting. No pipes visible inside the room.",
                 },
             ],
         },

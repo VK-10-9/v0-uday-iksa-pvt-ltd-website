@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion"
 import Link from "next/link"
 import Image from "next/image"
-import { X, Phone, ChevronRight, ChevronDown, Home, Info, Lightbulb, Briefcase, Award, Mail, Zap, HelpCircle, Factory, Building, Star, ExternalLink } from "lucide-react"
+import { X, Phone, ChevronRight, ChevronDown, Home, Info, Lightbulb, Briefcase, Award, Mail, Zap, HelpCircle, Factory, Building, Star, ExternalLink, Sun, Wind, Sparkles } from "lucide-react"
 import { HoverButton } from "@/components/ui/hover-button"
 import { products } from "@/lib/data/products"
 
@@ -89,9 +89,14 @@ export default function MobileMenu({ isOpen, onClose }) {
     {
       name: "Products",
       href: "/products",
-      icon: <Lightbulb className="h-5 w-5" />,
-      color: "text-brand-orange-400",
-      subLinks: products.map(p => ({ name: p.name, href: p.link }))
+      icon: <Sparkles className="h-5 w-5" />,
+      color: "text-brand-orange-500",
+      subLinks: [
+        { name: "NANOSUN™ Series", href: "/products" },
+        { name: "NANOVENT® Series", href: "/products" },
+        { name: "SKYTUBE™ Series", href: "/products" },
+        { name: "Architectural iWINDOW", href: "/products" },
+      ]
     },
     {
       name: "Portfolio",

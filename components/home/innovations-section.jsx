@@ -20,7 +20,7 @@ export default function InnovationsSection() {
   const [hoveredProduct, setHoveredProduct] = useState(null)
 
   return (
-    <section className="py-20 md:py-40 relative bg-slate-950 overflow-hidden">
+    <section className="py-12 md:py-24 relative bg-slate-950 overflow-hidden">
       {/* Background Atmosphere */}
       <div className="absolute inset-0">
         <motion.div
@@ -59,7 +59,7 @@ export default function InnovationsSection() {
             <span className="text-[10px] font-black text-brand-orange-400 uppercase tracking-[0.2em]">Engineering Excellence</span>
           </motion.div>
 
-          <h2 className="text-4xl md:text-6xl lg:text-8xl font-black mb-8 text-white uppercase tracking-tighter leading-none">
+          <h2 className="text-3xl md:text-5xl lg:text-7xl font-black mb-8 text-white uppercase tracking-tighter leading-none">
             Strategic <span className="brand-gradient-text">Products</span>
           </h2>
 

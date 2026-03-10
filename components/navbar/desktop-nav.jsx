@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { ExternalLink, Star, Award, Building, Factory } from "lucide-react"
+import { ExternalLink, Star, Award, Building, Factory, Sun, Wind, Zap } from "lucide-react"
 import { HoveredLink, Menu as NavMenu, MenuItem, ProductItem } from "@/components/ui/navbar-menu"
 import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
@@ -78,28 +78,91 @@ export default function DesktopNav({ active, setActive }) {
         </MenuItem>
 
         <MenuItem setActive={setActive} active={active} item="Products">
-          <div className="text-sm grid p-8 w-[920px]">
-            <div className="text-[10px] font-black text-gray-500 uppercase tracking-[0.3em] mb-10 pb-4 border-b border-white/5">Industrial Product Line</div>
-            <div className="grid grid-cols-2 gap-x-16 gap-y-12">
-              {products.map((product) => (
-                <ProductItem
-                  key={product.id}
-                  title={product.name}
-                  href={product.link}
-                  src={product.image}
-                  description={product.shortNote || product.description}
-                />
-              ))}
+          <div className="grid grid-cols-2 gap-x-8 gap-y-10 p-4 w-[650px]">
+            {/* Natural Skylight Section */}
+            <div className="flex flex-col space-y-4">
+              <div className="text-[10px] font-black text-brand-orange-500 uppercase tracking-widest border-b border-white/5 pb-2 flex items-center gap-2">
+                <Sun className="h-3 w-3" /> NANOSUN™ Series
+              </div>
+              <div className="space-y-3">
+                {[
+                  { name: "PEB / Metal Sheet Roof", href: "/products/nanosun", desc: "Industrial & Factory Sheds" },
+                  { name: "Flat RCC / Concrete Roof", href: "/products/nanosun-rcc", desc: "Offices & Apartments" },
+                  { name: "Tile Roof", href: "/products/nanosun-tiles", desc: "Bungalows & Hotels" },
+                  { name: "Openable Skylight", href: "/products/skylight", desc: "Light + Fresh Air" },
+                ].map((item) => (
+                  <HoveredLink key={item.name} href={item.href} className="group">
+                    <div className="flex flex-col">
+                      <span className="font-bold text-white group-hover:text-brand-orange-400 transition-colors uppercase text-[11px] leading-tight">{item.name}</span>
+                      <span className="text-[9px] text-gray-500">{item.desc}</span>
+                    </div>
+                  </HoveredLink>
+                ))}
+              </div>
             </div>
 
-            <div className="pt-12 mt-12 border-t border-white/5">
-              <Link
-                href="/products"
-                className="flex items-center justify-between group"
-              >
-                <span className="font-black tracking-[0.3em] uppercase text-[10px] text-brand-orange-400">View Comprehensive Solutions</span>
-                <ExternalLink className="h-4 w-4 text-brand-orange-400 group-hover:translate-x-1 transition-transform" />
-              </Link>
+            {/* Ventilation Section */}
+            <div className="flex flex-col space-y-4">
+              <div className="text-[10px] font-black text-brand-orange-500 uppercase tracking-widest border-b border-white/5 pb-2 flex items-center gap-2">
+                <Wind className="h-3 w-3" /> NANOVENT® Series
+              </div>
+              <div className="space-y-3">
+                {[
+                  { name: "Turbo Ventilator (SS 430)", href: "/products/nanovent", desc: "Standard industrial use" },
+                  { name: "Turbo Ventilator (SS 202)", href: "/products/nanovent", desc: "Mid-grade applications" },
+                  { name: "Turbo Ventilator (SS 304)", href: "/products/nanovent", desc: "Premium/Corrosive use" },
+                  { name: "Suspensor System", href: "/products/nanovent", desc: "Large-scale ventilation" },
+                ].map((item) => (
+                  <HoveredLink key={item.name} href={item.href} className="group">
+                    <div className="flex flex-col">
+                      <span className="font-bold text-white group-hover:text-brand-orange-400 transition-colors uppercase text-[11px] leading-tight">{item.name}</span>
+                      <span className="text-[9px] text-gray-500">{item.desc}</span>
+                    </div>
+                  </HoveredLink>
+                ))}
+              </div>
+            </div>
+
+            {/* Tubular Light Section */}
+            <div className="flex flex-col space-y-4">
+              <div className="text-[10px] font-black text-brand-orange-500 uppercase tracking-widest border-b border-white/5 pb-2 flex items-center gap-2">
+                <Zap className="h-3 w-3" /> SKYTUBE™ Series
+              </div>
+              <div className="space-y-3">
+                {[
+                  { name: "Standard Tubular", href: "/products/skytube", desc: "For windowless interior rooms" },
+                  { name: "Angled / Bend Config", href: "/products/skytube", desc: "Navigates around obstacles" },
+                ].map((item) => (
+                  <HoveredLink key={item.name} href={item.href} className="group">
+                    <div className="flex flex-col">
+                      <span className="font-bold text-white group-hover:text-brand-orange-400 transition-colors uppercase text-[11px] leading-tight">{item.name}</span>
+                      <span className="text-[9px] text-gray-500">{item.desc}</span>
+                    </div>
+                  </HoveredLink>
+                ))}
+              </div>
+            </div>
+
+            {/* Designer / Specialty Section */}
+            <div className="flex flex-col space-y-4">
+              <div className="text-[10px] font-black text-brand-orange-500 uppercase tracking-widest border-b border-white/5 pb-2 flex items-center gap-2">
+                <Star className="h-3 w-3" /> Architectural
+              </div>
+              <div className="space-y-3">
+                {[
+                  { name: "iWINDOW GLASS", href: "/products/iwindow", desc: "Flat Roof Windows" },
+                ].map((item) => (
+                  <HoveredLink key={item.name} href={item.href} className="group">
+                    <div className="flex flex-col">
+                      <span className="font-bold text-white group-hover:text-brand-orange-400 transition-colors uppercase text-[11px] leading-tight">{item.name}</span>
+                      <span className="text-[9px] text-gray-500">{item.desc}</span>
+                    </div>
+                  </HoveredLink>
+                ))}
+              </div>
+              <div className="pt-4 border-t border-white/5">
+                <Link href="/products" className="text-[10px] font-black text-brand-orange-400 uppercase tracking-widest hover:underline">View All Systems</Link>
+              </div>
             </div>
           </div>
         </MenuItem>

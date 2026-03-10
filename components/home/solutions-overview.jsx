@@ -9,7 +9,7 @@ import { solutionsData } from "@/lib/data/home-sections"
 
 export default function SolutionsOverview() {
     return (
-        <section id="solutions" className="py-24 md:py-48 relative bg-slate-950 px-6 lg:px-12 overflow-hidden">
+        <section id="solutions" className="py-12 md:py-16 relative bg-slate-950 px-6 lg:px-12 overflow-hidden">
             {/* Background Orbs with subtle movement */}
             <div className="absolute inset-0">
                 <motion.div
@@ -25,7 +25,7 @@ export default function SolutionsOverview() {
             </div>
 
             <div className="container mx-auto relative z-10">
-                <div className="grid lg:grid-cols-2 gap-20 lg:gap-32 items-center">
+                <div className="grid lg:grid-cols-2 gap-20 lg:gap-24 items-center">
                     {/* Left Side: Modern Image Grid */}
                     <div className="relative order-2 lg:order-1">
                         <div className="grid grid-cols-12 gap-4 items-start">
@@ -83,19 +83,19 @@ export default function SolutionsOverview() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                         >
-                            <p className="text-brand-orange-500 font-black text-5xl md:text-6xl mb-1 tracking-tighter">{solutionsData.experienceBadge.number}</p>
+                            <p className="text-brand-orange-500 font-black text-4xl md:text-5xl mb-1 tracking-tighter">{solutionsData.experienceBadge.number}</p>
                             <p className="text-[10px] font-black text-white uppercase tracking-widest leading-none opacity-60">{solutionsData.experienceBadge.label}</p>
                         </motion.div>
                     </div>
 
                     {/* Right Side: Refined Content */}
-                    <div className="space-y-12 order-1 lg:order-2">
-                        <div className="space-y-8">
+                    <div className="space-y-10 order-1 lg:order-2">
+                        <div className="space-y-6">
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                className="inline-flex items-center gap-3 bg-brand-orange-500/10 border border-brand-orange-500/20 rounded-full px-8 py-3 backdrop-blur-md"
+                                className="inline-flex items-center gap-3 bg-brand-orange-500/10 border border-brand-orange-500/20 rounded-full px-8 py-2.5 backdrop-blur-md"
                             >
                                 <div className="flex -space-x-2">
                                     <Home className="h-4 w-4 text-brand-orange-500" />
@@ -104,7 +104,7 @@ export default function SolutionsOverview() {
                                 <span className="text-[10px] font-black text-brand-orange-400 uppercase tracking-[0.4em]">{solutionsData.badge.text}</span>
                             </motion.div>
 
-                            <h2 className="text-5xl md:text-7xl font-black text-white uppercase tracking-tighter leading-[0.9]">
+                            <h2 className="text-2xl md:text-4xl lg:text-5xl font-black text-white uppercase tracking-tighter leading-[0.9]">
                                 {solutionsData.title.plain} <br />
                                 <span className="brand-gradient-text">{solutionsData.title.gradient}</span>
                             </h2>
@@ -178,7 +178,7 @@ export default function SolutionsOverview() {
 
                 {/* Local Highlight CTA */}
                 <motion.div
-                    className="mt-32 md:mt-48 bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-12 lg:p-24 rounded-[64px] md:rounded-[80px] text-center relative overflow-hidden group shadow-2xl"
+                    className="mt-16 md:mt-24 bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-10 lg:p-20 rounded-[64px] md:rounded-[80px] text-center relative overflow-hidden group shadow-2xl"
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -187,7 +187,7 @@ export default function SolutionsOverview() {
                     <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-red-500/10 rounded-full blur-[140px] translate-y-1/2 -translate-x-1/2" />
 
                     <div className="relative z-10 max-w-4xl mx-auto space-y-10">
-                        <h3 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter leading-tight">
+                        <h3 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter leading-tight">
                             Built for <span className="brand-gradient-text">Homes & Factories</span>
                         </h3>
                         <p className="text-lg md:text-2xl text-gray-400 font-medium leading-relaxed">

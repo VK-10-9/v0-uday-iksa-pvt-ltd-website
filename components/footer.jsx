@@ -98,11 +98,11 @@ export default function Footer() {
             <h3 className="text-xs font-black text-white mb-10 uppercase tracking-[0.3em] pl-4 border-l-2 border-brand-orange-500">Core Systems</h3>
             <ul className="space-y-6">
               {[
-                { name: 'NANOSUN DAYLIGHT', href: '/products' },
-                { name: 'NANOVENT VENTILATION', href: '/products' },
-                { name: 'SKYTUBE TUBULAR', href: '/products' },
+                { name: 'NATURAL SKYLIGHT', href: '/products' },
+                { name: 'TUBULAR DAYLIGHTING', href: '/products' },
+                { name: 'NATURAL VENTILATOR', href: '/products' },
+                { name: 'DESIGNER INTERIOR SKYLIGHT', href: '/products' },
                 { name: 'CUSTOM ENGINEERING', href: '/products' },
-                { name: 'OPTIMIZATION SERVICES', href: '/products' },
               ].map((item) => (
                 <li key={item.name}>
                   <Link
@@ -115,6 +115,17 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+
+            <div className="mt-12 pt-8 border-t border-white/5 flex items-center gap-4 group/india">
+              <div className="relative h-8 w-12 rounded overflow-hidden shadow-2xl group-hover/india:scale-110 transition-transform">
+                <div className="h-1/3 bg-[#FF9933]"></div>
+                <div className="h-1/3 bg-white flex items-center justify-center">
+                  <div className="w-2 h-2 rounded-full border border-blue-900 border-t-blue-900/50 animate-spin"></div>
+                </div>
+                <div className="h-1/3 bg-[#138808]"></div>
+              </div>
+              <span className="text-[10px] font-black text-white uppercase tracking-widest">Proudly Made in India</span>
+            </div>
           </div>
 
           {/* Newsletter / Social */}
@@ -144,14 +155,16 @@ export default function Footer() {
               <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-6">Digital Network</p>
               <div className="flex gap-4">
                 {[
-                  { icon: Linkedin, label: 'LinkedIn' },
-                  { icon: Instagram, label: 'Instagram' },
-                  { icon: Twitter, label: 'Twitter' },
-                  { icon: Facebook, label: 'Facebook' }
+                  { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com/company/uday-iksa-private-limited' },
+                  { icon: Instagram, label: 'Instagram', href: 'https://instagram.com/udayiksa' },
+                  { icon: Twitter, label: 'Twitter', href: '#' },
+                  { icon: Facebook, label: 'Facebook', href: 'https://facebook.com/udayiksa' }
                 ].map((social) => (
                   <a
                     key={social.label}
-                    href="#"
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-14 h-14 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center hover:bg-brand-orange-500 hover:border-brand-orange-500 transition-all duration-500 group shadow-lg"
                   >
                     <social.icon className="h-6 w-6 text-gray-500 group-hover:text-white transition-colors" />

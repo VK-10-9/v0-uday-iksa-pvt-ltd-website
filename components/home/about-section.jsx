@@ -37,7 +37,7 @@ export default function AboutSection() {
   ]
 
   return (
-    <section id="about" className="py-40 relative bg-slate-950 px-6 lg:px-12 overflow-hidden">
+    <section id="about" className="py-12 md:py-16 relative bg-slate-950 px-6 lg:px-12 overflow-hidden">
       {/* Dynamic Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-orange-500/5 rounded-full blur-[140px]" />
@@ -45,21 +45,21 @@ export default function AboutSection() {
       </div>
 
       <div className="container mx-auto relative z-10">
-        <div className="grid lg:grid-cols-2 gap-24 items-center mb-40">
+        <div className="grid lg:grid-cols-2 gap-24 items-center mb-24 md:mb-32">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-3 bg-white/5 border border-white/10 rounded-full px-8 py-2.5 mb-10 backdrop-blur-md">
+            <div className="inline-flex items-center gap-3 bg-white/5 border border-white/10 rounded-full px-8 py-2.5 mb-8 backdrop-blur-md">
               <Sparkles className="h-4 w-4 text-brand-orange-500" />
               <h2 className="text-[10px] font-black text-gray-400 uppercase tracking-[0.4em]">The Uday IKSA Story</h2>
             </div>
-            <h2 className="text-4xl md:text-7xl font-black text-white mb-10 tracking-tighter uppercase leading-none">
+            <h2 className="text-3xl md:text-5xl font-black text-white mb-8 tracking-tighter uppercase leading-none">
               Lighting Up <br /> <span className="brand-gradient-text">India, Naturally</span>
             </h2>
-            <div className="space-y-6 text-gray-400 text-lg leading-relaxed font-medium mb-12 max-w-xl">
+            <div className="space-y-6 text-gray-400 text-base leading-relaxed font-medium mb-10 max-w-xl">
               <p>
                 Uday IKSA started with one simple idea: <span className="text-white">buildings shouldn't need to burn electricity</span> just to stay bright during the day.
               </p>
@@ -77,6 +77,24 @@ export default function AboutSection() {
                 </Button>
               </Link>
             </div>
+
+            {/* Prof. Kurubar One-Liner */}
+            <motion.div
+              className="mt-12 p-8 bg-white/5 border border-white/10 rounded-[32px] relative overflow-hidden group"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <div className="relative z-10">
+                <p className="text-gray-300 italic text-sm leading-relaxed mb-4">
+                  "Our products are designed under the guidance of <span className="text-white font-bold">Prof. S.P. Kurubar</span> — Six Sigma Black Belt, Lean Specialist (Japan-trained), and Dean at KLE Technological University — bringing world-class engineering standards to every unit we build."
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="h-0.5 w-8 bg-brand-orange-500"></div>
+                  <span className="text-[10px] font-black text-brand-orange-500 uppercase tracking-widest">Engineering Trust</span>
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
 
           <div className="grid grid-cols-1 gap-8">
@@ -125,6 +143,6 @@ export default function AboutSection() {
           ))}
         </div>
       </div>
-    </section>
+    </section >
   )
 }

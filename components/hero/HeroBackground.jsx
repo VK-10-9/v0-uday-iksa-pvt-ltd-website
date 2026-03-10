@@ -1,8 +1,15 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { useEffect, useState } from "react"
 
 export default function HeroBackground({ mousePosition }) {
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
   return (
     <div className="absolute inset-0">
       {/* Brand Mesh Background */}
@@ -17,7 +24,7 @@ export default function HeroBackground({ mousePosition }) {
       />
 
       {/* Floating Brand Particles */}
-      {[...Array(50)].map((_, i) => (
+      {isClient && [...Array(50)].map((_, i) => (
         <motion.div
           key={i}
           className="absolute w-1 h-1 rounded-full"

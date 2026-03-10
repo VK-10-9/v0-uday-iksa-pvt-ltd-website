@@ -7,7 +7,7 @@ import { HoverButton } from "@/components/ui/hover-button"
 
 export default function CTASection() {
   return (
-    <section className="py-20 md:py-40 relative bg-slate-950 overflow-hidden">
+    <section className="py-12 md:py-16 relative bg-slate-950 overflow-hidden">
       {/* Enhanced Background */}
       <div className="absolute inset-0">
         {/* Animated Gradient Mesh */}
@@ -66,14 +66,14 @@ export default function CTASection() {
                   <span className="text-xs font-black text-brand-orange-400 uppercase tracking-[0.2em]">Ready to Transition?</span>
                 </div>
 
-                <h2 className="text-3xl md:text-6xl lg:text-8xl font-black mb-8 tracking-tighter leading-none uppercase">
+                <h2 className="text-3xl md:text-5xl lg:text-6xl font-black mb-8 tracking-tighter leading-none uppercase">
                   <span className="text-white">Start Your</span>
                   <br />
                   <span className="brand-gradient-text">Energy Revolution</span>
                 </h2>
 
-                <p className="text-lg md:text-xl lg:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-medium px-4">
-                  Join 500+ businesses and homeowners who have optimized their living and working spaces with our award-winning tech.
+                <p className="text-base md:text-lg lg:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed font-medium px-4">
+                  Join 500+ businesses and homeowners who have optimized their spaces with our award-winning tech.
                 </p>
               </motion.div>
 

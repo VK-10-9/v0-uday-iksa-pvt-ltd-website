@@ -10,7 +10,7 @@ export default function HeroHeading() {
       transition={{ delay: 0.4, duration: 1 }}
       className="space-y-6 md:space-y-8 text-left"
     >
-      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[0.9] md:leading-[0.85] tracking-tighter uppercase flex flex-col items-start">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[5.5rem] font-black leading-[0.9] md:leading-[0.85] tracking-tighter uppercase flex flex-col items-start">
         <motion.span
           className="block text-white"
           initial={{ opacity: 0, x: -50 }}

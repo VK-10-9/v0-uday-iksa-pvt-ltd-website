@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { HoverButton } from "@/components/ui/hover-button"
 import { useState } from "react"
+import CredentialStrip from "@/components/product/CredentialStrip"
 
 export default function NanosunPage() {
   const [activeSize, setActiveSize] = useState("PEB 530mm")
@@ -172,7 +173,7 @@ export default function NanosunPage() {
   return (
     <main className="pt-24 bg-slate-950">
       {/* Hero Section */}
-      <section className="relative py-40 overflow-hidden px-6 lg:px-12">
+      <section className="relative py-20 md:py-24 overflow-hidden px-6 lg:px-12">
         <div className="absolute inset-0 bg-brand-orange-500/5 blur-[120px] rounded-full transform -translate-y-1/2" />
         <div className="container mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-24 items-center">
@@ -181,7 +182,7 @@ export default function NanosunPage() {
                 <Sun className="h-4 w-4 text-brand-orange-400" />
                 <h2 className="text-[10px] font-black text-gray-400 uppercase tracking-[0.3em]">Natural Sky Light (NANOSUN)</h2>
               </div>
-              <h1 className="text-4xl md:text-6xl lg:text-8xl font-black text-white mb-10 tracking-tighter uppercase leading-[0.9]">
+              <h1 className="text-3xl md:text-5xl lg:text-7xl font-black text-white mb-10 tracking-tighter uppercase leading-[0.9]">
                 NANOSUN™ PEB <br /> <span className="brand-gradient-text">Circular Daylight</span>
               </h1>
               <p className="text-lg md:text-xl text-gray-400 mb-16 leading-relaxed max-w-2xl font-medium">
@@ -223,11 +224,13 @@ export default function NanosunPage() {
         </div>
       </section>
 
+      <CredentialStrip />
+
       {/* What's Inside Section */}
-      <section className="py-40 relative px-6 lg:px-12 bg-slate-950/50">
+      <section className="py-20 md:py-24 relative px-6 lg:px-12 bg-slate-950/50">
         <div className="container mx-auto">
           <div className="text-center mb-24 md:mb-32 px-4">
-            <h2 className="text-3xl md:text-5xl lg:text-7xl font-black text-white mb-6 uppercase tracking-tighter leading-none">What's Inside <span className="brand-gradient-text">Every Unit</span></h2>
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-6 uppercase tracking-tighter leading-none">What's Inside <span className="brand-gradient-text">Every Unit</span></h2>
             <p className="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto font-medium">Three high-performance components working together to bring nature deep into your space.</p>
           </div>
 
@@ -280,11 +283,11 @@ export default function NanosunPage() {
       </section>
 
       {/* Size Selector Section */}
-      <section className="py-40 relative px-6 lg:px-12 bg-slate-900/20">
+      <section className="py-20 md:py-24 relative px-6 lg:px-12 bg-slate-900/20">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-24 items-start pb-20 border-b border-white/5 mb-20">
             <div>
-              <h2 className="text-4xl md:text-8xl font-black text-white uppercase tracking-tighter leading-none mb-10">Choose <br /><span className="brand-gradient-text">Your Size</span></h2>
+              <h2 className="text-3xl md:text-5xl lg:text-7xl font-black text-white uppercase tracking-tighter leading-none mb-10">Choose <br /><span className="brand-gradient-text">Your Size</span></h2>
               <p className="text-lg md:text-xl text-gray-400 max-w-xl font-medium leading-relaxed">
                 Every building is different — that's why we offer 8 sizes optimized for different roof heights and coverage areas.
               </p>
@@ -352,7 +355,7 @@ export default function NanosunPage() {
       </section>
 
       {/* Built to Last / Common Specs */}
-      <section className="py-40 relative px-6 lg:px-12 bg-slate-950">
+      <section className="py-20 md:py-24 relative px-6 lg:px-12 bg-slate-950">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-24 items-center">
             <div className="relative h-[600px] rounded-[60px] overflow-hidden border border-white/10 group shadow-2xl shadow-brand-orange-500/10">
@@ -389,7 +392,7 @@ export default function NanosunPage() {
       </section>
 
       {/* Bottom CTA Section */}
-      <section className="py-40 relative px-6 lg:px-12 bg-slate-950 border-t border-white/5">
+      <section className="py-20 md:py-24 relative px-6 lg:px-12 bg-slate-950 border-t border-white/5">
         <div className="container mx-auto">
           <motion.div
             className="bg-brand-gradient p-12 md:p-24 lg:p-40 rounded-[60px] md:rounded-[100px] text-center shadow-2xl shadow-brand-orange-500/20 relative overflow-hidden"
