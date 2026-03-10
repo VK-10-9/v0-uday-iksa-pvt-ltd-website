@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import CTASection from "@/components/home/cta-section"
+
 
 export default function FAQPage() {
     const faqCategories = [
@@ -67,7 +67,7 @@ export default function FAQPage() {
             faqs: [
                 {
                     question: "Will it leak during rains or the monsoon?",
-                    answer: "No. Every unit is designed with a pre-moulded flanged dome — no joints, no gaps. The base plate is sealed to your roof surface. We've been installing these across India, including high-rainfall regions, for 15+ years. Leak-proof performance is non-negotiable for us.",
+                    answer: "No. Every unit is designed with a pre-moulded flanged dome — no joints, no gaps. The base plate is sealed to your roof surface. We've been installing these systems for 15+ years in various environments. Leak-proof performance is non-negotiable for us.",
                 },
                 {
                     question: "Can it be installed on my type of roof?",
@@ -287,7 +287,7 @@ export default function FAQPage() {
             </div>
 
             <div className="mt-20">
-                <CTASection />
+
             </div>
         </main>
     )

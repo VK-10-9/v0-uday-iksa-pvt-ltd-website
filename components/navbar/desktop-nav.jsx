@@ -219,7 +219,7 @@ export default function DesktopNav({ active, setActive }) {
               </div>
               <div className="space-y-2">
                 <p className="text-white font-bold text-xs uppercase tracking-tight">Will it leak during rains?</p>
-                <p className="text-gray-500 text-[10px] leading-relaxed">Every installation is 100% leak-proof and tested for Indian monsoon conditions.</p>
+                <p className="text-gray-500 text-[10px] leading-relaxed">Every installation is 100% leak-proof and tested for high-performance weather resilience.</p>
               </div>
               <div className="space-y-2">
                 <p className="text-white font-bold text-xs uppercase tracking-tight">Where can it be used?</p>

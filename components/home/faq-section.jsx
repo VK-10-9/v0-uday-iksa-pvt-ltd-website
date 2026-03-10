@@ -21,7 +21,7 @@ export default function FAQSection() {
         },
         {
             question: "Will it leak during rains?",
-            answer: "We design every installation to be completely leak-proof. We've been doing this for 15+ years — our systems are tested for Indian monsoon conditions.",
+            answer: "We design every installation to be completely leak-proof. We've been doing this for 15+ years — our systems are tested for high-performance weather resilience.",
         },
         {
             question: "Can it reach rooms on lower floors?",

@@ -367,7 +367,7 @@ export default function NanosunPage() {
               />
               <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-slate-950 to-transparent p-8 md:p-12 flex flex-col justify-end">
                 <p className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4">Built To Last</p>
-                <p className="text-gray-400 text-sm md:text-base font-medium">Engineered for the harshest Indian monsoons and summer heat.</p>
+                <p className="text-gray-400 text-sm md:text-base font-medium">Engineered for the extreme weather and temperatures.</p>
               </div>
             </div>
 

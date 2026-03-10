@@ -99,12 +99,12 @@ export default function InnovationsPage() {
             {[
               {
                 title: "Zero Heat Admission",
-                desc: "Our systems let in 100% of visible light but filter out infrared heat. Your building stays cool even under the Indian summer sun.",
+                desc: "Our systems let in 100% of visible light but filter out infrared heat. Your building stays cool even under the harshest midday sun.",
                 metric: "Pure Light"
               },
               {
                 title: "Leak Proof for Life",
-                desc: "Every installation is engineered with our proprietary flashing system. We guarantee zero leaks, even during the heaviest monsoons.",
+                desc: "Every installation is engineered with our proprietary flashing system. We guarantee zero leaks, even during extreme weather conditions.",
                 metric: "100% Sealed"
               },
               {

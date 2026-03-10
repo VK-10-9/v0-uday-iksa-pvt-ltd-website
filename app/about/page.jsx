@@ -11,7 +11,7 @@ export default function AboutPage() {
   return (
     <main className="pt-24 bg-slate-950">
       {/* Hero Section */}
-      <section className="relative py-24 md:py-32 overflow-hidden">
+      <section className="relative py-16 md:py-20 overflow-hidden">
         <div className="absolute inset-0 bg-brand-orange-500/5 blur-3xl rounded-full transform -translate-y-1/2"></div>
         <div className="container mx-auto px-6 relative z-10 text-center">
           <motion.div
@@ -20,18 +20,18 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
           >
-            <h1 className="text-4xl md:text-7xl font-black text-white mb-6 tracking-tighter uppercase leading-tight">
+            <h1 className="text-3xl md:text-5xl font-black text-white mb-6 tracking-tighter uppercase leading-tight">
               Why Pay for <span className="brand-gradient-text">Sunlight?</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-400 leading-relaxed font-medium max-w-xl mx-auto">
-              15+ years of patented daylighting & ventilation solutions across India.
+              15+ years of patented daylighting & ventilation solutions for industrial and residential buildings.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Our Story Section */}
-      <section id="story" className="py-24 relative border-t border-white/5">
+      <section id="story" className="py-16 relative border-t border-white/5">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -52,7 +52,7 @@ export default function AboutPage() {
                     Today, we design and produce every component — from optical domes to reflectors — in our own facility, ensuring quality that resellers simply cannot match.
                   </p>
                   <p className="text-white text-xl font-black tracking-tight border-l-3 border-brand-orange-500 pl-6 italic">
-                    "Built for Indian conditions."
+                    "Engineered for performance."
                   </p>
                 </div>
               </div>
@@ -85,10 +85,10 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-40 relative bg-slate-900/30 overflow-hidden">
+      <section className="py-20 relative bg-slate-900/30 overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="text-center mb-24">
-            <h2 className="text-4xl md:text-7xl font-black text-white uppercase tracking-tighter mb-6">Our Timeline</h2>
+            <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-6">Our Timeline</h2>
             <div className="h-1 w-32 bg-brand-orange-500 rounded-full mx-auto"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -118,10 +118,10 @@ export default function AboutPage() {
       </section>
 
       {/* Capabilities Section */}
-      <section className="py-40 relative px-6">
+      <section className="py-20 relative px-6">
         <div className="container mx-auto">
           <div className="text-center mb-24">
-            <h2 className="text-4xl md:text-7xl font-black text-white uppercase tracking-tighter mb-6">What We Actually Do</h2>
+            <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-6">What We Actually Do</h2>
             <p className="text-xl text-brand-orange-500 uppercase font-black tracking-[0.2em] mb-4">End-to-End. In-House. No Middlemen.</p>
             <div className="h-1 w-32 bg-brand-orange-500 rounded-full mx-auto mb-10"></div>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto font-medium">
@@ -166,12 +166,12 @@ export default function AboutPage() {
                 {
                   name: "Prof. S.P. Kurubar",
                   role: "Technical Advisor — Product Engineering & Quality Systems",
-                  image: "/placeholder-user.jpg",
+                  image: "/images/advisor-kurubar.jpg",
                   linkedin: "#",
-                  bio: "Professor S.P. Kurubar is one of India's leading experts in engineering quality and process optimisation. A Certified Six Sigma Black Belt and Lean Manufacturing Specialist — trained in Japan — he brings world-class standards of precision and quality thinking to Uday IKSA's product development and engineering processes.\n\nCurrently serving as Dean of the Examination Section at KLE Technological University, Hubballi, Professor Kurubar has spent decades bridging academic rigour with industrial application.\n\nHis involvement with Uday IKSA ensures that every product we manufacture — from dome to diffuser — is held to the highest standards of consistency, durability, and performance. It also means our engineering processes are continuously reviewed and improved using proven global methodologies."
+                  bio: "Professor S.P. Kurubar is one of the leading experts in engineering quality and process optimisation. A Certified Six Sigma Black Belt and Lean Manufacturing Specialist — trained in Japan — he brings world-class standards of precision and quality thinking to Uday IKSA's product development and engineering processes.\n\nCurrently serving as Dean of the Examination Section at KLE Technological University, Hubballi, Professor Kurubar has spent decades bridging academic rigour with industrial application.\n\nHis involvement with Uday IKSA ensures that every product we manufacture — from dome to diffuser — is held to the highest standards of consistency, durability, and performance. It also means our engineering processes are continuously reviewed and improved using proven global methodologies."
                 },
                 {
-                  name: "B.R. Indushekar",
+                  name: "Mr. B. R.  Indushekar",
                   role: "Technical Adviser",
                   image: "/placeholder-user.jpg",
                   linkedin: "https://www.linkedin.com/in/indushekar-bangalore-rajan-15bbb8308/",
@@ -186,7 +186,7 @@ export default function AboutPage() {
                   viewport={{ once: true }}
                 >
                   <div className="relative h-96 w-full overflow-hidden">
-                    <Image src={member.image} alt={member.name} fill className="object-cover grayscale hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+                    <Image src={member.image} alt={member.name} fill className="object-cover group-hover:scale-105 transition-all duration-700" />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80" />
                     <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="absolute top-6 right-6 w-12 h-12 bg-white/10 backdrop-blur-md rounded-xl flex items-center justify-center border border-white/10 hover:bg-brand-orange-500 transition-all z-20">
                       <Linkedin className="h-5 w-5 text-white" />
@@ -210,7 +210,7 @@ export default function AboutPage() {
                 viewport={{ once: true }}
               >
                 <div className="relative h-[500px] w-full overflow-hidden">
-                  <Image src="/placeholder-user.jpg" alt="Shivanand Balehosur" fill className="object-cover grayscale hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+                  <Image src="/images/ceo-shivanand.jpg" alt="Shivanand Balehosur" fill className="object-cover group-hover:scale-105 transition-all duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-90" />
                   <a href="https://www.linkedin.com/in/shivanand-balehosur-719796247/" target="_blank" rel="noopener noreferrer" className="absolute top-6 right-6 w-12 h-12 bg-white/10 backdrop-blur-md rounded-xl flex items-center justify-center border border-white/10 hover:bg-brand-orange-500 transition-all z-20">
                     <Linkedin className="h-5 w-5 text-white" />
@@ -231,21 +231,7 @@ export default function AboutPage() {
               </motion.div>
             </div>
 
-            {/* Technical Team Bar */}
-            <div className="w-full bg-white/5 rounded-[40px] p-12 border border-white/10 text-center">
-              <h4 className="text-2xl font-black text-white uppercase tracking-tighter mb-4">Technical & Installation Team</h4>
-              <p className="text-gray-400 max-w-4xl mx-auto leading-relaxed">
-                Behind every successful installation is a crew of trained technicians who've worked on everything from small residential roofs to large industrial facilities. Our installation team is permanently employed, regularly trained, and takes pride in clean, precise work — no shortcuts, no mess left behind.
-              </p>
-            </div>
 
-            {/* Research & Development Section */}
-            <div className="w-full bg-brand-orange-500/5 rounded-[40px] p-12 border border-brand-orange-500/20 text-center">
-              <h4 className="text-2xl font-black text-white uppercase tracking-tighter mb-4">Research & Development</h4>
-              <p className="text-gray-400 max-w-4xl mx-auto leading-relaxed">
-                Uday IKSA has a <span className="text-white font-bold">dedicated research individual focused exclusively on Natural Daylighting</span> — studying light behaviour, optical materials, roof interaction, and interior light distribution. This internal research capability drives ongoing product improvements and ensures our solutions stay ahead of the market.
-              </p>
-            </div>
 
             {/* Patented Technology Callout */}
             <div className="w-full bg-white/5 backdrop-blur-md rounded-[40px] p-12 border border-brand-orange-500/30 text-center relative overflow-hidden">
@@ -258,10 +244,10 @@ export default function AboutPage() {
               </h4>
               <div className="space-y-6 text-gray-400 max-w-4xl mx-auto leading-relaxed">
                 <p className="text-lg">
-                  🔒 <span className="text-white font-bold">Our core products are patented.</span>
+                  <span className="text-white font-bold">Our core products are patented.</span>
                 </p>
                 <p>
-                  NANOSUN™ (Natural Daylighting) and NANOVENT® (Natural Ventilation) are registered trademarks backed by patents. This means the technology inside every unit we sell is original — developed by our own team, protected by Indian patent law, and not available from any other manufacturer.
+                  NANOSUN™ (Natural Daylighting) and NANOVENT® (Natural Ventilation) are registered trademarks backed by patents. This means the technology inside every unit we sell is original — developed by our own team and protected by patent law.
                 </p>
                 <p className="text-brand-orange-400 font-bold italic">
                   You're not buying a generic product assembled from imported parts. You're buying a proprietary system designed, tested, and manufactured entirely by us in Hubli.
@@ -273,7 +259,7 @@ export default function AboutPage() {
       </section>
 
       {/* Why It Matters Section */}
-      <section className="py-40 relative px-6 bg-slate-900/50">
+      <section className="py-20 relative px-6 bg-slate-900/50">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-24 items-center">
             <motion.div
@@ -282,7 +268,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl md:text-7xl font-black text-white uppercase tracking-tighter mb-8 leading-none">This Isn't Just <br /><span className="brand-gradient-text">About Saving</span> <br />Electricity.</h2>
+              <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-8 leading-none text-balance">This Isn't Just <br /><span className="brand-gradient-text">About Saving</span> <br />Electricity.</h2>
               <div className="h-1 w-20 bg-brand-orange-500 rounded-full mb-12"></div>
               <div className="space-y-8 text-gray-400 text-lg leading-relaxed font-medium">
                 <p>When a factory switches off 50 tube lights during the day because natural light is doing the job — that's real energy saved, real money back, and real carbon not emitted.</p>
@@ -331,7 +317,7 @@ export default function AboutPage() {
               { label: "ZED Certified", icon: Shield },
               { label: "Patented Tech", icon: Zap },
               { label: "Made in India", icon: Globe },
-              { label: "Eco Mark", icon: Target },
+
             ].map((badge, idx) => (
               <motion.div
                 key={idx}
@@ -347,7 +333,7 @@ export default function AboutPage() {
       </section>
 
       {/* Local Identity Section */}
-      <section className="py-40 relative px-6 bg-slate-900/30">
+      <section className="py-20 relative px-6 bg-slate-900/30">
         <div className="container mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -355,7 +341,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <h2 className="text-4xl md:text-8xl font-black text-white uppercase tracking-tighter mb-10 leading-none">Proudly Built in <br /><span className="brand-gradient-text">Hubballi, Karnataka.</span></h2>
+            <h2 className="text-3xl md:text-5xl lg:text-7xl font-black text-white uppercase tracking-tighter mb-10 leading-none">Proudly Built in <br /><span className="brand-gradient-text">Hubballi, Karnataka.</span></h2>
             <p className="text-xl text-gray-400 mb-12 leading-relaxed font-medium">
               We're not a multinational. We're a Hubballi company that designs, manufactures, and installs products we genuinely believe in — and we've been doing it from the same city for over 15 years.
             </p>
