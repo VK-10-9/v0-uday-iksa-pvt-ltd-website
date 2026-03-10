@@ -55,7 +55,7 @@ export default function ProductShowcase({ activeProduct, setActiveProduct, hover
             </div>
             <p className="text-gray-200 text-sm md:text-lg max-w-lg leading-relaxed">{currentProduct.description}</p>
             {currentProduct.stats && (
-              <div className="flex gap-6 md:gap-10 pt-4 flex-wrap">
+              <div className="flex gap-6 md:gap-10 pt-4 flex-wrap border-b border-white/10 pb-6 mb-6">
                 {currentProduct.stats.slice(0, 2).map((stat, i) => (
                   <div key={i} className="flex items-center gap-4">
                     <div className="w-1 h-8 bg-brand-orange-500 rounded-full" />
@@ -63,6 +63,16 @@ export default function ProductShowcase({ activeProduct, setActiveProduct, hover
                       <p className="text-[10px] font-black text-brand-orange-400 uppercase tracking-widest leading-none mb-1.5">{stat.label}</p>
                       <p className="text-white font-black text-sm md:text-lg leading-none tracking-tight">{stat.value}</p>
                     </div>
+                  </div>
+                ))}
+              </div>
+            )}
+            {currentProduct.features && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {currentProduct.features.map((feature, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-orange-500" />
+                    <p className="text-[10px] text-gray-300 uppercase font-bold tracking-widest">{feature.title}</p>
                   </div>
                 ))}
               </div>

@@ -28,15 +28,6 @@ export default function InnovationsPage() {
       link: p.link,
       icon: iconMap[p.icon] || Lightbulb,
     })),
-    {
-      id: "research",
-      name: "Research & Development",
-      subtitle: "Future Systems",
-      description: "Our ongoing commitment to industrial innovation through specialized research in natural building physics and sustainable materials.",
-      image: "/images/research-lab.jpg",
-      link: "/products/research",
-      icon: Lightbulb,
-    }
   ]
 
   return (

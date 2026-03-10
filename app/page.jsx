@@ -3,7 +3,6 @@
 import HeroSection from "@/components/home/hero-section"
 import SolutionsOverview from "@/components/home/solutions-overview"
 import AboutSection from "@/components/home/about-section"
-import InnovationsSection from "@/components/home/innovations-section"
 import ProjectsSection from "@/components/home/projects-section"
 import ClientsSection from "@/components/home/clients-section"
 import TestimonialsSection from "@/components/home/testimonials-section"
@@ -17,7 +16,6 @@ export default function Home() {
       <HeroSection />
       <SolutionsOverview />
       <AboutSection />
-      <InnovationsSection />
       <ProjectsSection />
       <ClientsSection />
       <TestimonialsSection />
