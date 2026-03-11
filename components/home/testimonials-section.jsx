@@ -59,7 +59,7 @@ export default function TestimonialsSection() {
   }
 
   return (
-    <section className="py-40 relative bg-slate-950 overflow-hidden">
+    <section className="py-16 relative bg-slate-950 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <motion.div
@@ -75,7 +75,7 @@ export default function TestimonialsSection() {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-24">
+        <div className="text-center mb-12">
           <motion.div
             className="inline-flex items-center gap-3 bg-brand-orange-500/10 border border-brand-orange-500/20 rounded-full px-8 py-2.5 mb-10"
             initial={{ opacity: 0, y: 20 }}

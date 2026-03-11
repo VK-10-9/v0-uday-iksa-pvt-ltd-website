@@ -6,7 +6,7 @@ import { heroStats } from "@/lib/data/stats"
 export default function HeroStats() {
   return (
     <motion.div
-      className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-2xl w-full"
+      className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-2xl w-full"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 1.4, duration: 0.8 }}
@@ -22,9 +22,9 @@ export default function HeroStats() {
           transition={{ delay: 1.6 + index * 0.1 }}
         >
           <div
-            className={`absolute inset-0 bg-gradient-to-r ${stat.bg} rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl`}
+            className={`absolute inset-0 bg-gradient-to-r ${stat.bg} rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl`}
           />
-          <div className="relative brand-glass rounded-2xl p-4 md:p-6 group-hover:border-brand-orange-500/30 transition-all duration-300">
+          <div className="relative brand-glass rounded-xl p-3 md:p-4 group-hover:border-brand-orange-500/30 transition-all duration-300">
             <div className={`${stat.color} mb-3 flex justify-start`}>
               <motion.div whileHover={{ rotate: 360 }} transition={{ duration: 0.5 }}>
                 <stat.icon className="h-6 w-6" />

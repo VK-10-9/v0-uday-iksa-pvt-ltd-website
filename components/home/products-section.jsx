@@ -18,7 +18,7 @@ export default function ProductsSection() {
     }
 
     return (
-        <section id="products" className="py-24 md:py-32 relative bg-slate-950 overflow-hidden">
+        <section id="products" className="py-12 md:py-16 relative bg-slate-950 overflow-hidden">
             {/* Strategic Background Elements */}
             <div className="absolute inset-0">
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-orange-500/[0.02] transform skew-x-12 translate-x-1/4" />
@@ -34,7 +34,7 @@ export default function ProductsSection() {
 
             <div className="container mx-auto px-6 lg:px-12 relative z-10">
                 {/* Section Header */}
-                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-20 md:mb-28">
+                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12 md:mb-16">
                     <motion.div
                         className="max-w-3xl"
                         initial={{ opacity: 0, x: -50 }}

@@ -179,11 +179,11 @@ export default function NanosunRccPage() {
                                 Live in an apartment? Own an office? If your building has a flat concrete (RCC) roof, this was made for you. It fits cleanly into your slab — no ugly add-ons, no leaks, no electricity.
                             </p>
                             <div className="flex flex-wrap gap-6">
-                                <Link href="/contact">
-                                    <HoverButton className="bg-white text-black hover:bg-brand-orange-500 hover:text-white rounded-2xl px-16 py-8 text-sm font-black uppercase tracking-widest shadow-2xl transition-all">
+                                <HoverButton asChild className="bg-white text-black hover:bg-brand-orange-500 hover:text-white rounded-2xl px-16 py-8 text-sm font-black uppercase tracking-widest shadow-2xl transition-all">
+                                    <Link href="/contact">
                                         Book Free Site Assessment <ArrowRight className="ml-3 h-5 w-5" />
-                                    </HoverButton>
-                                </Link>
+                                    </Link>
+                                </HoverButton>
                                 <div className="flex items-center gap-3 bg-white/5 border border-white/10 rounded-2xl px-8 py-4 backdrop-blur-md">
                                     <Sparkles className="h-5 w-5 text-brand-orange-500" />
                                     <span className="text-[10px] font-black text-white uppercase tracking-widest">Patented Tech</span>
@@ -422,11 +422,11 @@ export default function NanosunRccPage() {
                                         ))}
                                     </div>
 
-                                    <Link href="/contact" className="block pt-10">
-                                        <HoverButton className="w-full bg-white text-black hover:bg-brand-orange-500 hover:text-white rounded-2xl py-8 text-sm font-black uppercase tracking-widest transition-all">
+                                    <HoverButton asChild className="w-full bg-white text-black hover:bg-brand-orange-500 hover:text-white rounded-2xl py-8 text-sm font-black uppercase tracking-widest transition-all">
+                                        <Link href="/contact" className="block pt-10">
                                             Request Quote for {activeSizes[activeSize].diameter} Size <ArrowRight className="ml-3 h-5 w-5" />
-                                        </HoverButton>
-                                    </Link>
+                                        </Link>
+                                    </HoverButton>
                                 </motion.div>
                             </AnimatePresence>
                         </div>
@@ -477,11 +477,11 @@ export default function NanosunRccPage() {
                         <p className="text-xl text-white/90 max-w-3xl mx-auto mb-16 leading-relaxed relative z-10 font-bold uppercase tracking-widest text-sm opacity-90 font-medium">
                             The best time to install is during slab casting. Our team handles every step—from site assessment to final leak-proof testing.
                         </p>
-                        <Link href="/contact" className="block relative z-10">
-                            <Button size="lg" className="bg-white text-black hover:bg-black hover:text-white transition-all duration-300 rounded-3xl px-20 py-10 text-xl font-black shadow-2xl uppercase tracking-widest">
+                        <Button asChild size="lg" className="bg-white text-black hover:bg-black hover:text-white transition-all duration-300 rounded-3xl px-20 py-10 text-xl font-black shadow-2xl uppercase tracking-widest">
+                            <Link href="/contact" className="block relative z-10">
                                 Request Free Site Assessment <ArrowRight className="ml-4 h-8 w-8" />
-                            </Button>
-                        </Link>
+                            </Link>
+                        </Button>
                     </motion.div>
                 </div>
             </section>

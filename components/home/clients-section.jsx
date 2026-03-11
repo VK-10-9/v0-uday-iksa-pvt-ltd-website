@@ -13,9 +13,9 @@ export default function ClientsSection() {
     ]
 
     return (
-        <section id="clients" className="py-40 relative bg-slate-950 px-6 lg:px-12 overflow-hidden">
+        <section id="clients" className="py-16 relative bg-slate-950 px-6 lg:px-12 overflow-hidden">
             <div className="container mx-auto relative z-10">
-                <div className="text-center mb-24">
+                <div className="text-center mb-12">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}

@@ -11,7 +11,7 @@ export default function AboutPage() {
   return (
     <main className="pt-24 bg-slate-950">
       {/* Hero Section */}
-      <section className="relative py-16 md:py-20 overflow-hidden">
+      <section className="relative py-8 md:py-10 overflow-hidden">
         <div className="absolute inset-0 bg-brand-orange-500/5 blur-3xl rounded-full transform -translate-y-1/2"></div>
         <div className="container mx-auto px-6 relative z-10 text-center">
           <motion.div
@@ -31,7 +31,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story Section */}
-      <section id="story" className="py-16 relative border-t border-white/5">
+      <section id="story" className="py-10 relative border-t border-white/5">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -59,22 +59,22 @@ export default function AboutPage() {
             </motion.div>
 
             <motion.div
-              className="relative h-[600px] rounded-[48px] overflow-hidden border border-white/10"
+              className="relative h-[400px] md:h-[600px] rounded-[48px] overflow-hidden border border-white/10 shadow-2xl"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
               <Image
-                src="/images/research-lab.jpg"
+                src="/brain/5b886c53-b306-4234-afef-4f7e3b295568/uday_iksa_manufacturing_hub_1773248280436.png"
                 alt="Uday IKSA Manufacturing Hub"
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-[3000ms] hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent z-10"></div>
-              <div className="absolute bottom-12 left-12 right-12 z-20">
-                <div className="bg-white/5 backdrop-blur-2xl border border-white/10 p-10 rounded-[40px]">
-                  <p className="text-gray-300 text-lg font-medium leading-relaxed italic">
+              <div className="absolute bottom-6 left-6 right-6 md:bottom-12 md:left-12 md:right-12 z-20">
+                <div className="bg-white/5 backdrop-blur-2xl border border-white/10 p-6 md:p-10 rounded-[32px] md:rounded-[40px]">
+                  <p className="text-gray-300 text-base md:text-lg font-medium leading-relaxed italic">
                     "Vertical integration is what gives us control over quality that no reseller or assembler can match. It's why our products are still performing in buildings we installed a decade ago."
                   </p>
                 </div>
@@ -85,10 +85,10 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-20 relative bg-slate-900/30 overflow-hidden">
+      <section className="py-12 relative bg-slate-900/30 overflow-hidden">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-24">
-            <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-6">Our Timeline</h2>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4">Our Timeline</h2>
             <div className="h-1 w-32 bg-brand-orange-500 rounded-full mx-auto"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -118,10 +118,10 @@ export default function AboutPage() {
       </section>
 
       {/* Capabilities Section */}
-      <section className="py-20 relative px-6">
+      <section className="py-12 relative px-6">
         <div className="container mx-auto">
-          <div className="text-center mb-24">
-            <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-6">What We Actually Do</h2>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4">What We Actually Do</h2>
             <p className="text-xl text-brand-orange-500 uppercase font-black tracking-[0.2em] mb-4">End-to-End. In-House. No Middlemen.</p>
             <div className="h-1 w-32 bg-brand-orange-500 rounded-full mx-auto mb-10"></div>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto font-medium">
@@ -152,9 +152,9 @@ export default function AboutPage() {
       </section>
 
       {/* Hierarchy Teams Section */}
-      <section id="team" className="py-24 relative px-6 border-t border-white/5">
+      <section id="team" className="py-16 relative px-6 border-t border-white/5">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4">Our Experts</h2>
             <div className="h-1 w-16 bg-brand-orange-500 rounded-full mx-auto mb-6"></div>
           </div>
@@ -171,9 +171,9 @@ export default function AboutPage() {
                   bio: "Professor S.P. Kurubar is one of the leading experts in engineering quality and process optimisation. A Certified Six Sigma Black Belt and Lean Manufacturing Specialist — trained in Japan — he brings world-class standards of precision and quality thinking to Uday IKSA's product development and engineering processes.\n\nCurrently serving as Dean of the Examination Section at KLE Technological University, Hubballi, Professor Kurubar has spent decades bridging academic rigour with industrial application.\n\nHis involvement with Uday IKSA ensures that every product we manufacture — from dome to diffuser — is held to the highest standards of consistency, durability, and performance. It also means our engineering processes are continuously reviewed and improved using proven global methodologies."
                 },
                 {
-                  name: "Mr. B. R.  Indushekar",
-                  role: "Technical Adviser",
-                  image: "/placeholder-user.jpg",
+                  name: "Mr. B. R. Indushekar",
+                  role: "Technical Advisor",
+                  image: "/brain/5b886c53-b306-4234-afef-4f7e3b295568/technical_advisor_portrait_1773248363700.png",
                   linkedin: "https://www.linkedin.com/in/indushekar-bangalore-rajan-15bbb8308/",
                   bio: "With 38+ years of leadership at Volvo and Ingersoll-Rand, he is a certified Six Sigma Black Belt and Lean Specialist from Japan, ensuring our systems meet world-class standards."
                 },
@@ -233,24 +233,23 @@ export default function AboutPage() {
 
 
 
-            {/* Patented Technology Callout */}
-            <div className="w-full bg-white/5 backdrop-blur-md rounded-[40px] p-12 border border-brand-orange-500/30 text-center relative overflow-hidden">
-              <div className="absolute top-0 right-0 p-4">
-                <Shield className="h-12 w-12 text-brand-orange-500/20" />
+            {/* Industrial Infographic Section */}
+            <div className="w-full bg-white/5 backdrop-blur-md rounded-[40px] p-0 border border-brand-orange-500/30 text-center relative overflow-hidden group">
+              <div className="relative aspect-[16/10] w-full overflow-hidden">
+                <Image
+                  src="/brain/5b886c53-b306-4234-afef-4f7e3b295568/media__1773246300254.jpg"
+                  alt="Uday IKSA Installation Process & Components"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
               </div>
-              <h4 className="text-2xl font-black text-white uppercase tracking-tighter mb-6 flex items-center justify-center gap-3">
-                <Shield className="h-6 w-6 text-brand-orange-500" />
-                Patented Technology — What It Means for You
-              </h4>
-              <div className="space-y-6 text-gray-400 max-w-4xl mx-auto leading-relaxed">
-                <p className="text-lg">
-                  <span className="text-white font-bold">Our core products are patented.</span>
-                </p>
-                <p>
-                  NANOSUN™ (Natural Daylighting) and NANOVENT® (Natural Ventilation) are registered trademarks backed by patents. This means the technology inside every unit we sell is original — developed by our own team and protected by patent law.
-                </p>
-                <p className="text-brand-orange-400 font-bold italic">
-                  You're not buying a generic product assembled from imported parts. You're buying a proprietary system designed, tested, and manufactured entirely by us in Hubli.
+              <div className="p-8 bg-slate-900/90 backdrop-blur-md border-t border-brand-orange-500/30">
+                <h4 className="text-2xl font-black text-white uppercase tracking-tighter mb-4 flex items-center justify-center gap-3">
+                  <Shield className="h-6 w-6 text-brand-orange-500" />
+                  Patented Technology — Engineering Precision
+                </h4>
+                <p className="text-gray-400 max-w-4xl mx-auto leading-relaxed text-sm">
+                  Our core products are patented. NANOSUN™ and NANOVENT® are proprietary systems designed, tested, and manufactured entirely by us in Hubli. You're buying a system built for decades of performance.
                 </p>
               </div>
             </div>
@@ -259,7 +258,7 @@ export default function AboutPage() {
       </section>
 
       {/* Why It Matters Section */}
-      <section className="py-20 relative px-6 bg-slate-900/50">
+      <section className="py-12 relative px-6 bg-slate-900/50">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-24 items-center">
             <motion.div
@@ -303,9 +302,9 @@ export default function AboutPage() {
       </section>
 
       {/* Recognition Section */}
-      <section className="py-24 relative px-6 border-t border-white/5 bg-slate-900/40">
+      <section className="py-16 relative px-6 border-t border-white/5 bg-slate-900/40">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4">Recognised Excellence</h2>
             <div className="h-1 w-16 bg-brand-orange-500 rounded-full mx-auto"></div>
           </div>
@@ -333,9 +332,9 @@ export default function AboutPage() {
       </section>
 
       {/* Catalog Preview Section */}
-      <section className="py-24 relative px-6 bg-slate-950 border-y border-white/5">
+      <section className="py-16 relative px-6 bg-slate-950 border-y border-white/5">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4">Official <span className="brand-gradient-text">Catalog</span></h2>
             <div className="h-1 w-16 bg-brand-orange-500 rounded-full mx-auto mb-6"></div>
             <p className="text-gray-400 max-w-2xl mx-auto font-medium">Explore our technical specifications and global standards directly from our engineering documentation.</p>
@@ -365,18 +364,17 @@ export default function AboutPage() {
           </div>
 
           <div className="mt-16 text-center">
-            <Link href="/UDAY IKSA PVT LTD.pdf" target="_blank">
-              <Button className="bg-brand-orange-500 text-white hover:bg-white hover:text-black rounded-2xl px-12 py-8 text-sm font-black uppercase tracking-widest transition-all shadow-2xl shadow-brand-orange-500/20">
+            <Button asChild className="bg-brand-orange-500 text-white hover:bg-white hover:text-black rounded-2xl px-12 py-8 text-sm font-black uppercase tracking-widest transition-all shadow-2xl shadow-brand-orange-500/20">
+              <Link href="/UDAY IKSA PVT LTD.pdf" target="_blank">
                 Download Full Technical PDF <ArrowRight className="ml-3 h-5 w-5" />
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
 
       {/* Local Identity Section */}
-      <section className="py-20 relative px-6 bg-slate-900/30">
-
+      <section className="py-12 relative px-6 bg-slate-900/30">
         <div className="container mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -384,7 +382,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <h2 className="text-3xl md:text-5xl lg:text-7xl font-black text-white uppercase tracking-tighter mb-10 leading-none">Proudly Built in <br /><span className="brand-gradient-text">Hubballi, Karnataka.</span></h2>
+            <h2 className="text-3xl md:text-5xl lg:text-7xl font-black text-white uppercase tracking-tighter mb-8 leading-none">Proudly Built in <br /><span className="brand-gradient-text">Hubballi, Karnataka.</span></h2>
             <p className="text-xl text-gray-400 mb-12 leading-relaxed font-medium">
               We're not a multinational. We're a Hubballi company that designs, manufactures, and installs products we genuinely believe in — and we've been doing it from the same city for over 15 years.
             </p>
@@ -405,7 +403,7 @@ export default function AboutPage() {
       </section>
 
       {/* Bottom CTA Section */}
-      <section className="py-24 relative px-6 border-t border-white/5">
+      <section className="py-16 relative px-6 border-t border-white/5">
         <div className="container mx-auto">
           <motion.div
             className="bg-brand-gradient py-16 px-8 rounded-[48px] text-center shadow-2xl shadow-brand-orange-500/10 relative overflow-hidden max-w-5xl mx-auto"
@@ -419,16 +417,16 @@ export default function AboutPage() {
               Join 500+ buildings saving electricity with natural light.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 relative z-10">
-              <Link href="/contact">
-                <HoverButton className="bg-white text-black hover:bg-slate-900 hover:text-white px-10 py-4 rounded-xl font-bold uppercase tracking-wider transition-all w-full sm:w-auto text-sm">
+              <HoverButton asChild className="bg-white text-black hover:bg-slate-900 hover:text-white px-10 py-4 rounded-xl font-bold uppercase tracking-wider transition-all w-full sm:w-auto text-sm">
+                <Link href="/contact">
                   Talk to Our Team <ArrowRight className="ml-2 h-4 w-4" />
-                </HoverButton>
-              </Link>
-              <a href="tel:+918792182631">
-                <HoverButton className="bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white px-10 py-4 rounded-xl font-bold uppercase tracking-wider transition-all w-full sm:w-auto text-sm">
+                </Link>
+              </HoverButton>
+              <HoverButton asChild className="bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white px-10 py-4 rounded-xl font-bold uppercase tracking-wider transition-all w-full sm:w-auto text-sm">
+                <a href="tel:+918792182631">
                   Call: +91 8792182631
-                </HoverButton>
-              </a>
+                </a>
+              </HoverButton>
             </div>
           </motion.div>
         </div>

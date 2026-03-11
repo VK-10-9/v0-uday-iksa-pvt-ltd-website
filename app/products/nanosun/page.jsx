@@ -172,11 +172,11 @@ export default function NanosunPage() {
                 Natural Sunlight for Your Factory or Warehouse — All Day, <span className="text-white font-bold">No Electricity</span>. Designed specifically for metal roofs to bring pure, comfortable light without the heat.
               </p>
               <div className="flex flex-wrap gap-6">
-                <Link href="/contact">
-                  <HoverButton className="bg-white text-black hover:bg-brand-orange-500 hover:text-white rounded-2xl px-10 md:px-16 py-6 md:py-8 text-xs md:text-sm font-black uppercase tracking-widest shadow-2xl transition-all">
+                <HoverButton asChild className="bg-white text-black hover:bg-brand-orange-500 hover:text-white rounded-2xl px-10 md:px-16 py-6 md:py-8 text-xs md:text-sm font-black uppercase tracking-widest shadow-2xl transition-all">
+                  <Link href="/contact">
                     Get Free Assessment <ArrowRight className="ml-3 h-5 w-5" />
-                  </HoverButton>
-                </Link>
+                  </Link>
+                </HoverButton>
                 <button className="px-10 md:px-16 py-6 md:py-8 border-2 border-white/10 hover:border-brand-orange-500/50 text-white transition-all duration-300 rounded-2xl text-[10px] font-black uppercase tracking-widest backdrop-blur-md">
                   Download Catalogue
                 </button>
@@ -309,11 +309,11 @@ export default function NanosunPage() {
                     <h3 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter">Best For: <br /><span className="text-gray-400">{size.bestFor}</span></h3>
                     <p className="text-lg md:text-xl text-gray-500 leading-relaxed font-medium">{size.description}</p>
 
-                    <Link href="/contact">
-                      <Button size="lg" className="bg-white text-black hover:bg-brand-orange-500 hover:text-white rounded-2xl px-12 py-8 text-xs font-black uppercase tracking-widest shadow-2xl shadow-white/5 group">
+                    <Button asChild size="lg" className="bg-white text-black hover:bg-brand-orange-500 hover:text-white rounded-2xl px-12 py-8 text-xs font-black uppercase tracking-widest shadow-2xl shadow-white/5 group">
+                      <Link href="/contact">
                         Request Pricing for this size <ArrowRight className="ml-3 group-hover:translate-x-1 transition-transform" />
-                      </Button>
-                    </Link>
+                      </Link>
+                    </Button>
                   </div>
 
                   <div className="grid grid-cols-1 gap-4">
@@ -398,11 +398,11 @@ export default function NanosunPage() {
               Not sure which size is right for you? <br />Tell us your roof height and we'll calculate the exact units you need.
             </p>
             <div className="flex flex-wrap justify-center gap-10 relative z-10">
-              <Link href="/contact" className="block w-full sm:w-auto">
-                <Button size="lg" className="w-full sm:w-auto bg-white text-black hover:bg-black hover:text-white transition-all duration-300 rounded-3xl px-12 md:px-20 py-6 md:py-10 text-lg md:text-xl font-black shadow-2xl shadow-white/10 uppercase tracking-widest">
+              <Button asChild size="lg" className="w-full sm:w-auto bg-white text-black hover:bg-black hover:text-white transition-all duration-300 rounded-3xl px-12 md:px-20 py-6 md:py-10 text-lg md:text-xl font-black shadow-2xl shadow-white/10 uppercase tracking-widest">
+                <Link href="/contact" className="block w-full sm:w-auto">
                   Get Free Assessment <ArrowRight className="ml-4 h-6 md:h-8 w-6 md:w-8" />
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
           </motion.div>
         </div>

@@ -10,11 +10,11 @@ import CredentialStrip from "@/components/product/CredentialStrip"
 
 export default function SkytubePage() {
     const components = [
-        { name: "Optical Collecting Dome", desc: "UV-resistant clear dome that harvests sunlight even at low angles." },
-        { name: "Optical Reflectors", desc: "99.7% spectral mirror coating for maximum light transmission." },
-        { name: "Covering Sheet", desc: "Weather-proof seal that integrates seamlessly with your roof profile." },
-        { name: "Daylight Diffuser Dome", desc: "Prismatic bottom dome that spreads light evenly across the interior." },
-        { name: "Gasket Rubber", desc: "Heavy-duty 8mm x 20mm seal for 100% leak-proof performance." }
+        { name: "Optical Daylight Collecting Dome", desc: "Captures sunlight from roof, ensuring maximum daylight collection." },
+        { name: "High Reflective Aluminium Reflectors", desc: "High reflectivity panels that transmit sunlight efficiently into building." },
+        { name: "Weather Resistant Covering Sheet", desc: "Seals and protects the roof opening from weather, dust and debris." },
+        { name: "Light Diffuser Dome", desc: "Evenly diffuses natural light providing bright and uniform illumination inside." },
+        { name: "Rubber Gasket Seal", desc: "Provides a waterproof and airtight seal between the skytube system and roof." }
     ]
 
     const dimensions = [
@@ -62,11 +62,11 @@ export default function SkytubePage() {
                             </div>
 
                             <div className="flex flex-wrap gap-6">
-                                <Link href="/contact">
-                                    <HoverButton className="bg-white text-black hover:bg-brand-orange-500 hover:text-white rounded-2xl px-16 py-8 text-sm font-black uppercase tracking-widest shadow-2xl transition-all">
+                                <HoverButton asChild className="bg-white text-black hover:bg-brand-orange-500 hover:text-white rounded-2xl px-16 py-8 text-sm font-black uppercase tracking-widest shadow-2xl transition-all">
+                                    <Link href="/contact">
                                         Brighten My Space <ArrowRight className="ml-3 h-5 w-5" />
-                                    </HoverButton>
-                                </Link>
+                                    </Link>
+                                </HoverButton>
                             </div>
                         </motion.div>
 
@@ -288,19 +288,39 @@ export default function SkytubePage() {
                         <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter mb-4 text-white">Engineered <br /><span className="brand-gradient-text">Execution</span></h2>
                         <p className="text-gray-500 font-black uppercase tracking-[0.3em] text-[10px]">Rapid Industrial Deployment</p>
                     </div>
-                    <div className="grid md:grid-cols-3 gap-16">
+                    <div className="grid md:grid-cols-5 gap-8">
                         {[
-                            { step: "01", title: "Site Audit", desc: "Technical analysis of roof profile, obstacle mapping, and light-level targeting.", icon: Gauge },
-                            { step: "02", title: "Precision Cut", desc: "Profile-specific base plate mounting with our 8mm heavy-duty gasket seal.", icon: HardHat },
-                            { step: "03", title: "Spectral Integration", desc: "Pipe assembly with 99.7% spectral mirror segments and prismatic diffusers.", icon: Sparkles }
+                            { step: "01", title: "Roof Cut", desc: "Cut opening on the sheet with precision tools.", icon: Gauge },
+                            { step: "02", title: "Base Installation", desc: "Fix base plate with heavy duty screws & seals.", icon: HardHat },
+                            { step: "03", title: "Reflector Mount", desc: "Install high-reflectivity aluminium units.", icon: Sparkles },
+                            { step: "04", title: "Dome Installation", desc: "Fix the optical daylight collecting dome.", icon: Sun },
+                            { step: "05", title: "Diffuser Setup", desc: "Install internal diffuser panel for uniform light.", icon: Sparkles }
                         ].map((step, i) => (
-                            <div key={i} className="relative p-12 bg-white/[0.02] border border-white/5 rounded-[60px] group hover:bg-white/[0.05] hover:border-brand-orange-500/30 transition-all duration-500">
-                                <div className="absolute -top-6 -left-6 bg-brand-orange-500 text-white px-8 py-4 rounded-3xl font-black text-2xl shadow-xl border border-slate-900 group-hover:bg-white group-hover:text-black transition-all">
+                            <div key={i} className="relative p-8 bg-white/[0.02] border border-white/5 rounded-[40px] group hover:bg-white/[0.05] hover:border-brand-orange-500/30 transition-all duration-500">
+                                <div className="absolute -top-4 -left-4 bg-brand-orange-500 text-white px-5 py-2.5 rounded-2xl font-black text-lg shadow-xl border border-slate-900 group-hover:bg-white group-hover:text-black transition-all">
                                     {step.step}
                                 </div>
-                                <step.icon className="h-12 w-12 text-brand-orange-400 mb-8 group-hover:text-brand-orange-500 transition-all" />
-                                <h4 className="text-2xl font-black uppercase tracking-tighter mb-4 text-white group-hover:text-brand-orange-500">{step.title}</h4>
-                                <p className="text-gray-500 text-sm font-medium leading-relaxed group-hover:text-gray-300">{step.desc}</p>
+                                <step.icon className="h-10 w-10 text-brand-orange-400 mb-6 group-hover:text-brand-orange-500 transition-all" />
+                                <h4 className="text-lg font-black uppercase tracking-tighter mb-3 text-white group-hover:text-brand-orange-500">{step.title}</h4>
+                                <p className="text-gray-500 text-[10px] font-medium leading-relaxed group-hover:text-gray-300">{step.desc}</p>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="mt-20 flex flex-wrap justify-center gap-12 border-t border-white/5 pt-12">
+                        {[
+                            { label: "Installation Time", val: "45 – 60 mins", icon: Gauge },
+                            { label: "Maintenance", val: "Minimal (Self-cleaning)", icon: Droplets },
+                            { label: "Warranty", val: "1 Year Standard", icon: ShieldCheck }
+                        ].map((spec, i) => (
+                            <div key={i} className="flex items-center gap-4">
+                                <div className="p-3 bg-brand-orange-500/10 rounded-xl">
+                                    <spec.icon className="h-5 w-5 text-brand-orange-500" />
+                                </div>
+                                <div>
+                                    <p className="text-[10px] font-black uppercase text-gray-500 tracking-widest">{spec.label}</p>
+                                    <p className="text-sm font-black text-white">{spec.val}</p>
+                                </div>
                             </div>
                         ))}
                     </div>
@@ -365,11 +385,11 @@ export default function SkytubePage() {
                         <Sparkles className="h-20 w-20 text-white/30 mx-auto mb-10 animate-pulse" />
                         <h2 className="text-5xl md:text-9xl font-black text-white mb-10 tracking-tighter uppercase leading-none relative z-10">Piped Sunshine</h2>
                         <div className="flex flex-wrap justify-center gap-10 relative z-10">
-                            <Link href="/contact" className="block w-full sm:w-auto">
-                                <Button size="lg" className="w-full sm:w-auto bg-white text-black hover:bg-black hover:text-white transition-all duration-300 rounded-3xl px-20 py-10 text-xl font-black shadow-2xl uppercase tracking-widest">
+                            <Button asChild size="lg" className="w-full sm:w-auto bg-white text-black hover:bg-black hover:text-white transition-all duration-300 rounded-3xl px-20 py-10 text-xl font-black shadow-2xl uppercase tracking-widest">
+                                <Link href="/contact" className="block w-full sm:w-auto">
                                     Request Technical Audit <ArrowRight className="ml-4 h-8 w-8" />
-                                </Button>
-                            </Link>
+                                </Link>
+                            </Button>
                         </div>
                     </motion.div>
                 </div>

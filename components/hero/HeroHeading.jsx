@@ -59,6 +59,33 @@ export default function HeroHeading() {
           <span className="text-gray-600 hidden sm:inline">•</span>
           <span className="text-brand-yellow-500 whitespace-nowrap">CII National Award</span>
         </div>
+
+        <div className="flex flex-wrap gap-6 pt-4">
+          <Link href="/contact" className="inline-block">
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <button className="bg-brand-orange-500 text-white px-10 py-5 rounded-2xl font-black text-xs uppercase tracking-widest shadow-2xl shadow-brand-orange-500/30 hover:bg-white hover:text-black transition-all duration-500 flex items-center gap-4 group">
+                Consult With Experts
+                <div className="bg-white/10 p-1.5 rounded-lg group-hover:bg-black/5">
+                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </button>
+            </motion.div>
+          </Link>
+
+          <Link href="/products" className="inline-block">
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <button className="bg-white/5 backdrop-blur-md border border-white/10 text-white px-10 py-5 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-white/10 transition-all duration-500">
+                Explore Core Systems
+              </button>
+            </motion.div>
+          </Link>
+        </div>
       </motion.div>
     </motion.div>
   )

@@ -16,7 +16,7 @@ export default function HeroSection() {
   const [activeProduct, setActiveProduct] = useProductRotation(products.length)
 
   return (
-    <section className="relative h-screen min-h-[750px] overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 flex flex-col justify-center pt-24 md:pt-32 pb-12">
+    <section className="relative h-screen min-h-[700px] overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 flex flex-col justify-center pt-24 md:pt-28 pb-8">
       <HeroBackground mousePosition={mousePosition} />
 
       {/* Main Content */}
@@ -28,7 +28,7 @@ export default function HeroSection() {
               <AwardBadge />
             </div>
             <HeroHeading />
-            <div className="flex justify-start pt-4">
+            <div className="flex justify-start">
               <HeroStats />
             </div>
           </div>

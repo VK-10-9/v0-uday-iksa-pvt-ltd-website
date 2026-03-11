@@ -2,19 +2,15 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Menu, Search, Bell } from "lucide-react"
+import { Menu } from "lucide-react"
 import Image from "next/image"
 import { motion, useScroll, useSpring } from "framer-motion"
 import DesktopNav from "@/components/navbar/desktop-nav"
 import MobileMenu from "@/components/navbar/mobile-menu"
-import SearchModal from "@/components/navbar/search-modal"
-import NotificationPanel from "@/components/navbar/notification-panel"
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [isSearchOpen, setIsSearchOpen] = useState(false)
-  const [isNotificationOpen, setIsNotificationOpen] = useState(false)
   const [active, setActive] = useState(null)
 
   const { scrollYProgress } = useScroll()
@@ -47,35 +43,25 @@ export default function Navbar() {
             {/* Enhanced Logo */}
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
               <Link href="/" className="flex items-center z-60 relative group">
-                <div className="relative h-12 w-12 mr-4">
+                <div className="relative h-24 w-24 mr-6 flex-shrink-0">
                   <motion.div
-                    className={`absolute inset-0 rounded-2xl bg-brand-orange-500/20 blur-xl transition-all duration-500 group-hover:bg-brand-orange-500/40`}
-                    animate={{
-                      scale: [1, 1.2, 1],
-                      rotate: [0, 90, 180, 270, 360],
-                    }}
-                    transition={{
-                      duration: 10,
-                      repeat: Infinity,
-                      ease: "linear",
-                    }}
+                    className="absolute inset-0 rounded-full bg-brand-orange-500/30 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+                    animate={{ scale: [1, 1.3, 1] }}
+                    transition={{ duration: 4, repeat: Infinity }}
                   />
-                  <div className="relative h-full w-full flex items-center justify-center bg-slate-900 border border-white/10 rounded-2xl p-2 group-hover:border-brand-orange-500/50 transition-colors">
+                  <div className="relative h-full w-full flex items-center justify-center transition-all">
                     <Image
                       src="/images/logo.png"
                       alt="Uday IKSA Logo"
-                      width={32}
-                      height={32}
+                      width={140}
+                      height={140}
                       priority
-                      className="object-contain"
+                      className="w-full h-full object-contain scale-[1.8] transform transition-transform duration-500 group-hover:scale-[1.9]"
                     />
                   </div>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-2xl font-black text-white uppercase tracking-tighter leading-none">
-                    Uday <span className="brand-gradient-text">IKSA</span>
-                  </span>
-                  <span className="text-[8px] text-gray-500 font-black uppercase tracking-[0.4em] mt-1">Sustainability Engineering</span>
+                  <span className="text-[12px] text-gray-400 font-black uppercase tracking-[0.5em] mt-1 group-hover:text-white transition-colors">Sustainability Engineering</span>
                 </div>
               </Link>
             </motion.div>
@@ -86,35 +72,18 @@ export default function Navbar() {
             </div>
 
             {/* Action Buttons */}
-            <div className="hidden lg:flex items-center space-x-4">
-              <motion.button
-                whileHover={{ scale: 1.1, backgroundColor: "rgba(255,255,255,0.15)" }}
-                whileTap={{ scale: 0.9 }}
-                onClick={() => setIsSearchOpen(true)}
-                className="w-12 h-12 flex items-center justify-center rounded-2xl bg-white/5 border border-white/10 text-white transition-all duration-300"
+            <div className="hidden lg:flex items-center space-x-6">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                <Search className="h-5 w-5" />
-              </motion.button>
-
-              <motion.button
-                whileHover={{ scale: 1.1, backgroundColor: "rgba(255,255,255,0.15)" }}
-                whileTap={{ scale: 0.9 }}
-                onClick={() => setIsNotificationOpen(!isNotificationOpen)}
-                className="relative w-12 h-12 flex items-center justify-center rounded-2xl bg-white/5 border border-white/10 text-white transition-all duration-300"
-              >
-                <Bell className="h-5 w-5" />
-                <span className="absolute top-3 right-3 h-2 w-2 bg-brand-orange-500 rounded-full animate-pulse shadow-lg shadow-brand-orange-500/50" />
-              </motion.button>
-
-              <Link href="/contact" className="block">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-3 bg-white text-black hover:bg-brand-orange-500 hover:text-white rounded-2xl font-black uppercase tracking-widest text-xs transition-all duration-300 shadow-xl shadow-white/5"
+                <Link
+                  href="/contact"
+                  className="px-10 py-3.5 bg-white text-black hover:bg-brand-orange-500 hover:text-white rounded-2xl font-black uppercase tracking-widest text-xs transition-all duration-300 shadow-xl shadow-white/5 inline-block"
                 >
                   Consult Now
-                </motion.button>
-              </Link>
+                </Link>
+              </motion.div>
             </div>
 
             {/* Mobile Menu Button */}
@@ -138,12 +107,6 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <MobileMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
-
-      {/* Search Modal */}
-      <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
-
-      {/* Notification Panel */}
-      <NotificationPanel isOpen={isNotificationOpen} onClose={() => setIsNotificationOpen(false)} />
     </>
   )
 }

@@ -151,11 +151,11 @@ export default function NanosunTilesPage() {
                                 Got a traditional Mangalore tile roof or a modern Italian tile bungalow? This model was built exactly for you. Fits seamlessly into your existing roof — no structural changes, no ugly protrusions — and brings pure natural sunlight into the rooms below.
                             </p>
                             <div className="flex flex-wrap gap-6">
-                                <Link href="/contact">
-                                    <HoverButton className="bg-white text-black hover:bg-brand-orange-500 hover:text-white rounded-2xl px-16 py-8 text-sm font-black uppercase tracking-widest shadow-2xl transition-all">
+                                <HoverButton asChild className="bg-white text-black hover:bg-brand-orange-500 hover:text-white rounded-2xl px-16 py-8 text-sm font-black uppercase tracking-widest shadow-2xl transition-all">
+                                    <Link href="/contact">
                                         Get Free Assessment <ArrowRight className="ml-3 h-5 w-5" />
-                                    </HoverButton>
-                                </Link>
+                                    </Link>
+                                </HoverButton>
                                 <a href="tel:+918792182631" className="px-16 py-8 border-2 border-white/10 hover:border-brand-orange-500/50 text-white transition-all duration-300 rounded-2xl text-[10px] font-black uppercase tracking-widest backdrop-blur-md flex items-center gap-3">
                                     <Phone className="h-4 w-4" /> +91 8792182631
                                 </a>
@@ -337,11 +337,11 @@ export default function NanosunTilesPage() {
                                             </div>
                                         </div>
 
-                                        <Link href="/contact">
-                                            <Button size="lg" className="bg-white text-black hover:bg-brand-orange-500 hover:text-white rounded-2xl px-12 py-8 text-xs font-black uppercase tracking-widest shadow-2xl shadow-white/5 group">
+                                        <Button asChild size="lg" className="bg-white text-black hover:bg-brand-orange-500 hover:text-white rounded-2xl px-12 py-8 text-xs font-black uppercase tracking-widest shadow-2xl shadow-white/5 group">
+                                            <Link href="/contact">
                                                 Request Pricing for {sizes[activeSize].diameter} <ArrowRight className="ml-3 group-hover:translate-x-1 transition-transform" />
-                                            </Button>
-                                        </Link>
+                                            </Link>
+                                        </Button>
                                     </div>
 
                                     <div className="grid grid-cols-1 gap-4">
@@ -450,16 +450,16 @@ export default function NanosunTilesPage() {
                             Share your roof type and the rooms you want to brighten — we&apos;ll recommend the right size and number of units, and give you a clear cost picture.
                         </p>
                         <div className="flex flex-wrap justify-center gap-10 relative z-10">
-                            <Link href="/contact" className="block">
-                                <Button size="lg" className="bg-white text-black hover:bg-black hover:text-white transition-all duration-300 rounded-3xl px-20 py-10 text-xl font-black shadow-2xl shadow-white/10 uppercase tracking-widest">
+                            <Button asChild size="lg" className="bg-white text-black hover:bg-black hover:text-white transition-all duration-300 rounded-3xl px-20 py-10 text-xl font-black shadow-2xl shadow-white/10 uppercase tracking-widest">
+                                <Link href="/contact" className="block">
                                     Get a Free Assessment <ArrowRight className="ml-4 h-8 w-8" />
-                                </Button>
-                            </Link>
-                            <a href="tel:+918792182631">
-                                <Button size="lg" variant="outline" className="border-2 border-white/30 text-white hover:bg-white hover:text-black transition-all duration-300 rounded-3xl px-20 py-10 text-xl font-black uppercase tracking-widest">
+                                </Link>
+                            </Button>
+                            <Button asChild size="lg" variant="outline" className="border-2 border-white/30 text-white hover:bg-white hover:text-black transition-all duration-300 rounded-3xl px-20 py-10 text-xl font-black uppercase tracking-widest">
+                                <a href="tel:+918792182631">
                                     <Phone className="mr-4 h-8 w-8" /> Call Us
-                                </Button>
-                            </a>
+                                </a>
+                            </Button>
                         </div>
                     </motion.div>
                 </div>

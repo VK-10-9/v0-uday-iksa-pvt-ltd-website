@@ -9,7 +9,7 @@ import { solutionsData } from "@/lib/data/home-sections"
 
 export default function SolutionsOverview() {
     return (
-        <section id="solutions" className="py-12 md:py-16 relative bg-slate-950 px-6 lg:px-12 overflow-hidden">
+        <section id="solutions" className="py-8 md:py-10 relative bg-slate-950 px-6 lg:px-12 overflow-hidden">
             {/* Background Orbs with subtle movement */}
             <div className="absolute inset-0">
                 <motion.div
@@ -167,10 +167,16 @@ export default function SolutionsOverview() {
                         </div>
 
                         <div className="pt-4">
-                            <Link href="/products">
-                                <Button size="lg" className="bg-brand-orange-500 text-white hover:bg-white hover:text-black rounded-2xl px-12 py-8 text-sm font-black uppercase tracking-widest shadow-2xl shadow-brand-orange-500/30 transition-all duration-500 flex items-center gap-4 group">
-                                    Compare Our Systems <ArrowRight className="h-5 w-5 group-hover:translate-x-2 transition-transform" />
-                                </Button>
+                            <Link href="/products" className="inline-block">
+                                <motion.div
+                                    whileHover={{ scale: 1.02 }}
+                                    whileTap={{ scale: 0.98 }}
+                                >
+                                    <button className="bg-brand-orange-500 text-white hover:bg-white hover:text-black rounded-2xl px-12 py-5 text-xs font-black uppercase tracking-widest shadow-2xl shadow-brand-orange-500/30 transition-all duration-500 flex items-center gap-4 group">
+                                        Compare Our Systems
+                                        <ArrowRight className="h-5 w-5 group-hover:translate-x-2 transition-transform" />
+                                    </button>
+                                </motion.div>
                             </Link>
                         </div>
                     </div>
@@ -178,7 +184,7 @@ export default function SolutionsOverview() {
 
                 {/* Local Highlight CTA */}
                 <motion.div
-                    className="mt-16 md:mt-24 bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-10 lg:p-20 rounded-[64px] md:rounded-[80px] text-center relative overflow-hidden group shadow-2xl"
+                    className="mt-10 md:mt-12 bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-10 lg:p-20 rounded-[64px] md:rounded-[80px] text-center relative overflow-hidden group shadow-2xl"
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}

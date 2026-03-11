@@ -101,11 +101,11 @@ function NanoventContent() {
               </div>
 
               <div className="flex flex-wrap gap-6">
-                <Link href="/contact">
-                  <HoverButton className="bg-white text-black hover:bg-brand-orange-500 hover:text-white rounded-2xl px-16 py-8 text-sm font-black uppercase tracking-widest shadow-2xl transition-all">
+                <HoverButton asChild className="bg-white text-black hover:bg-brand-orange-500 hover:text-white rounded-2xl px-16 py-8 text-sm font-black uppercase tracking-widest shadow-2xl transition-all">
+                  <Link href="/contact">
                     Project Audit <ArrowRight className="ml-3 h-5 w-5" />
-                  </HoverButton>
-                </Link>
+                  </Link>
+                </HoverButton>
               </div>
             </motion.div>
 
@@ -354,11 +354,11 @@ function NanoventContent() {
             <Wind className="h-20 w-20 text-white/30 mx-auto mb-10 animate-spin-slow" />
             <h2 className="text-5xl md:text-9xl font-black text-white mb-10 tracking-tighter uppercase leading-none relative z-10">Unpower Your Flow</h2>
             <div className="flex flex-wrap justify-center gap-10 relative z-10">
-              <Link href="/contact" className="block w-full sm:w-auto">
-                <Button size="lg" className="w-full sm:w-auto bg-white text-black hover:bg-black hover:text-white transition-all duration-300 rounded-3xl px-20 py-10 text-xl font-black shadow-2xl shadow-white/10 uppercase tracking-widest">
+              <Button asChild size="lg" className="w-full sm:w-auto bg-white text-black hover:bg-black hover:text-white transition-all duration-300 rounded-3xl px-20 py-10 text-xl font-black shadow-2xl shadow-white/10 uppercase tracking-widest">
+                <Link href="/contact" className="block w-full sm:w-auto">
                   Start Fresh Air Audit <ArrowRight className="ml-4 h-8 w-8" />
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
           </motion.div>
         </div>

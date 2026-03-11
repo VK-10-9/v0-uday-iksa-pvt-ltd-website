@@ -1,14 +1,29 @@
 "use client"
 
 import * as React from "react"
+import { Slot } from "@radix-ui/react-slot"
 import { cn } from "@/lib/utils"
 
 interface HoverButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode
+  asChild?: boolean
 }
 
-const HoverButton = React.forwardRef<HTMLButtonElement, HoverButtonProps>(({ className, children, ...props }, ref) => {
+const HoverButton = React.forwardRef<HTMLButtonElement, HoverButtonProps>(({ className, children, asChild = false, ...props }, ref) => {
+  const Comp = asChild ? Slot : "button"
   const buttonRef = React.useRef<HTMLButtonElement>(null)
+
+  // Use combining refs if asChild is true? Actually Radix Slot handles this.
+  // But we need the ref for our circle logic.
+
+  // To make it work with Slot, we might need a custom ref handler.
+  const mergedRef = (node: HTMLButtonElement) => {
+    // @ts-ignore
+    buttonRef.current = node
+    if (typeof ref === 'function') ref(node)
+    else if (ref) (ref as any).current = node
+  }
+
   const [isListening, setIsListening] = React.useState(false)
   const [circles, setCircles] = React.useState<
     Array<{
@@ -72,8 +87,8 @@ const HoverButton = React.forwardRef<HTMLButtonElement, HoverButtonProps>(({ cla
   }, [circles])
 
   return (
-    <button
-      ref={buttonRef}
+    <Comp
+      ref={mergedRef}
       className={cn(
         "relative isolate px-8 py-3 rounded-3xl",
         "text-foreground font-medium text-base leading-6",
@@ -95,7 +110,8 @@ const HoverButton = React.forwardRef<HTMLButtonElement, HoverButtonProps>(({ cla
       style={{
         "--circle-start": "#8b5cf6",
         "--circle-end": "#14b8a6",
-      }}
+        ...props.style
+      } as any}
     >
       {circles.map(({ id, x, y, color, fadeState }) => (
         <div
@@ -115,7 +131,7 @@ const HoverButton = React.forwardRef<HTMLButtonElement, HoverButtonProps>(({ cla
         />
       ))}
       {children}
-    </button>
+    </Comp>
   )
 })
 

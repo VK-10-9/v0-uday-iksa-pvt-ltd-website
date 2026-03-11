@@ -47,7 +47,7 @@ const installations = [
 
 export default function InstallationGallery() {
     return (
-        <section className="py-24 bg-slate-950 relative overflow-hidden">
+        <section className="py-12 bg-slate-950 relative overflow-hidden">
             {/* Background Glow */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-orange-500/5 blur-[120px] rounded-full pointer-events-none" />
 
@@ -79,9 +79,10 @@ export default function InstallationGallery() {
                         transition={{ delay: 0.2 }}
                     >
                         <Link href="/projects">
-                            <Button variant="outline" className="border-white/10 text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-xs uppercase font-bold tracking-widest backdrop-blur-sm">
-                                View All Projects <ArrowRight className="ml-2 h-4 w-4" />
-                            </Button>
+                            <button className="bg-white/5 backdrop-blur-md border border-white/10 text-white hover:bg-white hover:text-black rounded-2xl px-10 py-5 text-xs uppercase font-black tracking-widest transition-all duration-500 flex items-center gap-4 group">
+                                View All Projects
+                                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform text-brand-orange-500" />
+                            </button>
                         </Link>
                     </motion.div>
                 </div>

@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Sun, Award, Users, Building2, Target, Eye, Heart, Sparkles, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function AboutSection() {
   const stats = [
@@ -37,7 +38,7 @@ export default function AboutSection() {
   ]
 
   return (
-    <section id="about" className="py-12 md:py-16 relative bg-slate-950 px-6 lg:px-12 overflow-hidden">
+    <section id="about" className="py-8 md:py-10 relative bg-slate-950 px-6 lg:px-12 overflow-hidden">
       {/* Dynamic Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-orange-500/5 rounded-full blur-[140px]" />
@@ -45,7 +46,7 @@ export default function AboutSection() {
       </div>
 
       <div className="container mx-auto relative z-10">
-        <div className="grid lg:grid-cols-2 gap-24 items-center mb-24 md:mb-32">
+        <div className="grid lg:grid-cols-2 gap-24 items-center mb-12 md:mb-16">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -97,31 +98,48 @@ export default function AboutSection() {
             </motion.div>
           </motion.div>
 
-          <div className="grid grid-cols-1 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                className="bg-white/[0.03] border border-white/5 p-10 rounded-[48px] flex items-center gap-10 hover:bg-white/[0.05] hover:border-white/10 transition-all duration-500 group"
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-              >
-                <div className="bg-brand-orange-500/10 w-20 h-20 rounded-3xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <stat.icon className="h-10 w-10 text-brand-orange-500" />
-                </div>
-                <div>
-                  <p className="text-5xl font-black text-white mb-1 tracking-tighter">{stat.number}</p>
-                  <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest leading-none">{stat.label}</p>
-                </div>
-              </motion.div>
-            ))}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:items-center">
+            <div className="space-y-8">
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-white/[0.03] border border-white/5 p-8 rounded-[40px] flex items-center gap-8 hover:bg-white/[0.05] hover:border-white/10 transition-all duration-500 group"
+                  initial={{ opacity: 0, x: 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                >
+                  <div className="bg-brand-orange-500/10 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <stat.icon className="h-8 w-8 text-brand-orange-500" />
+                  </div>
+                  <div>
+                    <p className="text-4xl font-black text-white mb-1 tracking-tighter">{stat.number}</p>
+                    <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest leading-none">{stat.label}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div
+              className="relative h-[400px] md:h-full min-h-[400px] rounded-[48px] overflow-hidden border border-white/10 shadow-3xl"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+            >
+              <Image
+                src="/brain/5b886c53-b306-4234-afef-4f7e3b295568/uday_iksa_sunlight_engineering_hero_1773248306737.png"
+                alt="Sunlight Engineering"
+                fill
+                className="object-cover transition-transform duration-[4000ms] hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
+            </motion.div>
 
             {/* Why Choose Us - Image 1 content */}
             <motion.div
-              className="bg-brand-orange-500/5 border border-brand-orange-500/20 p-8 rounded-[48px] mt-4"
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              className="bg-brand-orange-500/5 border border-brand-orange-500/20 p-8 rounded-[48px] lg:col-span-2"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
@@ -129,7 +147,7 @@ export default function AboutSection() {
                 <div className="h-0.5 w-8 bg-brand-orange-500"></div>
                 <h3 className="text-[10px] font-black text-brand-orange-500 uppercase tracking-widest">Why Choose Uday Iksa?</h3>
               </div>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+              <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4">
                 {[
                   "Patented Technology",
                   "Experienced project team",
@@ -149,7 +167,7 @@ export default function AboutSection() {
         </div>
 
         {/* Values Section */}
-        <div className="grid lg:grid-cols-3 gap-10 pt-20 border-t border-white/5">
+        <div className="grid lg:grid-cols-3 gap-10 pt-10 border-t border-white/5">
           {values.map((value, index) => (
             <motion.div
               key={index}
