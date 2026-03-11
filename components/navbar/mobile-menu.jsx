@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion"
 import Link from "next/link"
 import Image from "next/image"
-import { X, Phone, ChevronRight, ChevronDown, Home, Info, Lightbulb, Briefcase, Award, Mail, Zap, HelpCircle, Factory, Building, Star, ExternalLink, Sun, Wind, Sparkles } from "lucide-react"
+import { X, Phone, ChevronRight, ChevronDown, Home, Info, Lightbulb, Briefcase, Award, Mail, Zap, HelpCircle, Factory, Building, Star, ExternalLink, Sun, Wind, Sparkles, Camera } from "lucide-react"
 import { HoverButton } from "@/components/ui/hover-button"
 import { products } from "@/lib/data/products"
 
@@ -110,6 +110,12 @@ export default function MobileMenu({ isOpen, onClose }) {
       href: "/awards",
       icon: <Award className="h-5 w-5" />,
       color: "text-brand-yellow-500",
+    },
+    {
+      name: "Gallery",
+      href: "/gallery",
+      icon: <Camera className="h-5 w-5" />,
+      color: "text-brand-orange-500",
     },
     {
       name: "FAQ",

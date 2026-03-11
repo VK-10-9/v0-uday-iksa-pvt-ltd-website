@@ -25,7 +25,7 @@ export default function HeroHeading() {
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ delay: 0.8, duration: 0.8, ease: "backOut" }}
         >
-          Do The
+          Power Your
         </motion.span>
         <motion.span
           className="block text-white"
@@ -33,7 +33,7 @@ export default function HeroHeading() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 1, duration: 0.8, ease: "easeOut" }}
         >
-          Work
+          Space
         </motion.span>
       </h1>
 
@@ -43,16 +43,21 @@ export default function HeroHeading() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2, duration: 0.8 }}
       >
+        <div className="flex items-center gap-3">
+          <div className="h-0.5 w-12 bg-brand-orange-500"></div>
+          <p className="text-brand-orange-500 font-black uppercase tracking-[0.3em] text-xs">Manufacturer and Service Provider</p>
+        </div>
+
         <p className="text-lg md:text-xl text-gray-400 leading-relaxed font-medium">
-          Stop paying for light that nature gives you for free. <span className="text-white font-black">Uday IKSA</span> brings natural sunlight and fresh air into your factory, office, home, or school.
+          Bringing natural daylighting and ventilation solutions to industrial, commercial, and residential buildings across India. Patented technology for a sustainable future.
         </p>
 
         <div className="flex flex-wrap items-center gap-3 md:gap-4 text-[10px] md:text-xs font-black uppercase tracking-[0.2em] md:tracking-[0.3em]">
-          <span className="text-brand-orange-500 whitespace-nowrap">No Electricity</span>
+          <span className="text-brand-orange-500 whitespace-nowrap">Patented Technology</span>
           <span className="text-gray-600">•</span>
-          <span className="text-brand-amber-500 whitespace-nowrap">Zero Running Cost</span>
+          <span className="text-brand-amber-500 whitespace-nowrap">ISO 9001:2015</span>
           <span className="text-gray-600 hidden sm:inline">•</span>
-          <span className="text-brand-yellow-500 whitespace-nowrap">High Impact</span>
+          <span className="text-brand-yellow-500 whitespace-nowrap">CII National Award</span>
         </div>
       </motion.div>
     </motion.div>

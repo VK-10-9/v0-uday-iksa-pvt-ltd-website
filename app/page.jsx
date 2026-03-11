@@ -8,6 +8,7 @@ import TestimonialsSection from "@/components/home/testimonials-section"
 import AwardsSection from "@/components/home/awards-section"
 import PatentedBanner from "@/components/home/PatentedBanner"
 import ProductsSection from "@/components/home/products-section"
+import InstallationGallery from "@/components/home/installation-gallery"
 
 export default function Home() {
   return (
@@ -16,8 +17,10 @@ export default function Home() {
       <PatentedBanner />
       <ProductsSection />
       <SolutionsOverview />
+      <InstallationGallery />
       <AboutSection />
       <ClientsSection />
+
       <TestimonialsSection />
       <AwardsSection />
 

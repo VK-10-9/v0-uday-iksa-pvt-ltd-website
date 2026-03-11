@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Building2, Users, Lightbulb, ChevronRight, Target, Eye, Heart, ArrowRight, Linkedin, Calendar, Trophy, CheckCircle2, Factory, Zap, Shield, Globe, Award, Sparkles, Sun } from "lucide-react"
+import { Building2, Users, Lightbulb, ChevronRight, Target, Eye, Heart, ArrowRight, Linkedin, Calendar, Trophy, CheckCircle2, Factory, Zap, Shield, Globe, Award, Sparkles, Sun, Maximize2 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -332,8 +332,51 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Catalog Preview Section */}
+      <section className="py-24 relative px-6 bg-slate-950 border-y border-white/5">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4">Official <span className="brand-gradient-text">Catalog</span></h2>
+            <div className="h-1 w-16 bg-brand-orange-500 rounded-full mx-auto mb-6"></div>
+            <p className="text-gray-400 max-w-2xl mx-auto font-medium">Explore our technical specifications and global standards directly from our engineering documentation.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[1, 2, 3, 4].map((num) => (
+              <motion.div
+                key={num}
+                className="group relative aspect-[1/1.4] rounded-3xl overflow-hidden border border-white/10 hover:border-brand-orange-500/50 transition-all shadow-2xl"
+                whileHover={{ y: -10 }}
+              >
+                <Image
+                  src={`/images/gallery/about/catalog-${num}.jpg`}
+                  alt={`Uday IKSA Catalog Page ${num}`}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="bg-brand-orange-500 p-4 rounded-full text-white shadow-xl">
+                    <Maximize2 className="h-6 w-6" />
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="mt-16 text-center">
+            <Link href="/UDAY IKSA PVT LTD.pdf" target="_blank">
+              <Button className="bg-brand-orange-500 text-white hover:bg-white hover:text-black rounded-2xl px-12 py-8 text-sm font-black uppercase tracking-widest transition-all shadow-2xl shadow-brand-orange-500/20">
+                Download Full Technical PDF <ArrowRight className="ml-3 h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Local Identity Section */}
       <section className="py-20 relative px-6 bg-slate-900/30">
+
         <div className="container mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

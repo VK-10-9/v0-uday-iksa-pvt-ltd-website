@@ -64,22 +64,28 @@ export default function InnovationsPage() {
 
                 {/* Subcategories Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                  {category.subcategories.map((sub, subIdx) => (
-                    <Link key={subIdx} href={sub.href} className="group">
-                      <motion.div
-                        className="bg-white/5 border border-white/10 p-8 rounded-[40px] h-full flex flex-col justify-between hover:bg-white/[0.08] hover:border-brand-orange-500/40 transition-all duration-500"
-                        whileHover={{ y: -10 }}
-                      >
-                        <div>
-                          <h4 className="text-white font-black uppercase text-sm tracking-widest mb-4 group-hover:text-brand-orange-400 transition-colors">{sub.name}</h4>
-                          <p className="text-gray-500 text-[11px] leading-relaxed font-medium mb-6">{sub.product}</p>
-                        </div>
-                        <div className="flex items-center text-[10px] font-black text-brand-orange-500 uppercase tracking-widest">
-                          Explore <ArrowRight className="ml-2 h-3 w-3 group-hover:translate-x-2 transition-transform" />
-                        </div>
-                      </motion.div>
-                    </Link>
-                  ))}
+                  {category.subcategories.map((sub, subIdx) => {
+                    const Icon = iconMap[category.icon] || ShieldCheck
+                    return (
+                      <Link key={subIdx} href={sub.href} className="group">
+                        <motion.div
+                          className="bg-white/5 border border-white/10 p-8 rounded-[40px] h-full flex flex-col justify-between hover:bg-white/[0.08] hover:border-brand-orange-500/40 transition-all duration-500 relative overflow-hidden"
+                          whileHover={{ y: -10 }}
+                        >
+                          <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                            <Icon className="h-24 w-24 -mr-8 -mt-8" />
+                          </div>
+                          <div className="relative z-10">
+                            <h4 className="text-white font-black uppercase text-sm tracking-widest mb-4 group-hover:text-brand-orange-400 transition-colors">{sub.name}</h4>
+                            <p className="text-gray-500 text-[11px] leading-relaxed font-medium mb-6">{sub.product}</p>
+                          </div>
+                          <div className="flex items-center text-[10px] font-black text-brand-orange-500 uppercase tracking-widest relative z-10">
+                            Explore <ArrowRight className="ml-2 h-3 w-3 group-hover:translate-x-2 transition-transform" />
+                          </div>
+                        </motion.div>
+                      </Link>
+                    )
+                  })}
                 </div>
               </motion.div>
             ))}
@@ -98,19 +104,19 @@ export default function InnovationsPage() {
           <div className="grid md:grid-cols-3 gap-12">
             {[
               {
-                title: "Zero Heat Admission",
-                desc: "Our systems let in 100% of visible light but filter out infrared heat. Your building stays cool even under the harshest midday sun.",
-                metric: "Pure Light"
+                title: "More Than Savings",
+                desc: "Reduces Carbon Footprint by cutting down artificial lighting usage. Our systems are an investment in sustainability that pays for itself through energy savings.",
+                metric: "Eco-Impact"
               },
               {
-                title: "Leak Proof for Life",
-                desc: "Every installation is engineered with our proprietary flashing system. We guarantee zero leaks, even during extreme weather conditions.",
-                metric: "100% Sealed"
+                title: "Health & Well-being",
+                desc: "Natural light supports circadian rhythms, improving mood, sleep quality, and overall health for building occupants compared to artificial lighting.",
+                metric: "Human First"
               },
               {
-                title: "Human Centric",
-                desc: "Natural light improves focus, mood, and sleep quality. We bring the full spectrum of sunlight into your workspace, naturally.",
-                metric: "Health First"
+                title: "Workforce Productivity",
+                desc: "Better comfort and focus lead to higher productivity. Our smart optical systems harvest outside sunlight and bring it inside glare-free.",
+                metric: "Focus+"
               }
             ].map((std, i) => (
               <motion.div

@@ -15,7 +15,7 @@ export default function AwardsPage() {
       category: "Green Innovation",
       description:
         "Recognized by CII Yi – Apollo Innovation for our groundbreaking technology in green solar lighting and natural ventilation systems that significantly reduce energy consumption in buildings.",
-      image: "/images/nanosun-rcc.png",
+      image: "/images/gallery/about/catalog-4.jpg",
     },
     {
       name: "Sustainability Excellence Award",
@@ -24,7 +24,7 @@ export default function AwardsPage() {
       category: "Product Innovation",
       description:
         "Honored for our NANOSUN daylighting system's contribution to sustainable building practices and exceptional performance in reducing carbon footprint across commercial and industrial projects.",
-      image: "/images/nanosun-structural.png",
+      image: "/images/installations/hindupur-industrial.jpg",
     },
     {
       name: "Energy Conservation Award",
@@ -33,7 +33,7 @@ export default function AwardsPage() {
       category: "Building Technology",
       description:
         "Recognized for developing innovative natural lighting and ventilation solutions that have demonstrably reduced energy consumption in over 100 buildings across India.",
-      image: "/images/nanovent.png",
+      image: "/images/gallery/nanovent/install-1.jpg",
     },
     {
       name: "Innovation Leadership Award",
@@ -42,9 +42,10 @@ export default function AwardsPage() {
       category: "Sustainable Technology",
       description:
         "Awarded for pioneering research and development in sustainable building technologies that address India's unique climate challenges while promoting energy efficiency.",
-      image: "/images/skytube.png",
+      image: "/images/gallery/nanosun/install-3.jpg",
     },
   ]
+
 
   const mediaFeatures = [
     {

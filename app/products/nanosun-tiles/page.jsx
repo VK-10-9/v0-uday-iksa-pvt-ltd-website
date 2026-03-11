@@ -169,8 +169,8 @@ export default function NanosunTilesPage() {
                             transition={{ duration: 1 }}
                         >
                             <Image
-                                src="/images/nanosun-structural.png"
-                                alt="NANOSUN Tiles Daylight Technology"
+                                src="/images/products/nanosun-tiles/house-render.png"
+                                alt="NANOSUN Tiles Daylight House Installation"
                                 fill
                                 className="object-cover transition-transform duration-1000 group-hover:scale-105"
                             />
@@ -360,6 +360,58 @@ export default function NanosunTilesPage() {
                                     </div>
                                 </motion.div>
                             </AnimatePresence>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Structural Integration Section */}
+            <section className="py-24 relative px-6 lg:px-12 bg-slate-950 overflow-hidden">
+                <div className="container mx-auto">
+                    <div className="grid lg:grid-cols-2 gap-24 items-center">
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            className="relative h-[600px] rounded-[60px] overflow-hidden border border-white/10 group shadow-3xl shadow-brand-orange-500/10"
+                        >
+                            <Image
+                                src="/images/products/nanosun-tiles/structural-render.png"
+                                alt="NANOSUN Tiles Structural Cross Section"
+                                fill
+                                className="object-cover transition-transform duration-1000 group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60" />
+                            <div className="absolute bottom-10 left-10 right-10">
+                                <div className="bg-white/5 backdrop-blur-3xl border border-white/10 p-8 rounded-[40px]">
+                                    <h3 className="text-3xl font-black text-white uppercase tracking-tighter mb-2">Flush Integration</h3>
+                                    <p className="text-gray-400 text-sm font-medium">Clean, compact, and structurally bonded for tiled roof architecture.</p>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        <div className="space-y-12">
+                            <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter leading-none">Seamless <br /><span className="brand-gradient-text">Architecture</span></h2>
+                            <p className="text-xl text-gray-400 font-medium leading-relaxed">
+                                Our Tiles model is engineered to respect the aesthetic of your bungalow. No bulky extensions — just a clean optical dome that sits flush with your roof line.
+                            </p>
+                            <div className="space-y-6">
+                                {[
+                                    { title: "Zero Tile Disturbance", desc: "No cutting of main rafters or structural beams." },
+                                    { title: "Weather Sealed", desc: "Custom FRP bases matched to your specific tile profile (Mangalore, Italian, etc.) ensure zero leaks." },
+                                    { title: "Universal Reach", desc: "Available in lengths up to 7 metres to reach ground floor rooms from the top roof." }
+                                ].map((item, i) => (
+                                    <div key={i} className="flex gap-4">
+                                        <div className="h-6 w-6 rounded-full bg-brand-orange-500/20 flex items-center justify-center shrink-0 mt-1">
+                                            <div className="h-2 w-2 rounded-full bg-brand-orange-500" />
+                                        </div>
+                                        <div>
+                                            <h4 className="text-white font-black uppercase text-sm mb-1">{item.title}</h4>
+                                            <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>

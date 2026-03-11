@@ -14,24 +14,24 @@ export default function AboutSection() {
 
   const values = [
     {
-      icon: Eye,
-      title: "Vision",
+      title: "Carbon Reductions",
       description:
-        "A future where every building in India uses the sun's free energy — instead of paying for artificial light.",
+        "Reduces Carbon Footprint by significantly cutting down artificial lighting usage in industrial and commercial spaces.",
+      icon: Sun,
       gradient: "from-brand-orange-500 to-brand-red-600",
     },
     {
-      title: "Mission",
+      title: "Human Wellness",
       description:
-        "To make natural daylighting and ventilation easy, affordable, and accessible for every type of building — from a small home to a large factory.",
-      icon: Target,
+        "Supports human health by maintaining natural circadian rhythms, improving mood and sleep patterns for building occupants.",
+      icon: Heart,
       gradient: "from-brand-amber-500 to-brand-orange-500",
     },
     {
-      title: "Values",
+      title: "Workplace Efficiency",
       description:
-        "Honest engineering. What we promise, we deliver — safely, sustainably, and with care for the people who use our products.",
-      icon: Heart,
+        "Better comfort, focus and productivity inside workplaces through glare-free, high-quality natural full-spectrum light.",
+      icon: Target,
       gradient: "from-brand-red-500 to-brand-orange-600",
     },
   ]
@@ -116,6 +116,35 @@ export default function AboutSection() {
                 </div>
               </motion.div>
             ))}
+
+            {/* Why Choose Us - Image 1 content */}
+            <motion.div
+              className="bg-brand-orange-500/5 border border-brand-orange-500/20 p-8 rounded-[48px] mt-4"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <div className="h-0.5 w-8 bg-brand-orange-500"></div>
+                <h3 className="text-[10px] font-black text-brand-orange-500 uppercase tracking-widest">Why Choose Uday Iksa?</h3>
+              </div>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+                {[
+                  "Patented Technology",
+                  "Experienced project team",
+                  "Inhouse Designing facility",
+                  "ISO 9001:2015 Certified",
+                  "Inhouse Manufacturing",
+                  "2022 CII National Award"
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3 text-white/70 text-xs font-semibold">
+                    <div className="h-1 w-1 bg-brand-orange-500 rounded-full"></div>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
           </div>
         </div>
 

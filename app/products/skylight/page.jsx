@@ -116,16 +116,16 @@ export default function SkylightPage() {
                             transition={{ duration: 1 }}
                         >
                             <Image
-                                src="/images/nanosun-rcc.png"
-                                alt="NANOSUN Skylight System"
+                                src="/images/products/skylight/hero-render.png"
+                                alt="NANOSUN Premium Skylight System"
                                 fill
                                 className="object-cover transition-transform duration-1000 group-hover:scale-105"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60" />
                             <div className="absolute bottom-12 left-12 right-12">
                                 <div className="bg-white/5 backdrop-blur-3xl border border-white/10 p-10 rounded-[48px]">
-                                    <p className="text-3xl font-black text-white uppercase tracking-tighter mb-2">Light + Air + Sky</p>
-                                    <p className="text-gray-400 text-sm font-medium">The only skylight that opens — bringing both daylight and fresh ventilation.</p>
+                                    <p className="text-3xl font-black text-white uppercase tracking-tighter mb-2">Luxury Integration</p>
+                                    <p className="text-gray-400 text-sm font-medium">Architectural brilliance that combines maximum daylight with natural airflow.</p>
                                 </div>
                             </div>
                         </motion.div>
@@ -169,27 +169,78 @@ export default function SkylightPage() {
             <section className="py-40 relative px-6 lg:px-12 bg-slate-950/50">
                 <div className="container mx-auto">
                     <div className="text-center mb-32">
-                        <h2 className="text-4xl md:text-7xl font-black text-white mb-6 uppercase tracking-tighter leading-none">Three Shapes — <span className="brand-gradient-text">One for Every Roof</span></h2>
+                        <h2 className="text-4xl md:text-7xl font-black text-white mb-6 uppercase tracking-tighter leading-none">Three Shapes — <span className="brand-gradient-text">Infinite Style</span></h2>
                         <p className="text-xl text-gray-500 max-w-2xl mx-auto font-medium">Match your architectural style with the perfect skylight shape.</p>
                     </div>
 
                     <div className="grid lg:grid-cols-3 gap-10">
-                        {shapes.map((shape, idx) => (
-                            <motion.div
-                                key={idx}
-                                className="bg-white/[0.03] border border-white/5 p-12 rounded-[60px] hover:bg-white/[0.05] transition-all group"
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: idx * 0.1 }}
-                            >
-                                <div className="bg-brand-orange-500/10 w-20 h-20 rounded-3xl flex items-center justify-center mb-10 group-hover:bg-brand-orange-500 group-hover:rotate-6 transition-all duration-500">
-                                    <shape.icon className="h-10 w-10 text-brand-orange-500 group-hover:text-white" />
-                                </div>
-                                <h4 className="text-3xl font-black text-white uppercase tracking-tighter mb-8 leading-none">{shape.name}</h4>
-                                <p className="text-gray-400 text-sm leading-relaxed font-medium">{shape.description}</p>
-                            </motion.div>
-                        ))}
+                        {/* Circular */}
+                        <motion.div
+                            className="bg-white/[0.03] border border-white/5 rounded-[60px] overflow-hidden group shadow-3xl"
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                        >
+                            <div className="relative h-[300px] border-b border-white/5">
+                                <Image
+                                    src="/images/products/nanosun-rcc/tech-1.jpg"
+                                    alt="Circular Skylight Tech"
+                                    fill
+                                    className="object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                                />
+                            </div>
+                            <div className="p-10">
+                                <h4 className="text-2xl font-black text-white uppercase mb-4 tracking-tighter">Circular Skylight</h4>
+                                <p className="text-gray-400 text-sm leading-relaxed mb-6">The classic choice. Perfect for distributing light evenly in all directions. Fits standard roof profiles perfectly.</p>
+                                <div className="text-[10px] font-black text-brand-orange-500 uppercase tracking-widest">Available up to 1000mm Dia</div>
+                            </div>
+                        </motion.div>
+
+                        {/* Square */}
+                        <motion.div
+                            className="bg-white/[0.03] border border-white/5 rounded-[60px] overflow-hidden group shadow-3xl"
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.1 }}
+                        >
+                            <div className="relative h-[300px] border-b border-white/5">
+                                <Image
+                                    src="/images/products/skylight/square-tech.jpg"
+                                    alt="Square Skylight Tech"
+                                    fill
+                                    className="object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                                />
+                            </div>
+                            <div className="p-10">
+                                <h4 className="text-2xl font-black text-white uppercase mb-4 tracking-tighter">Square Skylight</h4>
+                                <p className="text-gray-400 text-sm leading-relaxed mb-6">Designed for modern, geometric spaces. Provides a bold architectural statement while flooding the room below with pure sky light.</p>
+                                <div className="text-[10px] font-black text-brand-orange-500 uppercase tracking-widest">Available up to 900x900mm</div>
+                            </div>
+                        </motion.div>
+
+                        {/* Rectangular */}
+                        <motion.div
+                            className="bg-white/[0.03] border border-white/5 rounded-[60px] overflow-hidden group shadow-3xl"
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2 }}
+                        >
+                            <div className="relative h-[300px] border-b border-white/5">
+                                <Image
+                                    src="/images/products/skylight/rect-tech.jpg"
+                                    alt="Rectangular Skylight Tech"
+                                    fill
+                                    className="object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                                />
+                            </div>
+                            <div className="p-10">
+                                <h4 className="text-2xl font-black text-white uppercase mb-4 tracking-tighter">Rectangular Skylight</h4>
+                                <p className="text-gray-400 text-sm leading-relaxed mb-6">Ideal for linear spaces like corridors or open-plan living zones. Offers the widest area of light coverage.</p>
+                                <div className="text-[10px] font-black text-brand-orange-500 uppercase tracking-widest">Available up to 1000x3000mm</div>
+                            </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>
@@ -249,6 +300,78 @@ export default function SkylightPage() {
                                 <p className="text-gray-500 text-sm font-medium leading-relaxed">{app.desc}</p>
                             </motion.div>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Technical Specifications */}
+            <section className="py-24 bg-slate-900/50 border-y border-white/5 relative px-6 lg:px-12">
+                <div className="container mx-auto">
+                    <div className="text-center mb-24">
+                        <h2 className="text-4xl md:text-6xl font-black text-white mb-6 uppercase tracking-tighter leading-none">Technical <br /><span className="brand-gradient-text">Specifications</span></h2>
+                        <p className="text-xl text-gray-500 max-w-2xl mx-auto font-medium">Precision engineering for every opening.</p>
+                    </div>
+
+                    <div className="grid lg:grid-cols-3 gap-8">
+                        <div className="bg-white/5 border border-white/10 p-10 rounded-[40px] space-y-8">
+                            <div className="flex items-center gap-4">
+                                <Circle className="h-8 w-8 text-brand-orange-500" />
+                                <h3 className="text-2xl font-black text-white uppercase tracking-tighter">Circular Domes</h3>
+                            </div>
+                            <div className="space-y-4">
+                                {[
+                                    { label: "Diameters", value: "300mm to 1000mm" },
+                                    { label: "Light Output", value: "200 – 400 Lux" },
+                                    { label: "Material", value: "Optical Polycarbonate" },
+                                    { label: "Opening", value: "Up to 45 Degrees" }
+                                ].map((spec, i) => (
+                                    <div key={i} className="flex justify-between items-center py-4 border-b border-white/5 last:border-0">
+                                        <span className="text-[10px] font-black text-gray-500 uppercase tracking-widest">{spec.label}</span>
+                                        <span className="text-sm font-bold text-white">{spec.value}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="bg-white/5 border border-white/10 p-10 rounded-[40px] space-y-8">
+                            <div className="flex items-center gap-4">
+                                <Square className="h-8 w-8 text-brand-orange-500" />
+                                <h3 className="text-2xl font-black text-white uppercase tracking-tighter">Square Domes</h3>
+                            </div>
+                            <div className="space-y-4">
+                                {[
+                                    { label: "Standard Size", value: "600x600, 900x900mm" },
+                                    { label: "Light Output", value: "300 – 500 Lux" },
+                                    { label: "Thickness", value: "2.0mm to 3.0mm" },
+                                    { label: "Control", value: "Manual / Electric" }
+                                ].map((spec, i) => (
+                                    <div key={i} className="flex justify-between items-center py-4 border-b border-white/5 last:border-0">
+                                        <span className="text-[10px] font-black text-gray-500 uppercase tracking-widest">{spec.label}</span>
+                                        <span className="text-sm font-bold text-white">{spec.value}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="bg-white/5 border border-white/10 p-10 rounded-[40px] space-y-8">
+                            <div className="flex items-center gap-4">
+                                <RectangleHorizontal className="h-8 w-8 text-brand-orange-500" />
+                                <h3 className="text-2xl font-black text-white uppercase tracking-tighter">Rectangular</h3>
+                            </div>
+                            <div className="space-y-4">
+                                {[
+                                    { label: "Max Size", value: "1000 x 3000 mm" },
+                                    { label: "Light Output", value: "500 – 800+ Lux" },
+                                    { label: "Mechanism", value: "Gas Strut / Electric" },
+                                    { label: "Rain Sensor", value: "Optional Smart Add-on" }
+                                ].map((spec, i) => (
+                                    <div key={i} className="flex justify-between items-center py-4 border-b border-white/5 last:border-0">
+                                        <span className="text-[10px] font-black text-gray-500 uppercase tracking-widest">{spec.label}</span>
+                                        <span className="text-sm font-bold text-white">{spec.value}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

@@ -32,60 +32,60 @@ export default function NanosunPage() {
       id: "peb-300",
       name: "PEB 300mm",
       bestFor: "Small factory sections, storage bays, utility rooms",
-      description: "A step up from the 200mm, the 300mm covers a bit more area and handles slightly higher roofs. Good for compact factory spaces.",
+      description: "A professional everyday size for standard factory sheds. This unit sits above your metal roof profile to harvest skylight effectively.",
       specs: [
-        { label: "Dome Size", value: "300mm (±5%)" },
+        { label: "Dome Size", value: "300mm" },
         { label: "Suitable Roof Height", value: "Below 12 Feet", highlight: true },
+        { label: "Covering Area", value: "150 – 200 sq ft", highlight: true },
         { label: "Reflector Diameter", value: "300mm" },
         { label: "Diffuser Size", value: "280mm" },
-        { label: "Light Output", value: "100 – 250 Lux", highlight: true },
+        { label: "Approx Lux", value: "100 – 200 Lux", highlight: true },
         { label: "Dome Material", value: "Optical Polycarbonate" },
-        { label: "Reflector Material", value: "Aluminium (95%+ reflective)" },
       ]
     },
     {
       id: "peb-400",
       name: "PEB 400mm",
       bestFor: "Mid-size factory floors, workshops, assembly areas",
-      description: "One of our most popular sizes for small to mid-size industrial spaces. Ideal for workshops and assembly areas with standard heights.",
+      description: "Our most popular size for industrial workshops. Delivers a significant boost in internal brightness without structural changes.",
       specs: [
-        { label: "Dome Size", value: "400mm (±5%)" },
+        { label: "Dome Size", value: "400mm" },
         { label: "Suitable Roof Height", value: "Below 15 Feet", highlight: true },
+        { label: "Covering Area", value: "300 – 500 sq ft", highlight: true },
         { label: "Reflector Diameter", value: "400mm" },
         { label: "Diffuser Size", value: "380mm" },
-        { label: "Light Output", value: "100 – 250 Lux", highlight: true },
+        { label: "Approx Lux", value: "100 – 200 Lux", highlight: true },
         { label: "Dome Material", value: "Optical Polycarbonate" },
-        { label: "Reflector Material", value: "Aluminium (95%+ reflective)" },
       ]
     },
     {
       id: "peb-530",
       name: "PEB 530mm",
       bestFor: "Large factory floors, production halls, warehouses",
-      description: "When you need more light across a bigger area, the 530mm delivers. This is the go-to size for standard industrial warehouses and production halls.",
+      description: "The workhorse of industrial daylighting. Powerful enough to light up production lines and large storage aisles efficiently.",
       specs: [
-        { label: "Dome Size", value: "530mm (±5%)" },
+        { label: "Dome Size", value: "530mm" },
         { label: "Suitable Roof Height", value: "Below 20 Feet", highlight: true },
+        { label: "Covering Area", value: "500 – 800 sq ft", highlight: true },
         { label: "Reflector Diameter", value: "530mm" },
         { label: "Diffuser Size", value: "500mm" },
-        { label: "Light Output", value: "150 – 300 Lux", highlight: true },
+        { label: "Approx Lux", value: "150 – 300 Lux", highlight: true },
         { label: "Dome Material", value: "Optical Polycarbonate" },
-        { label: "Reflector Material", value: "Aluminium (95%+ reflective)" },
       ]
     },
     {
       id: "peb-750",
       name: "PEB 750mm",
       bestFor: "High-ceiling factories, large sheds, sports halls",
-      description: "Got a high roof — 8 to 15 metres? The 750mm is built for it. It pushes more light deeper into tall spaces, ideal for high-bay industrial environments.",
+      description: "Designed for high-bay industrial sheds. Pushes intense natural light deep into buildings with ceilings up to 30 feet.",
       specs: [
-        { label: "Dome Size", value: "750mm (±5%)" },
-        { label: "Suitable Roof Height", value: "8M to 15M", highlight: true },
+        { label: "Dome Size", value: "750mm" },
+        { label: "Suitable Roof Height", value: "Below 30 Feet", highlight: true },
+        { label: "Covering Area", value: "600 – 1000 sq ft", highlight: true },
         { label: "Reflector Diameter", value: "750mm" },
         { label: "Diffuser Size", value: "740mm" },
-        { label: "Light Output", value: "200 – 350 Lux", highlight: true },
+        { label: "Approx Lux", value: "150 – 300 Lux", highlight: true },
         { label: "Dome Material", value: "Optical Polycarbonate" },
-        { label: "Reflector Material", value: "Aluminium (95%+ reflective)" },
       ]
     },
     {
@@ -94,43 +94,26 @@ export default function NanosunPage() {
       bestFor: "Very large industrial plants, hangars, logistics centres",
       description: "When the space is massive and the roof is high, you need a unit that can keep up. Powerful enough to light large bays in logistics warehouses.",
       specs: [
-        { label: "Dome Size", value: "900mm (±5%)" },
+        { label: "Dome Size", value: "900mm" },
         { label: "Suitable Roof Height", value: "Below 45 Feet", highlight: true },
         { label: "Reflector Diameter", value: "900mm" },
         { label: "Diffuser Size", value: "860mm" },
         { label: "Light Output", value: "150 – 350 Lux", highlight: true },
         { label: "Dome Material", value: "Optical Polycarbonate" },
-        { label: "Reflector Material", value: "Aluminium (95%+ reflective)" },
-      ]
-    },
-    {
-      id: "peb-1000",
-      name: "PEB 1000mm",
-      bestFor: "Extra-large plants, multi-bay factories, aircraft hangars",
-      description: "For serious, high-volume industrial spaces. Where you'd otherwise need rows of tube lights, a few well-placed 1000mm units can transform the entire floor.",
-      specs: [
-        { label: "Dome Size", value: "1000mm (±5%)" },
-        { label: "Suitable Roof Height", value: "Below 45 Feet", highlight: true },
-        { label: "Reflector Diameter", value: "1000mm" },
-        { label: "Diffuser Size", value: "960mm" },
-        { label: "Light Output", value: "150 – 350 Lux", highlight: true },
-        { label: "Dome Material", value: "Optical Polycarbonate" },
-        { label: "Reflector Material", value: "Aluminium (95%+ reflective)" },
       ]
     },
     {
       id: "peb-1200",
       name: "PEB 1200mm",
-      bestFor: "The largest industrial spaces — massive warehouses, steel plants, shipyards",
-      description: "Our largest and most powerful circular daylighting unit. Designed for truly massive industrial buildings where conventional lighting is expensive to maintain.",
+      bestFor: "Massive industrial spaces — shipyards, steel plants",
+      description: "Our largest and most powerful daylighting unit. Designed for massive spans where conventional lighting is impossible to maintain.",
       specs: [
-        { label: "Dome Size", value: "1200mm (±5%)" },
+        { label: "Dome Size", value: "1200mm" },
         { label: "Suitable Roof Height", value: "Below 45 Feet", highlight: true },
         { label: "Reflector Diameter", value: "1200mm" },
         { label: "Diffuser Size", value: "1160mm" },
         { label: "Light Output", value: "150 – 350 Lux", highlight: true },
         { label: "Dome Material", value: "Optical Polycarbonate" },
-        { label: "Reflector Material", value: "Aluminium (95%+ reflective)" },
       ]
     },
   ]
@@ -207,8 +190,8 @@ export default function NanosunPage() {
               transition={{ duration: 1 }}
             >
               <Image
-                src="/images/nanosun-structural.png"
-                alt="NANOSUN PEB Technology"
+                src="/images/products/nanosun/3d-render.png"
+                alt="NANOSUN PEB Technology 3D Overview"
                 fill
                 className="object-cover transition-transform duration-1000 group-hover:scale-105"
               />
@@ -358,18 +341,26 @@ export default function NanosunPage() {
       <section className="py-20 md:py-24 relative px-6 lg:px-12 bg-slate-950">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-24 items-center">
-            <div className="relative h-[600px] rounded-[60px] overflow-hidden border border-white/10 group shadow-2xl shadow-brand-orange-500/10">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="relative h-[600px] rounded-[60px] overflow-hidden border border-white/10 group shadow-2xl shadow-brand-orange-500/10"
+            >
               <Image
-                src="/images/nanosun-structural.png"
-                alt="Uday IKSA Engineering"
+                src="/images/products/nanosun/factory-render.jpg"
+                alt="3D Engineering Overview of NANOSUN in Factory"
                 fill
-                className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                className="object-cover transition-transform duration-1000 group-hover:scale-110"
               />
-              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-slate-950 to-transparent p-8 md:p-12 flex flex-col justify-end">
-                <p className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4">Built To Last</p>
-                <p className="text-gray-400 text-sm md:text-base font-medium">Engineered for the extreme weather and temperatures.</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60" />
+              <div className="absolute bottom-12 left-12 right-12">
+                <div className="bg-white/5 backdrop-blur-3xl border border-white/10 p-10 rounded-[48px]">
+                  <p className="text-3xl font-black text-white uppercase tracking-tighter mb-2">Structural Precision</p>
+                  <p className="text-gray-400 text-sm font-medium">Engineered to fit standard PEB metal profiles with zero structural compromise.</p>
+                </div>
               </div>
-            </div>
+            </motion.div>
 
             <div>
               <div className="inline-flex items-center gap-3 bg-white/5 border border-white/10 rounded-full px-8 py-2.5 mb-10 backdrop-blur-md">

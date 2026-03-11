@@ -9,115 +9,156 @@ import Link from "next/link"
 import { HoverButton } from "@/components/ui/hover-button"
 
 export default function NanosunRccPage() {
+    const [activeCategory, setActiveCategory] = useState("circular")
     const [activeSize, setActiveSize] = useState(0)
 
-    const sizes = [
+    const circularSizes = [
         {
             id: "200mm",
             diameter: "200mm",
-            bestFor: "Small rooms — bathrooms, corridors, small storage areas, stairwells",
-            description: "Compact and easy to install, the 200mm is ideal for tight spaces with low ceilings. Turns a perpetually dark corridor or bathroom into a naturally bright, pleasant space — without any electrical work.",
+            bestFor: "Small rooms — bathrooms, corridors, small storage areas",
+            description: "Compact and easy to install, the 200mm is ideal for tight spaces in flat roofs. Turns dark corridors into naturally bright zones.",
             lux: "200 – 300 Lux",
             height: "Below 10 Feet",
             specs: [
-                { label: "Dome Size", value: "200mm (±5%)" },
-                { label: "Dome Material", value: "Optical Polycarbonate" },
-                { label: "Reflector Height", value: "380mm (±5%)" },
-                { label: "Reflector Diameter", value: "200mm" },
-                { label: "Diffuser Size", value: "190mm" },
+                { label: "Dome Diameter", value: "200mm" },
+                { label: "Neck Dia", value: "280mm" },
+                { label: "Base Dia", value: "620mm" },
+                { label: "Material", value: "Optical Polycarbonate" },
             ]
         },
         {
             id: "300mm",
             diameter: "300mm",
-            bestFor: "Kitchens, utility rooms, small bedrooms, compact offices",
-            description: "A versatile everyday size. The 300mm fits neatly into standard room sizes — perfect for kitchens that feel dark, or small offices where you want natural light without installing a large dome on the roof.",
+            bestFor: "Kitchens, small offices, utility rooms",
+            description: "A versatile size for standard flat roof rooms. Provides consistent daylight for residential and commercial interiors.",
             lux: "200 – 300 Lux",
             height: "Below 12 Feet",
             specs: [
-                { label: "Dome Size", value: "300mm (±5%)" },
-                { label: "Dome Material", value: "Optical Polycarbonate" },
-                { label: "Reflector Height", value: "380mm (±5%)" },
-                { label: "Reflector Diameter", value: "300mm" },
-                { label: "Diffuser Size", value: "280mm" },
+                { label: "Dome Diameter", value: "300mm" },
+                { label: "Neck Dia", value: "280mm" },
+                { label: "Base Dia", value: "620mm" },
+                { label: "Material", value: "Optical Polycarbonate" },
             ]
         },
         {
             id: "400mm",
             diameter: "400mm",
-            bestFor: "Living rooms, classrooms, mid-size offices, reception areas",
-            description: "The 400mm is the go-to for most residential and commercial rooms. Whether it's a living room that needs natural warmth or a classroom that should feel open and bright — this size covers it comfortably.",
+            bestFor: "Living rooms, classrooms, mid-size offices",
+            description: "The primary choice for RCC buildings. Offers a great balance of light output and structural integration.",
             lux: "200 – 300 Lux",
             height: "Below 15 Feet",
             specs: [
-                { label: "Dome Size", value: "400mm (±5%)" },
-                { label: "Dome Material", value: "Optical Polycarbonate" },
-                { label: "Reflector Height", value: "380mm (±5%)" },
-                { label: "Reflector Diameter", value: "400mm" },
-                { label: "Diffuser Size", value: "380mm" },
+                { label: "Dome Diameter", value: "400mm" },
+                { label: "Neck Dia", value: "380mm" },
+                { label: "Base Dia", value: "720mm" },
+                { label: "Material", value: "Optical Polycarbonate" },
             ]
         },
         {
             id: "530mm",
             diameter: "530mm",
-            bestFor: "Large living spaces, open-plan offices, hospital wards, canteens",
-            description: "When you need to light a bigger area brightly and evenly, the 530mm steps up. With up to 400 Lux output, it can genuinely replace multiple tube lights in a large room — all day, at zero electricity cost.",
+            bestFor: "Large halls, open offices, hospital wards",
+            description: "High-output daylighting for broader areas in concrete buildings. Can replace multiple artificial lights.",
             lux: "250 – 400 Lux",
             height: "Below 20 Feet",
             specs: [
-                { label: "Dome Size", value: "530mm (±5%)" },
-                { label: "Dome Material", value: "Optical Polycarbonate" },
-                { label: "Reflector Height", value: "380mm (±5%)" },
-                { label: "Reflector Diameter", value: "530mm" },
-                { label: "Diffuser Size", value: "500mm" },
+                { label: "Dome Diameter", value: "530mm" },
+                { label: "Neck Dia", value: "510mm" },
+                { label: "Base Dia", value: "830mm" },
+                { label: "Material", value: "Optical Polycarbonate" },
             ]
         },
         {
             id: "750mm",
             diameter: "750mm",
-            bestFor: "Large halls, auditoriums, hotel lobbies, warehouses with concrete roofs",
-            description: "The 750mm is a high-output unit built for large spaces. Halls, auditoriums, and hotel lobbies that need bright, even light across a wide area — this is the size that delivers without any running cost.",
+            bestFor: "Auditoriums, hotel lobbies, massive halls",
+            description: "Industrial strength daylighting for massive RCC projects. Designed for maximum light penetration.",
             lux: "250 – 400 Lux",
             height: "Below 30 Feet",
             specs: [
-                { label: "Dome Size", value: "750mm (±5%)" },
-                { label: "Dome Material", value: "Optical Polycarbonate" },
-                { label: "Reflector Height", value: "380mm (±5%)" },
-                { label: "Reflector Diameter", value: "750mm" },
-                { label: "Diffuser Size", value: "700mm" },
-            ]
-        },
-        {
-            id: "900mm",
-            diameter: "900mm",
-            bestFor: "Very large commercial spaces, manufacturing floors, institutional buildings",
-            description: "When one large unit needs to light a wide floor area in a tall concrete building, the 900mm is the answer. High output, wide coverage, and zero ongoing cost — ideal for large institutional and commercial spaces.",
-            lux: "250 – 400 Lux",
-            height: "Below 45 Feet",
-            specs: [
-                { label: "Dome Size", value: "900mm (±5%)" },
-                { label: "Dome Material", value: "Optical Polycarbonate" },
-                { label: "Reflector Height", value: "380mm (±5%)" },
-                { label: "Reflector Diameter", value: "900mm" },
-                { label: "Diffuser Size", value: "860mm" },
-            ]
-        },
-        {
-            id: "1200mm",
-            diameter: "1200mm",
-            bestFor: "The largest concrete-roof spaces — airports, railways, massive halls",
-            description: "Our largest RCC unit. When the space is enormous and the roof is high, the 1200mm delivers powerful, wide-spread natural light across the entire floor. Perfect for public buildings and large commercial complexes.",
-            lux: "250 – 400 Lux",
-            height: "Below 45 Feet",
-            specs: [
-                { label: "Dome Size", value: "1200mm (±5%)" },
-                { label: "Dome Material", value: "Optical Polycarbonate" },
-                { label: "Reflector Height", value: "380mm (±5%)" },
-                { label: "Reflector Diameter", value: "1200mm" },
-                { label: "Diffuser Size", value: "1150mm" },
+                { label: "Dome Diameter", value: "750mm" },
+                { label: "Neck Dia", value: "730mm" },
+                { label: "Base Dia", value: "1050mm" },
+                { label: "Safety Grill", value: "Optional 730mm" },
             ]
         }
     ]
+
+    const rectSizes = [
+        {
+            id: "300x600",
+            diameter: "300x600 mm",
+            bestFor: "Linear corridors, narrow workshops, specialized labs",
+            description: "Rectangular dome shape optimized for narrow architectural spaces on flat roofs.",
+            lux: "250 – 450 Lux",
+            height: "Below 15 Feet",
+            specs: [
+                { label: "Dome Size", value: "300 x 600 mm" },
+                { label: "Neck Inner", value: "280 x 580 mm" },
+                { label: "Base Outer", value: "600 x 900 mm" },
+                { label: "Type", value: "Single / Double Dome" },
+            ]
+        },
+        {
+            id: "600x600",
+            diameter: "600x600 mm",
+            bestFor: "Standard office grids, residential master rooms",
+            description: "Square format dome offering symmetric light distribution and clean aesthetic lines.",
+            lux: "300 – 500 Lux",
+            height: "Below 18 Feet",
+            specs: [
+                { label: "Dome Size", value: "600 x 600 mm" },
+                { label: "Neck Inner", value: "580 x 580 mm" },
+                { label: "Base Outer", value: "900 x 900 mm" },
+                { label: "Thickness", value: "2.0 – 3.0 mm" },
+            ]
+        },
+        {
+            id: "600x1200",
+            diameter: "600x1200 mm",
+            bestFor: "Large production halls, wide hallways, lobbies",
+            description: "High-volume rectangular unit designed for expansive flat roof surfaces.",
+            lux: "400 – 600 Lux",
+            height: "Below 25 Feet",
+            specs: [
+                { label: "Dome Size", value: "600 x 1200 mm" },
+                { label: "Neck Inner", value: "580 x 1180 mm" },
+                { label: "Base Outer", value: "900 x 1500 mm" },
+                { label: "Material", value: "Glazed / Combo Clear" },
+            ]
+        },
+        {
+            id: "1000x1200",
+            diameter: "1000x1200 mm",
+            bestFor: "Commercial complexes, airport zones, malls",
+            description: "Maximum output rectangular model for large-scale institutional projects.",
+            lux: "500 – 800 Lux",
+            height: "Below 35 Feet",
+            specs: [
+                { label: "Dome Size", value: "1000 x 1200 mm" },
+                { label: "Neck Inner", value: "980 x 1180 mm" },
+                { label: "Base Outer", value: "1300 x 1500 mm" },
+                { label: "Models", value: "Single / Double Glazed" },
+            ]
+        },
+        {
+            id: "1000x3000",
+            diameter: "1000x3000 mm",
+            bestFor: "Massive hangars, wide-span factories, major showrooms",
+            description: "The largest rectangular daylighting system available for concrete roof integration.",
+            lux: "800+ Lux",
+            height: "Below 45 Feet",
+            specs: [
+                { label: "Dome Size", value: "1000 x 3000 mm" },
+                { label: "Neck Inner", value: "980 x 2980 mm" },
+                { label: "Base Outer", value: "1300 x 3300 mm" },
+                { label: "Material", value: "Premium Polycarbonate" },
+            ]
+        }
+    ]
+
+    const activeSizes = activeCategory === "circular" ? circularSizes : rectSizes
 
     return (
         <main className="pt-24 bg-slate-950">
@@ -157,8 +198,8 @@ export default function NanosunRccPage() {
                             transition={{ duration: 1 }}
                         >
                             <Image
-                                src="/images/nanosun-rcc.png"
-                                alt="NANOSUN RCC Installation"
+                                src="/images/products/nanosun-rcc/system-diagram.png"
+                                alt="NANOSUN RCC Core Technology"
                                 fill
                                 className="object-cover transition-transform duration-1000 group-hover:scale-105"
                             />
@@ -214,54 +255,68 @@ export default function NanosunRccPage() {
                 </div>
             </section>
 
-            {/* The RCC Anatomy */}
-            <section className="py-40 relative px-6 lg:px-12 bg-slate-950 overflow-hidden">
+            {/* Design & Integration Section */}
+            <section className="py-24 relative px-6 lg:px-12 bg-slate-950 overflow-hidden">
                 <div className="container mx-auto">
-                    <div className="text-center mb-32">
-                        <h2 className="text-4xl md:text-7xl font-black text-white mb-6 uppercase tracking-tighter leading-none">What's <span className="brand-gradient-text">Inside</span></h2>
-                        <p className="text-xl text-gray-500 max-w-2xl mx-auto font-medium">Three precision-engineered parts working in harmony within your slab.</p>
+                    <div className="text-center mb-24">
+                        <h2 className="text-4xl md:text-6xl font-black text-white mb-6 uppercase tracking-tighter leading-none">Specialized <br /><span className="brand-gradient-text">RCC Models</span></h2>
+                        <p className="text-xl text-gray-500 max-w-2xl mx-auto font-medium">From fixed industrial units to electrically controlled premium systems.</p>
                     </div>
 
-                    <div className="grid lg:grid-cols-3 gap-12">
-                        {[
-                            {
-                                title: "Optical Collector",
-                                subtitle: "The Sky Lens",
-                                desc: "A semi-spherical dome that captures sunlight from every angle—even on cloudy days. Made from high-grade unbreakable polycarbonate.",
-                                icon: Sun
-                            },
-                            {
-                                title: "Optical Reflector",
-                                subtitle: "The 380mm Mirror",
-                                desc: "A compact pipe that moves light through the slab with 95%+ efficiency. Shorter than the PEB version for cleaner integration.",
-                                icon: Zap
-                            },
-                            {
-                                title: "Optical Diffuser",
-                                subtitle: "The Glow Panel",
-                                desc: "A diamond-embossed panel at the ceiling that spreads soft, glare-free light evenly across the entire room.",
-                                icon: Sparkles
-                            }
-                        ].map((part, i) => (
-                            <motion.div
-                                key={i}
-                                className="bg-white/[0.03] border border-white/5 p-12 rounded-[60px] relative group overflow-hidden"
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: i * 0.1 }}
-                            >
-                                <div className="bg-brand-orange-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-10 group-hover:rotate-12 transition-transform shadow-xl shadow-brand-orange-500/20">
-                                    <part.icon className="h-8 w-8 text-white" />
+                    <div className="grid lg:grid-cols-2 gap-12">
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="bg-white/[0.03] border border-white/5 rounded-[60px] overflow-hidden group shadow-3xl"
+                        >
+                            <div className="relative h-[400px]">
+                                <Image
+                                    src="/images/products/nanosun-rcc/tech-1.jpg"
+                                    alt="RCC Fixed and Openable Models"
+                                    fill
+                                    className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                                />
+                            </div>
+                            <div className="p-10">
+                                <h3 className="text-2xl font-black text-white uppercase tracking-tighter mb-4">Manual Control Models</h3>
+                                <p className="text-gray-400 text-sm leading-relaxed mb-6">Choose between Fixed RCC models for permanent daylighting or Openable models for combined light and maintenance access.</p>
+                                <div className="flex flex-wrap gap-4">
+                                    <span className="bg-white/5 border border-white/10 px-4 py-2 rounded-full text-[10px] font-black text-gray-400 uppercase tracking-widest">Fixed</span>
+                                    <span className="bg-white/5 border border-white/10 px-4 py-2 rounded-full text-[10px] font-black text-gray-400 uppercase tracking-widest">Openable</span>
+                                    <span className="bg-white/5 border border-white/10 px-4 py-2 rounded-full text-[10px] font-black text-gray-400 uppercase tracking-widest">Optional Mesh</span>
                                 </div>
-                                <h3 className="text-brand-orange-500 font-bold uppercase text-[10px] tracking-[0.2em] mb-4">{part.subtitle}</h3>
-                                <h4 className="text-3xl font-black text-white uppercase tracking-tighter mb-8">{part.title}</h4>
-                                <p className="text-gray-400 text-sm leading-relaxed font-medium">{part.desc}</p>
-                            </motion.div>
-                        ))}
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="bg-white/[0.03] border border-white/5 rounded-[60px] overflow-hidden group shadow-3xl"
+                        >
+                            <div className="relative h-[400px]">
+                                <Image
+                                    src="/images/products/nanosun-rcc/tech-2.jpg"
+                                    alt="RCC Electrical and Remote Models"
+                                    fill
+                                    className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                                />
+                            </div>
+                            <div className="p-10">
+                                <h3 className="text-2xl font-black text-white uppercase tracking-tighter mb-4">Electrical Systems</h3>
+                                <p className="text-gray-400 text-sm leading-relaxed mb-6">Premium motorized systems that allow you to open or close the unit via remote control, perfect for high ceilings or smart buildings.</p>
+                                <div className="flex flex-wrap gap-4">
+                                    <span className="bg-brand-orange-500/10 border border-brand-orange-500/30 px-4 py-2 rounded-full text-[10px] font-black text-brand-orange-400 uppercase tracking-widest">Smart Remote</span>
+                                    <span className="bg-brand-orange-500/10 border border-brand-orange-500/30 px-4 py-2 rounded-full text-[10px] font-black text-brand-orange-400 uppercase tracking-widest">Motorized</span>
+                                    <span className="bg-brand-orange-500/10 border border-brand-orange-500/30 px-4 py-2 rounded-full text-[10px] font-black text-brand-orange-400 uppercase tracking-widest">Auto-Seal</span>
+                                </div>
+                            </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>
+
 
             {/* Where is it used? Icons section */}
             <section className="py-40 relative px-6 lg:px-12 bg-slate-900/20">
@@ -303,19 +358,35 @@ export default function NanosunRccPage() {
                             <p className="text-xl text-gray-400 mb-16 font-medium leading-relaxed max-w-xl">
                                 We manufacture 7 different sizes to fit every room—from small bathrooms to massive airport terminals.
                             </p>
-                            <div className="flex flex-wrap gap-4">
-                                {sizes.map((size, idx) => (
+                            <div className="flex flex-col gap-8">
+                                <div className="flex gap-4 p-2 bg-white/5 rounded-2xl w-fit">
                                     <button
-                                        key={size.id}
-                                        onClick={() => setActiveSize(idx)}
-                                        className={`px-10 py-5 rounded-2xl font-black uppercase tracking-widest text-xs transition-all duration-500 ${activeSize === idx
+                                        onClick={() => { setActiveCategory("circular"); setActiveSize(0); }}
+                                        className={`px-6 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all ${activeCategory === "circular" ? "bg-brand-orange-500 text-white" : "text-gray-500 hover:text-white"}`}
+                                    >
+                                        Circular
+                                    </button>
+                                    <button
+                                        onClick={() => { setActiveCategory("rectangular"); setActiveSize(0); }}
+                                        className={`px-6 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all ${activeCategory === "rectangular" ? "bg-brand-orange-500 text-white" : "text-gray-500 hover:text-white"}`}
+                                    >
+                                        Rectangular / Square
+                                    </button>
+                                </div>
+                                <div className="flex flex-wrap gap-4">
+                                    {activeSizes.map((size, idx) => (
+                                        <button
+                                            key={size.id}
+                                            onClick={() => setActiveSize(idx)}
+                                            className={`px-10 py-5 rounded-2xl font-black uppercase tracking-widest text-xs transition-all duration-500 ${activeSize === idx
                                                 ? "bg-brand-orange-500 text-white shadow-2xl shadow-brand-orange-500/20 scale-110"
                                                 : "bg-white/5 text-gray-500 hover:bg-white/10 border border-white/10"
-                                            }`}
-                                    >
-                                        {size.diameter}
-                                    </button>
-                                ))}
+                                                }`}
+                                        >
+                                            {size.diameter}
+                                        </button>
+                                    ))}
+                                </div>
                             </div>
                         </div>
 
@@ -331,19 +402,19 @@ export default function NanosunRccPage() {
                                 >
                                     <div>
                                         <div className="inline-flex items-center gap-2 bg-brand-orange-500/10 border border-brand-orange-500/20 rounded-full px-6 py-2 mb-8">
-                                            <p className="text-[10px] font-black text-brand-orange-400 uppercase tracking-widest">{sizes[activeSize].lux} OUTPUT</p>
+                                            <p className="text-[10px] font-black text-brand-orange-400 uppercase tracking-widest">{activeSizes[activeSize].lux} OUTPUT</p>
                                         </div>
-                                        <h3 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4">NANOSUN™ RCC {sizes[activeSize].diameter}</h3>
-                                        <p className="text-brand-orange-500 font-black uppercase text-xs tracking-widest mb-10">BEST FOR: {sizes[activeSize].bestFor}</p>
-                                        <p className="text-xl text-gray-400 leading-relaxed font-medium">{sizes[activeSize].description}</p>
+                                        <h3 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4">NANOSUN™ RCC {activeSizes[activeSize].diameter}</h3>
+                                        <p className="text-brand-orange-500 font-black uppercase text-xs tracking-widest mb-10">BEST FOR: {activeSizes[activeSize].bestFor}</p>
+                                        <p className="text-xl text-gray-400 leading-relaxed font-medium">{activeSizes[activeSize].description}</p>
                                     </div>
 
                                     <div className="grid gap-6">
                                         <div className="flex items-center justify-between py-6 border-b border-white/5">
                                             <p className="text-gray-500 text-xs font-black uppercase tracking-widest">Suitable Roof Height</p>
-                                            <p className="text-white font-black">{sizes[activeSize].height}</p>
+                                            <p className="text-white font-black">{activeSizes[activeSize].height}</p>
                                         </div>
-                                        {sizes[activeSize].specs.map((spec, i) => (
+                                        {activeSizes[activeSize].specs.map((spec, i) => (
                                             <div key={i} className="flex items-center justify-between py-4 border-b border-white/5 last:border-0">
                                                 <p className="text-gray-600 text-[10px] font-black uppercase tracking-widest">{spec.label}</p>
                                                 <p className="text-gray-300 text-sm font-bold">{spec.value}</p>
@@ -353,7 +424,7 @@ export default function NanosunRccPage() {
 
                                     <Link href="/contact" className="block pt-10">
                                         <HoverButton className="w-full bg-white text-black hover:bg-brand-orange-500 hover:text-white rounded-2xl py-8 text-sm font-black uppercase tracking-widest transition-all">
-                                            Request Quote for {sizes[activeSize].diameter} Size <ArrowRight className="ml-3 h-5 w-5" />
+                                            Request Quote for {activeSizes[activeSize].diameter} Size <ArrowRight className="ml-3 h-5 w-5" />
                                         </HoverButton>
                                     </Link>
                                 </motion.div>

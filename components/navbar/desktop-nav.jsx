@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { ExternalLink, Star, Award, Building, Factory, Sun, Wind, Zap } from "lucide-react"
+import { ExternalLink, Star, Award, Building, Factory, Sun, Wind, Zap, Camera } from "lucide-react"
 import { HoveredLink, Menu as NavMenu, MenuItem, ProductItem } from "@/components/ui/navbar-menu"
 import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
@@ -208,6 +208,16 @@ export default function DesktopNav({ active, setActive }) {
             </div>
           </div>
         </MenuItem>
+
+        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          <Link
+            href="/gallery"
+            className="text-gray-400 hover:text-white text-xs font-black uppercase tracking-[0.2em] transition-all duration-300 hover:text-brand-orange-400 flex items-center"
+          >
+            <Camera className="h-4 w-4 mr-2 text-brand-orange-500" />
+            Gallery
+          </Link>
+        </motion.div>
 
         <MenuItem setActive={setActive} active={active} item="FAQ">
           <div className="flex flex-col space-y-6 text-sm w-96 p-4">

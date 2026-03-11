@@ -77,7 +77,7 @@ export default function SkytubePage() {
                             transition={{ duration: 1 }}
                         >
                             <Image
-                                src="/images/skytube-structural.png"
+                                src="/images/gallery/skytube/warehouse-1.png"
                                 alt="SKYTUBE Installation"
                                 fill
                                 className="object-cover transition-transform duration-1000 group-hover:scale-105"
@@ -156,6 +156,48 @@ export default function SkytubePage() {
                                 </div>
                             </motion.div>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Technical Specifications Section */}
+            <section className="py-20 bg-slate-900/50 border-y border-white/5 relative px-6 lg:px-12">
+                <div className="container mx-auto">
+                    <div className="grid lg:grid-cols-2 gap-24 items-center">
+                        <div>
+                            <h2 className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tighter uppercase leading-none">Standard <br /><span className="brand-gradient-text">Model Lengths</span></h2>
+                            <p className="text-xl text-gray-400 mb-12 font-medium">Available in four standard lengths to reach different floor levels and depths.</p>
+                            <div className="grid grid-cols-2 gap-6">
+                                {[
+                                    { label: "Model 01", val: "1080 mm" },
+                                    { label: "Model 02", val: "1650 mm" },
+                                    { label: "Model 03", val: "3050 mm" },
+                                    { label: "Model 04", val: "4500 mm" },
+                                ].map((spec, i) => (
+                                    <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-3xl">
+                                        <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-2">{spec.label}</p>
+                                        <p className="text-2xl font-black text-white">{spec.val}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="bg-white/[0.03] border border-white/5 p-12 lg:p-16 rounded-[60px] relative overflow-hidden">
+                            <h3 className="text-2xl font-black text-white uppercase tracking-tighter mb-10">System Dimensions</h3>
+                            <div className="space-y-6">
+                                {[
+                                    { label: "Dome Height (Low)", val: "280 mm" },
+                                    { label: "Dome Height (High)", val: "600 mm" },
+                                    { label: "Internal Pipe", val: "150 mm Dia" },
+                                    { label: "Diffuser Height", val: "100 mm" },
+                                    { label: "Reflectivity", val: "99.7% Spectral Mirror" },
+                                ].map((row, i) => (
+                                    <div key={i} className="flex justify-between items-center py-4 border-b border-white/10 last:border-0">
+                                        <span className="text-xs font-black text-gray-500 uppercase tracking-widest">{row.label}</span>
+                                        <span className="text-sm font-bold text-gray-300">{row.val}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
