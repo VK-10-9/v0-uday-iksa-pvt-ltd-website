@@ -108,10 +108,9 @@ export default function DesktopNav({ active, setActive }) {
               </div>
               <div className="space-y-3">
                 {[
-                  { name: "Turbo Ventilator (SS 430)", href: "/products/nanovent", desc: "Standard industrial use" },
-                  { name: "Turbo Ventilator (SS 202)", href: "/products/nanovent", desc: "Mid-grade applications" },
-                  { name: "Turbo Ventilator (SS 304)", href: "/products/nanovent", desc: "Premium/Corrosive use" },
-                  { name: "Suspensor System", href: "/products/nanovent", desc: "Large-scale ventilation" },
+                  { name: "Turbo Ventilator (SS 430)", href: "/products/nanovent?grade=ss430", desc: "Standard industrial use" },
+                  { name: "Turbo Ventilator (SS 202)", href: "/products/nanovent?grade=ss202", desc: "Mid-grade applications" },
+                  { name: "Turbo Ventilator (SS 304)", href: "/products/nanovent?grade=ss304", desc: "Premium/Corrosive use" },
                 ].map((item) => (
                   <HoveredLink key={item.name} href={item.href} className="group">
                     <div className="flex flex-col">
@@ -132,25 +131,6 @@ export default function DesktopNav({ active, setActive }) {
                 {[
                   { name: "Standard Tubular", href: "/products/skytube", desc: "For windowless interior rooms" },
                   { name: "Angled / Bend Config", href: "/products/skytube", desc: "Navigates around obstacles" },
-                ].map((item) => (
-                  <HoveredLink key={item.name} href={item.href} className="group">
-                    <div className="flex flex-col">
-                      <span className="font-bold text-white group-hover:text-brand-orange-400 transition-colors uppercase text-[11px] leading-tight">{item.name}</span>
-                      <span className="text-[9px] text-gray-500">{item.desc}</span>
-                    </div>
-                  </HoveredLink>
-                ))}
-              </div>
-            </div>
-
-            {/* Designer / Specialty Section */}
-            <div className="flex flex-col space-y-4">
-              <div className="text-[10px] font-black text-brand-orange-500 uppercase tracking-widest border-b border-white/5 pb-2 flex items-center gap-2">
-                <Star className="h-3 w-3" /> Architectural
-              </div>
-              <div className="space-y-3">
-                {[
-                  { name: "iWINDOW GLASS", href: "/products/iwindow", desc: "Flat Roof Windows" },
                 ].map((item) => (
                   <HoveredLink key={item.name} href={item.href} className="group">
                     <div className="flex flex-col">

@@ -92,10 +92,13 @@ export default function MobileMenu({ isOpen, onClose }) {
       icon: <Sparkles className="h-5 w-5" />,
       color: "text-brand-orange-500",
       subLinks: [
-        { name: "NANOSUN™ Series", href: "/products" },
-        { name: "NANOVENT® Series", href: "/products" },
-        { name: "SKYTUBE™ Series", href: "/products" },
-        { name: "Architectural iWINDOW", href: "/products" },
+        { name: "NANOSUN™ PEB", href: "/products/nanosun" },
+        { name: "NANOSUN™ RCC", href: "/products/nanosun-rcc" },
+        { name: "NANOSUN™ Tiles", href: "/products/nanosun-tiles" },
+        { name: "NANOSUN™ Skylight", href: "/products/skylight" },
+        { name: "Ventilator (SS 430)", href: "/products/nanovent?grade=ss430" },
+        { name: "Ventilator (SS 202)", href: "/products/nanovent?grade=ss202" },
+        { name: "Ventilator (SS 304)", href: "/products/nanovent?grade=ss304" },
       ]
     },
     {
