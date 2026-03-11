@@ -198,8 +198,8 @@ export default function NanosunRccPage() {
                             transition={{ duration: 1 }}
                         >
                             <Image
-                                src="/images/products/nanosun-rcc/system-diagram.png"
-                                alt="NANOSUN RCC Core Technology"
+                                src="/images/installations/psu-1.png"
+                                alt="NANOSUN RCC Real-World Basement Installation"
                                 fill
                                 className="object-cover transition-transform duration-1000 group-hover:scale-105"
                             />

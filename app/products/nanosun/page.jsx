@@ -190,8 +190,8 @@ export default function NanosunPage() {
               transition={{ duration: 1 }}
             >
               <Image
-                src="/images/products/nanosun/3d-render.png"
-                alt="NANOSUN PEB Technology 3D Overview"
+                src="/images/gallery/nanosun/industrial-top.jpg"
+                alt="NANOSUN PEB Real-World Industrial Installation"
                 fill
                 className="object-cover transition-transform duration-1000 group-hover:scale-105"
               />
@@ -348,8 +348,8 @@ export default function NanosunPage() {
               className="relative h-[600px] rounded-[60px] overflow-hidden border border-white/10 group shadow-2xl shadow-brand-orange-500/10"
             >
               <Image
-                src="/images/products/nanosun/factory-render.jpg"
-                alt="3D Engineering Overview of NANOSUN in Factory"
+                src="/images/gallery/nanosun/factory-high.jpg"
+                alt="NANOSUN Industrial Lighting at Scale"
                 fill
                 className="object-cover transition-transform duration-1000 group-hover:scale-110"
               />

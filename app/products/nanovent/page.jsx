@@ -9,8 +9,9 @@ import Link from "next/link"
 import { HoverButton } from "@/components/ui/hover-button"
 import CredentialStrip from "@/components/product/CredentialStrip"
 import { useSearchParams } from "next/navigation"
+import { Suspense } from "react"
 
-export default function NanoventPage() {
+function NanoventContent() {
   const searchParams = useSearchParams()
   const initialGrade = searchParams.get("grade") || "ss430"
   const [activeGrade, setActiveGrade] = useState(initialGrade)
@@ -365,3 +366,12 @@ export default function NanoventPage() {
     </main>
   )
 }
+
+export default function NanoventPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-slate-950 flex items-center justify-center"><Wind className="h-12 w-12 text-brand-orange-500 animate-spin" /></div>}>
+      <NanoventContent />
+    </Suspense>
+  )
+}
+

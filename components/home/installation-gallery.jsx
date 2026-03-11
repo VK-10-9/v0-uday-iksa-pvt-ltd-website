@@ -26,9 +26,9 @@ const installations = [
         category: "Skylights"
     },
     {
-        title: "NANOSUN Installation",
-        location: "Manufacturing Plant",
-        image: "/images/gallery/nanosun/install-1.jpg",
+        title: "Factory Illumination",
+        location: "Automobile Manufacturing",
+        image: "/images/gallery/nanosun/factory-high.jpg",
         category: "NANOSUN"
     },
     {
@@ -38,9 +38,9 @@ const installations = [
         category: "NANOVENT"
     },
     {
-        title: "Basement Lighting",
-        location: "PSU Facility",
-        image: "/images/gallery/nanosun/basement.png",
+        title: "Healthcare Daylighting",
+        location: "Kochi Medical Facility",
+        image: "/images/gallery/about/institutional-corridor.jpg",
         category: "Specialized"
     }
 ]

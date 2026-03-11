@@ -77,8 +77,8 @@ export default function SkytubePage() {
                             transition={{ duration: 0.8 }}
                         >
                             <Image
-                                src="/images/products/skytube/hero-isometric.png"
-                                alt="Skytube Factory Layout"
+                                src="/images/installations/skytube-warehouse.png"
+                                alt="Skytube Real-World Warehouse Installation"
                                 fill
                                 className="object-cover transition-transform duration-1000 group-hover:scale-105"
                             />

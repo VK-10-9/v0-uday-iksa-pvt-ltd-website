@@ -83,6 +83,55 @@ const installations = [
         image: "/images/gallery/skylights/square-1.jpg",
         category: "Skylights",
         desc: "Secure, weather-proof square dome systems for flat roofs."
+    },
+    {
+        title: "Large Factory Lighting",
+        location: "Automobile Plant, Pune",
+        image: "/images/gallery/nanosun/factory-high.jpg",
+        category: "NANOSUN",
+        desc: "High-bay installation providing uniform daylight across massive shop floors."
+    },
+    {
+        title: "Industrial Roof View",
+        location: "Manufacturing Hub, Manesar",
+        image: "/images/gallery/nanosun/industrial-top.jpg",
+        category: "NANOSUN",
+        desc: "Bird's eye view of NANOSUN units integrated into a metal PEB roof."
+    },
+    {
+        title: "Standard Warehouse Rows",
+        location: "FMCG Logistics, Chennai",
+        image: "/images/gallery/nanosun/warehouse-row.jpg",
+        category: "NANOSUN",
+        desc: "Systematic placement of daylighting units for optimal aisle illumination."
+    },
+    {
+        title: "Campus Daylighting",
+        location: "Educational Institution, Mysore",
+        image: "/images/gallery/about/institutional-campus.jpg",
+        category: "Institutional",
+        desc: "Natural lighting for common areas and campus buildings."
+    },
+    {
+        title: "Pure Glow Corridors",
+        location: "Healthcare Facility, Kochi",
+        image: "/images/gallery/about/institutional-corridor.jpg",
+        category: "Institutional",
+        desc: "Eliminating dark corridors with soft, healthy natural light pipes."
+    },
+    {
+        title: "Multi-Vent System",
+        location: "Processing Unit, Gujarat",
+        image: "/images/gallery/nanovent/multi-install.jpg",
+        category: "NANOVENT",
+        desc: "Array of passive ventilators ensuring high-volume air exchange."
+    },
+    {
+        title: "Internal Light Delivery",
+        location: "Office Workshop",
+        image: "/images/gallery/skytube/internal-glow.jpg",
+        category: "Skytube",
+        desc: "Showcasing the soft, glare-free output of Skytube in windowless rooms."
     }
 ]
 
