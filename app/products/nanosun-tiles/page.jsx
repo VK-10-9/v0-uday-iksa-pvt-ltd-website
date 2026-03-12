@@ -381,11 +381,16 @@ export default function NanosunTilesPage() {
               initial={{ opacity: 0, scale: 0.98 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="relative p-12 md:p-20 rounded-[48px] border border-white/10 bg-slate-900 shadow-2xl flex items-center justify-center group"
+              className="relative rounded-[48px] border border-white/10 bg-slate-900 shadow-2xl overflow-hidden group aspect-square"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-brand-orange-500/10 via-transparent to-transparent opacity-50" />
-              <div className="relative z-10 text-center">
-                <Maximize2 className="h-24 w-24 text-brand-orange-500/20 mb-8 mx-auto" />
+              <Image
+                src="/images/products/nanosun-tiles/Mangalore tiles roofing 1.png"
+                alt="Tile Roof Installation"
+                fill
+                className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-1000"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
+              <div className="absolute bottom-12 left-12 right-12 z-10">
                 <div className="bg-white/5 backdrop-blur-2xl border border-white/10 p-8 rounded-[32px]">
                   <h3 className="text-2xl font-black text-white uppercase tracking-tighter mb-1">Structural Precision</h3>
                   <p className="text-gray-400 text-xs font-medium">Clear optical dome that sits flush with your roof line.</p>
