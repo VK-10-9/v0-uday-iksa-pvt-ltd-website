@@ -91,7 +91,7 @@ export default function AboutPage() {
             <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4">Our Timeline</h2>
             <div className="h-1 w-32 bg-brand-orange-500 rounded-full mx-auto"></div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { year: "2009–2010", title: "The Foundation", desc: "Founded in Hubballi with a focus on marketing natural daylighting solutions. Built deep expertise in understanding roofs, buildings, and customer needs." },
               { year: "2012–2015", title: "Market Expansion", desc: "Expanded across North Karnataka and beyond. Identified key limitations in available products for Indian roof types and climate." },
@@ -102,15 +102,15 @@ export default function AboutPage() {
             ].map((item, idx) => (
               <motion.div
                 key={idx}
-                className="bg-white/5 p-10 rounded-[48px] border border-white/5 group hover:bg-white/[0.08] transition-all hover:border-brand-orange-500/30"
+                className="bg-white/5 p-8 rounded-[40px] border border-white/5 group hover:bg-white/[0.08] transition-all hover:border-brand-orange-500/30"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
               >
-                <div className="text-brand-orange-500 text-sm font-black uppercase tracking-widest mb-4">{item.year}</div>
-                <h3 className="text-2xl font-black text-white uppercase tracking-tighter mb-4">{item.title}</h3>
-                <p className="text-gray-400 font-medium leading-relaxed">{item.desc}</p>
+                <div className="text-brand-orange-500 text-[10px] font-black uppercase tracking-[0.2em] mb-3">{item.year}</div>
+                <h3 className="text-xl font-black text-white uppercase tracking-tighter mb-3 group-hover:text-brand-orange-400 transition-colors">{item.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed font-medium">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -120,15 +120,15 @@ export default function AboutPage() {
       {/* Capabilities Section */}
       <section className="py-12 relative px-6">
         <div className="container mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-10">
             <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4">What We Actually Do</h2>
-            <p className="text-xl text-brand-orange-500 uppercase font-black tracking-[0.2em] mb-4">End-to-End. In-House. No Middlemen.</p>
-            <div className="h-1 w-32 bg-brand-orange-500 rounded-full mx-auto mb-10"></div>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto font-medium">
+            <p className="text-sm md:text-base text-brand-orange-500 uppercase font-black tracking-[0.2em] mb-4">End-to-End. In-House.</p>
+            <div className="h-0.5 w-24 bg-brand-orange-500 rounded-full mx-auto mb-8"></div>
+            <p className="text-base text-gray-400 max-w-2xl mx-auto font-medium leading-relaxed">
               When you work with Uday IKSA, you're working directly with the people who design, build, and install your system.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { icon: Shield, title: "Design & Engineering", desc: "Every product is designed in-house. We don't just sell — we engineer solutions specific to your building type and light requirements." },
               { icon: Factory, title: "Manufacturing", desc: "Our factory at Gokul Industrial Estate handles everything — die-making, mould-making, and final assembly. Complete control." },
@@ -137,14 +137,14 @@ export default function AboutPage() {
             ].map((cap, idx) => (
               <motion.div
                 key={idx}
-                className="bg-white/5 backdrop-blur-sm p-10 rounded-[48px] border border-white/10 hover:border-brand-orange-500/40 transition-all flex flex-col items-center text-center group"
-                whileHover={{ y: -10 }}
+                className="bg-white/5 backdrop-blur-sm p-8 rounded-[40px] border border-white/10 hover:border-brand-orange-500/40 transition-all flex flex-col items-center text-center group"
+                whileHover={{ y: -5 }}
               >
-                <div className="w-16 h-16 bg-brand-orange-500/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-orange-500 transition-colors">
-                  <cap.icon className="h-8 w-8 text-brand-orange-500 group-hover:text-white" />
+                <div className="w-14 h-14 bg-brand-orange-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-orange-500 transition-colors">
+                  <cap.icon className="h-6 w-6 text-brand-orange-500 group-hover:text-white" />
                 </div>
-                <h3 className="text-2xl font-black text-white uppercase tracking-tighter mb-4">{cap.title}</h3>
-                <p className="text-gray-400 text-sm font-medium leading-relaxed">{cap.desc}</p>
+                <h3 className="text-xl font-black text-white uppercase tracking-tighter mb-3 group-hover:text-brand-orange-400 transition-colors">{cap.title}</h3>
+                <p className="text-gray-400 text-[13px] leading-relaxed font-medium">{cap.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -152,90 +152,91 @@ export default function AboutPage() {
       </section>
 
       {/* Hierarchy Teams Section */}
-      <section id="team" className="py-16 relative px-6 border-t border-white/5">
+      <section id="team" className="py-20 relative px-6 border-t border-white/5">
         <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4">Our Experts</h2>
-            <div className="h-1 w-16 bg-brand-orange-500 rounded-full mx-auto mb-6"></div>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4">Leadership & Advisors</h2>
+            <div className="h-0.5 w-16 bg-brand-orange-500 rounded-full mx-auto"></div>
           </div>
 
-          <div className="flex flex-col gap-16 items-center">
-            {/* Advisor Tier */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl w-full">
+          <div className="flex flex-col gap-12 items-center">
+            {/* Advisor Tier - Expert Council */}
+            <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
                 {
                   name: "Prof. S.P. Kurubar",
-                  role: "Technical Advisor — Product Engineering & Quality Systems",
+                  role: "Technical Advisor — Quality Systems",
                   image: "/images/advisor-kurubar.jpg",
                   linkedin: "#",
-                  bio: "Professor S.P. Kurubar is one of the leading experts in engineering quality and process optimisation. A Certified Six Sigma Black Belt and Lean Manufacturing Specialist — trained in Japan — he brings world-class standards of precision and quality thinking to Uday IKSA's product development and engineering processes.\n\nCurrently serving as Dean of the Examination Section at KLE Technological University, Hubballi, Professor Kurubar has spent decades bridging academic rigour with industrial application.\n\nHis involvement with Uday IKSA ensures that every product we manufacture — from dome to diffuser — is held to the highest standards of consistency, durability, and performance. It also means our engineering processes are continuously reviewed and improved using proven global methodologies."
+                  bio: "A Certified Six Sigma Black Belt and Lean Manufacturing Specialist trained in Japan, Professor Kurubar brings world-class standards of precision to our engineering processes. Currently Dean at KLE Technological University, his oversight ensures every NANOSUN™ dome meets global durability standards."
                 },
                 {
                   name: "Mr. B. R. Indushekar",
-                  role: "Technical Advisor",
+                  role: "Technical Advisor — Lean Operations",
                   image: "/brain/5b886c53-b306-4234-afef-4f7e3b295568/technical_advisor_portrait_1773248363700.png",
                   linkedin: "https://www.linkedin.com/in/indushekar-bangalore-rajan-15bbb8308/",
-                  bio: "With 38+ years of leadership at Volvo and Ingersoll-Rand, he is a certified Six Sigma Black Belt and Lean Specialist from Japan, ensuring our systems meet world-class standards."
+                  bio: "With 38+ years of leadership at Volvo and Ingersoll-Rand, he is an expert in operational excellence. His Japanese-tier lean methodologies help us maintain manufacturing efficiency without compromising the engineered integrity of our systems."
                 },
               ].map((member, index) => (
                 <motion.div
                   key={index}
-                  className="bg-white/5 backdrop-blur-sm rounded-[40px] overflow-hidden border border-white/10 group hover:border-brand-orange-500/40 transition-all duration-500"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
+                  className="bg-white/5 backdrop-blur-sm rounded-[40px] overflow-hidden border border-white/10 group hover:border-brand-orange-500/40 transition-all duration-500 flex flex-col"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
                 >
-                  <div className="relative h-96 w-full overflow-hidden">
+                  <div className="relative h-72 w-full overflow-hidden">
                     <Image src={member.image} alt={member.name} fill className="object-cover group-hover:scale-105 transition-all duration-700" />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80" />
-                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="absolute top-6 right-6 w-12 h-12 bg-white/10 backdrop-blur-md rounded-xl flex items-center justify-center border border-white/10 hover:bg-brand-orange-500 transition-all z-20">
-                      <Linkedin className="h-5 w-5 text-white" />
+                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="absolute top-4 right-4 w-9 h-9 bg-white/10 backdrop-blur-md rounded-lg flex items-center justify-center border border-white/10 hover:bg-brand-orange-500 transition-all z-20">
+                      <Linkedin className="h-4 w-4 text-white" />
                     </a>
                   </div>
-                  <div className="p-10 relative">
-                    <h3 className="text-3xl font-black text-white uppercase tracking-tighter mb-2">{member.name}</h3>
-                    <p className="text-brand-orange-500 font-black uppercase tracking-widest text-xs mb-6">{member.role}</p>
-                    <p className="text-gray-400 leading-relaxed italic text-sm">"{member.bio}"</p>
+                  <div className="p-8 flex-1">
+                    <p className="text-brand-orange-500 font-black uppercase tracking-[0.2em] text-[10px] mb-2">{member.role}</p>
+                    <h3 className="text-xl font-black text-white uppercase tracking-tighter mb-4">{member.name}</h3>
+                    <p className="text-gray-400 text-[13px] leading-relaxed font-medium italic">"{member.bio}"</p>
                   </div>
                 </motion.div>
               ))}
             </div>
 
-            {/* CEO Tier */}
-            <div className="max-w-2xl w-full">
+            {/* CEO Tier - Strategic Lead */}
+            <div className="max-w-4xl w-full">
               <motion.div
                 className="bg-white/5 backdrop-blur-sm rounded-[40px] overflow-hidden border border-brand-orange-500/30 group hover:border-brand-orange-500 transition-all duration-500"
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                <div className="relative h-[500px] w-full overflow-hidden">
-                  <Image src="/images/ceo-shivanand.jpg" alt="Shivanand Balehosur" fill className="object-cover group-hover:scale-105 transition-all duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-90" />
-                  <a href="https://www.linkedin.com/in/shivanand-balehosur-719796247/" target="_blank" rel="noopener noreferrer" className="absolute top-6 right-6 w-12 h-12 bg-white/10 backdrop-blur-md rounded-xl flex items-center justify-center border border-white/10 hover:bg-brand-orange-500 transition-all z-20">
-                    <Linkedin className="h-5 w-5 text-white" />
-                  </a>
-                </div>
-                <div className="p-12 relative">
-                  <h3 className="text-4xl font-black text-white uppercase tracking-tighter mb-2">Shivanand Balehosur</h3>
-                  <p className="text-brand-orange-500 font-black uppercase tracking-widest text-sm mb-8">Founder & CEO</p>
-                  <div className="space-y-6 text-gray-300 leading-relaxed font-medium">
-                    <p>
-                      With over 15 years in the natural daylighting sector, Shivanand has been at the centre of every product, every installation, and every customer relationship at Uday IKSA.
-                    </p>
-                    <p className="text-sm italic text-gray-400">
-                      "Having spent the early years understanding exactly what the market needed — and what it was getting wrong — he led the decision to build everything in-house, which remains the foundation of our quality today."
-                    </p>
+                <div className="grid md:grid-cols-2">
+                  <div className="relative h-96 md:h-full min-h-[400px] overflow-hidden">
+                    <Image src="/images/ceo-shivanand.jpg" alt="Shivanand Balehosur" fill className="object-cover group-hover:scale-105 transition-all duration-700" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:to-slate-950/20" />
+                    <a href="https://www.linkedin.com/in/shivanand-balehosur-719796247/" target="_blank" rel="noopener noreferrer" className="absolute top-6 left-6 w-10 h-10 bg-white/10 backdrop-blur-md rounded-xl flex items-center justify-center border border-white/10 hover:bg-brand-orange-500 transition-all z-20">
+                      <Linkedin className="h-4 w-4 text-white" />
+                    </a>
+                  </div>
+                  <div className="p-8 md:p-12 flex flex-col justify-center">
+                    <p className="text-brand-orange-500 font-black uppercase tracking-[0.3em] text-[10px] mb-3">Founder & CEO</p>
+                    <h3 className="text-3xl font-black text-white uppercase tracking-tighter mb-6">Shivanand Balehosur</h3>
+                    <div className="space-y-4 text-gray-400 text-sm leading-relaxed font-medium">
+                      <p>
+                        With over 15 years in the natural daylighting sector, Shivanand has been at the centre of every product, every installation, and every customer relationship at Uday IKSA.
+                      </p>
+                      <p className="italic border-l-2 border-white/10 pl-4 py-1 text-gray-500">
+                        "Having spent the early years understanding what the market was getting wrong, he led the decision to build everything in-house, which remains the foundation of our quality today."
+                      </p>
+                    </div>
                   </div>
                 </div>
               </motion.div>
             </div>
 
-
-
-            {/* Industrial Infographic Section */}
-            <div className="w-full bg-white/5 backdrop-blur-md rounded-[40px] p-0 border border-brand-orange-500/30 text-center relative overflow-hidden group">
-              <div className="relative aspect-[16/10] w-full overflow-hidden">
+            {/* Patented Technology Badge */}
+            <div className="w-full max-w-4xl bg-white/5 backdrop-blur-md rounded-[40px] p-0 border border-brand-orange-500/30 text-center relative overflow-hidden group">
+              <div className="relative aspect-[21/9] w-full overflow-hidden">
                 <Image
                   src="/brain/5b886c53-b306-4234-afef-4f7e3b295568/media__1773246300254.jpg"
                   alt="Uday IKSA Installation Process & Components"
@@ -243,13 +244,13 @@ export default function AboutPage() {
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
-              <div className="p-8 bg-slate-900/90 backdrop-blur-md border-t border-brand-orange-500/30">
-                <h4 className="text-2xl font-black text-white uppercase tracking-tighter mb-4 flex items-center justify-center gap-3">
-                  <Shield className="h-6 w-6 text-brand-orange-500" />
-                  Patented Technology — Engineering Precision
+              <div className="p-6 bg-slate-900/90 backdrop-blur-md border-t border-brand-orange-500/30">
+                <h4 className="text-xl font-black text-white uppercase tracking-tighter mb-3 flex items-center justify-center gap-3">
+                  <Shield className="h-5 w-5 text-brand-orange-500" />
+                  Proprietary Engineering Precision
                 </h4>
-                <p className="text-gray-400 max-w-4xl mx-auto leading-relaxed text-sm">
-                  Our core products are patented. NANOSUN™ and NANOVENT® are proprietary systems designed, tested, and manufactured entirely by us in Hubli. You're buying a system built for decades of performance.
+                <p className="text-gray-400 max-w-3xl mx-auto leading-relaxed text-xs">
+                  Our NANOSUN™ and NANOVENT® systems are proprietary technologies designed and manufactured entirely in Hubballi. You are buying a system built for decades of industrial-grade performance.
                 </p>
               </div>
             </div>
@@ -258,42 +259,42 @@ export default function AboutPage() {
       </section>
 
       {/* Why It Matters Section */}
-      <section className="py-12 relative px-6 bg-slate-900/50">
+      <section className="py-16 relative px-6 bg-slate-900/50">
         <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-24 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-8 leading-none text-balance">This Isn't Just <br /><span className="brand-gradient-text">About Saving</span> <br />Electricity.</h2>
-              <div className="h-1 w-20 bg-brand-orange-500 rounded-full mb-12"></div>
-              <div className="space-y-8 text-gray-400 text-lg leading-relaxed font-medium">
+              <h2 className="text-2xl md:text-4xl font-black text-white uppercase tracking-tighter mb-6 leading-none text-balance">This Isn't Just <br /><span className="brand-gradient-text">About Saving</span> <br />Electricity.</h2>
+              <div className="h-0.5 w-16 bg-brand-orange-500 rounded-full mb-10"></div>
+              <div className="space-y-6 text-gray-400 text-base leading-relaxed font-medium">
                 <p>When a factory switches off 50 tube lights during the day because natural light is doing the job — that's real energy saved, real money back, and real carbon not emitted.</p>
                 <p>But there's something more that doesn't show up on an electricity bill.</p>
-                <div className="bg-white/5 p-8 rounded-3xl border border-white/10">
-                  <p className="text-white">Natural light keeps people aligned with their body's natural rhythm — the circadian cycle that regulates sleep, energy, focus, and hormonal balance.</p>
+                <div className="bg-white/5 p-6 rounded-3xl border border-white/10">
+                  <p className="text-white text-sm">Natural light keeps people aligned with their body's natural rhythm — the circadian cycle that regulates sleep, energy, focus, and hormonal balance.</p>
                 </div>
-                <p>Workers in naturally lit spaces report feeling more alert, less fatigued, and more productive. Students learn better; patients recover faster. The science backs it up — we see it in our own installations every day.</p>
+                <p className="text-sm">Workers in naturally lit spaces report feeling more alert, less fatigued, and more productive. Students learn better; patients recover faster.</p>
               </div>
             </motion.div>
             <motion.div
-              className="grid grid-cols-2 gap-6"
+              className="grid grid-cols-2 gap-4"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
             >
               {[
-                { icon: Sun, title: "Better Focus", desc: "Humans are wired for daylight." },
-                { icon: Heart, title: "Better Health", desc: "Regulates the circadian rhythm." },
-                { icon: Zap, title: "Zero Energy", desc: "Free light from the sun." },
-                { icon: Shield, title: "Longevity", desc: "Tested to last for decades." },
+                { icon: Sun, title: "Better Focus", desc: "Optimal daylighting." },
+                { icon: Heart, title: "Better Health", desc: "Circadian alignment." },
+                { icon: Zap, title: "Zero Energy", desc: "100% Free sunlight." },
+                { icon: Shield, title: "Longevity", desc: "Industrial testing." },
               ].map((item, idx) => (
-                <div key={idx} className="bg-white/5 p-8 rounded-[40px] border border-white/5 hover:border-brand-orange-500/30 transition-all text-center group">
-                  <item.icon className="h-10 w-10 text-brand-orange-500 mx-auto mb-6 group-hover:scale-110 transition-transform" />
-                  <h4 className="text-white font-black uppercase tracking-tighter mb-2">{item.title}</h4>
-                  <p className="text-gray-500 text-xs">{item.desc}</p>
+                <div key={idx} className="bg-white/5 p-6 rounded-[32px] border border-white/5 hover:border-brand-orange-500/30 transition-all text-center group">
+                  <item.icon className="h-8 w-8 text-brand-orange-500 mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                  <h4 className="text-white text-sm font-black uppercase tracking-tighter mb-1.5">{item.title}</h4>
+                  <p className="text-gray-500 text-[10px] uppercase font-black tracking-widest">{item.desc}</p>
                 </div>
               ))}
             </motion.div>
@@ -301,80 +302,117 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Recognition Section */}
-      <section className="py-16 relative px-6 border-t border-white/5 bg-slate-900/40">
+      {/* Recognised Excellence - Bento Remake */}
+      <section className="py-24 relative px-6 overflow-hidden border-t border-white/5 bg-slate-950">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-px bg-gradient-to-r from-transparent via-brand-orange-500/20 to-transparent" />
+
         <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4">Recognised Excellence</h2>
-            <div className="h-1 w-16 bg-brand-orange-500 rounded-full mx-auto"></div>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
-            {[
-              { label: "CII INNOVERGE", icon: Award },
-              { label: "ISO 9001:2015", icon: CheckCircle2 },
-              { label: "DPIIT Recognised", icon: Shield },
-              { label: "ZED Certified", icon: Shield },
-              { label: "Patented Tech", icon: Zap },
-              { label: "Made in India", icon: Globe },
-
-            ].map((badge, idx) => (
-              <motion.div
-                key={idx}
-                className="bg-white/5 p-8 rounded-[40px] border border-white/10 flex flex-col items-center text-center group"
-                whileHover={{ y: -5 }}
-              >
-                <badge.icon className="h-8 w-8 text-brand-orange-500 mb-6 group-hover:rotate-12 transition-transform" />
-                <p className="text-[10px] font-black text-white uppercase tracking-widest leading-tight">{badge.label}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Catalog Preview Section */}
-      <section className="py-16 relative px-6 bg-slate-950 border-y border-white/5">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4">Official <span className="brand-gradient-text">Catalog</span></h2>
-            <div className="h-1 w-16 bg-brand-orange-500 rounded-full mx-auto mb-6"></div>
-            <p className="text-gray-400 max-w-2xl mx-auto font-medium">Explore our technical specifications and global standards directly from our engineering documentation.</p>
+          <div className="text-center mb-16">
+            <h2 className="text-2xl md:text-3xl font-black text-white uppercase tracking-tighter mb-4">Recognised Excellence</h2>
+            <div className="h-0.5 w-16 bg-brand-orange-500 rounded-full mx-auto"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[1, 2, 3, 4].map((num) => (
-              <motion.div
-                key={num}
-                className="group relative aspect-[1/1.4] rounded-3xl overflow-hidden border border-white/10 hover:border-brand-orange-500/50 transition-all shadow-2xl"
-                whileHover={{ y: -10 }}
-              >
-                <Image
-                  src={`/images/gallery/about/catalog-${num}.jpg`}
-                  alt={`Uday IKSA Catalog Page ${num}`}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <div className="bg-brand-orange-500 p-4 rounded-full text-white shadow-xl">
-                    <Maximize2 className="h-6 w-6" />
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
+            {/* Main Award - Bento Large Item */}
+            <motion.div
+              className="md:col-span-2 md:row-span-2 bg-white/[0.03] border border-brand-orange-500/20 rounded-[40px] p-8 relative overflow-hidden group hover:border-brand-orange-500/40 transition-all duration-700 shadow-2xl"
+              whileHover={{ y: -5 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <div className="absolute -top-12 -right-12 w-48 h-48 bg-brand-orange-500/10 blur-[80px] rounded-full group-hover:bg-brand-orange-500/20 transition-colors" />
+              <Award className="h-12 w-12 text-brand-orange-500 mb-8 group-hover:scale-110 transition-transform duration-500" />
+              <h3 className="text-2xl font-black text-white uppercase tracking-tighter mb-4 leading-none">CII INNOVERGE <br /><span className="brand-gradient-text text-xl">National Award</span></h3>
+              <p className="text-gray-400 text-sm leading-relaxed font-medium">India's most prestigious recognition for industrial innovation and green engineering breakthroughs.</p>
+              <div className="mt-8 pt-6 border-t border-white/5">
+                <span className="text-[10px] font-black text-brand-orange-400 uppercase tracking-widest">Innovation Excellence 2022</span>
+              </div>
+            </motion.div>
+
+            {/* Patented Tech - Bento Medium Item */}
+            <motion.div
+              className="md:col-span-2 bg-white/[0.03] border border-white/10 rounded-[40px] p-8 relative overflow-hidden group hover:border-brand-orange-500/40 transition-all duration-700"
+              whileHover={{ y: -5 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+            >
+              <div className="flex items-center gap-6">
+                <div className="bg-brand-orange-500/10 p-5 rounded-3xl group-hover:bg-brand-orange-500 group-hover:text-white transition-all duration-500">
+                  <Zap className="h-6 w-6 text-brand-orange-500 group-hover:text-white" />
                 </div>
-              </motion.div>
-            ))}
-          </div>
+                <div>
+                  <h3 className="text-lg font-black text-white uppercase tracking-tighter mb-1">Patented Tech</h3>
+                  <p className="text-gray-500 text-xs font-medium">Proprietary NANOSUN™ & NANOVENT®</p>
+                </div>
+              </div>
+            </motion.div>
 
-          <div className="mt-16 text-center">
-            <Button asChild className="bg-brand-orange-500 text-white hover:bg-white hover:text-black rounded-2xl px-12 py-8 text-sm font-black uppercase tracking-widest transition-all shadow-2xl shadow-brand-orange-500/20">
-              <Link href="/UDAY IKSA PVT LTD.pdf" target="_blank">
-                Download Full Technical PDF <ArrowRight className="ml-3 h-5 w-5" />
-              </Link>
-            </Button>
+            {/* DPIIT - Bento Small Item */}
+            <motion.div
+              className="md:col-span-1 bg-white/[0.03] border border-white/10 rounded-[40px] p-6 text-center group hover:border-brand-orange-500/40 transition-all duration-700"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
+              <Shield className="h-6 w-6 text-brand-orange-500 mx-auto mb-4 group-hover:rotate-12 transition-transform" />
+              <p className="text-[10px] font-black text-white uppercase tracking-widest leading-tight">DPIIT <br />Recognised</p>
+            </motion.div>
+
+            {/* ISO - Bento Small Item */}
+            <motion.div
+              className="md:col-span-1 bg-white/[0.03] border border-white/10 rounded-[40px] p-6 text-center group hover:border-brand-orange-500/40 transition-all duration-700"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+            >
+              <CheckCircle2 className="h-6 w-6 text-brand-orange-500 mx-auto mb-4 group-hover:rotate-12 transition-transform" />
+              <p className="text-[10px] font-black text-white uppercase tracking-widest leading-tight">ISO <br />9001:2015</p>
+            </motion.div>
+
+            {/* Made in India - Bento Spanned Item */}
+            <motion.div
+              className="md:col-span-2 bg-gradient-to-br from-brand-orange-600/10 to-transparent border border-white/10 rounded-[40px] p-8 flex items-center justify-between group hover:border-brand-orange-500/40 transition-all duration-700"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+            >
+              <div>
+                <h3 className="text-xl font-black text-white uppercase tracking-tighter mb-2">Built in Hubballi</h3>
+                <p className="text-gray-500 text-[10px] font-black uppercase tracking-widest">Proudly Made in India</p>
+              </div>
+              <Globe className="h-8 w-8 text-brand-orange-500 group-hover:rotate-45 transition-transform duration-1000" />
+            </motion.div>
+
+            {/* ZED - Bento Small Item */}
+            <motion.div
+              className="md:col-span-2 bg-white/[0.03] border border-white/10 rounded-[40px] p-6 flex items-center gap-6 group hover:border-brand-orange-500/40 transition-all duration-700"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5 }}
+            >
+              <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center shrink-0">
+                <Shield className="h-6 w-6 text-brand-orange-500" />
+              </div>
+              <div>
+                <h3 className="text-sm font-black text-white uppercase tracking-[0.2em]">ZED Certified</h3>
+                <p className="text-gray-500 text-[9px] uppercase font-bold">Zero Defect Manufacturing</p>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
+
+
 
       {/* Local Identity Section */}
-      <section className="py-12 relative px-6 bg-slate-900/30">
+      <section className="py-12 relative px-6 bg-slate-900/10">
         <div className="container mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -382,20 +420,20 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <h2 className="text-3xl md:text-5xl lg:text-7xl font-black text-white uppercase tracking-tighter mb-8 leading-none">Proudly Built in <br /><span className="brand-gradient-text">Hubballi, Karnataka.</span></h2>
-            <p className="text-xl text-gray-400 mb-12 leading-relaxed font-medium">
-              We're not a multinational. We're a Hubballi company that designs, manufactures, and installs products we genuinely believe in — and we've been doing it from the same city for over 15 years.
+            <h2 className="text-2xl md:text-4xl font-black text-white uppercase tracking-tighter mb-4 leading-none text-balance">Proudly Built in <br /><span className="brand-gradient-text">Hubballi, Karnataka.</span></h2>
+            <p className="text-sm md:text-base text-gray-500 mb-10 max-w-2xl mx-auto leading-relaxed font-medium">
+              We're a Hubballi company that designs, manufactures, and installs products we genuinely believe in — and we've been doing it from the same city for over 15 years.
             </p>
-            <div className="grid md:grid-cols-2 gap-8 text-left">
-              <div className="bg-white/5 p-10 rounded-[48px] border border-white/10">
-                <h4 className="text-brand-orange-500 font-black uppercase tracking-widest text-xs mb-4">Our Manufacturing Hub</h4>
-                <p className="text-white font-bold mb-2">Gokul Industrial Estate</p>
-                <p className="text-gray-500 text-sm">C-391, Gokul Industrial Estate, 2nd Gate Gokul Road, Hubballi – 580030</p>
+            <div className="grid md:grid-cols-2 gap-4 text-left">
+              <div className="bg-white/5 p-8 rounded-[32px] border border-white/10">
+                <h4 className="text-brand-orange-500 font-black uppercase tracking-widest text-[9px] mb-3">Manufacturing Hub</h4>
+                <p className="text-white font-bold text-sm mb-1">Gokul Industrial Estate</p>
+                <p className="text-gray-500 text-xs leading-relaxed">C-391, 2nd Gate Gokul Road, Hubballi – 580030</p>
               </div>
-              <div className="bg-white/5 p-10 rounded-[48px] border border-white/10">
-                <h4 className="text-brand-orange-500 font-black uppercase tracking-widest text-xs mb-4">Registered Office</h4>
-                <p className="text-white font-bold mb-2">Akshay Colony</p>
-                <p className="text-gray-500 text-sm">#147, 4th Phase, Akshay Colony, Vidyanagar, Hubballi – 580021</p>
+              <div className="bg-white/5 p-8 rounded-[32px] border border-white/10">
+                <h4 className="text-brand-orange-500 font-black uppercase tracking-widest text-[9px] mb-3">Registered Office</h4>
+                <p className="text-white font-bold text-sm mb-1">Akshay Colony</p>
+                <p className="text-gray-500 text-xs leading-relaxed">#147, 4th Phase, Vidyanagar, Hubballi – 580021</p>
               </div>
             </div>
           </motion.div>
@@ -403,26 +441,26 @@ export default function AboutPage() {
       </section>
 
       {/* Bottom CTA Section */}
-      <section className="py-16 relative px-6 border-t border-white/5">
+      <section className="py-12 relative px-6 border-t border-white/5">
         <div className="container mx-auto">
           <motion.div
-            className="bg-brand-gradient py-16 px-8 rounded-[48px] text-center shadow-2xl shadow-brand-orange-500/10 relative overflow-hidden max-w-5xl mx-auto"
-            whileHover={{ scale: 1.01 }}
+            className="bg-brand-gradient py-12 px-8 rounded-[40px] text-center shadow-2xl shadow-brand-orange-500/10 relative overflow-hidden max-w-4xl mx-auto"
+            whileHover={{ scale: 1.005 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-5xl font-black text-white mb-6 tracking-tighter uppercase relative z-10">
+            <h2 className="text-2xl md:text-4xl font-black text-white mb-4 tracking-tighter uppercase relative z-10">
               Let's Talk.
             </h2>
-            <p className="text-lg text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed relative z-10 font-medium">
+            <p className="text-sm md:text-base text-white/80 max-w-xl mx-auto mb-8 leading-relaxed relative z-10 font-medium">
               Join 500+ buildings saving electricity with natural light.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4 relative z-10">
-              <HoverButton asChild className="bg-white text-black hover:bg-slate-900 hover:text-white px-10 py-4 rounded-xl font-bold uppercase tracking-wider transition-all w-full sm:w-auto text-sm">
+            <div className="flex flex-col sm:flex-row justify-center gap-3 relative z-10">
+              <HoverButton asChild className="bg-white text-black hover:bg-slate-900 hover:text-white px-8 py-3.5 rounded-xl font-bold uppercase tracking-widest transition-all w-full sm:w-auto text-xs">
                 <Link href="/contact">
-                  Talk to Our Team <ArrowRight className="ml-2 h-4 w-4" />
+                  Start Consultation <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </HoverButton>
-              <HoverButton asChild className="bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white px-10 py-4 rounded-xl font-bold uppercase tracking-wider transition-all w-full sm:w-auto text-sm">
+              <HoverButton asChild className="bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white px-8 py-3.5 rounded-xl font-bold uppercase tracking-widest transition-all w-full sm:w-auto text-xs">
                 <a href="tel:+918792182631">
                   Call: +91 8792182631
                 </a>

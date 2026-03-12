@@ -130,340 +130,339 @@ export default function NanosunTilesPage() {
     ]
 
     return (
-        <main className="pt-24 bg-slate-950">
-            {/* Hero Section */}
-            <section className="relative py-40 overflow-hidden px-6 lg:px-12">
-                <div className="absolute inset-0 bg-brand-orange-500/5 blur-[120px] rounded-full transform -translate-y-1/2" />
-                <div className="container mx-auto relative z-10">
-                    <div className="grid lg:grid-cols-2 gap-24 items-center">
-                        <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
-                            <div className="inline-flex items-center gap-3 bg-white/5 border border-white/10 rounded-full px-8 py-2.5 mb-10 backdrop-blur-md">
-                                <Sun className="h-4 w-4 text-brand-orange-400" />
-                                <h2 className="text-[10px] font-black text-gray-400 uppercase tracking-[0.3em]">Tile Roof Daylight (NANOSUN)</h2>
-                            </div>
-                            <h1 className="text-5xl md:text-8xl font-black text-white mb-10 tracking-tighter uppercase leading-[0.9]">
-                                NANOSUN™ <br /> <span className="brand-gradient-text">Tiles Daylight</span>
-                            </h1>
-                            <p className="text-xl text-gray-400 mb-8 leading-relaxed max-w-2xl font-medium">
-                                Natural Light for Your Tiled Roof Home — <span className="text-white font-bold">Without Touching a Single Tile.</span>
-                            </p>
-                            <p className="text-lg text-gray-500 mb-16 leading-relaxed max-w-2xl">
-                                Got a traditional Mangalore tile roof or a modern Italian tile bungalow? This model was built exactly for you. Fits seamlessly into your existing roof — no structural changes, no ugly protrusions — and brings pure natural sunlight into the rooms below.
-                            </p>
-                            <div className="flex flex-wrap gap-6">
-                                <HoverButton asChild className="bg-white text-black hover:bg-brand-orange-500 hover:text-white rounded-2xl px-16 py-8 text-sm font-black uppercase tracking-widest shadow-2xl transition-all">
-                                    <Link href="/contact">
-                                        Get Free Assessment <ArrowRight className="ml-3 h-5 w-5" />
-                                    </Link>
-                                </HoverButton>
-                                <a href="tel:+918792182631" className="px-16 py-8 border-2 border-white/10 hover:border-brand-orange-500/50 text-white transition-all duration-300 rounded-2xl text-[10px] font-black uppercase tracking-widest backdrop-blur-md flex items-center gap-3">
-                                    <Phone className="h-4 w-4" /> +91 8792182631
-                                </a>
-                            </div>
-                        </motion.div>
+        <main className="pt-24 bg-slate-950 text-slate-200">
+      {/* Hero Section - Refined Scale */}
+      <section className="relative py-20 md:py-32 overflow-hidden px-6 lg:px-12">
+        <div className="absolute inset-0 bg-brand-orange-500/5 blur-[120px] rounded-full transform -translate-y-1/2" />
+        <div className="container mx-auto relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
+              <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-5 py-1.5 mb-8 backdrop-blur-md">
+                <Sun className="h-3 w-3 text-brand-orange-400" />
+                <h2 className="text-[9px] font-black text-gray-400 uppercase tracking-widest leading-none">Tile Roof Daylight (NANOSUN)</h2>
+              </div>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-8 tracking-tighter uppercase leading-[0.95]">
+                NANOSUN™ <br /> <span className="brand-gradient-text">Tiles Daylight</span>
+              </h1>
+              <p className="text-base md:text-lg text-gray-400 mb-6 leading-relaxed max-w-xl font-medium">
+                Natural Light for Your Tiled Roof Home — <span className="text-white font-bold">Without Structural Changes.</span>
+              </p>
+              <p className="text-sm text-gray-500 mb-10 leading-relaxed max-w-xl">
+                Got a traditional Mangalore tile roof or a modern Italian tile bungalow? This model was built specifically for you. It fits seamlessly into your existing roof profile without touching a single rafter.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button asChild className="bg-white text-black hover:bg-slate-900 hover:text-white rounded-xl px-12 py-5 text-xs font-black uppercase tracking-widest shadow-2xl transition-all">
+                  <Link href="/contact">
+                    Free Assessment <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+                <a href="tel:+918792182631" className="px-8 py-5 border border-white/10 hover:border-brand-orange-500/40 text-white transition-all duration-300 rounded-xl text-[10px] font-black uppercase tracking-widest backdrop-blur-md flex items-center gap-2">
+                  <Phone className="h-3.5 w-3.5" /> +91 8792182631
+                </a>
+              </div>
+            </motion.div>
 
-                        <motion.div
-                            className="relative h-[650px] rounded-[80px] overflow-hidden border border-white/10 shadow-3xl group"
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 1 }}
-                        >
-                            <Image
-                                src="/images/products/nanosun-tiles/house-render.png"
-                                alt="NANOSUN Tiles Daylight House Installation"
-                                fill
-                                className="object-cover transition-transform duration-1000 group-hover:scale-105"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60" />
-                            <div className="absolute bottom-12 left-12 right-12">
-                                <div className="bg-white/5 backdrop-blur-3xl border border-white/10 p-10 rounded-[48px]">
-                                    <p className="text-3xl font-black text-white uppercase tracking-tighter mb-2">Tile Roof Ready</p>
-                                    <p className="text-gray-400 text-sm font-medium">Designed to blend into your pitched tile roof as if it was always there.</p>
-                                </div>
-                            </div>
-                        </motion.div>
-                    </div>
+            <motion.div
+              className="relative h-[400px] md:h-[600px] rounded-[48px] overflow-hidden border border-white/10 shadow-3xl group"
+              initial={{ opacity: 0, scale: 0.98 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1 }}
+            >
+              <Image
+                src="/images/products/nanosun-tiles/house-render.png"
+                alt="NANOSUN Tiles Daylight House Installation"
+                fill
+                className="object-cover transition-transform duration-1000 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60" />
+              <div className="absolute bottom-8 left-8 right-8">
+                <div className="bg-white/5 backdrop-blur-2xl border border-white/10 p-8 rounded-[32px]">
+                  <p className="text-2xl font-black text-white uppercase tracking-tighter mb-1">Tile Roof Ready</p>
+                  <p className="text-gray-400 text-xs font-medium">Designed to blend into high-profile tiled roofs seamlessly.</p>
                 </div>
-            </section>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
-            {/* Who Is This For */}
-            <section className="py-40 relative px-6 lg:px-12 bg-slate-900/30">
-                <div className="container mx-auto">
-                    <div className="text-center mb-32">
-                        <h2 className="text-4xl md:text-7xl font-black text-white mb-6 uppercase tracking-tighter leading-none">Who Is This <span className="brand-gradient-text">For?</span></h2>
-                        <p className="text-xl text-gray-500 max-w-2xl mx-auto font-medium">Built for every building with a pitched tile roof that deserves natural daylight inside.</p>
-                    </div>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-                        {applications.map((app, i) => (
-                            <motion.div
-                                key={i}
-                                className="bg-white/[0.03] border border-white/5 p-12 rounded-[50px] hover:bg-white/[0.05] transition-all group"
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: i * 0.1 }}
-                            >
-                                <div className="w-16 h-16 rounded-2xl bg-brand-orange-500/10 flex items-center justify-center mb-8 group-hover:bg-brand-orange-500 transition-colors">
-                                    <app.icon className="h-8 w-8 text-brand-orange-500 group-hover:text-white" />
-                                </div>
-                                <h4 className="text-white font-black text-2xl uppercase tracking-tighter mb-4">{app.name}</h4>
-                                <p className="text-gray-500 text-sm font-medium leading-relaxed">{app.desc}</p>
-                            </motion.div>
-                        ))}
-                    </div>
+      {/* Applications Section - Optimized Density */}
+      <section className="py-24 relative px-6 lg:px-12 bg-slate-900/30">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-black text-white mb-4 uppercase tracking-tighter leading-none">Who Is This <span className="brand-gradient-text">For?</span></h2>
+            <p className="text-sm md:text-base text-gray-500 max-w-xl mx-auto font-medium">Built for every building with a pitched tile roof that deserves natural daylight.</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {applications.map((app, i) => (
+              <motion.div
+                key={i}
+                className="bg-white/[0.02] border border-white/5 p-10 rounded-[40px] hover:border-brand-orange-500/20 transition-all group"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+              >
+                <div className="w-14 h-14 rounded-2xl bg-brand-orange-500/10 flex items-center justify-center mb-6 group-hover:bg-brand-orange-500 transition-colors">
+                  <app.icon className="h-6 w-6 text-brand-orange-500 group-hover:text-white" />
                 </div>
-            </section>
+                <h4 className="text-white font-black text-xl uppercase tracking-tighter mb-4">{app.name}</h4>
+                <p className="text-gray-500 text-xs font-medium leading-relaxed">{app.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            {/* How It Works on a Tile Roof */}
-            <section className="py-40 relative px-6 lg:px-12 bg-slate-950/50">
-                <div className="container mx-auto">
-                    <div className="text-center mb-32">
-                        <h2 className="text-4xl md:text-7xl font-black text-white mb-6 uppercase tracking-tighter leading-none">How It Works on a <span className="brand-gradient-text">Tile Roof</span></h2>
-                        <p className="text-xl text-gray-500 max-w-3xl mx-auto font-medium">Three steps — just like all NANOSUN products — but specifically engineered to sit within the profile of your existing roof tiles without disturbing the structure.</p>
-                    </div>
+      {/* How It Works Section */}
+      <section className="py-24 relative px-6 lg:px-12 bg-slate-950/50">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-black text-white mb-4 uppercase tracking-tighter leading-none">How It Works on a <span className="brand-gradient-text">Tile Roof</span></h2>
+            <p className="text-sm md:text-base text-gray-500 max-w-2xl mx-auto font-medium">Specifically engineered to sit within the profile of your existing roof tiles without disturbing the structure.</p>
+          </div>
 
-                    <div className="grid lg:grid-cols-3 gap-10">
-                        {howItWorks.map((step, idx) => (
-                            <motion.div
-                                key={idx}
-                                className="bg-white/[0.03] border border-white/5 p-12 rounded-[60px] hover:bg-white/[0.05] transition-all group relative"
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: idx * 0.1 }}
-                            >
-                                <div className="absolute top-8 right-8 text-[80px] font-black text-white/[0.03] leading-none">{step.step}</div>
-                                <div className="bg-brand-orange-500/10 w-20 h-20 rounded-3xl flex items-center justify-center mb-10 group-hover:bg-brand-orange-500 group-hover:rotate-6 transition-all duration-500">
-                                    <step.icon className="h-10 w-10 text-brand-orange-500 group-hover:text-white" />
-                                </div>
-                                <h3 className="text-[10px] font-black text-brand-orange-500 uppercase tracking-widest mb-4 leading-none">Step {step.step} — {step.subtitle}</h3>
-                                <h4 className="text-3xl font-black text-white uppercase tracking-tighter mb-8 leading-none">{step.title}</h4>
-                                <p className="text-gray-400 text-sm leading-relaxed font-medium">{step.description}</p>
-                            </motion.div>
-                        ))}
-                    </div>
-
-                    {/* Compatibility highlights */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20">
-                        {[
-                            "Works with Mangalore & modern Italian tiles",
-                            "Leak-proof flanged tile integration",
-                            "Reaches down up to 7–8 metres",
-                            "Available with 45° and 90° bends",
-                        ].map((point, i) => (
-                            <div key={i} className="flex items-start gap-3 bg-white/[0.03] border border-white/5 p-6 rounded-3xl">
-                                <CheckCircle2 className="h-5 w-5 text-brand-orange-500 mt-0.5 shrink-0" />
-                                <span className="text-xs font-bold text-gray-400 leading-relaxed">{point}</span>
-                            </div>
-                        ))}
-                    </div>
+          <div className="grid lg:grid-cols-3 gap-6">
+            {howItWorks.map((step, idx) => (
+              <motion.div
+                key={idx}
+                className="bg-white/[0.02] border border-white/5 p-10 rounded-[40px] hover:border-brand-orange-500/20 transition-all group relative"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.05 }}
+              >
+                <div className="absolute top-6 right-6 text-5xl font-black text-white/[0.03] leading-none uppercase">{step.step}</div>
+                <div className="bg-brand-orange-500/10 w-14 h-14 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-orange-500 transition-all duration-500">
+                  <step.icon className="h-6 w-6 text-brand-orange-500 group-hover:text-white" />
                 </div>
-            </section>
+                <h3 className="text-[9px] font-black text-brand-orange-500 uppercase tracking-widest mb-3 leading-none">Step {step.step} — {step.subtitle}</h3>
+                <h4 className="text-xl md:text-2xl font-black text-white uppercase tracking-tighter mb-6 leading-none">{step.title}</h4>
+                <p className="text-gray-500 text-xs leading-relaxed font-medium">{step.description}</p>
+              </motion.div>
+            ))}
+          </div>
 
-            {/* System Components */}
-            <section className="py-20 bg-slate-950 border-y border-white/5">
-                <div className="container mx-auto px-6">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4">What&apos;s Inside <span className="brand-gradient-text">Every Unit</span></h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+            {[
+              "Works with Mangalore & modern Italian tiles",
+              "Leak-proof flanged tile integration",
+              "Reaches down up to 7–8 metres",
+              "Available with 45° and 90° bends",
+            ].map((point, i) => (
+              <div key={i} className="flex items-start gap-2.5 bg-white/[0.02] border border-white/5 p-5 rounded-2xl">
+                <CheckCircle2 className="h-3.5 w-3.5 text-brand-orange-500 mt-0.5 shrink-0" />
+                <span className="text-[10px] font-bold text-gray-500 leading-relaxed uppercase tracking-widest">{point}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* System Components Bar */}
+      <section className="py-16 bg-slate-950 border-y border-white/5">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-4xl font-black text-white uppercase tracking-tighter mb-2">What&apos;s Inside <span className="brand-gradient-text text-xl md:text-2xl">(All Units)</span></h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {systemComponents.map((component, i) => (
+              <div key={i} className="flex items-center gap-3 bg-white/[0.02] border border-white/5 p-6 rounded-2xl">
+                <CheckCircle2 className="h-4 w-4 text-brand-orange-500 shrink-0" />
+                <span className="text-[10px] md:text-xs font-bold text-gray-400 leading-tight uppercase tracking-wider">{component}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Size Selector Section - Refined UI */}
+      <section className="py-24 relative px-6 lg:px-12 bg-slate-900/20">
+        <div className="container mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 items-start pb-16 border-b border-white/5 mb-16">
+            <div>
+              <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter leading-none mb-6">Choose <br /><span className="brand-gradient-text">Your Size</span></h2>
+              <p className="text-sm md:text-base text-gray-500 max-w-md font-medium leading-relaxed">
+                Available in 4 sizes optimized for residential and hospitality pitched-roof buildings.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2.5 pt-4">
+              {sizes.map((size, idx) => (
+                <button
+                  key={size.id}
+                  onClick={() => setActiveSize(idx)}
+                  className={`px-6 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all ${activeSize === idx
+                    ? "bg-brand-orange-500 text-white shadow-xl shadow-brand-orange-500/10"
+                    : "bg-white/5 text-gray-500 hover:bg-white/10"
+                    }`}
+                >
+                  {size.diameter}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={sizes[activeSize].id}
+                initial={{ opacity: 0, scale: 0.99 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.99 }}
+                transition={{ duration: 0.4 }}
+                className="grid lg:grid-cols-12 gap-12 items-center"
+              >
+                <div className="lg:col-span-5 space-y-10">
+                  <div className="inline-flex items-center gap-2 bg-brand-orange-500/10 border border-brand-orange-500/20 rounded-full px-4 py-1">
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand-orange-500 animate-pulse" />
+                    <span className="text-[9px] font-black text-white uppercase tracking-widest">{sizes[activeSize].diameter}</span>
+                  </div>
+                  <h3 className="text-2xl md:text-4xl font-black text-white uppercase tracking-tighter leading-tight">Best For: <br /><span className="text-gray-500">{sizes[activeSize].bestFor.split(' — ')[1]}</span></h3>
+                  <p className="text-sm md:text-base text-gray-500 leading-relaxed font-medium">{sizes[activeSize].description}</p>
+
+                  <div className="grid grid-cols-3 gap-3">
+                    <div className="bg-white/5 border border-white/5 px-4 py-3.5 rounded-2xl">
+                      <p className="text-[8px] font-black text-gray-600 uppercase tracking-widest mb-1">Lux Level</p>
+                      <p className="text-xs font-black text-brand-orange-500">{sizes[activeSize].lux}</p>
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {systemComponents.map((component, i) => (
-                            <div key={i} className="flex items-start gap-4 bg-white/[0.03] border border-white/5 p-8 rounded-3xl">
-                                <CheckCircle2 className="h-5 w-5 text-brand-orange-500 mt-0.5 shrink-0" />
-                                <span className="text-sm font-bold text-gray-300 leading-relaxed">{component}</span>
-                            </div>
-                        ))}
+                    <div className="bg-white/5 border border-white/5 px-4 py-3.5 rounded-2xl">
+                      <p className="text-[8px] font-black text-gray-600 uppercase tracking-widest mb-1">Roof Max</p>
+                      <p className="text-xs font-black text-brand-orange-500">{sizes[activeSize].height}</p>
                     </div>
+                    <div className="bg-white/5 border border-white/5 px-4 py-3.5 rounded-2xl">
+                      <p className="text-[8px] font-black text-gray-600 uppercase tracking-widest mb-1">Coverage</p>
+                      <p className="text-xs font-black text-brand-orange-500">{sizes[activeSize].coverage.split(' ')[0]}</p>
+                    </div>
+                  </div>
+
+                  <Button asChild className="bg-white text-black hover:bg-slate-900 hover:text-white rounded-xl px-12 py-5 text-xs font-black uppercase tracking-widest transition-all">
+                    <Link href="/contact">
+                      Request Pricing <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
                 </div>
-            </section>
 
-            {/* Size Selector Section */}
-            <section className="py-40 relative px-6 lg:px-12 bg-slate-900/20">
-                <div className="container mx-auto">
-                    <div className="grid lg:grid-cols-2 gap-24 items-start pb-20 border-b border-white/5 mb-20">
-                        <div>
-                            <h2 className="text-6xl md:text-8xl font-black text-white uppercase tracking-tighter leading-none mb-10">Choose <br /><span className="brand-gradient-text">Your Size</span></h2>
-                            <p className="text-xl text-gray-400 max-w-xl font-medium leading-relaxed">
-                                Available in 4 sizes optimized for residential and hospitality pitched-roof buildings.
-                            </p>
-                        </div>
-                        <div className="flex flex-wrap gap-4 pt-10">
-                            {sizes.map((size, idx) => (
-                                <button
-                                    key={size.id}
-                                    onClick={() => setActiveSize(idx)}
-                                    className={`px-8 py-5 rounded-2xl text-[10px] font-black uppercase tracking-widest transition-all ${activeSize === idx
-                                        ? "bg-brand-orange-500 text-white shadow-xl shadow-brand-orange-500/20 scale-105"
-                                        : "bg-white/5 text-gray-400 hover:bg-white/10"
-                                        }`}
-                                >
-                                    {size.diameter}
-                                </button>
-                            ))}
-                        </div>
-                    </div>
+                <div className="lg:col-span-1 hidden lg:block border-l border-white/5 h-64 mx-auto" />
 
-                    <div className="grid lg:grid-cols-12 gap-16">
-                        <div className="lg:col-span-12">
-                            <AnimatePresence mode="wait">
-                                <motion.div
-                                    key={sizes[activeSize].id}
-                                    initial={{ opacity: 0, scale: 0.98 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    exit={{ opacity: 0 }}
-                                    className="grid lg:grid-cols-2 gap-16"
-                                >
-                                    <div className="space-y-12">
-                                        <div className="inline-flex items-center gap-4 bg-brand-orange-500/10 px-8 py-1.5 rounded-full">
-                                            <span className="text-[10px] font-black text-brand-orange-500 uppercase tracking-widest">Active Selector</span>
-                                            <span className="w-1.5 h-1.5 rounded-full bg-brand-orange-500 animate-pulse" />
-                                            <span className="text-[10px] font-black text-white uppercase tracking-widest">{sizes[activeSize].diameter}</span>
-                                        </div>
-                                        <h3 className="text-4xl lg:text-5xl font-black text-white uppercase tracking-tighter">Best For: <br /><span className="text-gray-400">{sizes[activeSize].bestFor}</span></h3>
-                                        <p className="text-xl text-gray-500 leading-relaxed font-medium">{sizes[activeSize].description}</p>
-
-                                        <div className="grid grid-cols-3 gap-4">
-                                            <div className="bg-brand-orange-500/10 border border-brand-orange-500/30 p-6 rounded-[24px]">
-                                                <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-2">Light Output</p>
-                                                <p className="text-lg font-black text-brand-orange-400">{sizes[activeSize].lux}</p>
-                                            </div>
-                                            <div className="bg-brand-orange-500/10 border border-brand-orange-500/30 p-6 rounded-[24px]">
-                                                <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-2">Roof Height</p>
-                                                <p className="text-lg font-black text-brand-orange-400">{sizes[activeSize].height}</p>
-                                            </div>
-                                            <div className="bg-brand-orange-500/10 border border-brand-orange-500/30 p-6 rounded-[24px]">
-                                                <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-2">Coverage</p>
-                                                <p className="text-lg font-black text-brand-orange-400">{sizes[activeSize].coverage}</p>
-                                            </div>
-                                        </div>
-
-                                        <Button asChild size="lg" className="bg-white text-black hover:bg-brand-orange-500 hover:text-white rounded-2xl px-12 py-8 text-xs font-black uppercase tracking-widest shadow-2xl shadow-white/5 group">
-                                            <Link href="/contact">
-                                                Request Pricing for {sizes[activeSize].diameter} <ArrowRight className="ml-3 group-hover:translate-x-1 transition-transform" />
-                                            </Link>
-                                        </Button>
-                                    </div>
-
-                                    <div className="grid grid-cols-1 gap-4">
-                                        {sizes[activeSize].specs.map((spec, i) => (
-                                            <div
-                                                key={i}
-                                                className={`flex justify-between items-center p-8 rounded-[32px] border ${spec.highlight
-                                                    ? "bg-brand-orange-500/10 border-brand-orange-500/30"
-                                                    : "bg-white/5 border-white/5"
-                                                    }`}
-                                            >
-                                                <span className="text-[10px] font-black text-gray-500 uppercase tracking-widest">{spec.label}</span>
-                                                <span className={`text-xl font-black ${spec.highlight ? "text-brand-orange-400" : "text-white"}`}>{spec.value}</span>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </motion.div>
-                            </AnimatePresence>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Structural Integration Section */}
-            <section className="py-24 relative px-6 lg:px-12 bg-slate-950 overflow-hidden">
-                <div className="container mx-auto">
-                    <div className="grid lg:grid-cols-2 gap-24 items-center">
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            className="relative h-[600px] rounded-[60px] overflow-hidden border border-white/10 group shadow-3xl shadow-brand-orange-500/10"
-                        >
-                            <Image
-                                src="/images/products/nanosun-tiles/structural-render.png"
-                                alt="NANOSUN Tiles Structural Cross Section"
-                                fill
-                                className="object-cover transition-transform duration-1000 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60" />
-                            <div className="absolute bottom-10 left-10 right-10">
-                                <div className="bg-white/5 backdrop-blur-3xl border border-white/10 p-8 rounded-[40px]">
-                                    <h3 className="text-3xl font-black text-white uppercase tracking-tighter mb-2">Flush Integration</h3>
-                                    <p className="text-gray-400 text-sm font-medium">Clean, compact, and structurally bonded for tiled roof architecture.</p>
-                                </div>
-                            </div>
-                        </motion.div>
-
-                        <div className="space-y-12">
-                            <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter leading-none">Seamless <br /><span className="brand-gradient-text">Architecture</span></h2>
-                            <p className="text-xl text-gray-400 font-medium leading-relaxed">
-                                Our Tiles model is engineered to respect the aesthetic of your bungalow. No bulky extensions — just a clean optical dome that sits flush with your roof line.
-                            </p>
-                            <div className="space-y-6">
-                                {[
-                                    { title: "Zero Tile Disturbance", desc: "No cutting of main rafters or structural beams." },
-                                    { title: "Weather Sealed", desc: "Custom FRP bases matched to your specific tile profile (Mangalore, Italian, etc.) ensure zero leaks." },
-                                    { title: "Universal Reach", desc: "Available in lengths up to 7 metres to reach ground floor rooms from the top roof." }
-                                ].map((item, i) => (
-                                    <div key={i} className="flex gap-4">
-                                        <div className="h-6 w-6 rounded-full bg-brand-orange-500/20 flex items-center justify-center shrink-0 mt-1">
-                                            <div className="h-2 w-2 rounded-full bg-brand-orange-500" />
-                                        </div>
-                                        <div>
-                                            <h4 className="text-white font-black uppercase text-sm mb-1">{item.title}</h4>
-                                            <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Key Benefits */}
-            <section className="py-20 bg-slate-950 border-y border-white/5">
-                <div className="container mx-auto px-6">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4">Key <span className="brand-gradient-text">Benefits</span></h2>
-                    </div>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                        {keyBenefits.map((benefit, i) => (
-                            <div key={i} className="flex items-start gap-4 bg-white/[0.03] border border-white/5 p-8 rounded-3xl">
-                                <CheckCircle2 className="h-5 w-5 text-brand-orange-500 mt-0.5 shrink-0" />
-                                <span className="text-sm font-bold text-gray-300 leading-relaxed">{benefit}</span>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Bottom CTA */}
-            <section className="py-40 relative px-6 lg:px-12 bg-slate-950 border-t border-white/5">
-                <div className="container mx-auto">
-                    <motion.div
-                        className="bg-brand-gradient p-24 lg:p-40 rounded-[100px] text-center shadow-2xl shadow-brand-orange-500/20 relative overflow-hidden"
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
+                <div className="lg:col-span-6 grid grid-cols-1 gap-3">
+                  {sizes[activeSize].specs.map((spec, i) => (
+                    <div
+                      key={i}
+                      className={`flex justify-between items-center px-8 py-5 rounded-[24px] border ${spec.highlight
+                        ? "bg-brand-orange-500/5 border-brand-orange-500/20"
+                        : "bg-white/5 border-white/5"
+                        }`}
                     >
-                        <div className="absolute inset-0 bg-grid-white/[0.05] pointer-events-none" />
-                        <Sparkles className="h-20 w-20 text-white/30 mx-auto mb-10 animate-pulse" />
-                        <h2 className="text-5xl md:text-8xl font-black text-white mb-10 tracking-tighter uppercase leading-tight relative z-10">Have a Tiled Roof?</h2>
-                        <p className="text-white/90 max-w-3xl mx-auto mb-16 leading-relaxed relative z-10 font-bold uppercase tracking-widest text-sm opacity-90 font-medium">
-                            Share your roof type and the rooms you want to brighten — we&apos;ll recommend the right size and number of units, and give you a clear cost picture.
-                        </p>
-                        <div className="flex flex-wrap justify-center gap-10 relative z-10">
-                            <Button asChild size="lg" className="bg-white text-black hover:bg-black hover:text-white transition-all duration-300 rounded-3xl px-20 py-10 text-xl font-black shadow-2xl shadow-white/10 uppercase tracking-widest">
-                                <Link href="/contact" className="block">
-                                    Get a Free Assessment <ArrowRight className="ml-4 h-8 w-8" />
-                                </Link>
-                            </Button>
-                            <Button asChild size="lg" variant="outline" className="border-2 border-white/30 text-white hover:bg-white hover:text-black transition-all duration-300 rounded-3xl px-20 py-10 text-xl font-black uppercase tracking-widest">
-                                <a href="tel:+918792182631">
-                                    <Phone className="mr-4 h-8 w-8" /> Call Us
-                                </a>
-                            </Button>
-                        </div>
-                    </motion.div>
+                      <span className="text-[9px] font-black text-gray-600 uppercase tracking-widest">{spec.label}</span>
+                      <span className={`text-sm md:text-base font-black ${spec.highlight ? "text-brand-orange-500" : "text-white"}`}>{spec.value}</span>
+                    </div>
+                  ))}
                 </div>
-            </section>
-        </main>
-    )
+              </motion.div>
+            </AnimatePresence>
+          </div>
+        </div>
+      </section>
+
+      {/* Structural Precision Section */}
+      <section className="py-24 relative px-6 lg:px-12 bg-slate-950 overflow-hidden">
+        <div className="container mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.98 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="relative h-[450px] md:h-[600px] rounded-[48px] overflow-hidden border border-white/10 group shadow-2xl"
+            >
+              <Image
+                src="/images/products/nanosun-tiles/structural-render.png"
+                alt="NANOSUN Tiles Structural Cross Section"
+                fill
+                className="object-cover transition-transform duration-1000 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60" />
+              <div className="absolute bottom-8 left-8 right-8">
+                <div className="bg-white/5 backdrop-blur-2xl border border-white/10 p-8 rounded-[32px]">
+                  <h3 className="text-2xl font-black text-white uppercase tracking-tighter mb-1">Structural Precision</h3>
+                  <p className="text-gray-400 text-xs font-medium">Clear optical dome that sits flush with your roof line.</p>
+                </div>
+              </div>
+            </motion.div>
+
+            <div className="space-y-10">
+              <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter leading-tight">Seamless <br /><span className="brand-gradient-text">Architecture</span></h2>
+              <p className="text-sm md:text-base text-gray-500 font-medium leading-relaxed max-w-xl">
+                Our Tiles model respect the bungalow aesthetic. No structural disturbance — just high-performance daylight.
+              </p>
+              <div className="space-y-6">
+                {[
+                  { title: "Zero Tile Disturbance", desc: "No cutting of main rafters or structural beams." },
+                  { title: "Weather Sealed", desc: "Custom matched bases ensure zero leaks even in heavy monsoon zones." },
+                  { title: "Universal Reach", desc: "Available in lengths up to 7 metres to reach any floor level." }
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-4">
+                    <div className="h-5 w-5 rounded-full bg-brand-orange-500/10 flex items-center justify-center shrink-0 mt-0.5">
+                      <div className="h-1.5 w-1.5 rounded-full bg-brand-orange-500" />
+                    </div>
+                    <div>
+                      <h4 className="text-white font-black uppercase text-xs mb-1">{item.title}</h4>
+                      <p className="text-gray-500 text-xs leading-relaxed font-medium">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Benefits Bar */}
+      <section className="py-20 bg-slate-950 border-y border-white/5">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-4xl font-black text-white uppercase tracking-tighter mb-2">Key <span className="brand-gradient-text">Benefits</span></h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {keyBenefits.slice(0, 4).map((benefit, i) => (
+              <div key={i} className="flex items-center gap-3 bg-white/[0.02] border border-white/5 p-6 rounded-2xl">
+                <CheckCircle2 className="h-4 w-4 text-brand-orange-500 shrink-0" />
+                <span className="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-widest">{benefit}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA - Compact & Optimized */}
+      <section className="py-12 relative px-6 lg:px-12 bg-slate-950 border-t border-white/5">
+        <div className="container mx-auto">
+          <motion.div
+            className="bg-brand-gradient py-10 px-6 rounded-[32px] text-center shadow-2xl shadow-brand-orange-500/10 relative overflow-hidden max-w-3xl mx-auto"
+            initial={{ opacity: 0, scale: 0.98 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.002 }}
+          >
+            <div className="absolute inset-0 bg-grid-white/[0.03] pointer-events-none opacity-50" />
+            <h2 className="text-xl md:text-3xl font-black text-white mb-4 tracking-tighter uppercase relative z-10 leading-none">Have a Tiled Roof?</h2>
+            <p className="text-[10px] md:text-xs text-white/80 max-w-lg mx-auto mb-8 leading-relaxed relative z-10 font-bold uppercase tracking-[0.2em]">
+              Share your roof type and the rooms you want to brighten — we&apos;ll recommend the exact units you need.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 relative z-10">
+              <Button asChild className="bg-white text-black hover:bg-slate-900 hover:text-white transition-all duration-300 rounded-xl px-10 py-3.5 text-xs font-black uppercase tracking-widest shadow-2xl">
+                <Link href="/contact">
+                  Free Assessment <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" className="border border-white/20 text-white hover:bg-white hover:text-black transition-all duration-300 rounded-xl px-10 py-3.5 text-xs font-black uppercase tracking-widest">
+                <a href="tel:+918792182631" className="flex items-center gap-2">
+                  <Phone className="h-4 w-4" /> Call Consultation
+                </a>
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </main>
+  )
 }

@@ -28,3 +28,14 @@ Continue building your app on:
 2. Deploy your chats from the v0 interface
 3. Changes are automatically pushed to this repository
 4. Vercel deploys the latest version from this repository
+
+## Technical Documentation
+
+Detailed documentation of the codebase structure, design system, and patterns can be found in the `docs/` directory:
+
+- [**Project Overview**](./docs/overview.md) - Tech stack and core philosophy.
+- [**Directory Structure**](./docs/directory_structure.md) - Breakdown of the technical architecture.
+- [**Routing & Pages**](./docs/routing_and_pages.md) - Index of all 24 routes.
+- [**Component Library**](./docs/component_library.md) - Key UI and layout components.
+- [**Design System**](./docs/design_system.md) - Visual rules and premium aesthetic guide.
+- [**Data Management**](./docs/data_management.md) - How to update product and project data.

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { ArrowRight, BarChart3, Globe2, ShieldCheck, Zap } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 import { projectCategories, featuredProjects } from "@/lib/data/projects"
 import ProjectCard from "@/components/projects/ProjectCard"
 import FeaturedProject from "@/components/projects/FeaturedProject"
@@ -114,8 +115,10 @@ export default function ProjectsPage() {
             <p className="text-xl text-white/80 max-w-3xl mx-auto mb-12 leading-relaxed relative z-10 font-bold uppercase tracking-widest text-xs opacity-80">
               Audit Your Asset • Verify ROI • Deploy Global Tech
             </p>
-            <Button size="lg" className="bg-white text-black hover:bg-black hover:text-white transition-all duration-300 rounded-2xl px-16 py-8 text-xl font-black relative z-10 shadow-2xl uppercase tracking-widest">
-              Consult an Engineer <ArrowRight className="ml-3 h-6 w-6" />
+            <Button asChild size="lg" className="bg-white text-black hover:bg-black hover:text-white transition-all duration-300 rounded-2xl px-16 py-8 text-xl font-black relative z-10 shadow-2xl uppercase tracking-widest">
+              <Link href="/contact">
+                Consult an Engineer <ArrowRight className="ml-3 h-6 w-6" />
+              </Link>
             </Button>
           </motion.div>
         </div>
