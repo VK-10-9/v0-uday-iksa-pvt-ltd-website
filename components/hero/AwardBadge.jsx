@@ -11,17 +11,17 @@ export default function AwardBadge() {
       transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
       whileHover={{ scale: 1.05, rotate: 2 }}
     >
-      <div className="inline-flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/20 rounded-full px-8 py-3.5 shadow-2xl group hover:border-brand-orange-500/40 hover:shadow-brand-orange-500/20 transition-all duration-500">
+      <div className="inline-flex items-center gap-3 bg-white/5 backdrop-blur-xl border border-white/20 rounded-full px-5 py-2 shadow-2xl group hover:border-brand-orange-500/40 hover:shadow-brand-orange-500/20 transition-all duration-500">
         <motion.div
           animate={{ scale: [1, 1.2, 1], rotate: [0, 5, -5, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         >
-          <Award className="h-6 w-6 text-brand-orange-500" />
+          <Award className="h-4 w-4 text-brand-orange-500" />
         </motion.div>
 
         <div className="flex flex-col items-start leading-none">
-          <span className="text-[10px] font-black text-brand-amber-400 uppercase tracking-[0.2em] mb-0.5">National Winner</span>
-          <span className="text-xs font-black text-white uppercase tracking-wider">
+          <span className="text-[7px] font-black text-brand-amber-400 uppercase tracking-[0.2em] mb-0.5">National Winner</span>
+          <span className="text-[8px] font-black text-white uppercase tracking-wider">
             CII INNOVERGE 2022
           </span>
         </div>

@@ -54,28 +54,25 @@ export default function InnovationsPage() {
                 transition={{ duration: 0.8 }}
               >
                 {/* Category Header - Side by Side Image/Text */}
-                <div className="grid lg:grid-cols-12 gap-10 items-center border-b border-white/10 pb-12">
-                  <div className="lg:col-span-7">
-                    <p className="text-brand-orange-500 font-black uppercase tracking-[0.3em] text-[10px] mb-4">{category.brand}</p>
-                    <h2 className="text-3xl md:text-5xl lg:text-5xl font-black text-white uppercase tracking-tighter leading-none mb-6">{category.name}</h2>
-                    <p className="text-base md:text-lg text-gray-400 font-medium leading-relaxed max-w-2xl">{category.description}</p>
+                  <div className="lg:col-span-12">
+                     <div className="grid lg:grid-cols-12 gap-10 items-center">
+                        <div className="lg:col-span-8">
+                          <p className="text-brand-orange-500 font-black uppercase tracking-[0.3em] text-[10px] mb-4">{category.brand}</p>
+                          <h2 className="text-3xl md:text-5xl lg:text-7xl font-black text-white uppercase tracking-tighter leading-none mb-6">{category.name}</h2>
+                          <p className="text-base md:text-lg text-gray-400 font-medium leading-relaxed max-w-2xl">{category.description}</p>
+                        </div>
+                        <div className="lg:col-span-4 hidden lg:block">
+                           <div className="relative aspect-square flex items-center justify-center border border-white/5 rounded-[40px] bg-white/[0.01] overflow-hidden group">
+                              <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] group-hover:opacity-[0.05] transition-opacity">
+                                 <p className="text-[120px] font-black uppercase tracking-tighter select-none -rotate-12">{category.brand}</p>
+                              </div>
+                              <div className="relative z-10 p-12">
+                                 <Zap className="h-24 w-24 text-brand-orange-500/10 group-hover:scale-110 transition-transform duration-700" />
+                              </div>
+                           </div>
+                        </div>
+                     </div>
                   </div>
-                  <div className="lg:col-span-5">
-                    <motion.div 
-                      className="relative aspect-[16/10] rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group"
-                      whileHover={{ scale: 1.02 }}
-                      transition={{ duration: 0.5 }}
-                    >
-                      <Image 
-                        src={category.image} 
-                        alt={category.name} 
-                        fill 
-                        className="object-cover transition-transform duration-1000 group-hover:scale-110" 
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent" />
-                    </motion.div>
-                  </div>
-                </div>
 
                 {/* Subcategories Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">

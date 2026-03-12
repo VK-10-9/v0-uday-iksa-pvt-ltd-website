@@ -86,10 +86,10 @@ export default function SkylightPage() {
             <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
               <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-5 py-1.5 mb-8 backdrop-blur-md">
                 <Sun className="h-3 w-3 text-brand-orange-400" />
-                <h2 className="text-[9px] font-black text-gray-400 uppercase tracking-widest leading-none">Openable Skylight (NANOSUN)</h2>
+                <h2 className="text-[9px] font-black text-gray-400 uppercase tracking-widest leading-none">Premium Openable Skylight (NANOSUN™)</h2>
               </div>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-8 tracking-tighter uppercase leading-[0.95]">
-                NANOSUN™ <br /> <span className="brand-gradient-text">Premium Skylight</span>
+                Luxury <br /> <span className="brand-gradient-text">Openable Skylight</span>
               </h1>
               <p className="text-base md:text-lg text-gray-400 mb-6 leading-relaxed max-w-xl font-medium">
                 Open Up Your Roof to Light, Air, and Sky — <span className="text-white font-bold">All in One.</span>
@@ -110,22 +110,22 @@ export default function SkylightPage() {
             </motion.div>
 
             <motion.div
-              className="relative h-[400px] md:h-[600px] rounded-[48px] overflow-hidden border border-white/10 shadow-3xl group"
+              className="relative aspect-square rounded-[48px] border border-white/10 bg-white/[0.02] shadow-3xl overflow-hidden group"
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1 }}
             >
               <Image
-                src="/images/products/skylight/hero-render.png"
-                alt="NANOSUN Premium Skylight System"
+                src="/images/products/skylight/Rectangular and square dome design 121.jpg"
+                alt="Premium Openable Skylight"
                 fill
-                className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-1000"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60" />
-              <div className="absolute bottom-8 left-8 right-8">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute bottom-12 left-12 right-12 z-10">
                 <div className="bg-white/5 backdrop-blur-2xl border border-white/10 p-8 rounded-[32px]">
-                  <p className="text-2xl font-black text-white uppercase tracking-tighter mb-1">Luxury Integration</p>
-                  <p className="text-gray-400 text-xs font-medium">Architectural brilliance that combines maximum daylight with natural airflow.</p>
+                   <p className="text-2xl font-black text-white uppercase tracking-tighter mb-1">Luxury Integration</p>
+                   <p className="text-gray-400 text-[11px] font-medium max-w-xs">Architectural brilliance that combines maximum daylight with natural airflow.</p>
                 </div>
               </div>
             </motion.div>
@@ -179,13 +179,14 @@ export default function SkylightPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <div className="relative h-[250px] border-b border-white/5">
+              <div className="relative h-[250px] border-b border-white/5 overflow-hidden">
                 <Image
-                  src="/images/products/nanosun-rcc/tech-1.jpg"
-                  alt="Circular Skylight Tech"
+                  src="/images/products/skylight/circular dia dome design for rcc B.1.jpg"
+                  alt="Circular Skylight"
                   fill
-                  className="object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                  className="object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent" />
               </div>
               <div className="p-8">
                 <h4 className="text-xl font-black text-white uppercase mb-3 tracking-tighter">Circular Skylight</h4>
@@ -201,13 +202,14 @@ export default function SkylightPage() {
               viewport={{ once: true }}
               transition={{ delay: 0.05 }}
             >
-              <div className="relative h-[250px] border-b border-white/5">
+              <div className="relative h-[250px] border-b border-white/5 overflow-hidden">
                 <Image
-                  src="/images/products/skylight/square-tech.jpg"
-                  alt="Square Skylight Tech"
+                  src="/images/products/skylight/squre domes_07.jpg"
+                  alt="Square Skylight"
                   fill
-                  className="object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                  className="object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent" />
               </div>
               <div className="p-8">
                 <h4 className="text-xl font-black text-white uppercase mb-3 tracking-tighter">Square Skylight</h4>
@@ -223,13 +225,14 @@ export default function SkylightPage() {
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
             >
-              <div className="relative h-[250px] border-b border-white/5">
+              <div className="relative h-[250px] border-b border-white/5 overflow-hidden">
                 <Image
-                  src="/images/products/skylight/rect-tech.jpg"
-                  alt="Rectangular Skylight Tech"
+                  src="/images/products/skylight/Rectangular and square dome design fg.jpg"
+                  alt="Rectangular Skylight"
                   fill
-                  className="object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                  className="object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent" />
               </div>
               <div className="p-8">
                 <h4 className="text-xl font-black text-white uppercase mb-3 tracking-tighter">Rectangular Skylight</h4>

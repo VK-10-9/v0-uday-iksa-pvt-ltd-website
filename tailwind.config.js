@@ -108,6 +108,21 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      fontSize: {
+        xs: ["0.55rem", { lineHeight: "1rem" }], 
+        sm: ["0.65rem", { lineHeight: "1.15rem" }],
+        base: ["0.75rem", { lineHeight: "1.4" }],
+        lg: ["0.85rem", { lineHeight: "1.5" }],
+        xl: ["0.95rem", { lineHeight: "1.75rem" }],
+        "2xl": ["1.1rem", { lineHeight: "2rem" }],
+        "3xl": ["1.35rem", { lineHeight: "2.25rem" }],
+        "4xl": ["1.6rem", { lineHeight: "1" }],
+        "5xl": ["2.1rem", { lineHeight: "1" }],
+        "6xl": ["2.6rem", { lineHeight: "1" }],
+        "7xl": ["3.15rem", { lineHeight: "1" }],
+        "8xl": ["4.2rem", { lineHeight: "1" }],
+        "9xl": ["5.6rem", { lineHeight: "1" }],
+      },
       backgroundImage: {
         "brand-gradient": "linear-gradient(135deg, #f47920 0%, #c41230 40%, #fbbf24 70%, #ffcc00 100%)",
         "brand-gradient-reverse":

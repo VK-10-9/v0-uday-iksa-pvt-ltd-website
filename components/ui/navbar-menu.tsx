@@ -25,13 +25,26 @@ export const MenuItem = ({
   children?: React.ReactNode
 }) => {
   return (
-    <div onMouseEnter={() => setActive(item)} className="relative h-full flex items-center">
-      <motion.p
-        transition={{ duration: 0.3 }}
-        className={`cursor-pointer text-gray-400 hover:text-brand-orange-400 text-xs font-black uppercase tracking-[0.2em] transition-all duration-300 ${active === item ? 'text-brand-orange-400 scale-105' : ''}`}
+    <div onMouseEnter={() => setActive(item)} className="relative h-full flex items-center group/menu">
+      <motion.div
+        className="flex items-center"
       >
-        {item}
-      </motion.p>
+        <span
+          className={`cursor-pointer text-gray-400 group-hover/menu:text-white text-xs font-black uppercase tracking-[0.2em] transition-all duration-300 relative py-2 ${
+            active === item ? 'text-white' : ''
+          }`}
+        >
+          {item}
+          {active === item && (
+             <motion.div 
+               layoutId="underline"
+               className="absolute bottom-0 left-0 right-0 h-0.5 bg-brand-orange-500 rounded-full"
+               transition={{ type: "spring", stiffness: 380, damping: 30 }}
+             />
+          )}
+        </span>
+      </motion.div>
+      
       {active !== null && (
         <motion.div
           initial={{ opacity: 0, scale: 0.95, y: 10 }}
@@ -39,14 +52,14 @@ export const MenuItem = ({
           transition={transition}
         >
           {active === item && (
-            <div className="absolute top-[calc(100%_+_1.5rem)] left-1/2 transform -translate-x-1/2 pt-4">
+            <div className="absolute top-[calc(100%_+_1rem)] left-1/2 transform -translate-x-1/2 pt-4">
               <motion.div
                 transition={transition}
-                layoutId="active"
-                className="bg-slate-900/95 backdrop-blur-2xl rounded-[40px] overflow-hidden border border-white/10 shadow-2xl relative"
+                layoutId="active-content"
+                className="bg-slate-900/90 backdrop-blur-3xl rounded-3xl overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative"
               >
-                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-orange-500/50 to-transparent" />
-                <motion.div layout className="w-max h-full p-2">
+                <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-brand-orange-500/50 to-transparent" />
+                <motion.div layout className="w-max h-full p-1.5">
                   {children}
                 </motion.div>
               </motion.div>
@@ -68,7 +81,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)}
-      className="relative flex justify-center gap-x-12 px-6 h-10 items-center"
+      className="relative flex justify-center gap-x-10 h-10 items-center"
     >
       {children}
     </nav>
@@ -87,19 +100,21 @@ export const ProductItem = ({
   src: string
 }) => {
   return (
-    <Link href={href} className="flex gap-6 group items-center">
-      <div className="relative w-40 h-28 rounded-2xl overflow-hidden border border-white/5 shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:border-brand-orange-500/50">
+    <Link href={href} className="flex gap-5 group items-center p-3 rounded-2xl hover:bg-white/5 transition-all">
+      <div className="relative w-32 h-20 rounded-xl overflow-hidden border border-white/5 shadow-xl transition-all duration-500 group-hover:scale-105 group-hover:border-brand-orange-500/30">
         <Image
           src={src || "/placeholder.svg"}
           fill
           alt={title}
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-tr from-brand-orange-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-brand-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
       </div>
-      <div className="max-w-[14rem]">
-        <h4 className="text-lg font-black text-white group-hover:text-brand-orange-500 transition-colors uppercase tracking-tighter leading-none mb-3">{title}</h4>
-        <p className="text-gray-500 text-xs font-medium leading-relaxed group-hover:text-gray-400 transition-colors">{description}</p>
+      <div className="max-w-[10rem]">
+        <h4 className="text-[8px] font-black text-white group-hover:text-brand-orange-400 transition-colors uppercase tracking-wider leading-none mb-2">{title}</h4>
+        <p className="text-gray-500 text-[7px] font-bold leading-relaxed group-hover:text-gray-400 transition-colors uppercase tracking-tighter">
+          {description}
+        </p>
       </div>
     </Link>
   )
@@ -109,7 +124,7 @@ export const HoveredLink = ({ children, ...rest }: any) => {
   return (
     <Link
       {...rest}
-      className="text-gray-400 hover:text-white transition-all duration-200 block py-1.5 font-bold uppercase text-[11px] tracking-widest"
+      className="text-gray-400 hover:text-white transition-all duration-300 block py-2 px-3 rounded-lg hover:bg-white/5 font-black uppercase text-[7px] tracking-[0.15em]"
     >
       {children}
     </Link>

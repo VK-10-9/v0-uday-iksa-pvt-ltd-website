@@ -21,9 +21,9 @@ export default function HeroSection() {
 
       {/* Main Content */}
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 lg:px-12 h-full flex items-center">
-        <div className="grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-16 items-center w-full">
+        <div className="grid lg:grid-cols-[1fr_1fr] gap-8 lg:gap-12 items-center w-full">
           {/* Left Side: Content */}
-          <div className="space-y-8 md:space-y-12">
+          <div className="space-y-6 md:space-y-8">
             <div className="flex justify-start">
               <AwardBadge />
             </div>

@@ -16,7 +16,7 @@ export default function AwardsPage() {
       category: "Green Innovation",
       description:
         "Recognized by CII Yi – Apollo Innovation for our groundbreaking technology in green solar lighting and natural ventilation systems that significantly reduce energy consumption in buildings.",
-      image: "/images/gallery/about/catalog-4.jpg",
+      image: "/images/web site images/catlog awards iim.jpg",
     },
     {
       name: "Sustainability Excellence Award",
@@ -25,7 +25,7 @@ export default function AwardsPage() {
       category: "Product Innovation",
       description:
         "Honored for our NANOSUN daylighting system's contribution to sustainable building practices and exceptional performance in reducing carbon footprint across commercial and industrial projects.",
-      image: "/images/installations/hindupur-industrial.jpg",
+      image: "/images/gallery/nanosun/PEB 1.jpeg",
     },
     {
       name: "Energy Conservation Award",
@@ -34,7 +34,7 @@ export default function AwardsPage() {
       category: "Building Technology",
       description:
         "Recognized for developing innovative natural lighting and ventilation solutions that have demonstrably reduced energy consumption in over 100 buildings across India.",
-      image: "/images/gallery/nanovent/install-1.jpg",
+      image: "/images/gallery/nanovent/RCC - Turbo Ventilator .png",
     },
     {
       name: "Innovation Leadership Award",
@@ -43,7 +43,7 @@ export default function AwardsPage() {
       category: "Sustainable Technology",
       description:
         "Awarded for pioneering research and development in sustainable building technologies that address India's unique climate challenges while promoting energy efficiency.",
-      image: "/images/gallery/nanosun/install-3.jpg",
+      image: "/images/gallery/nanosun/PEB 5.jpeg",
     },
   ]
 
@@ -128,11 +128,16 @@ export default function AwardsPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
               >
-                <div className={`relative h-[350px] md:h-[450px] rounded-[40px] overflow-hidden group border border-white/10 ${index % 2 !== 0 ? 'lg:order-2' : ''}`}>
+                <div className={`relative h-[350px] md:h-[450px] rounded-[48px] border border-white/10 bg-white/[0.02] flex items-center justify-center overflow-hidden group ${index % 2 !== 0 ? 'lg:order-2' : ''}`}>
                   <div className="absolute inset-0 bg-gradient-to-tr from-brand-orange-500/10 to-transparent z-10" />
-                  <Image src={award.image || "/placeholder.svg"} alt={award.name} fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
-                  <div className="absolute top-6 right-6 bg-brand-orange-500 text-white p-3 rounded-2xl z-20 shadow-xl">
-                    <Award className="h-6 w-6" />
+                  <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] group-hover:opacity-[0.05] transition-opacity">
+                    <p className="text-[120px] font-black uppercase tracking-tighter select-none -rotate-12">{award.year}</p>
+                  </div>
+                  <div className="relative z-20 text-center">
+                    <Award className="h-32 w-32 text-brand-orange-500/20 mb-8 mx-auto group-hover:scale-110 group-hover:rotate-12 transition-transform duration-700" />
+                    <div className="bg-brand-orange-500/10 px-6 py-2 rounded-full border border-brand-orange-500/20 inline-block font-black text-[10px] uppercase tracking-widest text-brand-orange-500">
+                      National Recognition
+                    </div>
                   </div>
                 </div>
 

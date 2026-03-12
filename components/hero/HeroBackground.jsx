@@ -19,12 +19,12 @@ export default function HeroBackground({ mousePosition }) {
       <motion.div
         className="absolute inset-0"
         style={{
-          background: `radial-gradient(circle 600px at ${mousePosition.x}px ${mousePosition.y}px, rgba(244, 121, 32, 0.15) 0%, transparent 50%)`,
+          background: `radial-gradient(circle 400px at ${mousePosition.x}px ${mousePosition.y}px, rgba(244, 121, 32, 0.08) 0%, transparent 50%)`,
         }}
       />
 
       {/* Floating Brand Particles */}
-      {isClient && [...Array(50)].map((_, i) => (
+      {isClient && [...Array(25)].map((_, i) => (
         <motion.div
           key={i}
           className="absolute w-1 h-1 rounded-full"

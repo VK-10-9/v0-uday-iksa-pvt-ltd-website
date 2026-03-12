@@ -25,7 +25,7 @@ export default function ProjectsSection() {
             className="inline-flex items-center gap-2 bg-brand-orange-500/10 border border-brand-orange-500/20 rounded-full px-6 py-2 mb-8"
           >
             <ShieldCheck className="h-4 w-4 text-brand-orange-400" />
-            <span className="text-[10px] font-black text-brand-orange-400 uppercase tracking-widest">Pan-India Footprint</span>
+            <span className="text-[7px] font-black text-brand-orange-400 uppercase tracking-widest">Pan-India Footprint</span>
           </motion.div>
 
           <h2 className="text-5xl lg:text-7xl font-black text-white uppercase tracking-tighter mb-6 leading-none">
@@ -82,7 +82,7 @@ export default function ProjectsSection() {
                           <MapPin className="h-5 w-5 text-brand-orange-500 flex-shrink-0" />
                           <h4 className="text-sm font-black text-white leading-tight uppercase tracking-tight">{project.name}</h4>
                         </div>
-                        <span className="inline-block px-3 py-1 bg-brand-orange-500/10 border border-brand-orange-500/20 rounded-full text-[10px] font-black text-brand-orange-400 uppercase tracking-widest leading-none">
+                        <span className="inline-block px-3 py-1 bg-brand-orange-500/10 border border-brand-orange-500/20 rounded-full text-[7px] font-black text-brand-orange-400 uppercase tracking-widest leading-none">
                           {project.type} Sector
                         </span>
                       </div>
@@ -95,11 +95,11 @@ export default function ProjectsSection() {
 
           {/* Overlay Info */}
           <div className="absolute bottom-12 right-12 text-right">
-            <p className="text-gray-500 text-[10px] font-black uppercase tracking-[0.3em] mb-1">Impact Radius</p>
+            <p className="text-gray-500 text-[7px] font-black uppercase tracking-[0.3em] mb-1">Impact Radius</p>
             <p className="text-white text-3xl font-black uppercase tracking-tighter">50+ CITIES</p>
           </div>
           <div className="absolute bottom-12 left-12">
-            <p className="text-gray-500 text-[10px] font-black uppercase tracking-[0.3em] mb-1">Installed Capacity</p>
+            <p className="text-gray-500 text-[7px] font-black uppercase tracking-[0.3em] mb-1">Installed Capacity</p>
             <p className="text-white text-3xl font-black uppercase tracking-tighter">285+ PROJECTS</p>
           </div>
         </div>

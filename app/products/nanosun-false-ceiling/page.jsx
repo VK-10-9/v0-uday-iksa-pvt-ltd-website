@@ -101,19 +101,17 @@ export default function NanosunFalseCeilingPage() {
                         </motion.div>
 
                         <motion.div
-                            className="relative h-[650px] rounded-[80px] overflow-hidden border border-white/10 shadow-3xl group"
+                            className="relative p-12 md:p-20 rounded-[80px] border border-white/10 bg-white/[0.02] shadow-3xl flex items-center justify-center overflow-hidden group"
                             initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 1 }}
                         >
-                            <Image
-                                src="/images/nanosun-rcc.png"
-                                alt="NANOSUN False Ceiling Daylight"
-                                fill
-                                className="object-cover transition-transform duration-1000 group-hover:scale-105"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60" />
-                            <div className="absolute bottom-12 left-12 right-12">
+                            <div className="absolute inset-0 bg-brand-orange-500/5 group-hover:bg-brand-orange-500/10 transition-colors" />
+                            <div className="absolute inset-0 flex items-center justify-center opacity-[0.02] group-hover:opacity-[0.04] transition-opacity">
+                                <p className="text-[180px] font-black uppercase tracking-tighter select-none -rotate-12">CEILING</p>
+                            </div>
+                            <div className="relative z-10 text-center">
+                                <Lightbulb className="h-32 w-32 text-brand-orange-400/20 mb-10 mx-auto group-hover:scale-110 transition-transform duration-700" />
                                 <div className="bg-white/5 backdrop-blur-3xl border border-white/10 p-10 rounded-[48px]">
                                     <p className="text-3xl font-black text-white uppercase tracking-tighter mb-2">Flush Ceiling Light</p>
                                     <p className="text-gray-400 text-sm font-medium">Looks like a premium LED panel — but it&apos;s actually pure sunlight.</p>
@@ -174,16 +172,14 @@ export default function NanosunFalseCeilingPage() {
             <section className="py-40 relative px-6 lg:px-12 bg-slate-900/30">
                 <div className="container mx-auto">
                     <div className="grid lg:grid-cols-2 gap-24 items-center">
-                        <div className="relative h-[500px] rounded-[60px] overflow-hidden border border-white/10 group shadow-2xl shadow-brand-orange-500/10">
-                            <Image
-                                src="/images/nanosun-rcc.png"
-                                alt="NANOSUN False Ceiling Interior View"
-                                fill
-                                className="object-cover transition-transform duration-1000 group-hover:scale-105"
-                            />
-                            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-slate-950 to-transparent p-12 flex flex-col justify-end">
-                                <p className="text-4xl font-black text-white uppercase tracking-tighter mb-4">From Inside</p>
-                                <p className="text-gray-400 font-medium">A clean, round frosted panel that glows with natural sunshine.</p>
+                        <div className="relative p-12 md:p-16 rounded-[60px] border border-white/10 bg-slate-900 shadow-2xl shadow-brand-orange-500/10 flex items-center justify-center group">
+                            <div className="absolute inset-0 bg-gradient-to-br from-brand-orange-500/10 via-transparent to-transparent opacity-50" />
+                            <div className="relative z-10 text-center">
+                                <CircleDot className="h-24 w-24 text-brand-orange-500/30 mb-8 mx-auto group-hover:scale-110 transition-transform duration-700" />
+                                <div className="bg-white/5 backdrop-blur-2xl border border-white/10 p-10 rounded-[40px]">
+                                    <p className="text-3xl font-black text-white uppercase tracking-tighter mb-4">From Inside</p>
+                                    <p className="text-gray-400 font-medium">A clean, round frosted panel that glows with natural sunshine.</p>
+                                </div>
                             </div>
                         </div>
 

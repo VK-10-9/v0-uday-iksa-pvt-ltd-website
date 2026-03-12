@@ -72,15 +72,15 @@ export default function ProductCard({ product, index, activeProduct, setActivePr
 
             <div className="flex-1">
               <h3 className="text-xl font-black text-white uppercase tracking-tighter mb-0.5">{product.name}</h3>
-              <p className="text-gray-500 text-[10px] font-black uppercase tracking-widest">{product.subtitle}</p>
+              <p className="text-gray-500 text-[7px] font-black uppercase tracking-widest">{product.subtitle}</p>
             </div>
 
             <div className="flex flex-col items-end gap-1.5 order-last">
-              <div className="flex items-center gap-1.5 text-[10px] font-black text-brand-orange-400 uppercase tracking-widest bg-brand-orange-500/10 px-2 py-0.5 rounded-md">
+              <div className="flex items-center gap-1.5 text-[7px] font-black text-brand-orange-400 uppercase tracking-widest bg-brand-orange-500/10 px-2 py-0.5 rounded-md">
                 <Activity className="h-3 w-3" />
                 {product.stats}
               </div>
-              <div className="flex items-center gap-1.5 text-[10px] font-black text-brand-amber-400 uppercase tracking-widest bg-brand-amber-500/10 px-2 py-0.5 rounded-md">
+              <div className="flex items-center gap-1.5 text-[7px] font-black text-brand-amber-400 uppercase tracking-widest bg-brand-amber-500/10 px-2 py-0.5 rounded-md">
                 <Zap className="h-3 w-3" />
                 {product.benefit}
               </div>

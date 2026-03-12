@@ -7,6 +7,8 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { HoverButton } from "@/components/ui/hover-button"
+import CredentialStrip from "@/components/product/CredentialStrip"
+import ProductTrustSection from "@/components/product/ProductTrustSection"
 
 export default function NanosunTilesPage() {
     const [activeSize, setActiveSize] = useState(0)
@@ -139,10 +141,10 @@ export default function NanosunTilesPage() {
             <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
               <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-5 py-1.5 mb-8 backdrop-blur-md">
                 <Sun className="h-3 w-3 text-brand-orange-400" />
-                <h2 className="text-[9px] font-black text-gray-400 uppercase tracking-widest leading-none">Tile Roof Daylight (NANOSUN)</h2>
+                <h2 className="text-[9px] font-black text-gray-400 uppercase tracking-widest leading-none">Natural Daylighting (NANOSUN™)</h2>
               </div>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-8 tracking-tighter uppercase leading-[0.95]">
-                NANOSUN™ <br /> <span className="brand-gradient-text">Tiles Daylight</span>
+                Skylight for <br /> <span className="brand-gradient-text">Tile Roofs (NANOSUN™)</span>
               </h1>
               <p className="text-base md:text-lg text-gray-400 mb-6 leading-relaxed max-w-xl font-medium">
                 Natural Light for Your Tiled Roof Home — <span className="text-white font-bold">Without Structural Changes.</span>
@@ -163,28 +165,35 @@ export default function NanosunTilesPage() {
             </motion.div>
 
             <motion.div
-              className="relative h-[400px] md:h-[600px] rounded-[48px] overflow-hidden border border-white/10 shadow-3xl group"
+              className="relative aspect-square rounded-[48px] border border-white/10 bg-white/[0.02] shadow-3xl overflow-hidden group"
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1 }}
             >
-              <Image
-                src="/images/products/nanosun-tiles/house-render.png"
-                alt="NANOSUN Tiles Daylight House Installation"
+              <Image 
+                src="/images/products/nanosun-tiles/ChatGPT Image Feb 19, 2026, 06_13_49 PM.png"
+                alt="NANOSUN Tiles Product — Tile Roof Installation"
                 fill
-                className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                className="object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-1000"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60" />
-              <div className="absolute bottom-8 left-8 right-8">
+              <div className="absolute inset-0 bg-brand-orange-500/5 group-hover:bg-brand-orange-500/10 transition-colors" />
+              <div className="absolute inset-0 flex items-center justify-center opacity-[0.02] group-hover:opacity-[0.04] transition-opacity -z-10">
+                <p className="text-[200px] font-black uppercase tracking-tighter select-none -rotate-12">TILES</p>
+              </div>
+              <div className="absolute bottom-12 left-12 right-12 z-10">
                 <div className="bg-white/5 backdrop-blur-2xl border border-white/10 p-8 rounded-[32px]">
-                  <p className="text-2xl font-black text-white uppercase tracking-tighter mb-1">Tile Roof Ready</p>
-                  <p className="text-gray-400 text-xs font-medium">Designed to blend into high-profile tiled roofs seamlessly.</p>
+                   <p className="text-2xl font-black text-white uppercase tracking-tighter mb-1">Tile Roof Ready</p>
+                   <p className="text-gray-400 text-xs font-medium">Designed to blend into high-profile tiled roofs seamlessly.</p>
                 </div>
               </div>
             </motion.div>
           </div>
         </div>
       </section>
+
+      <CredentialStrip />
+
+      <ProductTrustSection />
 
       {/* Applications Section - Optimized Density */}
       <section className="py-24 relative px-6 lg:px-12 bg-slate-900/30">
@@ -372,16 +381,11 @@ export default function NanosunTilesPage() {
               initial={{ opacity: 0, scale: 0.98 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="relative h-[450px] md:h-[600px] rounded-[48px] overflow-hidden border border-white/10 group shadow-2xl"
+              className="relative p-12 md:p-20 rounded-[48px] border border-white/10 bg-slate-900 shadow-2xl flex items-center justify-center group"
             >
-              <Image
-                src="/images/products/nanosun-tiles/structural-render.png"
-                alt="NANOSUN Tiles Structural Cross Section"
-                fill
-                className="object-cover transition-transform duration-1000 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60" />
-              <div className="absolute bottom-8 left-8 right-8">
+              <div className="absolute inset-0 bg-gradient-to-br from-brand-orange-500/10 via-transparent to-transparent opacity-50" />
+              <div className="relative z-10 text-center">
+                <Maximize2 className="h-24 w-24 text-brand-orange-500/20 mb-8 mx-auto" />
                 <div className="bg-white/5 backdrop-blur-2xl border border-white/10 p-8 rounded-[32px]">
                   <h3 className="text-2xl font-black text-white uppercase tracking-tighter mb-1">Structural Precision</h3>
                   <p className="text-gray-400 text-xs font-medium">Clear optical dome that sits flush with your roof line.</p>

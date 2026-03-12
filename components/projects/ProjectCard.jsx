@@ -33,7 +33,7 @@ export default function ProjectCard({ category, index }) {
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-110"
         />
-        <div className="absolute top-4 right-4 bg-brand-orange-500 text-white text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full z-20 shadow-lg shadow-brand-orange-500/30">
+        <div className="absolute top-4 right-4 bg-brand-orange-500 text-white text-[7px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full z-20 shadow-lg shadow-brand-orange-500/30">
           {category.count}+ Projects
         </div>
       </div>

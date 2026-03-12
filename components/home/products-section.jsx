@@ -44,7 +44,7 @@ export default function ProductsSection() {
                     >
                         <div className="inline-flex items-center gap-3 bg-brand-orange-500/10 border border-brand-orange-500/20 rounded-full px-6 py-2 mb-8">
                             <Shield className="h-3.5 w-3.5 text-brand-orange-500" />
-                            <span className="text-[9px] font-black text-brand-orange-500 uppercase tracking-[0.3em]">Proprietary Technology</span>
+                            <span className="text-[7px] font-black text-brand-orange-500 uppercase tracking-[0.3em]">Proprietary Technology</span>
                         </div>
 
                         <h2 className="text-5xl md:text-7xl lg:text-9xl font-black text-white uppercase tracking-tighter leading-[0.85] mb-8">
@@ -87,14 +87,18 @@ export default function ProductsSection() {
                             >
                                 {/* Image Layer with Parallax-ish feel */}
                                 <div className="absolute inset-0 z-0">
-                                    <Image
+                                    <Image 
                                         src={category.image}
                                         alt={category.name}
                                         fill
-                                        className="object-cover transition-transform duration-[2000ms] group-hover:scale-110 opacity-60 group-hover:opacity-100"
+                                        className="object-cover opacity-20 group-hover:opacity-40 group-hover:scale-110 transition-all duration-1000"
                                     />
+                                    <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] group-hover:opacity-[0.06] transition-opacity duration-1000 select-none">
+                                        <p className="text-[140px] font-black uppercase tracking-tighter leading-none -rotate-90 origin-center whitespace-nowrap">
+                                            {category.id.split('-').join(' ')}
+                                        </p>
+                                    </div>
                                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
-                                    <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors duration-700" />
                                 </div>
 
                                 {/* Vertical Brand Sidebar */}
@@ -109,7 +113,7 @@ export default function ProductsSection() {
                                                 <Icon className="h-6 w-6 text-brand-orange-500 group-hover:text-white" />
                                             </div>
                                             <div className="bg-white/10 backdrop-blur-md border border-white/10 px-4 py-1.5 rounded-full">
-                                                <span className="text-[10px] font-black text-white uppercase tracking-widest">{category.brand}</span>
+                                                <span className="text-[7px] font-black text-white uppercase tracking-widest">{category.brand}</span>
                                             </div>
                                         </div>
 
@@ -136,12 +140,12 @@ export default function ProductsSection() {
 
                                         <div className="flex gap-4 opacity-40 group-hover:opacity-100 transition-opacity duration-700">
                                             <div className="flex flex-col">
-                                                <span className="text-[8px] font-black text-gray-500 uppercase tracking-widest">Efficiency</span>
+                                                <span className="text-[6px] font-black text-gray-500 uppercase tracking-widest">Efficiency</span>
                                                 <span className="text-xs font-bold text-white">99.7%</span>
                                             </div>
                                             <div className="w-px h-6 bg-white/10" />
                                             <div className="flex flex-col">
-                                                <span className="text-[8px] font-black text-gray-500 uppercase tracking-widest">Warranty</span>
+                                                <span className="text-[6px] font-black text-gray-500 uppercase tracking-widest">Warranty</span>
                                                 <span className="text-xs font-bold text-white">10Y+</span>
                                             </div>
                                         </div>

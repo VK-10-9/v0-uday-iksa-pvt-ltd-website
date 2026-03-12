@@ -7,6 +7,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { HoverButton } from "@/components/ui/hover-button"
+import CredentialStrip from "@/components/product/CredentialStrip"
 
 export default function NanosunRccPage() {
     const [activeCategory, setActiveCategory] = useState("circular")
@@ -170,10 +171,10 @@ export default function NanosunRccPage() {
             <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
               <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-5 py-1.5 mb-8 backdrop-blur-md">
                 <Building className="h-3 w-3 text-brand-orange-500" />
-                <h2 className="text-[9px] font-black text-gray-400 uppercase tracking-widest leading-none">Concrete Solutions (NANOSUN RCC)</h2>
+                <h2 className="text-[9px] font-black text-gray-400 uppercase tracking-widest leading-none">Flat Roof Solutions (NANOSUN™)</h2>
               </div>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-8 tracking-tighter uppercase leading-[0.95]">
-                Natural Sunlight <br /> <span className="brand-gradient-text">Built Into Your Roof</span>
+                Skylight for <br /> <span className="brand-gradient-text">Concrete Roofs</span>
               </h1>
               <p className="text-base md:text-lg text-gray-400 mb-10 leading-relaxed max-w-xl font-medium">
                 Live in an apartment? Own an office? If your building has a flat concrete (RCC) roof, this was made for you. It fits cleanly into your slab — no leaks, no electricity.
@@ -192,28 +193,33 @@ export default function NanosunRccPage() {
             </motion.div>
 
             <motion.div
-              className="relative h-[400px] md:h-[600px] rounded-[48px] overflow-hidden border border-white/10 shadow-3xl group"
+              className="relative aspect-square rounded-[48px] border border-white/10 bg-white/[0.02] shadow-3xl overflow-hidden group"
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1 }}
             >
-              <Image
-                src="/images/installations/psu-1.png"
-                alt="NANOSUN RCC Real-World Basement Installation"
+              <Image 
+                src="/images/products/nanosun-rcc/circular dome design 300mm 1.1.jpg"
+                alt="NANOSUN RCC Product"
                 fill
-                className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                className="object-contain p-16 opacity-70 group-hover:opacity-90 group-hover:scale-110 transition-all duration-1000"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60" />
-              <div className="absolute bottom-8 left-8 right-8">
+              <div className="absolute inset-0 bg-brand-orange-500/5 group-hover:bg-brand-orange-500/10 transition-colors" />
+              <div className="absolute inset-0 flex items-center justify-center opacity-[0.02] group-hover:opacity-[0.04] transition-opacity -z-10">
+                <p className="text-[200px] font-black uppercase tracking-tighter select-none -rotate-12">RCC</p>
+              </div>
+              <div className="absolute bottom-12 left-12 right-12 z-10">
                 <div className="bg-white/5 backdrop-blur-2xl border border-white/10 p-8 rounded-[32px]">
-                  <p className="text-2xl font-black text-white uppercase tracking-tighter mb-1">Flush Integration</p>
-                  <p className="text-gray-400 text-xs font-medium">Clean, compact, and structurally bonded for concrete architecture.</p>
+                   <p className="text-2xl font-black text-white uppercase tracking-tighter mb-1">Flush Integration</p>
+                   <p className="text-gray-400 text-xs font-medium">Clean, compact, and structurally bonded for concrete architecture.</p>
                 </div>
               </div>
             </motion.div>
           </div>
         </div>
       </section>
+
+      <CredentialStrip />
 
       {/* Comparison Section - Optimized Density */}
       <section className="py-24 relative px-6 lg:px-12 bg-slate-900/30">
@@ -268,20 +274,21 @@ export default function NanosunRccPage() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-white/[0.02] border border-white/5 rounded-[48px] overflow-hidden group shadow-2xl"
+              className="bg-white/[0.02] border border-white/5 rounded-[48px] overflow-hidden group shadow-2xl relative"
             >
-              <div className="relative h-[300px] md:h-[400px]">
+              <div className="relative h-56 w-full overflow-hidden">
                 <Image
-                  src="/images/products/nanosun-rcc/tech-1.jpg"
-                  alt="RCC Fixed and Openable Models"
+                  src="/images/gallery/skylights/Screenshot 2025-12-23 110217.png"
+                  alt="Manual Control RCC Skylight"
                   fill
-                  className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                  className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
               </div>
-              <div className="p-8">
+              <div className="p-10 relative z-10 text-center">
                 <h3 className="text-xl md:text-2xl font-black text-white uppercase tracking-tighter mb-4">Manual Control Models</h3>
-                <p className="text-gray-500 text-xs md:text-sm leading-relaxed mb-6 font-medium">Choose between Fixed RCC models for permanent daylighting or Openable models for integrated maintenance access.</p>
-                <div className="flex flex-wrap gap-2.5">
+                <p className="text-gray-500 text-xs md:text-sm leading-relaxed mb-8 font-medium italic">"Fixed or Openable — built for concrete slabs."</p>
+                <div className="flex flex-wrap justify-center gap-2.5">
                   <span className="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-[9px] font-black text-gray-500 uppercase tracking-widest">Fixed</span>
                   <span className="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-[9px] font-black text-gray-500 uppercase tracking-widest">Openable</span>
                   <span className="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-[9px] font-black text-gray-500 uppercase tracking-widest">Optional Mesh</span>
@@ -293,20 +300,21 @@ export default function NanosunRccPage() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-white/[0.02] border border-white/5 rounded-[48px] overflow-hidden group shadow-2xl"
+              className="bg-white/[0.02] border border-white/5 rounded-[48px] overflow-hidden group shadow-2xl relative"
             >
-              <div className="relative h-[300px] md:h-[400px]">
+              <div className="relative h-56 w-full overflow-hidden">
                 <Image
-                  src="/images/products/nanosun-rcc/tech-2.jpg"
-                  alt="RCC Electrical and Remote Models"
+                  src="/images/gallery/skylights/For RCC Model.png"
+                  alt="Electrical Skylight System"
                   fill
-                  className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                  className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
               </div>
-              <div className="p-8">
+              <div className="p-10 relative z-10 text-center">
                 <h3 className="text-xl md:text-2xl font-black text-white uppercase tracking-tighter mb-4">Electrical Systems</h3>
-                <p className="text-gray-500 text-xs md:text-sm leading-relaxed mb-6 font-medium">Premium motorized systems that allow you to open or close the unit via remote control, perfect for high-bay concrete architecture.</p>
-                <div className="flex flex-wrap gap-2.5">
+                <p className="text-gray-500 text-xs md:text-sm leading-relaxed mb-8 font-medium italic">"Smart Remote. Motorized. Auto-Seal."</p>
+                <div className="flex flex-wrap justify-center gap-2.5">
                   <span className="bg-brand-orange-500/10 border border-brand-orange-500/20 px-4 py-1.5 rounded-full text-[9px] font-black text-brand-orange-500 uppercase tracking-widest">Smart Remote</span>
                   <span className="bg-brand-orange-500/10 border border-brand-orange-500/20 px-4 py-1.5 rounded-full text-[9px] font-black text-brand-orange-500 uppercase tracking-widest">Motorized</span>
                   <span className="bg-brand-orange-500/10 border border-brand-orange-500/20 px-4 py-1.5 rounded-full text-[9px] font-black text-brand-orange-500 uppercase tracking-widest">Auto-Seal</span>

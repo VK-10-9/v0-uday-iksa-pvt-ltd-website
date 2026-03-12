@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Menu } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import Image from "next/image"
-import { motion, useScroll, useSpring } from "framer-motion"
+import { motion, useScroll, useSpring, AnimatePresence } from "framer-motion"
 import DesktopNav from "@/components/navbar/desktop-nav"
 import MobileMenu from "@/components/navbar/mobile-menu"
 
@@ -32,80 +32,79 @@ export default function Navbar() {
   return (
     <>
       <motion.header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? "py-4 backdrop-blur-2xl bg-slate-950/80 border-b border-white/5 shadow-2xl" : "py-8 bg-transparent"
-          }`}
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
+          isScrolled 
+            ? "py-3 bg-slate-950/80 backdrop-blur-2xl border-b border-white/5 shadow-[0_8px_32px_rgba(0,0,0,0.4)]" 
+            : "py-6 bg-transparent"
+        }`}
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
       >
-        <div className="container mx-auto px-6 lg:px-12">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between">
-            {/* Enhanced Logo */}
-            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-              <Link href="/" className="flex items-center z-60 relative group">
-                <div className="relative h-24 w-24 mr-6 flex-shrink-0">
-                  <motion.div
-                    className="absolute inset-0 rounded-full bg-brand-orange-500/30 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"
-                    animate={{ scale: [1, 1.3, 1] }}
-                    transition={{ duration: 4, repeat: Infinity }}
+            {/* Logo Section */}
+            <div className="flex-shrink-0">
+              <Link href="/" className="flex items-center relative group">
+                <div className="relative h-12 w-12 md:h-14 md:w-14 transition-all duration-500 group-hover:scale-105">
+                  <Image
+                    src="/images/logo.png"
+                    alt="Uday IKSA Logo"
+                    fill
+                    priority
+                    className="object-contain scale-[1.6]"
                   />
-                  <div className="relative h-full w-full flex items-center justify-center transition-all">
-                    <Image
-                      src="/images/logo.png"
-                      alt="Uday IKSA Logo"
-                      width={140}
-                      height={140}
-                      priority
-                      className="w-full h-full object-contain scale-[1.8] transform transition-transform duration-500 group-hover:scale-[1.9]"
-                    />
-                  </div>
                 </div>
-                <div className="flex flex-col">
-                  <span className="text-[12px] text-gray-400 font-black uppercase tracking-[0.5em] mt-1 group-hover:text-white transition-colors">Sustainability Engineering</span>
+                <div className="ml-4 flex flex-col">
+                  <span className="text-lg md:text-xl font-black text-white uppercase tracking-tighter leading-none">
+                    UDAY <span className="brand-gradient-text">IKSA</span>
+                  </span>
+                  <span className="text-[6px] md:text-[7px] font-bold text-gray-500 uppercase tracking-[0.3em] mt-1">
+                    Sustainability Engineering
+                  </span>
                 </div>
               </Link>
-            </motion.div>
+            </div>
 
-            {/* Desktop Navigation */}
-            <div className="hidden lg:block bg-white/5 border border-white/10 rounded-full px-8 py-2.5 backdrop-blur-md">
+            {/* Main Navigation - Integrated into the bar, no separate pill */}
+            <div className="hidden lg:flex items-center">
               <DesktopNav active={active} setActive={setActive} />
             </div>
 
-            {/* Action Buttons */}
-            <div className="hidden lg:flex items-center space-x-6">
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Link
-                  href="/contact"
-                  className="px-10 py-3.5 bg-white text-black hover:bg-brand-orange-500 hover:text-white rounded-2xl font-black uppercase tracking-widest text-xs transition-all duration-300 shadow-xl shadow-white/5 inline-block"
+            {/* CTA Section */}
+            <div className="hidden lg:flex items-center gap-6">
+              <Link href="/contact">
+                <motion.button
+                  whileHover={{ scale: 1.02, y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="relative group overflow-hidden bg-white text-black px-8 py-3 rounded-xl font-black text-[8px] uppercase tracking-widest transition-all duration-500 hover:text-white"
                 >
-                  Consult Now
-                </Link>
-              </motion.div>
+                  <div className="absolute inset-0 bg-brand-orange-500 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
+                  <span className="relative z-10">Consult Now</span>
+                </motion.button>
+              </Link>
             </div>
 
-            {/* Mobile Menu Button */}
-            <motion.button
-              className="lg:hidden text-white z-60 relative w-12 h-12 flex items-center justify-center rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md"
-              onClick={() => setIsMobileMenuOpen(true)}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <Menu className="h-6 w-6" />
-            </motion.button>
+            {/* Mobile Actions */}
+            <div className="lg:hidden flex items-center gap-4">
+               <motion.button
+                className="text-white w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10"
+                onClick={() => setIsMobileMenuOpen(true)}
+                whileTap={{ scale: 0.9 }}
+              >
+                <Menu className="h-5 w-5" />
+              </motion.button>
+            </div>
           </div>
         </div>
 
-        {/* High-End Scroll Progress Bar */}
+        {/* Improved Scroll Progress */}
         <motion.div
-          className="absolute bottom-0 left-0 right-0 h-[2px] bg-brand-orange-500 origin-left z-50"
+          className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-brand-orange-500 via-brand-amber-500 to-brand-orange-500 origin-left z-50 opacity-50"
           style={{ scaleX }}
         />
       </motion.header>
 
-      {/* Mobile Menu */}
       <MobileMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
     </>
   )

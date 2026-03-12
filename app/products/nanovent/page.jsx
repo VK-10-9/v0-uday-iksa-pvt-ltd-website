@@ -2,12 +2,13 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { ArrowRight, Wind, ShieldCheck, Zap, Waves, CheckCircle2, ThermometerSun, Gauge, Droplets, FlaskConical, Building2, Factory, Layout, Maximize, Box, Settings, Layers, AppWindow, Ruler } from "lucide-react"
+import { ArrowRight, Wind, ShieldCheck, Zap, Waves, CheckCircle2, ThermometerSun, Gauge, Droplets, FlaskConical, Building2, Factory, Layout, Maximize, Box, Settings, Layers, AppWindow, Ruler, Home } from "lucide-react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { HoverButton } from "@/components/ui/hover-button"
 import CredentialStrip from "@/components/product/CredentialStrip"
+import ProductTrustSection from "@/components/product/ProductTrustSection"
 import { useSearchParams } from "next/navigation"
 import { Suspense } from "react"
 
@@ -79,10 +80,10 @@ function NanoventContent() {
             >
               <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-5 py-1.5 mb-8 backdrop-blur-md">
                 <Wind className="h-3 w-3 text-brand-orange-400" />
-                <h2 className="text-[9px] font-black text-gray-400 uppercase tracking-widest leading-none">NANOVENT® Passive Engineering</h2>
+                <h2 className="text-[9px] font-black text-gray-400 uppercase tracking-widest leading-none">Natural Ventilation (NANOVENT®)</h2>
               </div>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 tracking-tighter uppercase leading-[0.95]">
-                Grade <br /> <span className="brand-gradient-text">{grades[activeGrade].name}</span>
+                Natural Roof <br /> <span className="brand-gradient-text">Ventilator (NANOVENT®)</span>
               </h1>
               <p className="text-sm md:text-base text-brand-orange-500 font-bold uppercase tracking-widest mb-8 leading-none">
                 {grades[activeGrade].tagline}
@@ -125,23 +126,26 @@ function NanoventContent() {
 
               <motion.div
                 key={`img-${activeGrade}`}
-                className="relative h-[400px] md:h-[600px] rounded-[48px] overflow-hidden border border-white/10 shadow-3xl group"
+                className="relative aspect-square rounded-[48px] border border-white/10 bg-white/[0.02] shadow-3xl overflow-hidden group"
                 initial={{ opacity: 0, scale: 0.98 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8 }}
               >
-                <Image
-                  src="/images/products/nanovent/aerial-view.png"
-                  alt="Nanovent Factory View"
+                <Image 
+                  src="/images/gallery/nanovent/RCC - Turbo Ventilator .png"
+                  alt="NANOVENT Product"
                   fill
-                  className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                  className="object-contain p-20 opacity-40 group-hover:opacity-60 group-hover:scale-110 transition-all duration-1000"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60" />
-                <div className="absolute bottom-8 left-8 right-8">
-                  <div className="bg-white/5 backdrop-blur-2xl border border-white/10 p-8 rounded-[32px] flex items-center justify-between">
+                <div className={`absolute inset-0 bg-gradient-to-br ${activeGrade === 'ss430' ? 'from-brand-orange-500/10' : activeGrade === 'ss202' ? 'from-blue-500/10' : 'from-green-500/10'} to-slate-950/80 transition-colors duration-500`} />
+                <div className="absolute inset-0 flex items-center justify-center opacity-[0.02] group-hover:opacity-[0.04] transition-opacity -z-10">
+                  <p className="text-[200px] font-black uppercase tracking-tighter select-none -rotate-12">{grades[activeGrade].name}</p>
+                </div>
+                <div className="absolute bottom-12 left-12 right-12 z-10">
+                  <div className="bg-white/5 backdrop-blur-2xl border border-white/10 p-8 rounded-[32px] flex items-center justify-between gap-6">
                     <div>
-                      <p className="text-2xl font-black text-white uppercase tracking-tighter mb-1">Aerial View</p>
-                      <p className="text-gray-400 text-xs font-medium">Massive Industrial Implementation</p>
+                      <p className="text-2xl font-black text-white uppercase tracking-tighter mb-1">Passive Flow</p>
+                      <p className="text-gray-400 text-xs font-medium">Mechanical Engineering Perfection</p>
                     </div>
                     <div className="bg-brand-orange-500/10 p-3 rounded-2xl border border-brand-orange-500/20">
                       <Maximize className="h-5 w-5 text-brand-orange-500" />
@@ -194,15 +198,15 @@ function NanoventContent() {
               </div>
             </div>
 
-            <div className="lg:w-1/2 relative h-[500px] md:h-[700px] w-full bg-slate-900/30 rounded-[64px] border border-white/5 shadow-3xl flex items-center justify-center overflow-hidden">
-              <Image
-                src="/images/products/nanovent/anatomy.png"
-                alt="Nanovent Exploded View"
-                width={600}
-                height={600}
-                className="object-contain drop-shadow-[0_0_40px_rgba(249,115,22,0.2)]"
-              />
-              <div className="absolute top-1/4 right-12 bg-slate-800/80 backdrop-blur-md shadow-2xl p-6 rounded-[32px] border border-white/10 max-w-[180px] z-20">
+            <div className="lg:w-1/2 relative aspect-square w-full rounded-[64px] border border-white/5 shadow-3xl overflow-hidden group">
+               <Image
+                 src="/images/gallery/nanovent/WhatsApp Image 2025-12-13 at 10.44.17 AM.jpeg"
+                 alt="NANOVENT Turbo Ventilator Installation"
+                 fill
+                 className="object-cover opacity-50 group-hover:opacity-80 group-hover:scale-105 transition-all duration-1000"
+               />
+               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
+               <div className="absolute top-1/4 right-12 bg-slate-800/80 backdrop-blur-md shadow-2xl p-6 rounded-[32px] border border-white/10 max-w-[180px] z-20">
                 <p className="text-[8px] font-black uppercase text-brand-orange-500 mb-1 tracking-widest">Key Tech</p>
                 <p className="text-xs font-black leading-tight text-white">Zero-Friction Dual Bearing Hub</p>
               </div>
@@ -255,15 +259,20 @@ function NanoventContent() {
 
           <div className="grid grid-cols-2 lg:grid-cols-5 gap-4">
             {[
-              { name: "Sheds & Factories", img: "/images/products/nanovent/app-factory.jpg" },
-              { name: "Basements", img: "/images/products/nanovent/app-basement.png" },
-              { name: "Hotels & Canteens", img: "/images/products/nanovent/hero-render.png" },
-              { name: "Warehouses", img: "/images/products/nanovent/aerial-view.png" },
-              { name: "Residential", img: "/images/products/nanovent/product-shot.jpg" }
+              { name: "Sheds & Factories", src: "/images/gallery/nanovent/WhatsApp Image 2025-12-13 at 10.44.15 AM.jpeg" },
+              { name: "Production Units", src: "/images/gallery/nanovent/WhatsApp Image 2025-12-13 at 10.44.25 AM.jpeg" },
+              { name: "Hotels & Canteens", src: "/images/gallery/nanovent/WhatsApp Image 2025-12-13 at 10.44.17 AM.jpeg" },
+              { name: "Warehouses", src: "/images/gallery/nanovent/WhatsApp Image 2025-12-13 at 10.44.26 AM.jpeg" },
+              { name: "Industrial Roofs", src: "/images/gallery/nanovent/RCC - Turbo Ventilator .png" }
             ].map((app, i) => (
               <div key={i} className="relative h-48 rounded-3xl overflow-hidden border border-white/5 group shadow-2xl">
-                <Image src={app.img} alt={app.name} fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
+                <Image
+                  src={app.src}
+                  alt={app.name}
+                  fill
+                  className="object-cover opacity-50 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                 <div className="absolute bottom-5 left-5">
                   <span className="text-[9px] font-black uppercase tracking-widest text-white/90">{app.name}</span>
                 </div>
@@ -348,6 +357,8 @@ function NanoventContent() {
           </div>
         </div>
       </section>
+
+      <ProductTrustSection />
 
       {/* Final CTA - Optimized */}
       <section className="py-24 relative px-6 lg:px-12 bg-slate-950 border-t border-white/5">

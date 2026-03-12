@@ -56,7 +56,7 @@ export default function InnovationsSection() {
             transition={{ type: "spring", stiffness: 200 }}
           >
             <Sparkles className="h-4 w-4 text-brand-orange-400" />
-            <span className="text-[10px] font-black text-brand-orange-400 uppercase tracking-[0.2em]">Engineering Excellence</span>
+            <span className="text-[7px] font-black text-brand-orange-400 uppercase tracking-[0.2em]">Engineering Excellence</span>
           </motion.div>
 
           <h2 className="text-3xl md:text-5xl lg:text-7xl font-black mb-8 text-white uppercase tracking-tighter leading-none">
@@ -100,7 +100,7 @@ export default function InnovationsSection() {
                   {/* Category Badge */}
                   <div className="absolute top-10 right-10 flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full">
                     <IconComponent className="h-4 w-4 text-brand-orange-400" />
-                    <span className="text-[10px] font-black text-white uppercase tracking-widest">{product.subtitle}</span>
+                    <span className="text-[7px] font-black text-white uppercase tracking-widest">{product.subtitle}</span>
                   </div>
 
                   <div className="space-y-6">
@@ -126,7 +126,7 @@ export default function InnovationsSection() {
                                 <div className="p-1 rounded-md bg-brand-orange-500/20 text-brand-orange-500 group-hover/feat:bg-brand-orange-500 group-hover/feat:text-white transition-colors">
                                   <ShieldCheck className="h-3 w-3" />
                                 </div>
-                                <span className="text-[10px] text-gray-200 uppercase font-black tracking-widest leading-none">{feature.title}</span>
+                                <span className="text-[7px] text-gray-200 uppercase font-black tracking-widest leading-none">{feature.title}</span>
                               </div>
                             ))}
                           </div>

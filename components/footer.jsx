@@ -34,7 +34,7 @@ export default function Footer() {
               </div>
               <div className="space-y-1">
                 <p className="text-3xl font-black text-white uppercase tracking-tighter leading-none group-hover:text-brand-orange-400 transition-colors">UDAY <span className="brand-gradient-text">IKSA</span></p>
-                <p className="text-[9px] font-black text-gray-500 uppercase tracking-[0.4em]">Sustainability Engineering</p>
+                <p className="text-[7px] font-black text-gray-500 uppercase tracking-[0.4em]">Sustainability Engineering</p>
               </div>
             </Link>
 
@@ -48,7 +48,7 @@ export default function Footer() {
                   <MapPin className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="text-gray-400 text-[10px] font-black uppercase tracking-widest mb-1.5">Headquarters</p>
+                  <p className="text-gray-400 text-[7px] font-black uppercase tracking-widest mb-1.5">Headquarters</p>
                   <p className="text-gray-500 text-xs group-hover/item:text-white transition-colors leading-relaxed font-medium">#147, 4th Phase, Akshay Colony, Vidyanagar, Hubballi – 580021</p>
                 </div>
               </div>
@@ -58,7 +58,7 @@ export default function Footer() {
                   <MapPin className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="text-gray-400 text-[10px] font-black uppercase tracking-widest mb-1.5">Factory</p>
+                  <p className="text-gray-400 text-[7px] font-black uppercase tracking-widest mb-1.5">Factory</p>
                   <p className="text-gray-500 text-xs group-hover/item:text-white transition-colors leading-relaxed font-medium">C-391, Gokul Industrial Estate, 2nd Gate Gokul Road, Hubballi – 580030</p>
                 </div>
               </div>
@@ -66,12 +66,12 @@ export default function Footer() {
               <div className="flex flex-wrap gap-4 pt-4">
                 <a href="tel:+918792182631" className="flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 hover:bg-brand-orange-500 hover:border-brand-orange-500 transition-all group">
                   <Phone className="h-4 w-4 text-brand-orange-500 group-hover:text-white" />
-                  <span className="text-gray-400 text-[11px] group-hover:text-white transition-colors font-bold tracking-tight">+91 87921 82631</span>
+                  <span className="text-gray-400 text-[8px] group-hover:text-white transition-colors font-bold tracking-tight">+91 87921 82631</span>
                 </a>
 
                 <a href="mailto:info@udayiksa.com" className="flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 hover:bg-brand-orange-500 hover:border-brand-orange-500 transition-all group">
                   <Mail className="h-4 w-4 text-brand-orange-500 group-hover:text-white" />
-                  <span className="text-gray-400 text-[11px] group-hover:text-white transition-colors font-bold uppercase tracking-wider">info@udayiksa.com</span>
+                  <span className="text-gray-400 text-[8px] group-hover:text-white transition-colors font-bold uppercase tracking-wider">info@udayiksa.com</span>
                 </a>
               </div>
             </div>
@@ -79,7 +79,7 @@ export default function Footer() {
 
           {/* Navigation Columns */}
           <div className="lg:pl-8">
-            <h3 className="text-[10px] font-black text-white mb-10 uppercase tracking-[0.4em] pl-4 border-l-2 border-brand-orange-500">Corporate</h3>
+            <h3 className="text-[7px] font-black text-white mb-10 uppercase tracking-[0.4em] pl-4 border-l-2 border-brand-orange-500">Corporate</h3>
             <ul className="space-y-5">
               {[
                 { name: 'Home', href: '/' },
@@ -102,7 +102,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-[10px] font-black text-white mb-10 uppercase tracking-[0.4em] pl-4 border-l-2 border-brand-orange-500">Core Systems</h3>
+            <h3 className="text-[7px] font-black text-white mb-10 uppercase tracking-[0.4em] pl-4 border-l-2 border-brand-orange-500">Core Systems</h3>
             <ul className="space-y-5">
               {[
                 { name: 'NATURAL SKYLIGHT', href: '/products/nanosun' },
@@ -131,13 +131,13 @@ export default function Footer() {
                 </div>
                 <div className="h-1/3 bg-[#138808]"></div>
               </div>
-              <span className="text-[10px] font-black text-white uppercase tracking-widest">Proudly Made in India</span>
+              <span className="text-[7px] font-black text-white uppercase tracking-widest">Proudly Made in India</span>
             </div>
           </div>
 
           {/* Social */}
           <div className="lg:pl-8">
-            <h3 className="text-[10px] font-black text-white mb-10 uppercase tracking-[0.4em] pl-4 border-l-2 border-brand-orange-500">Digital Network</h3>
+            <h3 className="text-[7px] font-black text-white mb-10 uppercase tracking-[0.4em] pl-4 border-l-2 border-brand-orange-500">Digital Network</h3>
             <div className="grid grid-cols-2 gap-4">
               {[
                 { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com/company/uday-iksa-private-limited' },
@@ -163,7 +163,7 @@ export default function Footer() {
         <div className="mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center gap-4">
             <Sparkles className="h-4 w-4 text-brand-orange-500" />
-            <p className="text-gray-600 text-[9px] font-black uppercase tracking-[0.4em]">
+            <p className="text-gray-600 text-[7px] font-black uppercase tracking-[0.4em]">
               &copy; {currentYear} Uday IKSA Pvt Ltd • Built for Impact
             </p>
           </div>
@@ -177,7 +177,7 @@ export default function Footer() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-[10px] text-gray-600 hover:text-brand-orange-400 transition-colors uppercase font-black tracking-widest"
+                className="text-[7px] text-gray-600 hover:text-brand-orange-400 transition-colors uppercase font-black tracking-widest"
               >
                 {link.name}
               </Link>

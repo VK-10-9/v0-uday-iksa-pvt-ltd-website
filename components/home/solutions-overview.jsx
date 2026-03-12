@@ -29,51 +29,41 @@ export default function SolutionsOverview() {
                     {/* Left Side: Modern Image Grid */}
                     <div className="relative order-2 lg:order-1">
                         <div className="grid grid-cols-12 gap-4 items-start">
-                            <motion.div
-                                className="col-span-12 md:col-span-7 aspect-square relative rounded-[40px] overflow-hidden border border-white/10 shadow-2xl"
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                            >
-                                <Image
-                                    src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80"
-                                    alt="Industrial Interior"
-                                    fill
-                                    className="object-cover"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent" />
-                            </motion.div>
-
-                            <motion.div
-                                className="col-span-12 md:col-span-5 aspect-[3/4] relative rounded-[40px] overflow-hidden border-2 border-brand-orange-500/30 z-20 shadow-2xl md:-translate-x-8 md:translate-y-8"
-                                initial={{ opacity: 0, y: 40 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.2 }}
-                            >
-                                <Image
-                                    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80"
-                                    alt="Modern Home Skylight"
-                                    fill
-                                    className="object-cover"
-                                />
-                            </motion.div>
-
-                            <motion.div
-                                className="col-span-12 aspect-[16/7] relative rounded-[40px] overflow-hidden border border-white/10 mt-2 shadow-2xl"
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.4 }}
-                            >
-                                <Image
-                                    src="https://images.unsplash.com/photo-1503387762-592dee58c460?auto=format&fit=crop&q=80"
-                                    alt="Modern Construction"
-                                    fill
-                                    className="object-cover"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-r from-slate-950/40 to-transparent" />
-                            </motion.div>
+                             <motion.div
+                                 className="col-span-12 md:col-span-7 aspect-square relative rounded-[40px] overflow-hidden border border-white/10 shadow-2xl bg-white/[0.03] flex items-center justify-center group"
+                                 initial={{ opacity: 0, x: -20 }}
+                                 whileInView={{ opacity: 1, x: 0 }}
+                                 viewport={{ once: true }}
+                             >
+                                 <div className="absolute inset-0 bg-gradient-to-br from-brand-orange-500/10 to-transparent opacity-50" />
+                                 <Building2 className="h-24 w-24 text-brand-orange-500/20 group-hover:scale-110 transition-transform duration-700" />
+                                 <div className="absolute inset-0 flex items-center justify-center opacity-[0.02]">
+                                     <p className="text-[140px] font-black uppercase tracking-tighter select-none rotate-90">INDUSTRIAL</p>
+                                 </div>
+                             </motion.div>
+ 
+                             <motion.div
+                                 className="col-span-12 md:col-span-5 aspect-[3/4] relative rounded-[40px] overflow-hidden border-2 border-brand-orange-500/30 z-20 shadow-2xl md:-translate-x-8 md:translate-y-8 bg-slate-900 flex items-center justify-center group"
+                                 initial={{ opacity: 0, y: 40 }}
+                                 whileInView={{ opacity: 1, y: 0 }}
+                                 viewport={{ once: true }}
+                                 transition={{ delay: 0.2 }}
+                             >
+                                 <Home className="h-16 w-16 text-brand-orange-500/30 group-hover:rotate-12 transition-transform duration-700" />
+                                 <div className="absolute inset-0 bg-gradient-to-t from-brand-orange-500/10 via-transparent to-transparent opacity-40" />
+                             </motion.div>
+ 
+                             <motion.div
+                                 className="col-span-12 aspect-[16/7] relative rounded-[40px] overflow-hidden border border-white/10 mt-2 shadow-2xl bg-white/[0.02] flex items-center justify-center group"
+                                 initial={{ opacity: 0, y: 20 }}
+                                 whileInView={{ opacity: 1, y: 0 }}
+                                 viewport={{ once: true }}
+                                 transition={{ delay: 0.4 }}
+                             >
+                                 <div className="text-center">
+                                     <p className="text-3xl md:text-5xl font-black text-white/10 uppercase tracking-[0.5em] group-hover:tracking-[0.6em] transition-all duration-1000">PRECISION</p>
+                                 </div>
+                             </motion.div>
                         </div>
 
                         {/* Floating Experience Badge */}
@@ -84,7 +74,7 @@ export default function SolutionsOverview() {
                             viewport={{ once: true }}
                         >
                             <p className="text-brand-orange-500 font-black text-4xl md:text-5xl mb-1 tracking-tighter">{solutionsData.experienceBadge.number}</p>
-                            <p className="text-[10px] font-black text-white uppercase tracking-widest leading-none opacity-60">{solutionsData.experienceBadge.label}</p>
+                            <p className="text-[7px] font-black text-white uppercase tracking-widest leading-none opacity-60">{solutionsData.experienceBadge.label}</p>
                         </motion.div>
                     </div>
 
@@ -101,7 +91,7 @@ export default function SolutionsOverview() {
                                     <Home className="h-4 w-4 text-brand-orange-500" />
                                     <Building2 className="h-4 w-4 text-brand-orange-500 bg-slate-950 rounded-full" />
                                 </div>
-                                <span className="text-[10px] font-black text-brand-orange-400 uppercase tracking-[0.4em]">{solutionsData.badge.text}</span>
+                                <span className="text-[7px] font-black text-brand-orange-400 uppercase tracking-[0.4em]">{solutionsData.badge.text}</span>
                             </motion.div>
 
                             <h2 className="text-2xl md:text-4xl lg:text-5xl font-black text-white uppercase tracking-tighter leading-[0.9]">
@@ -123,7 +113,7 @@ export default function SolutionsOverview() {
                         >
                             <div className="absolute top-0 right-0 w-64 h-64 bg-brand-orange-500/5 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2" />
 
-                            <h4 className="text-white font-black uppercase tracking-[0.3em] text-[10px] mb-10 opacity-60">
+                            <h4 className="text-white font-black uppercase tracking-[0.3em] text-[7px] mb-10 opacity-60">
                                 {solutionsData.howItWorks.title}
                             </h4>
 
@@ -136,7 +126,7 @@ export default function SolutionsOverview() {
                                             </div>
                                             <h5 className="text-white font-black uppercase text-sm tracking-widest">{step.title}</h5>
                                         </div>
-                                        <p className="text-[11px] text-gray-500 leading-relaxed font-medium">
+                                        <p className="text-[8px] text-gray-500 leading-relaxed font-medium">
                                             {step.description}
                                         </p>
                                     </div>
@@ -160,7 +150,7 @@ export default function SolutionsOverview() {
                                     </div>
                                     <div>
                                         <h4 className="text-white font-black uppercase tracking-widest text-xs mb-1.5 group-hover:text-brand-orange-400 transition-colors uppercase">{feature.title}</h4>
-                                        <p className="text-gray-500 text-[11px] leading-relaxed font-medium">{feature.description}</p>
+                                        <p className="text-gray-500 text-[8px] leading-relaxed font-medium">{feature.description}</p>
                                     </div>
                                 </motion.div>
                             ))}

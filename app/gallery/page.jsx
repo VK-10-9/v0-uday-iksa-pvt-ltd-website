@@ -9,129 +9,73 @@ import Link from "next/link"
 const installations = [
     {
         title: "Industrial Daylighting",
-        location: "Berger Paints, Hindupur",
-        image: "/images/installations/hindupur-industrial.jpg",
+        location: "Berger Paints, Gujarat",
+        image: "/images/gallery/nanosun/Gujarat Berger Paints India Ltd.6.jpeg",
         category: "Industrial",
         desc: "Large scale NANOSUN installation providing 100% natural light."
     },
     {
         title: "Warehouse Light Solutions",
-        location: "Logistics Center, Bangalore",
-        image: "/images/installations/skytube-warehouse.png",
+        location: "Berger Paints, Assam",
+        image: "/images/installations/Assam Berger paints India Ltd3.jpeg",
         category: "Skytube",
         desc: "Tubular daylighting in deep warehouse interiors."
     },
     {
         title: "Educational Complex",
-        location: "PSU Institutional Building",
-        image: "/images/installations/institutional-1.jpg",
+        location: "Institutional Hub, Karnataka",
+        image: "/images/gallery/about/WhatsApp Image 2026-02-14 at 12.37.16 PM.jpeg",
         category: "Institutional",
         desc: "Fresh air and natural light for student well-being."
     },
     {
         title: "Manufacturing Plant",
         location: "Industrial Hangar, Hubballi",
-        image: "/images/gallery/nanosun/install-1.jpg",
+        image: "/images/gallery/nanosun/IMG-20250912-WA0011.jpg",
         category: "NANOSUN",
         desc: "Clean, consistent daylight for precision manufacturing."
     },
     {
         title: "Turbo Ventilation",
-        location: "Steel Fabrication Unit",
-        image: "/images/gallery/nanovent/install-1.jpg",
+        location: "RCC Roof Installation",
+        image: "/images/gallery/nanovent/RCC - Turbo Ventilator .png",
         category: "NANOVENT",
         desc: "Heat extraction systems working without electricity."
     },
     {
         title: "Internal Basement Lighting",
-        location: "Public Sector Unit",
-        image: "/images/gallery/nanosun/basement.png",
+        location: "Industrial Unit",
+        image: "/images/web site images/RCC SLAB DOME DISGN AFTER COMPLETION OF CONCRETE WORK 1.jpg",
         category: "Specialized",
         desc: "Bringing light to windowless basement zones."
     },
     {
         title: "Natural Air Intake",
-        location: "Modern Factory, Chennai",
-        image: "/images/gallery/nanovent/product-1.jpg",
+        location: "Modern Factory, Hubballi",
+        image: "/images/gallery/nanovent/WhatsApp Image 2025-12-13 at 10.44.15 AM.jpeg",
         category: "NANOVENT",
         desc: "High-extraction aerodynamic turbine ventilation."
     },
     {
         title: "RCC Roof Skylight",
-        location: "Corporate Office, Pune",
-        image: "/images/gallery/skylights/rect-1.jpg",
+        location: "Corporate Office Hub",
+        image: "/images/web site images/RCC SLAB DOME DISGN AFTER COMPLETION OF CONCRETE WORK 2.jpg",
         category: "Skylights",
         desc: "Architectural integration on flat concrete slabs for premium commercial spaces."
     },
     {
         title: "Circular Daylighting",
         location: "Textile Mill, Gujarat",
-        image: "/images/gallery/nanosun/install-3.jpg",
+        image: "/images/gallery/nanosun/IMG-20250912-WA0013.jpg",
         category: "NANOSUN",
         desc: "Multiple NANOSUN units illuminating a large-scale manufacturing floor."
     },
     {
         title: "Precision Engineering",
         location: "Workshop Floor",
-        image: "/images/gallery/nanosun/install-2.jpg",
+        image: "/images/gallery/nanosun/IMG-20250904-WA0008.jpg",
         category: "NANOSUN",
         desc: "Glare-free natural light optimized for technician focus and safety."
-    },
-    {
-        title: "Square Skylight Dome",
-        location: "Residential Complex",
-        image: "/images/gallery/skylights/square-1.jpg",
-        category: "Skylights",
-        desc: "Secure, weather-proof square dome systems for flat roofs."
-    },
-    {
-        title: "Large Factory Lighting",
-        location: "Automobile Plant, Pune",
-        image: "/images/gallery/nanosun/factory-high.jpg",
-        category: "NANOSUN",
-        desc: "High-bay installation providing uniform daylight across massive shop floors."
-    },
-    {
-        title: "Industrial Roof View",
-        location: "Manufacturing Hub, Manesar",
-        image: "/images/gallery/nanosun/industrial-top.jpg",
-        category: "NANOSUN",
-        desc: "Bird's eye view of NANOSUN units integrated into a metal PEB roof."
-    },
-    {
-        title: "Standard Warehouse Rows",
-        location: "FMCG Logistics, Chennai",
-        image: "/images/gallery/nanosun/warehouse-row.jpg",
-        category: "NANOSUN",
-        desc: "Systematic placement of daylighting units for optimal aisle illumination."
-    },
-    {
-        title: "Campus Daylighting",
-        location: "Educational Institution, Mysore",
-        image: "/images/gallery/about/institutional-campus.jpg",
-        category: "Institutional",
-        desc: "Natural lighting for common areas and campus buildings."
-    },
-    {
-        title: "Pure Glow Corridors",
-        location: "Healthcare Facility, Kochi",
-        image: "/images/gallery/about/institutional-corridor.jpg",
-        category: "Institutional",
-        desc: "Eliminating dark corridors with soft, healthy natural light pipes."
-    },
-    {
-        title: "Multi-Vent System",
-        location: "Processing Unit, Gujarat",
-        image: "/images/gallery/nanovent/multi-install.jpg",
-        category: "NANOVENT",
-        desc: "Array of passive ventilators ensuring high-volume air exchange."
-    },
-    {
-        title: "Internal Light Delivery",
-        location: "Office Workshop",
-        image: "/images/gallery/skytube/internal-glow.jpg",
-        category: "Skytube",
-        desc: "Showcasing the soft, glare-free output of Skytube in windowless rooms."
     }
 ]
 
@@ -165,7 +109,7 @@ export default function GalleryPage() {
             {/* Gallery Grid */}
             <section className="py-24 relative px-6 lg:px-12">
                 <div className="container mx-auto">
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                         {installations.map((item, index) => (
                             <motion.div
                                 key={index}
@@ -175,40 +119,35 @@ export default function GalleryPage() {
                                 transition={{ delay: index % 3 * 0.1 }}
                                 className="group relative"
                             >
-                                <div className="aspect-[4/5] rounded-[48px] overflow-hidden border border-white/5 bg-white/5 relative">
+                                <div className="aspect-[4/3] rounded-[32px] overflow-hidden relative border border-white/5 shadow-xl">
+                                    {/* Real Photo */}
                                     <Image
                                         src={item.image}
                                         alt={item.title}
                                         fill
-                                        className="object-cover transition-transform duration-1000 group-hover:scale-110"
+                                        className="object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+                                    {/* Gradient overlay */}
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
+                                    {/* Hover overlay */}
+                                    <div className="absolute inset-0 bg-brand-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                                    {/* Location Badge */}
-                                    <div className="absolute top-8 left-8">
-                                        <div className="bg-black/40 backdrop-blur-md border border-white/10 px-4 py-2 rounded-2xl flex items-center gap-2">
-                                            <MapPin className="h-3 w-3 text-brand-orange-500" />
-                                            <span className="text-[10px] text-white font-bold uppercase tracking-widest">{item.location}</span>
+                                    {/* Top badge */}
+                                    <div className="absolute top-5 left-5 z-20">
+                                        <div className="bg-black/40 backdrop-blur-md border border-white/10 px-4 py-2 rounded-xl flex items-center gap-2 group-hover:bg-brand-orange-500 group-hover:border-brand-orange-500 transition-all duration-500">
+                                            <MapPin className="h-3.5 w-3.5 text-brand-orange-500 group-hover:text-white" />
+                                            <span className="text-[9px] text-white font-black uppercase tracking-widest">{item.location}</span>
                                         </div>
                                     </div>
 
-                                    {/* Action Hover */}
-                                    <div className="absolute top-8 right-8">
-                                        <motion.div
-                                            whileHover={{ scale: 1.1, rotate: 90 }}
-                                            className="bg-brand-orange-500 p-4 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-2xl shadow-brand-orange-500/50"
-                                        >
-                                            <Maximize2 className="h-5 w-5 text-white" />
-                                        </motion.div>
-                                    </div>
-
-                                    <div className="absolute bottom-10 left-10 right-10">
-                                        <div className="flex items-center gap-3 mb-4">
-                                            <div className="h-px w-8 bg-brand-orange-500"></div>
-                                            <span className="text-brand-orange-500 text-[10px] font-black uppercase tracking-widest">{item.category}</span>
+                                    {/* Bottom content */}
+                                    <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
+                                        <div className="flex items-center gap-2 mb-2">
+                                            <div className="h-px w-8 bg-brand-orange-500" />
+                                            <span className="text-brand-orange-400 text-[9px] font-black uppercase tracking-widest">{item.category}</span>
                                         </div>
-                                        <h3 className="text-2xl font-black text-white uppercase tracking-tighter mb-3 leading-none group-hover:text-brand-orange-400 transition-colors">{item.title}</h3>
-                                        <p className="text-gray-400 text-xs font-medium leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 line-clamp-2">
+                                        <h3 className="text-xl font-black text-white uppercase tracking-tighter mb-1 group-hover:text-brand-orange-400 transition-colors">{item.title}</h3>
+                                        <p className="text-gray-400 text-xs font-medium leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 max-h-0 group-hover:max-h-12 overflow-hidden">
                                             {item.desc}
                                         </p>
                                     </div>
@@ -218,6 +157,7 @@ export default function GalleryPage() {
                     </div>
                 </div>
             </section>
+
 
             {/* Impact Stats */}
             <section className="py-24 bg-white/5 border-y border-white/5">

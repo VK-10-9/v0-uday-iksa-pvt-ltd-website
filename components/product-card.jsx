@@ -47,14 +47,14 @@ export default function ProductCard({ product }) {
         <p className="text-gray-400 text-sm leading-relaxed mb-8 flex-grow font-medium">{product.description}</p>
 
         <div className="mb-10 space-y-4">
-          <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest pl-1">Key Performance Indices</p>
+          <p className="text-[7px] font-black text-gray-500 uppercase tracking-widest pl-1">Key Performance Indices</p>
           <div className="grid gap-3">
             {product.features.slice(0, 3).map((feature, index) => (
               <div key={index} className="flex items-center gap-3">
                 <div className="p-1 rounded-md bg-brand-orange-500/10 text-brand-orange-500">
                   <Check className="h-3 w-3" />
                 </div>
-                <span className="text-[10px] text-gray-200 uppercase font-black tracking-widest leading-none">{feature}</span>
+                <span className="text-[7px] text-gray-200 uppercase font-black tracking-widest leading-none">{feature}</span>
               </div>
             ))}
           </div>

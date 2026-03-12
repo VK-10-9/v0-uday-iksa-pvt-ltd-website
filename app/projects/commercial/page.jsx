@@ -106,23 +106,21 @@ export default function CommercialProjectsPage() {
             </motion.div>
 
             <motion.div
-              className="relative h-[650px] rounded-[80px] overflow-hidden border border-white/10 shadow-2xl group"
+              className="relative p-12 md:p-20 rounded-[80px] border border-white/10 bg-white/[0.02] shadow-2xl flex items-center justify-center overflow-hidden group"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <Image
-                src="/images/commercial-overview.jpg"
-                alt="Commercial Portfolio"
-                fill
-                className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
-              />
-              <div className="absolute inset-0 bg-brand-orange-500/10 opacity-40 mix-blend-overlay" />
-              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-slate-950 to-transparent p-12 flex items-end">
-                <div className="bg-white/10 backdrop-blur-2xl border border-white/20 p-8 rounded-[40px] w-full">
-                  <p className="text-xs font-black text-white uppercase tracking-[0.4em] mb-3">Certification Magnet</p>
-                  <p className="text-gray-300 text-sm font-medium">Enabling LEED, IGBC, and WELL Platinum ratings through advanced daylighting physics.</p>
+              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-slate-950/40 to-transparent z-10" />
+              <div className="absolute inset-0 flex items-center justify-center opacity-[0.02] group-hover:opacity-[0.05] transition-opacity">
+                <p className="text-[220px] font-black uppercase tracking-tighter select-none -rotate-12">ASSET</p>
+              </div>
+              <div className="relative z-20 text-center">
+                <Building2 className="h-32 w-32 text-brand-orange-500/20 mb-10 mx-auto group-hover:scale-110 transition-transform duration-700" />
+                <div className="bg-white/10 backdrop-blur-2xl border border-white/20 p-8 rounded-[40px] w-full max-w-md">
+                   <p className="text-xs font-black text-white uppercase tracking-[0.4em] mb-3">Certification Magnet</p>
+                   <p className="text-gray-300 text-sm font-medium">Enabling LEED, IGBC, and WELL Platinum ratings through advanced daylighting physics.</p>
                 </div>
               </div>
             </motion.div>
@@ -148,15 +146,14 @@ export default function CommercialProjectsPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
               >
-                <div className={`relative h-[600px] rounded-[72px] overflow-hidden group shadow-2xl ${index % 2 !== 0 ? 'lg:order-2' : ''}`}>
-                  <Image
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.name}
-                    fill
-                    className="object-cover transition-transform duration-1000 group-hover:scale-110"
-                  />
-                  <div className="absolute top-10 left-10 z-20">
-                    <div className="bg-slate-950/80 backdrop-blur-md px-6 py-2 rounded-full border border-white/10">
+                <div className={`relative h-[600px] rounded-[72px] border border-white/5 bg-white/[0.02] flex items-center justify-center overflow-hidden group shadow-2xl ${index % 2 !== 0 ? 'lg:order-2' : ''}`}>
+                  <div className="absolute inset-0 bg-gradient-to-tr from-brand-orange-500/10 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute inset-0 flex items-center justify-center opacity-[0.02] group-hover:opacity-[0.05] transition-opacity overflow-hidden">
+                    <p className="text-[200px] font-black uppercase tracking-tighter select-none rotate-90 leading-none">{project.year}</p>
+                  </div>
+                  <div className="relative z-20 text-center">
+                    <Building className="h-40 w-40 text-brand-orange-500/10 mb-8 mx-auto group-hover:scale-110 group-hover:rotate-12 transition-transform duration-700" />
+                    <div className="bg-slate-950/80 backdrop-blur-md px-8 py-3 rounded-full border border-white/10 inline-block">
                       <span className="text-[10px] font-black text-white uppercase tracking-widest">{project.year}</span>
                     </div>
                   </div>

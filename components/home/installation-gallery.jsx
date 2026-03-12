@@ -10,37 +10,37 @@ const installations = [
     {
         title: "Industrial Daylighting",
         location: "Hindupur Berger Paints",
-        image: "/images/installations/hindupur-industrial.jpg",
+        image: "/images/gallery/nanosun/Gujarat Berger Paints India Ltd.6.jpeg",
         category: "Industrial"
     },
     {
         title: "Warehouse Optimization",
-        location: "Logistics Hub",
-        image: "/images/gallery/skytube/warehouse-1.png",
+        location: "Siemens Factory, Pune",
+        image: "/images/gallery/skytube/standing seam roof sheeting 1.png",
         category: "Skytube"
     },
     {
         title: "RCC Roof Integration",
         location: "Institutional Building",
-        image: "/images/gallery/skylights/rect-1.jpg",
+        image: "/images/products/nanosun-rcc/circular dome design 300mm 1.1.jpg",
         category: "Skylights"
     },
     {
         title: "Factory Illumination",
         location: "Automobile Manufacturing",
-        image: "/images/gallery/nanosun/factory-high.jpg",
+        image: "/images/gallery/nanosun/Hindupur Berger Paints India Ltd 20.jpeg",
         category: "NANOSUN"
     },
     {
         title: "Ventilation System",
         location: "Industrial Hangar",
-        image: "/images/gallery/nanovent/install-1.jpg",
+        image: "/images/gallery/nanovent/RCC - Turbo Ventilator .png",
         category: "NANOVENT"
     },
     {
-        title: "Healthcare Daylighting",
-        location: "Kochi Medical Facility",
-        image: "/images/gallery/about/institutional-corridor.jpg",
+        title: "Skylight Installation",
+        location: "Multi-Storey Complex",
+        image: "/images/gallery/nanosun/IMG-20250912-WA0011.jpg",
         category: "Specialized"
     }
 ]
@@ -97,13 +97,17 @@ export default function InstallationGallery() {
                             transition={{ delay: index * 0.1 }}
                             className="group relative aspect-[4/5] rounded-[40px] overflow-hidden border border-white/5"
                         >
-                            <Image
+                            <Image 
                                 src={item.image}
                                 alt={item.title}
                                 fill
-                                className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                className="object-cover opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80" />
+                            
+                            <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] group-hover:opacity-[0.05] transition-opacity">
+                                <p className="text-[120px] font-black uppercase tracking-tighter leading-none select-none -rotate-12">{item.category}</p>
+                            </div>
 
                             <div className="absolute top-6 right-6">
                                 <div className="bg-white/10 backdrop-blur-md border border-white/20 p-3 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">

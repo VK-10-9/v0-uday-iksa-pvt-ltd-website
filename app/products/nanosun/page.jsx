@@ -8,6 +8,7 @@ import Link from "next/link"
 import { HoverButton } from "@/components/ui/hover-button"
 import { useState } from "react"
 import CredentialStrip from "@/components/product/CredentialStrip"
+import ProductTrustSection from "@/components/product/ProductTrustSection"
 
 export default function NanosunPage() {
   const [activeSize, setActiveSize] = useState("PEB 530mm")
@@ -163,10 +164,10 @@ export default function NanosunPage() {
             <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
               <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 mb-8 backdrop-blur-md">
                 <Sun className="h-3 w-3 text-brand-orange-400" />
-                <h2 className="text-[9px] font-black text-gray-400 uppercase tracking-[0.3em]">Natural Sky Light (NANOSUN)</h2>
+                <h2 className="text-[9px] font-black text-gray-400 uppercase tracking-[0.3em]">Natural Daylighting (NANOSUN™)</h2>
               </div>
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-6 uppercase tracking-tighter leading-[0.9]">
-                NANOSUN™ PEB <br /> <span className="brand-gradient-text">Circular Daylight</span>
+                Skylight for Metal <br /> <span className="brand-gradient-text">Roofs (NANOSUN™)</span>
               </h1>
               <p className="text-sm md:text-base text-gray-400 mb-10 leading-relaxed max-w-xl font-medium">
                 Natural Sunlight for Your Factory or Warehouse — All Day, <span className="text-white font-bold">No Electricity</span>. Designed specifically for metal roofs to bring pure, comfortable light without the heat gain.
@@ -184,22 +185,25 @@ export default function NanosunPage() {
             </motion.div>
 
             <motion.div
-              className="relative h-[350px] md:h-[550px] rounded-[48px] overflow-hidden border border-white/10 shadow-3xl group"
+              className="relative aspect-square rounded-[48px] border border-white/10 bg-white/[0.02] shadow-3xl overflow-hidden group"
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1 }}
             >
-              <Image
-                src="/images/gallery/nanosun/industrial-top.jpg"
-                alt="NANOSUN PEB Real-World Industrial Installation"
+              <Image 
+                src="/images/products/nanosun/PEB MODEL.png"
+                alt="NANOSUN Product"
                 fill
-                className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                className="object-contain p-20 opacity-40 group-hover:opacity-60 group-hover:scale-110 transition-all duration-1000"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
-              <div className="absolute bottom-8 left-8 right-8">
-                <div className="bg-white/5 backdrop-blur-2xl border border-white/10 p-6 rounded-[32px]">
-                  <p className="text-xl md:text-2xl font-black text-white uppercase tracking-tighter mb-1">Zero Power</p>
-                  <p className="text-gray-400 text-[11px] font-medium max-w-xs">Engineered to light up massive industrial floorplates using pure sunlight.</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
+              <div className="absolute inset-0 flex items-center justify-center opacity-[0.02] group-hover:opacity-[0.04] transition-opacity -z-10">
+                <p className="text-[200px] font-black uppercase tracking-tighter select-none -rotate-12">NANOSUN</p>
+              </div>
+              <div className="absolute bottom-12 left-12 right-12 z-10">
+                <div className="bg-white/5 backdrop-blur-2xl border border-white/10 p-8 rounded-[32px]">
+                   <p className="text-xl md:text-2xl font-black text-white uppercase tracking-tighter mb-1">Zero Power</p>
+                   <p className="text-gray-400 text-[11px] font-medium max-w-xs">Engineered to light up massive industrial floorplates using pure sunlight.</p>
                 </div>
               </div>
             </motion.div>
@@ -345,16 +349,16 @@ export default function NanosunPage() {
               initial={{ opacity: 0, scale: 0.98 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="relative h-[450px] md:h-[600px] rounded-[48px] overflow-hidden border border-white/10 group shadow-2xl"
+              className="relative aspect-square rounded-[48px] border border-white/10 bg-white/[0.02] shadow-3xl overflow-hidden group"
             >
               <Image
-                src="/images/gallery/nanosun/factory-high.jpg"
-                alt="NANOSUN Industrial Lighting at Scale"
+                src="/images/gallery/nanosun/Gujarat Berger Paints India Ltd.6.jpeg"
+                alt="NANOSUN Installation — Berger Paints Gujarat"
                 fill
-                className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                className="object-cover opacity-50 group-hover:opacity-80 group-hover:scale-105 transition-all duration-1000"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
-              <div className="absolute bottom-10 left-10 right-10">
+              <div className="absolute bottom-10 left-10 right-10 z-10">
                 <div className="bg-white/5 backdrop-blur-2xl border border-white/10 p-8 rounded-[32px]">
                   <p className="text-2xl font-black text-white uppercase tracking-tighter mb-1">Structural Precision</p>
                   <p className="text-gray-500 text-xs font-medium">Engineered to fit standard PEB metal profiles with zero structural compromise.</p>
@@ -381,6 +385,8 @@ export default function NanosunPage() {
           </div>
         </div>
       </section>
+
+      <ProductTrustSection />
 
       {/* Bottom CTA Section - Compact & Optimized */}
       <section className="py-12 relative px-6 lg:px-12 bg-slate-950 border-t border-white/5">

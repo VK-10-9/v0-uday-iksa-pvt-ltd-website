@@ -1,195 +1,195 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Sun, Award, Users, Building2, Target, Eye, Heart, Sparkles, ArrowRight } from "lucide-react"
+import { Sun, Award, Users, Building2, Target, Eye, Heart, Sparkles, ArrowRight, ShieldCheck, Zap, Globe, CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
 
 export default function AboutSection() {
   const stats = [
-    { icon: Building2, number: "500+", label: "Projects Delivered", color: "text-brand-orange-500" },
-    { icon: Users, number: "15+", label: "Years in Business", color: "text-brand-amber-500" },
-    { icon: Award, number: "10+", label: "Industry Awards", color: "text-brand-yellow-500" },
+    { number: "500+", label: "Product Installations", sub: "National Footprint" },
+    { number: "15+", label: "Years of Expertise", sub: "Since 2009" },
+    { number: "10+", label: "Industry Awards", sub: "Innovation Leaders" },
   ]
 
   const values = [
     {
       title: "Carbon Reductions",
-      description:
-        "Reduces Carbon Footprint by significantly cutting down artificial lighting usage in industrial and commercial spaces.",
+      description: "Reduces Carbon Footprint by significantly cutting down artificial lighting usage in industrial spaces.",
       icon: Sun,
-      gradient: "from-brand-orange-500 to-brand-red-600",
     },
     {
       title: "Human Wellness",
-      description:
-        "Supports human health by maintaining natural circadian rhythms, improving mood and sleep patterns for building occupants.",
+      description: "Supports human health by maintaining natural circadian rhythms and improving workplace mood.",
       icon: Heart,
-      gradient: "from-brand-amber-500 to-brand-orange-500",
     },
     {
-      title: "Workplace Efficiency",
-      description:
-        "Better comfort, focus and productivity inside workplaces through glare-free, high-quality natural full-spectrum light.",
+      title: "Efficiency",
+      description: "Better focus and productivity through glare-free, high-quality natural full-spectrum light.",
       icon: Target,
-      gradient: "from-brand-red-500 to-brand-orange-600",
     },
   ]
 
   return (
-    <section id="about" className="py-8 md:py-10 relative bg-slate-950 px-6 lg:px-12 overflow-hidden">
-      {/* Dynamic Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-orange-500/5 rounded-full blur-[140px]" />
-        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-red-500/5 rounded-full blur-[100px]" />
+    <section id="about" className="py-24 relative bg-slate-950 px-6 lg:px-12 overflow-hidden border-t border-white/5">
+      {/* Structural Backdrop */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-brand-orange-500/20 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-brand-orange-500/20 to-transparent" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-orange-500/5 rounded-full blur-[120px]" />
       </div>
 
       <div className="container mx-auto relative z-10">
-        <div className="grid lg:grid-cols-2 gap-24 items-center mb-12 md:mb-16">
+        <div className="grid lg:grid-cols-2 gap-20 lg:gap-32 items-center mb-32">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-3 bg-white/5 border border-white/10 rounded-full px-8 py-2.5 mb-8 backdrop-blur-md">
-              <Sparkles className="h-4 w-4 text-brand-orange-500" />
-              <h2 className="text-[10px] font-black text-gray-400 uppercase tracking-[0.4em]">The Uday IKSA Story</h2>
+            <div className="inline-flex items-center gap-3 bg-white/5 border border-white/10 rounded-full px-5 py-2 mb-10 backdrop-blur-md">
+              <Sparkles className="h-3 w-3 text-brand-orange-500" />
+              <h2 className="text-[7px] font-black text-white uppercase tracking-[0.4em]">The Uday IKSA Legacy</h2>
             </div>
-            <h2 className="text-3xl md:text-5xl font-black text-white mb-8 tracking-tighter uppercase leading-none">
-              Lighting Up <br /> <span className="brand-gradient-text">India, Naturally</span>
+            
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-10 tracking-tighter uppercase leading-[0.9]">
+              Engineering <br /> <span className="brand-gradient-text">India's Sunlight</span>
             </h2>
-            <div className="space-y-6 text-gray-400 text-base leading-relaxed font-medium mb-10 max-w-xl">
+
+            <div className="space-y-8 text-gray-400 text-base md:text-lg leading-relaxed font-medium mb-12 max-w-xl">
               <p>
-                Uday IKSA started with one simple idea: <span className="text-white">buildings shouldn't need to burn electricity</span> just to stay bright during the day.
+                Uday IKSA started with one simple idea: <span className="text-white font-bold">buildings shouldn't burn electricity</span> just to stay bright during the day.
               </p>
               <p>
-                Based in Hubballi, Karnataka, we design and manufacture <span className="text-white font-bold">natural sky lights</span> and <span className="text-white font-bold">roof ventilation systems</span> that are installed across India — in factories, warehouses, schools, hospitals, offices, and even homes.
-              </p>
-              <p className="text-sm">
-                Trusted by <span className="text-brand-orange-400 font-black">500+ customers</span>, from small workshops to giants like Tata, HAL, and Indian Railways.
+                Based in Hubballi, Karnataka, we design and manufacture <span className="text-white">patented daylighting</span> and <span className="text-white text-brand-orange-500/80">ventilation systems</span> used by India's largest industrial names — from Tata and HAL to the Indian Railways.
               </p>
             </div>
-            <div className="flex flex-wrap gap-8">
+
+            <div className="flex flex-wrap gap-6">
               <Link href="/about">
-                <Button size="lg" className="bg-white text-black hover:bg-brand-orange-500 hover:text-white rounded-2xl px-12 py-8 text-xs font-black uppercase tracking-widest shadow-2xl shadow-white/5">
-                  Our Story & Journey <ArrowRight className="ml-3 h-5 w-5" />
+                <Button size="lg" className="bg-brand-orange-500 text-white hover:bg-white hover:text-black rounded-xl px-12 py-7 text-xs font-black uppercase tracking-widest transition-all">
+                  Our Story & Journey <ArrowRight className="ml-3 h-4 w-4" />
                 </Button>
               </Link>
             </div>
 
-            {/* Prof. Kurubar One-Liner */}
+            {/* Advisor Spotlight */}
             <motion.div
-              className="mt-12 p-8 bg-white/5 border border-white/10 rounded-[32px] relative overflow-hidden group"
+              className="mt-16 p-8 bg-white/5 border border-white/10 rounded-[40px] relative overflow-hidden group"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
+              <div className="absolute top-0 right-0 p-8 opacity-5">
+                <ShieldCheck className="h-24 w-24 text-white" />
+              </div>
               <div className="relative z-10">
-                <p className="text-gray-300 italic text-sm leading-relaxed mb-4">
-                  "Our products are designed under the guidance of <span className="text-white font-bold">Prof. S.P. Kurubar</span> — Six Sigma Black Belt, Lean Specialist (Japan-trained), and Dean at KLE Technological University — bringing world-class engineering standards to every unit we build."
+                <p className="text-gray-300 italic text-sm leading-relaxed mb-6 font-medium">
+                  "Our products are designed under the guidance of <span className="text-white font-bold">Prof. S.B. Kurubar</span> — distinguished electrical engineer and academic lead — ensuring world-class technical rigour in every unit."
                 </p>
-                <div className="flex items-center gap-3">
-                  <div className="h-0.5 w-8 bg-brand-orange-500"></div>
-                  <span className="text-[10px] font-black text-brand-orange-500 uppercase tracking-widest">Engineering Trust</span>
+                <div className="flex items-center gap-4">
+                  <div className="h-px w-10 bg-brand-orange-500"></div>
+                  <span className="text-[7px] font-black text-brand-orange-500 uppercase tracking-widest">Engineering Trust</span>
                 </div>
               </div>
             </motion.div>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:items-center">
-            <div className="space-y-8">
+          <div className="space-y-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {stats.map((stat, index) => (
                 <motion.div
                   key={index}
-                  className="bg-white/[0.03] border border-white/5 p-8 rounded-[40px] flex items-center gap-8 hover:bg-white/[0.05] hover:border-white/10 transition-all duration-500 group"
-                  initial={{ opacity: 0, x: 50 }}
+                  className="bg-white/[0.03] border border-white/5 p-10 rounded-[40px] hover:bg-white/[0.05] hover:border-brand-orange-500/20 transition-all duration-500 group"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <p className="text-5xl md:text-6xl font-black text-white mb-4 tracking-tighter group-hover:brand-gradient-text transition-all">{stat.number}</p>
+                  <div>
+                    <p className="text-[8px] font-black text-brand-orange-500 uppercase tracking-widest mb-1">{stat.label}</p>
+                    <p className="text-[7px] font-bold text-gray-500 uppercase tracking-widest opacity-60">{stat.sub}</p>
+                  </div>
+                </motion.div>
+              ))}
+              
+              <motion.div
+                className="bg-brand-orange-500/10 border border-brand-orange-500/20 p-10 rounded-[40px] flex items-center justify-center text-center group overflow-hidden relative sm:col-span-2"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+              >
+                <div className="relative z-10">
+                  <Globe className="h-10 w-10 text-brand-orange-500 mx-auto mb-4 group-hover:rotate-12 transition-transform" />
+                  <p className="text-[8px] font-black text-white uppercase tracking-widest leading-none mb-1">Made In Hubballi</p>
+                  <p className="text-[7px] font-bold text-brand-orange-500 uppercase tracking-widest">Engineering Legacy Since 2009</p>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+
+        {/* Values & Certifications Bento */}
+        <div className="grid lg:grid-cols-2 gap-20 items-stretch">
+          <div className="grid sm:grid-cols-2 gap-4">
+            <motion.div
+              className="bg-white/[0.03] border border-brand-orange-500/20 rounded-[48px] p-8 md:p-12 relative overflow-hidden group col-span-2"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <Award className="h-10 w-10 text-brand-orange-500 mb-8" />
+              <h3 className="text-2xl font-black text-white uppercase tracking-tighter mb-4 leading-none">CII INNOVERGE <br /><span className="brand-gradient-text text-xl">National Award 2022</span></h3>
+              <p className="text-gray-400 text-sm leading-relaxed font-medium max-w-md">India's most prestigious recognition for industrial innovation and green engineering breakthroughs.</p>
+            </motion.div>
+            
+            <div className="bg-white/[0.02] border border-white/5 rounded-[40px] p-6 flex flex-col items-center justify-center text-center gap-3">
+              <ShieldCheck className="h-6 w-6 text-brand-orange-500" />
+              <p className="text-[10px] font-black text-white uppercase tracking-widest">ISO 9001:2015</p>
+            </div>
+            
+            <div className="bg-white/[0.02] border border-white/5 rounded-[40px] p-6 flex flex-col items-center justify-center text-center gap-3">
+              <Zap className="h-6 w-6 text-brand-orange-500" />
+              <p className="text-[7px] font-black text-white uppercase tracking-widest">Patented Tech</p>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <div className="inline-flex items-center gap-3 mb-4">
+              <div className="h-px w-8 bg-brand-orange-500"></div>
+              <h3 className="text-[7px] font-black text-gray-400 uppercase tracking-widest">Beyond The Building</h3>
+            </div>
+            
+            <div className="grid gap-4">
+              {values.map((value, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-white/[0.01] hover:bg-white/[0.03] backdrop-blur-md p-8 rounded-[32px] border border-white/5 hover:border-brand-orange-500/20 transition-all flex items-center gap-8 group"
+                  initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  transition={{ delay: index * 0.1 }}
                 >
-                  <div className="bg-brand-orange-500/10 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <stat.icon className="h-8 w-8 text-brand-orange-500" />
+                  <div className="bg-brand-orange-500/10 w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-brand-orange-500 transition-colors">
+                    <value.icon className="h-6 w-6 text-brand-orange-500 group-hover:text-white" />
                   </div>
                   <div>
-                    <p className="text-4xl font-black text-white mb-1 tracking-tighter">{stat.number}</p>
-                    <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest leading-none">{stat.label}</p>
+                    <h3 className="text-lg font-black text-white uppercase tracking-tighter mb-2 leading-none group-hover:text-brand-orange-400 transition-colors">
+                      {value.title}
+                    </h3>
+                    <p className="text-gray-500 text-[9px] font-medium leading-relaxed max-w-sm">
+                      {value.description}
+                    </p>
                   </div>
                 </motion.div>
               ))}
             </div>
-
-            <motion.div
-              className="relative h-[400px] md:h-full min-h-[400px] rounded-[48px] overflow-hidden border border-white/10 shadow-3xl"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-            >
-              <Image
-                src="/brain/5b886c53-b306-4234-afef-4f7e3b295568/uday_iksa_sunlight_engineering_hero_1773248306737.png"
-                alt="Sunlight Engineering"
-                fill
-                className="object-cover transition-transform duration-[4000ms] hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
-            </motion.div>
-
-            {/* Why Choose Us - Image 1 content */}
-            <motion.div
-              className="bg-brand-orange-500/5 border border-brand-orange-500/20 p-8 rounded-[48px] lg:col-span-2"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="h-0.5 w-8 bg-brand-orange-500"></div>
-                <h3 className="text-[10px] font-black text-brand-orange-500 uppercase tracking-widest">Why Choose Uday Iksa?</h3>
-              </div>
-              <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4">
-                {[
-                  "Patented Technology",
-                  "Experienced project team",
-                  "Inhouse Designing facility",
-                  "ISO 9001:2015 Certified",
-                  "Inhouse Manufacturing",
-                  "2022 CII National Award"
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-white/70 text-xs font-semibold">
-                    <div className="h-1 w-1 bg-brand-orange-500 rounded-full"></div>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
           </div>
         </div>
-
-        {/* Values Section */}
-        <div className="grid lg:grid-cols-3 gap-10 pt-10 border-t border-white/5">
-          {values.map((value, index) => (
-            <motion.div
-              key={index}
-              className="bg-white/[0.02] backdrop-blur-md p-12 rounded-[60px] border border-white/5 hover:bg-white/[0.04] transition-all group"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.15 }}
-            >
-              <div className="bg-brand-orange-500/10 w-16 h-16 rounded-[24px] mb-10 flex items-center justify-center group-hover:bg-brand-orange-500 group-hover:rotate-6 transition-all duration-500 shadow-2xl shadow-brand-orange-500/20">
-                <value.icon className="h-8 w-8 text-brand-orange-500 group-hover:text-white" />
-              </div>
-              <h3 className="text-2xl font-black text-white uppercase tracking-tighter mb-6 leading-none group-hover:text-brand-orange-400">
-                {value.title}
-              </h3>
-              <p className="text-gray-500 text-sm font-medium leading-relaxed group-hover:text-gray-400 transition-colors">
-                {value.description}
-              </p>
-            </motion.div>
-          ))}
-        </div>
       </div>
-    </section >
+    </section>
   )
 }

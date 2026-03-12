@@ -115,7 +115,7 @@ export default function CTASection() {
                     <Phone className="h-6 w-6 md:h-8 md:w-8 text-brand-orange-500 group-hover:text-white" />
                   </div>
                   <div className="text-center md:text-left">
-                    <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-1">Direct Line</p>
+                    <p className="text-[7px] font-black text-gray-500 uppercase tracking-widest mb-1">Direct Line</p>
                     <p className="text-white text-base md:text-lg font-black tracking-tight">+91 8792182631</p>
                   </div>
                 </div>
@@ -125,7 +125,7 @@ export default function CTASection() {
                     <Mail className="h-6 w-6 md:h-8 md:w-8 text-brand-orange-500 group-hover:text-white" />
                   </div>
                   <div className="text-center md:text-left">
-                    <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-1">Engineering Support</p>
+                    <p className="text-[7px] font-black text-gray-500 uppercase tracking-widest mb-1">Engineering Support</p>
                     <p className="text-white text-base md:text-lg font-black tracking-tight">info@udayiksa.com</p>
                   </div>
                 </div>
@@ -139,7 +139,7 @@ export default function CTASection() {
                 viewport={{ once: true }}
                 transition={{ duration: 1, delay: 0.8 }}
               >
-                <p className="text-gray-500 text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.3em] mb-8 md:mb-10">Trusted By National Industrial Giants</p>
+                <p className="text-gray-500 text-[8px] font-black uppercase tracking-[0.2em] md:tracking-[0.3em] mb-8 md:mb-10">Trusted By National Industrial Giants</p>
                 <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-40 hover:opacity-100 transition-opacity duration-700">
                   {["TATA STEEL", "INFOSYS", "APOLLO", "IIT-M", "MAHINDRA"].map((company, index) => (
                     <span key={index} className="text-white text-sm md:text-xl font-black tracking-[0.4em] italic">{company}</span>

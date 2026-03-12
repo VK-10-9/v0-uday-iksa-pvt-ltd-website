@@ -54,7 +54,7 @@ export default function ProductHoverCard({ product, hoveredProduct }) {
               <h4 className="text-2xl font-black text-white uppercase tracking-tighter leading-none mb-1">
                 {product.name}
               </h4>
-              <p className="text-brand-orange-400 text-[10px] font-black uppercase tracking-widest">{product.subtitle || "Premium Engineering"}</p>
+              <p className="text-brand-orange-400 text-[7px] font-black uppercase tracking-widest">{product.subtitle || "Premium Engineering"}</p>
             </div>
 
             {/* Product Visual */}
@@ -67,7 +67,7 @@ export default function ProductHoverCard({ product, hoveredProduct }) {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4">
-                <span className="bg-white/10 backdrop-blur-md border border-white/10 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">
+                <span className="bg-white/10 backdrop-blur-md border border-white/10 text-white text-[7px] font-black px-3 py-1 rounded-full uppercase tracking-widest">
                   Featured Tech
                 </span>
               </div>

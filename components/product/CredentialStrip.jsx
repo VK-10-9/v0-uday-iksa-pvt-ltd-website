@@ -16,8 +16,8 @@ export default function CredentialStrip() {
                             <ShieldCheck className="h-5 w-5" />
                         </div>
                         <div>
-                            <p className="text-[10px] font-black text-white uppercase tracking-widest leading-none mb-1">Patented Tech</p>
-                            <p className="text-[9px] font-bold text-gray-500 uppercase tracking-widest">Original IP</p>
+                            <p className="text-[7px] font-black text-white uppercase tracking-widest leading-none mb-1">Patented Tech</p>
+                            <p className="text-[6px] font-bold text-gray-500 uppercase tracking-widest">Original IP</p>
                         </div>
                     </motion.div>
 
@@ -29,8 +29,8 @@ export default function CredentialStrip() {
                             <Sparkles className="h-5 w-5" />
                         </div>
                         <div>
-                            <p className="text-[10px] font-black text-white uppercase tracking-widest leading-none mb-1">R&D Certified</p>
-                            <p className="text-[9px] font-bold text-gray-500 uppercase tracking-widest">KLE Tech University</p>
+                            <p className="text-[7px] font-black text-white uppercase tracking-widest leading-none mb-1">R&D Certified</p>
+                            <p className="text-[6px] font-bold text-gray-500 uppercase tracking-widest">KLE Tech University</p>
                         </div>
                     </motion.div>
 
@@ -42,8 +42,8 @@ export default function CredentialStrip() {
                             <Award className="h-5 w-5" />
                         </div>
                         <div>
-                            <p className="text-[10px] font-black text-white uppercase tracking-widest leading-none mb-1">Made In India</p>
-                            <p className="text-[9px] font-bold text-gray-500 uppercase tracking-widest">In-house Mfg</p>
+                            <p className="text-[7px] font-black text-white uppercase tracking-widest leading-none mb-1">Made In India</p>
+                            <p className="text-[6px] font-bold text-gray-500 uppercase tracking-widest">In-house Mfg</p>
                         </div>
                     </motion.div>
                 </div>

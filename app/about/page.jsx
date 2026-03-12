@@ -6,6 +6,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { HoverButton } from "@/components/ui/hover-button"
+import TimelineSection from "@/components/home/timeline-section"
 
 export default function AboutPage() {
   return (
@@ -42,7 +43,7 @@ export default function AboutPage() {
               className="space-y-8"
             >
               <div className="space-y-4">
-                <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4">The Hubballi Story</h2>
+                <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4">Our Story</h2>
                 <div className="h-1 w-16 bg-brand-orange-500 rounded-full mb-8"></div>
                 <div className="space-y-6 text-gray-400 text-base leading-relaxed font-medium">
                   <p>
@@ -59,25 +60,23 @@ export default function AboutPage() {
             </motion.div>
 
             <motion.div
-              className="relative h-[400px] md:h-[600px] rounded-[48px] overflow-hidden border border-white/10 shadow-2xl"
+              className="relative aspect-video rounded-[48px] border border-white/10 bg-white/[0.02] shadow-2xl flex items-center justify-center overflow-hidden group"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <Image
-                src="/brain/5b886c53-b306-4234-afef-4f7e3b295568/uday_iksa_manufacturing_hub_1773248280436.png"
-                alt="Uday IKSA Manufacturing Hub"
+              <Image 
+                src="/images/gallery/about/WhatsApp Image 2026-02-14 at 12.37.16 PM.jpeg"
+                alt="Uday IKSA Team"
                 fill
-                className="object-cover transition-transform duration-[3000ms] hover:scale-110"
+                className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-1000"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent z-10"></div>
-              <div className="absolute bottom-6 left-6 right-6 md:bottom-12 md:left-12 md:right-12 z-20">
-                <div className="bg-white/5 backdrop-blur-2xl border border-white/10 p-6 md:p-10 rounded-[32px] md:rounded-[40px]">
-                  <p className="text-gray-300 text-base md:text-lg font-medium leading-relaxed italic">
-                    "Vertical integration is what gives us control over quality that no reseller or assembler can match. It's why our products are still performing in buildings we installed a decade ago."
-                  </p>
-                </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
+              <div className="absolute bottom-10 left-10 right-10 z-20">
+                <p className="text-gray-300 text-base md:text-lg font-medium leading-relaxed italic text-center">
+                  "Vertical integration is what gives us control over quality that no reseller or assembler can match."
+                </p>
               </div>
             </motion.div>
           </div>
@@ -85,37 +84,7 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-12 relative bg-slate-900/30 overflow-hidden">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4">Our Timeline</h2>
-            <div className="h-1 w-32 bg-brand-orange-500 rounded-full mx-auto"></div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { year: "2009–2010", title: "The Foundation", desc: "Founded in Hubballi with a focus on marketing natural daylighting solutions. Built deep expertise in understanding roofs, buildings, and customer needs." },
-              { year: "2012–2015", title: "Market Expansion", desc: "Expanded across North Karnataka and beyond. Identified key limitations in available products for Indian roof types and climate." },
-              { year: "2017", title: "Manufacturing Shift", desc: "Made the decisive shift to full in-house manufacturing. Invested in design capabilities, die-making, and production facilities." },
-              { year: "2018–2020", title: "Trademark Launch", desc: "Launched NANOSUN™ and NANOVENT® as registered trademarks. Expanded product range across PEB, RCC, and false ceiling applications." },
-              { year: "2022", title: "National Recognition", desc: "Won the CII INNOVERGE National Award — India's prestigious recognition for green engineering and industrial innovation." },
-              { year: "Today", title: "Scaling Impact", desc: "500+ installations in 50+ cities. Clients ranging from Indian Railways and HAL to individual homeowners. Still based in Hubballi." },
-            ].map((item, idx) => (
-              <motion.div
-                key={idx}
-                className="bg-white/5 p-8 rounded-[40px] border border-white/5 group hover:bg-white/[0.08] transition-all hover:border-brand-orange-500/30"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-              >
-                <div className="text-brand-orange-500 text-[10px] font-black uppercase tracking-[0.2em] mb-3">{item.year}</div>
-                <h3 className="text-xl font-black text-white uppercase tracking-tighter mb-3 group-hover:text-brand-orange-400 transition-colors">{item.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed font-medium">{item.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <TimelineSection />
 
       {/* Capabilities Section */}
       <section className="py-12 relative px-6">
@@ -163,20 +132,21 @@ export default function AboutPage() {
             {/* Advisor Tier - Expert Council */}
             <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
-                {
-                  name: "Prof. S.P. Kurubar",
-                  role: "Technical Advisor — Quality Systems",
-                  image: "/images/advisor-kurubar.jpg",
-                  linkedin: "#",
-                  bio: "A Certified Six Sigma Black Belt and Lean Manufacturing Specialist trained in Japan, Professor Kurubar brings world-class standards of precision to our engineering processes. Currently Dean at KLE Technological University, his oversight ensures every NANOSUN™ dome meets global durability standards."
-                },
-                {
-                  name: "Mr. B. R. Indushekar",
-                  role: "Technical Advisor — Lean Operations",
-                  image: "/brain/5b886c53-b306-4234-afef-4f7e3b295568/technical_advisor_portrait_1773248363700.png",
-                  linkedin: "https://www.linkedin.com/in/indushekar-bangalore-rajan-15bbb8308/",
-                  bio: "With 38+ years of leadership at Volvo and Ingersoll-Rand, he is an expert in operational excellence. His Japanese-tier lean methodologies help us maintain manufacturing efficiency without compromising the engineered integrity of our systems."
-                },
+              {
+                name: "Prof. S.B. Kurubar",
+                role: "TECHNICAL ADVISOR — QUALITY SYSTEMS",
+                image: "/images/gallery/about/WhatsApp Image 2026-02-19 at 10.45.06 AM.jpeg",
+                linkedin: "#",
+                bio: "A distinguished engineer and academic with over five decades of experience, Professor S.B. Kurubar brings deep technical rigour to Uday IKSA's product quality and engineering processes. A graduate of KREC Suratkal (1968) with a post-graduation from SJCE Mysore, he has spent his career at the intersection of electrical engineering, computer science, and academic leadership — serving as Head of Department for both CSE and ISE, Visiting Professor at Karnatak University Dharwad, and Dean of Examination Affairs at BVBCET Hubballi. His oversight ensures that every NANOSUN™ product we manufacture meets the highest standards of consistency and durability."
+              },
+              {
+                name: "Mr. B.R. Indushekar",
+                role: "TECHNICAL ADVISOR — LEAN OPERATIONS",
+                image: "/images/gallery/about/WhatsApp Image 2026-02-19 at 10.48.09 AM.jpeg",
+                linkedin: "https://www.linkedin.com/in/indushekar-bangalore-rajan-15bbb8308/",
+                bio: "With 38+ years of senior leadership across Ingersoll-Rand and Volvo, B.R. Indushekar is one of India's most accomplished operations and manufacturing executives. A Certified Six Sigma Black Belt (CII) and Lean Specialist trained in Gifu, Japan, he brings world-class manufacturing discipline to Uday IKSA's production processes. As former Vice President & General Manager at Volvo CE India — where he led a plant transformation that won 40+ national awards — his Japanese-tier lean methodologies help us maintain manufacturing efficiency without compromising the engineered integrity of our products.",
+                quote: "38+ years of leadership at Volvo and Ingersoll-Rand. His lean methodologies ensure we build at the highest efficiency without ever cutting corners on quality."
+              },
               ].map((member, index) => (
                 <motion.div
                   key={index}
@@ -186,17 +156,26 @@ export default function AboutPage() {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <div className="relative h-72 w-full overflow-hidden">
-                    <Image src={member.image} alt={member.name} fill className="object-cover group-hover:scale-105 transition-all duration-700" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80" />
-                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="absolute top-4 right-4 w-9 h-9 bg-white/10 backdrop-blur-md rounded-lg flex items-center justify-center border border-white/10 hover:bg-brand-orange-500 transition-all z-20">
-                      <Linkedin className="h-4 w-4 text-white" />
-                    </a>
+                  <div className="relative h-64 overflow-hidden">
+                    <Image 
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
                   </div>
-                  <div className="p-8 flex-1">
+                  <div className="p-8 flex-1 flex flex-col relative z-20">
                     <p className="text-brand-orange-500 font-black uppercase tracking-[0.2em] text-[10px] mb-2">{member.role}</p>
                     <h3 className="text-xl font-black text-white uppercase tracking-tighter mb-4">{member.name}</h3>
-                    <p className="text-gray-400 text-[13px] leading-relaxed font-medium italic">"{member.bio}"</p>
+                    <p className="text-gray-400 text-[12px] leading-relaxed font-medium mb-6">{member.bio}</p>
+                    {member.quote && (
+                      <div className="mt-auto pt-6 border-t border-white/5">
+                        <p className="text-white text-xs font-black italic tracking-tight opacity-80 leading-relaxed">
+                          "{member.quote}"
+                        </p>
+                      </div>
+                    )}
                   </div>
                 </motion.div>
               ))}
@@ -236,13 +215,12 @@ export default function AboutPage() {
 
             {/* Patented Technology Badge */}
             <div className="w-full max-w-4xl bg-white/5 backdrop-blur-md rounded-[40px] p-0 border border-brand-orange-500/30 text-center relative overflow-hidden group">
-              <div className="relative aspect-[21/9] w-full overflow-hidden">
-                <Image
-                  src="/brain/5b886c53-b306-4234-afef-4f7e3b295568/media__1773246300254.jpg"
-                  alt="Uday IKSA Installation Process & Components"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
-                />
+              <div className="relative py-20 px-10 bg-white/5 flex flex-col items-center justify-center">
+                <Shield className="h-20 w-20 text-brand-orange-500/20 mb-6" />
+                <div className="text-center">
+                  <p className="text-brand-orange-500 font-black uppercase tracking-[0.4em] text-[10px] mb-2 text-center">Patented Manufacturing</p>
+                  <p className="text-2xl font-black text-white uppercase tracking-tighter">Vertical Integration</p>
+                </div>
               </div>
               <div className="p-6 bg-slate-900/90 backdrop-blur-md border-t border-brand-orange-500/30">
                 <h4 className="text-xl font-black text-white uppercase tracking-tighter mb-3 flex items-center justify-center gap-3">

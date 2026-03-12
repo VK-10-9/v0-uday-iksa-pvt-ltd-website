@@ -107,23 +107,21 @@ export default function IndustrialProjectsPage() {
             </motion.div>
 
             <motion.div
-              className="relative h-[600px] rounded-[60px] overflow-hidden border border-white/10 shadow-2xl shadow-brand-orange-500/5 group"
+              className="relative p-12 md:p-20 rounded-[60px] border border-white/10 bg-white/[0.02] shadow-2xl shadow-brand-orange-500/5 flex items-center justify-center overflow-hidden group"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <Image
-                src="/images/industrial-overview.jpg"
-                alt="Industrial Engineering"
-                fill
-                className="object-cover transition-transform duration-1000 group-hover:scale-105"
-              />
-              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-slate-950 to-transparent opacity-80" />
-              <div className="absolute bottom-12 left-12 z-20">
-                <div className="bg-slate-900/60 backdrop-blur-2xl border border-white/10 p-8 rounded-[32px]">
-                  <Zap className="h-8 w-8 text-brand-orange-500 mb-4" />
-                  <p className="text-xs font-black text-white uppercase tracking-widest leading-none">High-Load Engineering</p>
+              <div className="absolute inset-0 bg-brand-orange-500/5 group-hover:bg-brand-orange-500/10 transition-colors" />
+              <div className="absolute inset-0 flex items-center justify-center opacity-[0.02] group-hover:opacity-[0.05] transition-opacity">
+                <p className="text-[200px] font-black uppercase tracking-tighter select-none -rotate-12">BUILT</p>
+              </div>
+              <div className="relative z-10 text-center">
+                <Zap className="h-24 w-24 text-brand-orange-500/20 mb-10 mx-auto group-hover:scale-110 transition-transform duration-700" />
+                <div className="bg-white/5 backdrop-blur-2xl border border-white/10 p-8 rounded-[32px]">
+                   <p className="text-xl md:text-2xl font-black text-white uppercase tracking-tighter mb-1">High-Load Engineering</p>
+                   <p className="text-gray-400 text-[11px] font-medium max-w-xs">Industrial-grade durability systems engineered for heavy manufacturing conditions.</p>
                 </div>
               </div>
             </motion.div>
@@ -149,17 +147,15 @@ export default function IndustrialProjectsPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
               >
-                <div className={`relative h-[550px] rounded-[60px] overflow-hidden group shadow-2xl border border-white/5 ${index % 2 !== 0 ? 'lg:order-2' : ''}`}>
-                  <Image
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.name}
-                    fill
-                    className="object-cover transition-transform duration-1000 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-tr from-brand-orange-500/20 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <div className="absolute top-8 right-8 z-20">
-                    <div className="bg-slate-950/60 backdrop-blur-md border border-white/10 px-6 py-2 rounded-full">
-                      <span className="text-[10px] font-black text-white uppercase tracking-widest">{project.year}</span>
+                <div className={`relative h-[550px] rounded-[60px] border border-white/5 bg-white/[0.02] flex items-center justify-center overflow-hidden group shadow-2xl ${index % 2 !== 0 ? 'lg:order-2' : ''}`}>
+                  <div className="absolute inset-0 bg-gradient-to-tr from-brand-orange-500/10 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute inset-0 flex items-center justify-center opacity-[0.02] group-hover:opacity-[0.05] transition-opacity overflow-hidden">
+                    <p className="text-[180px] font-black uppercase tracking-tighter select-none rotate-90 leading-none">{project.year}</p>
+                  </div>
+                  <div className="relative z-20 text-center">
+                    <Factory className="h-32 w-32 text-brand-orange-500/10 mb-8 mx-auto group-hover:scale-110 group-hover:rotate-12 transition-transform duration-700" />
+                    <div className="bg-slate-950/60 backdrop-blur-md border border-white/10 px-8 py-3 rounded-full inline-block">
+                      <span className="text-xs font-black text-white uppercase tracking-widest">{project.year}</span>
                     </div>
                   </div>
                 </div>
