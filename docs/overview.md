@@ -23,3 +23,4 @@ The website follows a **"Premium Industrial Aesthetic"**. This means:
 - **Sectoral Portfolio**: Categorized project showcase (Industrial, Commercial, PSU, etc.).
 - **Performance Optimized**: Using `next/image` for large industrial installation renders and optimized component loading.
 - **SEO & Legal**: Comprehensive metadata for industrial keywords and fully implemented privacy/terms/governance pages.
+- **V0 Powered Workflow**: Seamless sync between v0.dev and GitHub (see [Workflow Guide](./workflow.md)).

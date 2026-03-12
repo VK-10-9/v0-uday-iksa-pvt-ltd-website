@@ -1,41 +1,68 @@
-# Uday Iksa Pvt Ltd Website
+# UDAY IKSA | Sustainability Engineering Platform
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+![UDAY IKSA Logo](/public/images/logo.png)
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/king109vk-gmailcoms-projects/v0-uday-iksa-pvt-ltd-website)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/ipeQwaxbACD)
+> **India's trusted manufacturer of natural daylighting and ventilation systems.**  
+> Patented NANOSUN™ and NANOVENT® technologies installed across 500+ industrial and commercial buildings.
 
-## Overview
+---
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## 🏗️ The Platform
+This is a high-performance web application built to showcase UDAY IKSA's industrial innovations. It follows a **Premium Industrial Aesthetic**—combining deep contrast, technical typography, and micro-animations to reflect mechanical precision.
 
-## Deployment
+## 🚀 Key Innovations
+- **NANOSUN™**: Advanced natural skylights for PEB, RCC, and Tiled roofs.
+- **NANOVENT®**: Wind-driven turbo ventilators engineered for extreme heat extraction.
+- **SKYTUBE™**: Tubular daylighting systems (piped sunshine) for interior windowless spaces.
 
-Your project is live at:
+## 🛠️ Technical Stack
+- **Framework**: [Next.js 14](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Motion**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Deployment**: [Vercel](https://vercel.com/)
 
-**[https://vercel.com/king109vk-gmailcoms-projects/v0-uday-iksa-pvt-ltd-website](https://vercel.com/king109vk-gmailcoms-projects/v0-uday-iksa-pvt-ltd-website)**
+---
 
-## Build your app
+## 📚 Technical Documentation
+Since this is a complex industrial showcase, we have documented the system architecture and design patterns in detail.
 
-Continue building your app on:
+| Document | Description |
+| :--- | :--- |
+| [**Project Overview**](./docs/overview.md) | High-level goals, tech stack, and core philosophy. |
+| [**Directory Structure**](./docs/directory_structure.md) | Map of the technical architecture and codebase. |
+| [**Routing & Pages**](./docs/routing_and_pages.md) | Index of all 24 production routes. |
+| [**Design System**](./docs/design_system.md) | The visual rules of the "Premium Industrial" theme. |
+| [**Data Management**](./docs/data_management.md) | How to update product/project data arrays. |
+| [**Development Workflow**](./docs/workflow.md) | v0.dev sync, local setup, and deployment guide. |
 
-**[https://v0.dev/chat/projects/ipeQwaxbACD](https://v0.dev/chat/projects/ipeQwaxbACD)**
+---
 
-## How It Works
+## ⚡ Quick Start
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+### 1. Local Development
+```powershell
+# Clone the repository
+git clone https://github.com/VK-10-9/v0-uday-iksa-pvt-ltd-website.git
 
-## Technical Documentation
+# Install dependencies
+npm install
 
-Detailed documentation of the codebase structure, design system, and patterns can be found in the `docs/` directory:
+# Start the development server
+npm run dev
+```
 
-- [**Project Overview**](./docs/overview.md) - Tech stack and core philosophy.
-- [**Directory Structure**](./docs/directory_structure.md) - Breakdown of the technical architecture.
-- [**Routing & Pages**](./docs/routing_and_pages.md) - Index of all 24 routes.
-- [**Component Library**](./docs/component_library.md) - Key UI and layout components.
-- [**Design System**](./docs/design_system.md) - Visual rules and premium aesthetic guide.
-- [**Data Management**](./docs/data_management.md) - How to update product and project data.
+### 2. V0 Sync
+This project is connected to v0.dev. When changes are deployed from the v0 interface, they are automatically pushed here. To pull the latest AI refinements locally:
+```powershell
+git pull origin main
+```
+
+---
+
+## 🌐 Live Environment
+- **Production**: [udayiksa.com](https://v0-uday-iksa-pvt-ltd-website.vercel.app/) (Demo Link)
+- **Built for**: Impact and Energy Revolution.
+
+---
+© 2024 Uday IKSA Pvt Ltd. Built with precision and sustainability at its core.
