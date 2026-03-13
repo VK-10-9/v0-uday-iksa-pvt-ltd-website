@@ -13,7 +13,7 @@ export default function ProductShowcase({ activeProduct, setActiveProduct, hover
     <div className="relative space-y-12">
       {/* Featured Image Frame */}
       <motion.div
-        className="relative h-[250px] sm:h-[300px] md:h-[380px] w-full rounded-3xl overflow-hidden brand-glass-premium border-2 border-brand-orange-500/30 group"
+        className="relative h-[320px] sm:h-[350px] md:h-[380px] w-full rounded-3xl overflow-hidden brand-glass-premium border-2 border-brand-orange-500/30 group"
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
@@ -21,10 +21,10 @@ export default function ProductShowcase({ activeProduct, setActiveProduct, hover
         <AnimatePresence mode="wait">
           <motion.div
             key={activeProduct}
-            initial={{ opacity: 0, scale: 1.08 }}
+            initial={{ opacity: 0, scale: 1.05 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 0.6 }}
+            exit={{ opacity: 0, scale: 0.98 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             className="absolute inset-0"
           >
             {/* Real product photo */}
@@ -33,52 +33,68 @@ export default function ProductShowcase({ activeProduct, setActiveProduct, hover
                 src={currentProduct.image}
                 alt={currentProduct.name}
                 fill
-                className="object-cover"
+                className="object-cover group-hover:scale-105 transition-transform duration-1000"
                 priority
               />
             )}
-            {/* Tinted gradient overlay to keep brand feel */}
-            <div className={`absolute inset-0 bg-gradient-to-br ${currentProduct.color} opacity-25 mix-blend-overlay`} />
-            {/* Bottom dark gradient for text readability */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/10" />
+            
+            {/* Cinematic Gradient Overlays */}
+            {/* 1. Base dark tint */}
+            <div className="absolute inset-0 bg-slate-950/20 mix-blend-multiply" />
+            
+            {/* 2. Brand-tinted highlight (Dynamic) */}
+            <div className={`absolute inset-0 bg-gradient-to-br ${currentProduct.color} opacity-20 mix-blend-overlay`} />
+            
+            {/* 3. Serious Vignette for Readability (Strong Bottom & Left) */}
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-90" />
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-950/60 via-transparent to-transparent opacity-60" />
           </motion.div>
         </AnimatePresence>
 
-        {/* Info Overlay */}
-        <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10 z-20">
+        {/* Info Overlay - Glassmorphic Container for Depth */}
+        <div className="absolute inset-0 flex flex-col justify-end p-4 sm:p-6 md:p-12 z-20">
           <motion.div
-            initial={{ y: 20, opacity: 0 }}
+            initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             key={`info-${activeProduct}`}
-            transition={{ delay: 0.3 }}
-            className="space-y-4"
+            transition={{ delay: 0.4, duration: 0.6 }}
+            className="max-w-2xl bg-white/[0.01] backdrop-blur-[2px] rounded-3xl p-2 md:p-0"
           >
-            <div className="flex items-center gap-4">
-              <h3 className="text-base md:text-lg font-black text-white tracking-tight">{currentProduct.name}</h3>
-              <span className={`px-3 py-1 rounded-full text-[9px] font-bold bg-gradient-to-r ${currentProduct.color} text-white uppercase tracking-widest`}>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-3 sm:mb-6">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-white tracking-tighter uppercase drop-shadow-2xl leading-none">
+                {currentProduct.name}
+              </h3>
+              <div className={`w-fit px-3 md:px-4 py-1.5 rounded-full text-[7px] md:text-[10px] font-black bg-gradient-to-r ${currentProduct.color} text-white uppercase tracking-[0.2em] shadow-xl shadow-black/20`}>
                 {currentProduct.subtitle}
-              </span>
+              </div>
             </div>
-            <p className="text-gray-200 text-[8px] md:text-[9px] max-w-lg leading-relaxed">{currentProduct.description}</p>
+
+            <p className="text-gray-200 text-[10px] sm:text-sm max-w-xl leading-relaxed font-medium mb-4 sm:mb-8 drop-shadow-lg opacity-90">
+              {currentProduct.description}
+            </p>
+
             {currentProduct.stats && (
-              <div className="flex gap-6 md:gap-10 pt-4 flex-wrap border-b border-white/10 pb-6 mb-6">
+              <div className="flex gap-4 md:gap-12 pt-3 sm:pt-6 flex-wrap border-t border-white/10 mb-4 sm:mb-8 w-fit">
                 {currentProduct.stats.slice(0, 2).map((stat, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <div className="w-1 h-6 bg-brand-orange-500 rounded-full" />
+                  <div key={i} className="flex items-center gap-3 md:gap-4 group">
+                    <div className="w-1 md:w-1.5 h-8 md:h-10 bg-brand-orange-500 rounded-full shadow-[0_0_15px_rgba(244,121,32,0.4)] transition-all group-hover:h-12" />
                     <div>
-                      <p className="text-[7px] font-black text-brand-orange-400 uppercase tracking-widest leading-none mb-1">{stat.label}</p>
-                      <p className="text-white font-black text-[7px] md:text-[8px] leading-none tracking-tight">{stat.value}</p>
+                      <p className="text-[8px] md:text-[10px] font-black text-brand-orange-400 uppercase tracking-widest leading-none mb-1 md:mb-2">{stat.label}</p>
+                      <p className="text-white font-black text-xs md:text-base leading-none tracking-tight">{stat.value}</p>
                     </div>
                   </div>
                 ))}
               </div>
             )}
+
             {currentProduct.features && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="hidden sm:grid grid-cols-2 gap-x-8 gap-y-3 opacity-80 border-t border-white/5 pt-6">
                 {currentProduct.features.map((feature, i) => (
-                  <div key={i} className="flex items-center gap-2">
-                    <div className="w-1 h-1 rounded-full bg-brand-orange-500" />
-                    <p className="text-[7px] text-gray-300 uppercase font-bold tracking-widest">{feature.title}</p>
+                  <div key={i} className="flex items-center gap-3 group">
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-orange-500 group-hover:scale-125 transition-transform" />
+                    <p className="text-[10px] text-gray-300 uppercase font-black tracking-widest drop-shadow-sm">
+                      {feature.title}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -87,23 +103,25 @@ export default function ProductShowcase({ activeProduct, setActiveProduct, hover
         </div>
       </motion.div>
 
-      {/* Product Selection Pills */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-        {products.map((product, index) => (
-          <motion.button
-            key={product.id}
-            onClick={() => setActiveProduct(index)}
-            className={`px-3 py-2 rounded-lg font-bold transition-all duration-500 flex items-center gap-2 ${activeProduct === index
-              ? "bg-brand-orange-500 text-white shadow-lg shadow-brand-orange-500/20 scale-105"
-              : "bg-white/5 text-gray-400 hover:bg-white/10 border border-white/5"
-              } text-[7px] md:text-[8px] uppercase tracking-wider`}
-            whileHover={{ y: -3 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <span className={`w-1.5 h-1.5 rounded-full ${activeProduct === index ? "bg-white" : "bg-gray-600"} ${activeProduct === index ? "animate-pulse" : ""}`} />
-            <span className="truncate">{product.name}</span>
-          </motion.button>
-        ))}
+      {/* Product Selection - Clean & Responsive */}
+      <div className="relative w-full">
+        <div className="flex flex-row md:flex-wrap gap-2 md:gap-3 overflow-x-auto md:overflow-x-visible pb-4 md:pb-0 scrollbar-hide snap-x">
+          {products.map((product, index) => (
+            <motion.button
+              key={product.id}
+              onClick={() => setActiveProduct(index)}
+              className={`flex-shrink-0 px-4 md:px-5 py-3 md:py-3.5 rounded-xl md:rounded-2xl font-black transition-all duration-500 flex items-center gap-2.5 snap-center border ${activeProduct === index
+                ? "bg-brand-orange-500 text-white border-brand-orange-500 shadow-lg shadow-brand-orange-500/20 scale-[1.02]"
+                : "bg-white/5 text-gray-400 hover:bg-white/10 border-white/5 active:scale-95"
+                } text-[9px] md:text-[10px] uppercase tracking-wider`}
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <div className={`w-1.5 h-1.5 rounded-full ${activeProduct === index ? "bg-white shadow-[0_0_8px_white] animate-pulse" : "bg-gray-600"}`} />
+              <span className="whitespace-nowrap">{product.name}</span>
+            </motion.button>
+          ))}
+        </div>
       </div>
     </div>
   )

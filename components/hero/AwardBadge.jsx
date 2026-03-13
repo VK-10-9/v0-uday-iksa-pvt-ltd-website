@@ -20,8 +20,8 @@ export default function AwardBadge() {
         </motion.div>
 
         <div className="flex flex-col items-start leading-none">
-          <span className="text-[7px] font-black text-brand-amber-400 uppercase tracking-[0.2em] mb-0.5">National Winner</span>
-          <span className="text-[8px] font-black text-white uppercase tracking-wider">
+          <span className="text-[9px] font-black text-brand-amber-400 uppercase tracking-[0.2em] mb-0.5">National Winner</span>
+          <span className="text-[10px] font-black text-white uppercase tracking-wider">
             CII INNOVERGE 2022
           </span>
         </div>

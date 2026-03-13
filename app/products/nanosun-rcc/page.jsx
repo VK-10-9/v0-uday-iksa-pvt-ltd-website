@@ -278,7 +278,7 @@ export default function NanosunRccPage() {
             >
               <div className="relative h-56 w-full overflow-hidden">
                 <Image
-                  src="/images/gallery/skylights/Screenshot 2025-12-23 110217.png"
+                  src="/images/web site images/WhatsApp Image 2026-03-13 at 18.56.32.jpeg"
                   alt="Manual Control RCC Skylight"
                   fill
                   className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
@@ -304,7 +304,7 @@ export default function NanosunRccPage() {
             >
               <div className="relative h-56 w-full overflow-hidden">
                 <Image
-                  src="/images/gallery/skylights/For RCC Model.png"
+                  src="/images/web site images/WhatsApp Image 2026-03-13 at 18.56.48.jpeg"
                   alt="Electrical Skylight System"
                   fill
                   className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"

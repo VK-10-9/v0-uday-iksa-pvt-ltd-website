@@ -36,18 +36,25 @@ const installations = [
         desc: "Clean, consistent daylight for precision manufacturing."
     },
     {
-        title: "Turbo Ventilation",
-        location: "RCC Roof Installation",
-        image: "/images/gallery/nanovent/RCC - Turbo Ventilator .png",
+        title: "HAL Facility Ventilation",
+        location: "Aeronautical Complex, Bangalore",
+        image: "/images/web site images/WhatsApp Image 2026-03-13 at 19.11.05 (1).jpeg",
         category: "NANOVENT",
-        desc: "Heat extraction systems working without electricity."
+        desc: "High-velocity atmospheric heat extraction for aerospace maintenance."
     },
     {
         title: "Internal Basement Lighting",
         location: "Industrial Unit",
-        image: "/images/web site images/RCC SLAB DOME DISGN AFTER COMPLETION OF CONCRETE WORK 1.jpg",
+        image: "/images/web site images/WhatsApp Image 2026-03-13 at 19.04.43.jpeg",
         category: "Specialized",
         desc: "Bringing light to windowless basement zones."
+    },
+    {
+        title: "Subsurface Daylighting",
+        location: "Commercial Complex",
+        image: "/images/web site images/WhatsApp Image 2026-03-13 at 19.04.43 (1).jpeg",
+        category: "Specialized",
+        desc: "Dual-layer light harvesting for deep basement environments."
     },
     {
         title: "Natural Air Intake",
@@ -59,7 +66,7 @@ const installations = [
     {
         title: "RCC Roof Skylight",
         location: "Corporate Office Hub",
-        image: "/images/web site images/RCC SLAB DOME DISGN AFTER COMPLETION OF CONCRETE WORK 2.jpg",
+        image: "/images/web site images/WhatsApp Image 2026-03-13 at 19.03.09.jpeg",
         category: "Skylights",
         desc: "Architectural integration on flat concrete slabs for premium commercial spaces."
     },

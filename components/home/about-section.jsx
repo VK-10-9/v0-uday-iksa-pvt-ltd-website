@@ -96,35 +96,35 @@ export default function AboutSection() {
             </motion.div>
           </motion.div>
 
-          <div className="space-y-12">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="w-full">
+            <div className="flex sm:grid sm:grid-cols-2 gap-4 overflow-x-auto sm:overflow-x-visible pb-8 sm:pb-0 scrollbar-hide snap-x">
               {stats.map((stat, index) => (
                 <motion.div
                   key={index}
-                  className="bg-white/[0.03] border border-white/5 p-10 rounded-[40px] hover:bg-white/[0.05] hover:border-brand-orange-500/20 transition-all duration-500 group"
+                  className="bg-white/[0.03] border border-white/5 p-8 md:p-10 rounded-[40px] hover:bg-white/[0.05] hover:border-brand-orange-500/20 transition-all duration-500 group flex-shrink-0 w-[240px] sm:w-auto snap-center"
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <p className="text-5xl md:text-6xl font-black text-white mb-4 tracking-tighter group-hover:brand-gradient-text transition-all">{stat.number}</p>
+                  <p className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4 tracking-tighter group-hover:brand-gradient-text transition-all leading-none">{stat.number}</p>
                   <div>
-                    <p className="text-[8px] font-black text-brand-orange-500 uppercase tracking-widest mb-1">{stat.label}</p>
+                    <p className="text-[9px] font-black text-brand-orange-500 uppercase tracking-widest mb-1">{stat.label}</p>
                     <p className="text-[7px] font-bold text-gray-500 uppercase tracking-widest opacity-60">{stat.sub}</p>
                   </div>
                 </motion.div>
               ))}
               
               <motion.div
-                className="bg-brand-orange-500/10 border border-brand-orange-500/20 p-10 rounded-[40px] flex items-center justify-center text-center group overflow-hidden relative sm:col-span-2"
+                className="bg-brand-orange-500/10 border border-brand-orange-500/20 p-8 md:p-10 rounded-[40px] flex items-center justify-center text-center group overflow-hidden relative sm:col-span-2 flex-shrink-0 w-[240px] sm:w-auto snap-center"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
               >
                 <div className="relative z-10">
-                  <Globe className="h-10 w-10 text-brand-orange-500 mx-auto mb-4 group-hover:rotate-12 transition-transform" />
-                  <p className="text-[8px] font-black text-white uppercase tracking-widest leading-none mb-1">Made In Hubballi</p>
+                  <Globe className="h-8 w-8 text-brand-orange-500 mx-auto mb-4 group-hover:rotate-12 transition-transform" />
+                  <p className="text-[9px] font-black text-white uppercase tracking-widest leading-none mb-1">Made In Hubballi</p>
                   <p className="text-[7px] font-bold text-brand-orange-500 uppercase tracking-widest">Engineering Legacy Since 2009</p>
                 </div>
               </motion.div>
