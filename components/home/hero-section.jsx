@@ -16,12 +16,12 @@ export default function HeroSection() {
   const [activeProduct, setActiveProduct] = useProductRotation(products.length)
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center py-20 lg:py-0 lg:h-screen overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 pt-24 md:pt-28 pb-8">
+    <section className="relative min-h-screen flex flex-col justify-center py-20 lg:py-0 lg:h-screen overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 pt-32 md:pt-44 pb-8">
       <HeroBackground mousePosition={mousePosition} />
 
       {/* Main Content */}
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 lg:px-12 h-auto lg:h-full flex items-center">
-        <div className="flex flex-col lg:grid lg:grid-cols-[1fr_1fr] gap-10 lg:gap-12 items-center w-full">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-x-10 lg:gap-x-16 gap-y-10 lg:gap-y-0 items-start w-full">
           
           {/* Top: Award & Heading (Desktop Left, Mobile Top) */}
           <div className="space-y-6 md:space-y-8 w-full order-1">
@@ -32,7 +32,7 @@ export default function HeroSection() {
           </div>
 
           {/* Center: Product Showcase (Desktop Right, Mobile Center) */}
-          <div className="w-full flex flex-col justify-center order-2">
+          <div className="w-full flex flex-col justify-center order-2 lg:row-span-2">
             <ProductShowcase
               activeProduct={activeProduct}
               setActiveProduct={setActiveProduct}
@@ -41,8 +41,8 @@ export default function HeroSection() {
             />
           </div>
 
-          {/* Bottom: Stats (Desktop Left Bottom, Mobile Bottom) */}
-          <div className="w-full flex justify-start order-3 lg:absolute lg:bottom-12 lg:left-12 lg:max-w-2xl px-0 lg:px-0">
+          {/* Bottom: Stats (Desktop Left Below Heading, Mobile Bottom) */}
+          <div className="w-full flex justify-start order-3 lg:col-start-1 lg:mt-8 px-0">
             <HeroStats />
           </div>
         </div>
