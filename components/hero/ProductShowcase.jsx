@@ -13,7 +13,7 @@ export default function ProductShowcase({ activeProduct, setActiveProduct, hover
     <div className="relative space-y-12">
       {/* Featured Image Frame */}
       <motion.div
-        className="relative h-[320px] sm:h-[350px] md:h-[380px] w-full rounded-3xl overflow-hidden brand-glass-premium border-2 border-brand-orange-500/30 group"
+        className="relative h-[420px] sm:h-[450px] md:h-[500px] w-full rounded-3xl overflow-hidden brand-glass-premium border-2 border-brand-orange-500/30 group"
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
@@ -45,8 +45,9 @@ export default function ProductShowcase({ activeProduct, setActiveProduct, hover
             {/* 2. Brand-tinted highlight (Dynamic) */}
             <div className={`absolute inset-0 bg-gradient-to-br ${currentProduct.color} opacity-20 mix-blend-overlay`} />
             
-            {/* 3. Serious Vignette for Readability (Strong Bottom & Left) */}
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-90" />
+            {/* 3. Serious Vignette for Readability (Strong Bottom, Top & Left) */}
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-90" />
+            <div className="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-transparent to-transparent opacity-60" />
             <div className="absolute inset-0 bg-gradient-to-r from-slate-950/60 via-transparent to-transparent opacity-60" />
           </motion.div>
         </AnimatePresence>
@@ -58,9 +59,9 @@ export default function ProductShowcase({ activeProduct, setActiveProduct, hover
             animate={{ y: 0, opacity: 1 }}
             key={`info-${activeProduct}`}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="max-w-2xl bg-white/[0.01] backdrop-blur-[2px] rounded-3xl p-2 md:p-0"
+            className="max-w-2xl bg-white/[0.01] backdrop-blur-[2px] rounded-3xl p-2 md:p-0 mt-20 sm:mt-0"
           >
-            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-3 sm:mb-6">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-4 sm:mb-6 pt-6 sm:pt-0">
               <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-white tracking-tighter uppercase drop-shadow-2xl leading-none">
                 {currentProduct.name}
               </h3>
@@ -69,7 +70,7 @@ export default function ProductShowcase({ activeProduct, setActiveProduct, hover
               </div>
             </div>
 
-            <p className="text-gray-200 text-[10px] sm:text-sm max-w-xl leading-relaxed font-medium mb-4 sm:mb-8 drop-shadow-lg opacity-90">
+            <p className="text-gray-200 text-[9px] sm:text-sm max-w-xl leading-relaxed font-medium mb-3 sm:mb-8 drop-shadow-lg opacity-90 line-clamp-4 sm:line-clamp-none">
               {currentProduct.description}
             </p>
 
