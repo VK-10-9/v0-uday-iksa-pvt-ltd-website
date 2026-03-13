@@ -134,10 +134,10 @@ export default function NanosunTilesPage() {
     return (
         <main className="pt-24 bg-slate-950 text-slate-200">
       {/* Hero Section - Refined Scale */}
-      <section className="relative py-20 md:py-32 overflow-hidden px-6 lg:px-12">
+      <section className="relative py-8 md:py-12 overflow-hidden px-6 lg:px-12">
         <div className="absolute inset-0 bg-brand-orange-500/5 blur-[120px] rounded-full transform -translate-y-1/2" />
         <div className="container mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
             <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
               <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-5 py-1.5 mb-8 backdrop-blur-md">
                 <Sun className="h-3 w-3 text-brand-orange-400" />
@@ -196,7 +196,7 @@ export default function NanosunTilesPage() {
       <ProductTrustSection />
 
       {/* Applications Section - Optimized Density */}
-      <section className="py-24 relative px-6 lg:px-12 bg-slate-900/30">
+      <section className="py-10 relative px-6 lg:px-12 bg-slate-900/30">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-black text-white mb-4 uppercase tracking-tighter leading-none">Who Is This <span className="brand-gradient-text">For?</span></h2>
@@ -224,7 +224,7 @@ export default function NanosunTilesPage() {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-24 relative px-6 lg:px-12 bg-slate-950/50">
+      <section className="py-10 relative px-6 lg:px-12 bg-slate-950/50">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-black text-white mb-4 uppercase tracking-tighter leading-none">How It Works on a <span className="brand-gradient-text">Tile Roof</span></h2>
@@ -269,7 +269,7 @@ export default function NanosunTilesPage() {
       </section>
 
       {/* System Components Bar */}
-      <section className="py-16 bg-slate-950 border-y border-white/5">
+      <section className="py-10 bg-slate-950 border-y border-white/5">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-4xl font-black text-white uppercase tracking-tighter mb-2">What&apos;s Inside <span className="brand-gradient-text text-xl md:text-2xl">(All Units)</span></h2>
@@ -286,7 +286,7 @@ export default function NanosunTilesPage() {
       </section>
 
       {/* Size Selector Section - Refined UI */}
-      <section className="py-24 relative px-6 lg:px-12 bg-slate-900/20">
+      <section className="py-10 relative px-6 lg:px-12 bg-slate-900/20">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-start pb-16 border-b border-white/5 mb-16">
             <div>
@@ -374,7 +374,7 @@ export default function NanosunTilesPage() {
       </section>
 
       {/* Structural Precision Section */}
-      <section className="py-24 relative px-6 lg:px-12 bg-slate-950 overflow-hidden">
+      <section className="py-10 relative px-6 lg:px-12 bg-slate-950 overflow-hidden">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <motion.div
@@ -426,7 +426,7 @@ export default function NanosunTilesPage() {
       </section>
 
       {/* Key Benefits Bar */}
-      <section className="py-20 bg-slate-950 border-y border-white/5">
+      <section className="py-10 bg-slate-950 border-y border-white/5">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-4xl font-black text-white uppercase tracking-tighter mb-2">Key <span className="brand-gradient-text">Benefits</span></h2>

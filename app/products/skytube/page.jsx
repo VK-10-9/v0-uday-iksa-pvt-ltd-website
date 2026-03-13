@@ -287,10 +287,10 @@ export default function SkytubePage() {
     <main className="pt-24 bg-slate-950 min-h-screen text-white overflow-hidden">
 
       {/* ── HERO SECTION ── */}
-      <section className="relative py-16 md:py-24 overflow-hidden px-6 lg:px-12 border-b border-white/5">
+      <section className="relative py-8 md:py-12 overflow-hidden px-6 lg:px-12 border-b border-white/5">
         <div className="absolute inset-0 bg-brand-orange-500/5 blur-[120px] rounded-full transform translate-y-1/2" />
         <div className="container mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-start">
             <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
               <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-5 py-1.5 mb-8 backdrop-blur-md">
                 <Zap className="h-3 w-3 text-brand-orange-400" />
@@ -359,7 +359,7 @@ export default function SkytubePage() {
       <CredentialStrip />
 
       {/* ── SKYTUBE VS CIRCULAR COMPARISON ── */}
-      <section className="py-20 px-6 lg:px-12 bg-slate-950/50 border-b border-white/5">
+      <section className="py-10 px-6 lg:px-12 bg-slate-950/50 border-b border-white/5">
         <div className="container mx-auto">
           <div className="text-center mb-16 px-4">
             <h2 className="text-2xl md:text-4xl font-black text-white mb-4 uppercase tracking-tighter leading-none">
@@ -413,7 +413,7 @@ export default function SkytubePage() {
       </section>
 
       {/* ── HOW IT WORKS ── */}
-      <section className="py-20 relative px-6 lg:px-12 bg-slate-950">
+      <section className="py-10 relative px-6 lg:px-12 bg-slate-950">
         <div className="container mx-auto">
           <div className="text-center mb-16 px-4">
             <h2 className="text-2xl md:text-4xl font-black text-white mb-4 uppercase tracking-tighter leading-none">How It <span className="brand-gradient-text">Works</span></h2>
@@ -487,10 +487,10 @@ export default function SkytubePage() {
       </section>
 
       {/* ── PRODUCT FAMILY SELECTOR ── */}
-      <section className="py-20 relative px-6 lg:px-12 bg-slate-900/20 border-y border-white/5">
+      <section className="py-10 relative px-6 lg:px-12 bg-slate-900/20 border-y border-white/5">
         <div className="container mx-auto">
           {/* Section Header */}
-          <div className="grid lg:grid-cols-2 gap-16 items-start pb-16 border-b border-white/5 mb-16">
+          <div className="grid lg:grid-cols-2 gap-16 items-start pb-8 border-b border-white/5 mb-10">
             <div>
               <h2 className="text-2xl md:text-4xl lg:text-5xl font-black text-white uppercase tracking-tighter mb-6 leading-tight">Product <br /><span className="brand-gradient-text">Families</span></h2>
               <p className="text-sm md:text-base text-gray-500 max-w-md font-medium leading-relaxed">
@@ -603,7 +603,7 @@ export default function SkytubePage() {
       </section>
 
       {/* ── FULL QUICK COMPARISON TABLE ── */}
-      <section className="py-20 px-6 lg:px-12 bg-slate-950 border-b border-white/5">
+      <section className="py-10 px-6 lg:px-12 bg-slate-950 border-b border-white/5">
         <div className="container mx-auto">
           <div className="flex items-center gap-4 mb-12">
             <Ruler className="h-8 w-8 text-brand-orange-500" />
@@ -645,7 +645,7 @@ export default function SkytubePage() {
       </section>
 
       {/* ── WHERE IS SKYTUBE USED ── */}
-      <section className="py-20 px-6 lg:px-12 bg-slate-950 border-b border-white/5">
+      <section className="py-10 px-6 lg:px-12 bg-slate-950 border-b border-white/5">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-2xl md:text-4xl font-black text-white mb-4 uppercase tracking-tighter leading-none">Where Is SKYTUBE <span className="brand-gradient-text">Used?</span></h2>
@@ -679,7 +679,7 @@ export default function SkytubePage() {
       </section>
 
       {/* ── KEY BENEFITS ── */}
-      <section className="py-16 bg-slate-950 border-b border-white/5">
+      <section className="py-10 bg-slate-950 border-b border-white/5">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-4xl font-black text-white mb-4 uppercase tracking-tighter leading-none">Key <span className="brand-gradient-text">Benefits</span></h2>
@@ -709,7 +709,7 @@ export default function SkytubePage() {
       <ProductTrustSection />
 
       {/* ── FINAL CTA ── */}
-      <section className="py-24 relative px-6 lg:px-12 bg-slate-950 border-t border-white/5">
+      <section className="py-12 relative px-6 lg:px-12 bg-slate-950 border-t border-white/5">
         <div className="container mx-auto">
           <motion.div
             className="bg-brand-gradient py-12 md:py-20 px-8 rounded-[48px] text-center shadow-2xl shadow-brand-orange-500/10 relative overflow-hidden max-w-4xl mx-auto"

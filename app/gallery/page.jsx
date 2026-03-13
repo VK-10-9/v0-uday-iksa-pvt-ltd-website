@@ -84,7 +84,7 @@ export default function GalleryPage() {
     return (
         <main className="pt-24 bg-slate-950 min-h-screen">
             {/* Hero Section */}
-            <section className="relative py-24 md:py-32 overflow-hidden border-b border-white/5">
+            <section className="relative py-12 md:py-16 overflow-hidden border-b border-white/5">
                 <div className="absolute inset-0 bg-brand-orange-500/5 blur-[120px] rounded-full transform -translate-y-1/2" />
                 <div className="container mx-auto px-6 relative z-10 text-center">
                     <motion.div
@@ -107,7 +107,7 @@ export default function GalleryPage() {
             </section>
 
             {/* Gallery Grid */}
-            <section className="py-24 relative px-6 lg:px-12">
+            <section className="py-12 relative px-6 lg:px-12">
                 <div className="container mx-auto">
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                         {installations.map((item, index) => (
@@ -160,7 +160,7 @@ export default function GalleryPage() {
 
 
             {/* Impact Stats */}
-            <section className="py-24 bg-white/5 border-y border-white/5">
+            <section className="py-12 bg-white/5 border-y border-white/5">
                 <div className="container mx-auto px-6">
                     <div className="grid md:grid-cols-4 gap-8">
                         {[
@@ -182,10 +182,10 @@ export default function GalleryPage() {
             </section>
 
             {/* CTA */}
-            <section className="py-40 relative px-6">
+            <section className="py-16 relative px-6">
                 <div className="container mx-auto text-center">
                     <motion.div
-                        className="bg-brand-gradient p-12 md:p-24 rounded-[60px] md:rounded-[100px] shadow-2xl relative overflow-hidden"
+                        className="bg-brand-gradient p-8 md:p-16 rounded-[48px] md:rounded-[80px] shadow-2xl relative overflow-hidden"
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}

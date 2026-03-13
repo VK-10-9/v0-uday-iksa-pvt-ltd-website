@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowRight, Building2, Home, CheckCircle2 } from "lucide-react"
+import { ArrowRight, CheckCircle2, Home, Building2 } from "lucide-react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
@@ -25,43 +25,66 @@ export default function SolutionsOverview() {
             </div>
 
             <div className="container mx-auto relative z-10">
-                <div className="grid lg:grid-cols-2 gap-20 lg:gap-24 items-center">
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                     {/* Left Side: Modern Image Grid */}
                     <div className="relative order-2 lg:order-1">
                         <div className="grid grid-cols-12 gap-4 items-start">
+                             {/* Large Industrial Photo */}
                              <motion.div
-                                 className="col-span-12 md:col-span-7 aspect-square relative rounded-[40px] overflow-hidden border border-white/10 shadow-2xl bg-white/[0.03] flex items-center justify-center group"
+                                 className="col-span-12 md:col-span-7 aspect-square relative rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group"
                                  initial={{ opacity: 0, x: -20 }}
                                  whileInView={{ opacity: 1, x: 0 }}
                                  viewport={{ once: true }}
                              >
-                                 <div className="absolute inset-0 bg-gradient-to-br from-brand-orange-500/10 to-transparent opacity-50" />
-                                 <Building2 className="h-24 w-24 text-brand-orange-500/20 group-hover:scale-110 transition-transform duration-700" />
-                                 <div className="absolute inset-0 flex items-center justify-center opacity-[0.02]">
-                                     <p className="text-[140px] font-black uppercase tracking-tighter select-none rotate-90">INDUSTRIAL</p>
+                                 <Image
+                                     src="/images/gallery/nanosun/Gujarat Berger Paints India Ltd.6.jpeg"
+                                     alt="Nanosun industrial installation — Berger Paints Gujarat"
+                                     fill
+                                     className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                 />
+                                 <div className="absolute inset-0 bg-gradient-to-br from-slate-950/40 via-transparent to-slate-950/60" />
+                                 <div className="absolute bottom-6 left-6 z-10">
+                                     <p className="text-[8px] font-black text-white/70 uppercase tracking-[0.3em]">Industrial Installation</p>
                                  </div>
                              </motion.div>
- 
+
+                             {/* Portrait Residential/Institutional Photo */}
                              <motion.div
-                                 className="col-span-12 md:col-span-5 aspect-[3/4] relative rounded-[40px] overflow-hidden border-2 border-brand-orange-500/30 z-20 shadow-2xl md:-translate-x-8 md:translate-y-8 bg-slate-900 flex items-center justify-center group"
+                                 className="col-span-12 md:col-span-5 aspect-[3/4] relative rounded-[40px] overflow-hidden border-2 border-brand-orange-500/30 z-20 shadow-2xl md:-translate-x-8 md:translate-y-8 group"
                                  initial={{ opacity: 0, y: 40 }}
                                  whileInView={{ opacity: 1, y: 0 }}
                                  viewport={{ once: true }}
                                  transition={{ delay: 0.2 }}
                              >
-                                 <Home className="h-16 w-16 text-brand-orange-500/30 group-hover:rotate-12 transition-transform duration-700" />
-                                 <div className="absolute inset-0 bg-gradient-to-t from-brand-orange-500/10 via-transparent to-transparent opacity-40" />
+                                 <Image
+                                     src="/images/gallery/skytube/WhatsApp Image 2024-07-16 at 12.13.46 PM.jpeg"
+                                     alt="Skytube residential installation"
+                                     fill
+                                     className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                 />
+                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
+                                 <div className="absolute bottom-5 left-5 z-10">
+                                     <p className="text-[8px] font-black text-white/70 uppercase tracking-[0.3em]">Residential Solution</p>
+                                 </div>
                              </motion.div>
- 
+
+                             {/* Wide Factory Banner Photo */}
                              <motion.div
-                                 className="col-span-12 aspect-[16/7] relative rounded-[40px] overflow-hidden border border-white/10 mt-2 shadow-2xl bg-white/[0.02] flex items-center justify-center group"
+                                 className="col-span-12 aspect-[16/7] relative rounded-[40px] overflow-hidden border border-white/10 mt-2 shadow-2xl group"
                                  initial={{ opacity: 0, y: 20 }}
                                  whileInView={{ opacity: 1, y: 0 }}
                                  viewport={{ once: true }}
                                  transition={{ delay: 0.4 }}
                              >
-                                 <div className="text-center">
-                                     <p className="text-3xl md:text-5xl font-black text-white/10 uppercase tracking-[0.5em] group-hover:tracking-[0.6em] transition-all duration-1000">PRECISION</p>
+                                 <Image
+                                     src="/images/gallery/nanosun/WhatsApp Image 2026-01-28 at 11.16.11 AM.jpeg"
+                                     alt="Nanosun factory daylighting installation"
+                                     fill
+                                     className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                 />
+                                 <div className="absolute inset-0 bg-gradient-to-r from-slate-950/60 via-transparent to-slate-950/60" />
+                                 <div className="absolute inset-0 flex items-center justify-center">
+                                     <p className="text-2xl md:text-4xl font-black text-white/20 uppercase tracking-[0.5em] group-hover:text-white/30 group-hover:tracking-[0.6em] transition-all duration-1000">PRECISION</p>
                                  </div>
                              </motion.div>
                         </div>
@@ -174,7 +197,7 @@ export default function SolutionsOverview() {
 
                 {/* Local Highlight CTA */}
                 <motion.div
-                    className="mt-10 md:mt-12 bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-10 lg:p-20 rounded-[64px] md:rounded-[80px] text-center relative overflow-hidden group shadow-2xl"
+                    className="mt-6 md:mt-8 bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-8 lg:p-12 rounded-[48px] md:rounded-[64px] text-center relative overflow-hidden group shadow-2xl"
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}

@@ -6,7 +6,6 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { HoverButton } from "@/components/ui/hover-button"
-import TimelineSection from "@/components/home/timeline-section"
 
 export default function AboutPage() {
   return (
@@ -70,7 +69,7 @@ export default function AboutPage() {
                 src="/images/gallery/about/WhatsApp Image 2026-02-14 at 12.37.16 PM.jpeg"
                 alt="Uday IKSA Team"
                 fill
-                className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-1000"
+                className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
               <div className="absolute bottom-10 left-10 right-10 z-20">
@@ -83,44 +82,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Timeline Section */}
-      <TimelineSection />
-
-      {/* Capabilities Section */}
-      <section className="py-12 relative px-6">
-        <div className="container mx-auto">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4">What We Actually Do</h2>
-            <p className="text-sm md:text-base text-brand-orange-500 uppercase font-black tracking-[0.2em] mb-4">End-to-End. In-House.</p>
-            <div className="h-0.5 w-24 bg-brand-orange-500 rounded-full mx-auto mb-8"></div>
-            <p className="text-base text-gray-400 max-w-2xl mx-auto font-medium leading-relaxed">
-              When you work with Uday IKSA, you're working directly with the people who design, build, and install your system.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { icon: Shield, title: "Design & Engineering", desc: "Every product is designed in-house. We don't just sell — we engineer solutions specific to your building type and light requirements." },
-              { icon: Factory, title: "Manufacturing", desc: "Our factory at Gokul Industrial Estate handles everything — die-making, mould-making, and final assembly. Complete control." },
-              { icon: Zap, title: "Custom Solutions", desc: "Standard sizes don't always fit. We can customise dimensions, pipe lengths, and configurations for complex installations." },
-              { icon: Building2, title: "Installation", desc: "Our expert team handles the entire site work — from roof access and cutting to sealing, testing, and clean finishing." },
-            ].map((cap, idx) => (
-              <motion.div
-                key={idx}
-                className="bg-white/5 backdrop-blur-sm p-8 rounded-[40px] border border-white/10 hover:border-brand-orange-500/40 transition-all flex flex-col items-center text-center group"
-                whileHover={{ y: -5 }}
-              >
-                <div className="w-14 h-14 bg-brand-orange-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-orange-500 transition-colors">
-                  <cap.icon className="h-6 w-6 text-brand-orange-500 group-hover:text-white" />
-                </div>
-                <h3 className="text-xl font-black text-white uppercase tracking-tighter mb-3 group-hover:text-brand-orange-400 transition-colors">{cap.title}</h3>
-                <p className="text-gray-400 text-[13px] leading-relaxed font-medium">{cap.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Hierarchy Teams Section */}
+      {/* Leadership & Advisors Section — 2nd Section */}
       <section id="team" className="py-20 relative px-6 border-t border-white/5">
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -135,14 +97,16 @@ export default function AboutPage() {
               {
                 name: "Prof. S.B. Kurubar",
                 role: "TECHNICAL ADVISOR — QUALITY SYSTEMS",
-                image: "/images/gallery/about/WhatsApp Image 2026-02-19 at 10.45.06 AM.jpeg",
+                image: "/images/image copy.png",
+                position: "object-top",
                 linkedin: "#",
                 bio: "A distinguished engineer and academic with over five decades of experience, Professor S.B. Kurubar brings deep technical rigour to Uday IKSA's product quality and engineering processes. A graduate of KREC Suratkal (1968) with a post-graduation from SJCE Mysore, he has spent his career at the intersection of electrical engineering, computer science, and academic leadership — serving as Head of Department for both CSE and ISE, Visiting Professor at Karnatak University Dharwad, and Dean of Examination Affairs at BVBCET Hubballi. His oversight ensures that every NANOSUN™ product we manufacture meets the highest standards of consistency and durability."
               },
               {
                 name: "Mr. B.R. Indushekar",
                 role: "TECHNICAL ADVISOR — LEAN OPERATIONS",
-                image: "/images/gallery/about/WhatsApp Image 2026-02-19 at 10.48.09 AM.jpeg",
+                image: "/images/image.png",
+                position: "object-center",
                 linkedin: "https://www.linkedin.com/in/indushekar-bangalore-rajan-15bbb8308/",
                 bio: "With 38+ years of senior leadership across Ingersoll-Rand and Volvo, B.R. Indushekar is one of India's most accomplished operations and manufacturing executives. A Certified Six Sigma Black Belt (CII) and Lean Specialist trained in Gifu, Japan, he brings world-class manufacturing discipline to Uday IKSA's production processes. As former Vice President & General Manager at Volvo CE India — where he led a plant transformation that won 40+ national awards — his Japanese-tier lean methodologies help us maintain manufacturing efficiency without compromising the engineered integrity of our products.",
                 quote: "38+ years of leadership at Volvo and Ingersoll-Rand. His lean methodologies ensure we build at the highest efficiency without ever cutting corners on quality."
@@ -156,14 +120,14 @@ export default function AboutPage() {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <div className="relative h-64 overflow-hidden">
+                  <div className="relative h-80 overflow-hidden">
                     <Image 
                       src={member.image}
                       alt={member.name}
                       fill
-                      className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                      className={`object-cover ${member.position || 'object-center'} opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700`}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
                   </div>
                   <div className="p-8 flex-1 flex flex-col relative z-20">
                     <p className="text-brand-orange-500 font-black uppercase tracking-[0.2em] text-[10px] mb-2">{member.role}</p>
@@ -232,6 +196,40 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Capabilities Section */}
+      <section className="py-12 relative px-6">
+        <div className="container mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4">What We Actually Do</h2>
+            <p className="text-sm md:text-base text-brand-orange-500 uppercase font-black tracking-[0.2em] mb-4">End-to-End. In-House.</p>
+            <div className="h-0.5 w-24 bg-brand-orange-500 rounded-full mx-auto mb-8"></div>
+            <p className="text-base text-gray-400 max-w-2xl mx-auto font-medium leading-relaxed">
+              When you work with Uday IKSA, you're working directly with the people who design, build, and install your system.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { icon: Shield, title: "Design & Engineering", desc: "Every product is designed in-house. We don't just sell — we engineer solutions specific to your building type and light requirements." },
+              { icon: Factory, title: "Manufacturing", desc: "Our factory at Gokul Industrial Estate handles everything — die-making, mould-making, and final assembly. Complete control." },
+              { icon: Zap, title: "Custom Solutions", desc: "Standard sizes don't always fit. We can customise dimensions, pipe lengths, and configurations for complex installations." },
+              { icon: Building2, title: "Installation", desc: "Our expert team handles the entire site work — from roof access and cutting to sealing, testing, and clean finishing." },
+            ].map((cap, idx) => (
+              <motion.div
+                key={idx}
+                className="bg-white/5 backdrop-blur-sm p-8 rounded-[40px] border border-white/10 hover:border-brand-orange-500/40 transition-all flex flex-col items-center text-center group"
+                whileHover={{ y: -5 }}
+              >
+                <div className="w-14 h-14 bg-brand-orange-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-orange-500 transition-colors">
+                  <cap.icon className="h-6 w-6 text-brand-orange-500 group-hover:text-white" />
+                </div>
+                <h3 className="text-xl font-black text-white uppercase tracking-tighter mb-3 group-hover:text-brand-orange-400 transition-colors">{cap.title}</h3>
+                <p className="text-gray-400 text-[13px] leading-relaxed font-medium">{cap.desc}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

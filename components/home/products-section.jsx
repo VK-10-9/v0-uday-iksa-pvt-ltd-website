@@ -18,7 +18,7 @@ export default function ProductsSection() {
     }
 
     return (
-        <section id="products" className="py-12 md:py-16 relative bg-slate-950 overflow-hidden">
+        <section id="products" className="py-8 md:py-12 relative bg-slate-950 overflow-hidden">
             {/* Strategic Background Elements */}
             <div className="absolute inset-0">
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-orange-500/[0.02] transform skew-x-12 translate-x-1/4" />
@@ -34,7 +34,7 @@ export default function ProductsSection() {
 
             <div className="container mx-auto px-6 lg:px-12 relative z-10">
                 {/* Section Header */}
-                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12 md:mb-16">
+                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-8 md:mb-10">
                     <motion.div
                         className="max-w-3xl"
                         initial={{ opacity: 0, x: -50 }}
@@ -42,7 +42,7 @@ export default function ProductsSection() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <div className="inline-flex items-center gap-3 bg-brand-orange-500/10 border border-brand-orange-500/20 rounded-full px-6 py-2 mb-8">
+                        <div className="inline-flex items-center gap-3 bg-brand-orange-500/10 border border-brand-orange-500/20 rounded-full px-6 py-2 mb-4">
                             <Shield className="h-3.5 w-3.5 text-brand-orange-500" />
                             <span className="text-[7px] font-black text-brand-orange-500 uppercase tracking-[0.3em]">Proprietary Technology</span>
                         </div>

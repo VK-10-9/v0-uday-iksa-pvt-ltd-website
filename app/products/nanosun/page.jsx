@@ -157,10 +157,10 @@ export default function NanosunPage() {
   return (
     <main className="pt-24 bg-slate-950 text-slate-200">
       {/* Hero Section - Refined Scale */}
-      <section className="relative py-16 md:py-20 overflow-hidden px-6 lg:px-12">
+      <section className="relative py-8 md:py-10 overflow-hidden px-6 lg:px-12">
         <div className="absolute inset-0 bg-brand-orange-500/5 blur-[120px] rounded-full transform -translate-y-1/2" />
         <div className="container mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
             <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
               <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 mb-8 backdrop-blur-md">
                 <Sun className="h-3 w-3 text-brand-orange-400" />
@@ -214,9 +214,9 @@ export default function NanosunPage() {
       <CredentialStrip />
 
       {/* What's Inside Section - Optimized Density */}
-      <section className="py-20 relative px-6 lg:px-12 bg-slate-950/50">
+      <section className="py-10 relative px-6 lg:px-12 bg-slate-950/50">
         <div className="container mx-auto">
-          <div className="text-center mb-16 md:mb-20 px-4">
+          <div className="text-center mb-8 px-4">
             <h2 className="text-2xl md:text-4xl font-black text-white mb-4 uppercase tracking-tighter leading-none">What's Inside <span className="brand-gradient-text">Every Unit</span></h2>
             <div className="h-0.5 w-16 bg-brand-orange-500 rounded-full mx-auto mb-6"></div>
             <p className="text-sm md:text-base text-gray-500 max-w-xl mx-auto font-medium">Three high-performance components working together to bring nature deep into your space.</p>
@@ -271,9 +271,9 @@ export default function NanosunPage() {
       </section>
 
       {/* Size Selector Section - Refined UI */}
-      <section className="py-20 relative px-6 lg:px-12 bg-slate-900/20">
+      <section className="py-10 relative px-6 lg:px-12 bg-slate-900/20">
         <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-start pb-16 border-b border-white/5 mb-16">
+          <div className="grid lg:grid-cols-2 gap-10 items-start pb-10 border-b border-white/5 mb-10">
             <div>
               <h2 className="text-2xl md:text-4xl lg:text-5xl font-black text-white uppercase tracking-tighter mb-6 leading-tight">Choose <br /><span className="brand-gradient-text">Your Size</span></h2>
               <p className="text-sm md:text-base text-gray-500 max-w-md font-medium leading-relaxed">
@@ -342,9 +342,9 @@ export default function NanosunPage() {
       </section>
 
       {/* Common Specs - Technical Presentation */}
-      <section className="py-20 md:py-24 relative px-6 lg:px-12 bg-slate-950">
+      <section className="py-10 md:py-12 relative px-6 lg:px-12 bg-slate-950">
         <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.98 }}
               whileInView={{ opacity: 1, scale: 1 }}

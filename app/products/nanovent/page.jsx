@@ -68,10 +68,10 @@ function NanoventContent() {
   return (
     <main className="pt-24 bg-slate-950 min-h-screen text-white overflow-hidden">
       {/* Dynamic Hero Section - Refined Scale */}
-      <section className="relative py-20 md:py-32 overflow-hidden px-6 lg:px-12 border-b border-white/5">
+      <section className="relative py-8 md:py-12 overflow-hidden px-6 lg:px-12 border-b border-white/5">
         <div className="absolute inset-0 bg-brand-orange-500/5 blur-[120px] rounded-full transform translate-y-1/2" />
         <div className="container mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
             <motion.div
               key={activeGrade}
               initial={{ opacity: 0, x: -30 }}
@@ -161,7 +161,7 @@ function NanoventContent() {
       <CredentialStrip />
 
       {/* Anatomy Exploration Section - Realigned to Dark Theme */}
-      <section className="py-24 px-6 lg:px-12 bg-slate-950 text-white relative overflow-hidden">
+      <section className="py-10 px-6 lg:px-12 bg-slate-950 text-white relative overflow-hidden">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
             <div className="lg:w-1/2 space-y-10">
@@ -216,7 +216,7 @@ function NanoventContent() {
       </section>
 
       {/* Mounting Bases Section - Densified */}
-      <section className="py-24 px-6 lg:px-12 bg-slate-950 border-y border-white/5 relative">
+      <section className="py-10 px-6 lg:px-12 bg-slate-950 border-y border-white/5 relative">
         <div className="container mx-auto">
           <div className="max-w-3xl mb-16">
             <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter leading-none mb-6">Mounting <br /><span className="brand-gradient-text">Freedom</span></h2>
@@ -250,7 +250,7 @@ function NanoventContent() {
       </section>
 
       {/* Suitability Grid - Tightened */}
-      <section className="py-24 px-6 lg:px-12 bg-slate-900/10">
+      <section className="py-10 px-6 lg:px-12 bg-slate-900/10">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-4 text-white">Project <span className="brand-gradient-text">Suitability</span></h2>
@@ -283,7 +283,7 @@ function NanoventContent() {
       </section>
 
       {/* Technical Tables Section - Densified */}
-      <section className="py-24 px-6 lg:px-12 bg-slate-950 border-t border-white/5">
+      <section className="py-10 px-6 lg:px-12 bg-slate-950 border-t border-white/5">
         <div className="container mx-auto max-w-5xl space-y-24">
           <div>
             <div className="flex items-center gap-4 mb-12">
@@ -361,7 +361,7 @@ function NanoventContent() {
       <ProductTrustSection />
 
       {/* Final CTA - Optimized */}
-      <section className="py-24 relative px-6 lg:px-12 bg-slate-950 border-t border-white/5">
+      <section className="py-12 relative px-6 lg:px-12 bg-slate-950 border-t border-white/5">
         <div className="container mx-auto">
           <motion.div
             className="bg-brand-gradient py-12 md:py-20 px-8 rounded-[48px] text-center shadow-2xl shadow-brand-orange-500/10 relative overflow-hidden max-w-4xl mx-auto"

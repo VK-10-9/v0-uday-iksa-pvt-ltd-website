@@ -20,7 +20,7 @@ export default function ClientsSection() {
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
-                        className="inline-flex items-center gap-3 bg-white/5 border border-white/10 rounded-full px-8 py-2.5 mb-10 backdrop-blur-md"
+                        className="inline-flex items-center gap-3 bg-white/5 border border-white/10 rounded-full px-8 py-2.5 mb-4 backdrop-blur-md"
                     >
                         <Building2 className="h-4 w-4 text-brand-orange-500" />
                         <span className="text-[10px] font-black text-gray-400 uppercase tracking-[0.4em]">Our Network</span>

@@ -164,10 +164,10 @@ export default function NanosunRccPage() {
     return (
         <main className="pt-24 bg-slate-950 text-slate-200">
       {/* Hero Section - Refined Scale */}
-      <section className="relative py-20 md:py-32 overflow-hidden px-6 lg:px-12">
+      <section className="relative py-8 md:py-12 overflow-hidden px-6 lg:px-12">
         <div className="absolute inset-0 bg-brand-orange-500/5 blur-[120px] rounded-full transform translate-y-1/2" />
         <div className="container mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
             <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
               <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-5 py-1.5 mb-8 backdrop-blur-md">
                 <Building className="h-3 w-3 text-brand-orange-500" />
@@ -222,7 +222,7 @@ export default function NanosunRccPage() {
       <CredentialStrip />
 
       {/* Comparison Section - Optimized Density */}
-      <section className="py-24 relative px-6 lg:px-12 bg-slate-900/30">
+      <section className="py-10 relative px-6 lg:px-12 bg-slate-900/30">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
@@ -262,7 +262,7 @@ export default function NanosunRccPage() {
       </section>
 
       {/* Design & Integration Section */}
-      <section className="py-24 relative px-6 lg:px-12 bg-slate-950 overflow-hidden">
+      <section className="py-10 relative px-6 lg:px-12 bg-slate-950 overflow-hidden">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-black text-white mb-4 uppercase tracking-tighter leading-none">Specialized <br /><span className="brand-gradient-text">RCC Models</span></h2>
@@ -326,7 +326,7 @@ export default function NanosunRccPage() {
       </section>
 
       {/* Perfect For Section */}
-      <section className="py-24 relative px-6 lg:px-12 bg-slate-900/20">
+      <section className="py-10 relative px-6 lg:px-12 bg-slate-900/20">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-5xl font-black text-white mb-16 uppercase tracking-tighter leading-none">Perfect For <span className="brand-gradient-text">Every Building</span></h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
@@ -357,7 +357,7 @@ export default function NanosunRccPage() {
       </section>
 
       {/* Choose Your Size Section - Refined UI */}
-      <section id="sizes" className="py-24 relative px-6 lg:px-12 bg-slate-950">
+      <section id="sizes" className="py-10 relative px-6 lg:px-12 bg-slate-950">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
             <div className="lg:sticky lg:top-32 h-fit">
@@ -442,7 +442,7 @@ export default function NanosunRccPage() {
       </section>
 
       {/* Standard Quality Table */}
-      <section className="py-24 relative px-6 lg:px-12 bg-slate-900/30">
+      <section className="py-10 relative px-6 lg:px-12 bg-slate-900/30">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-black text-white mb-4 uppercase tracking-tighter leading-none">Standard <span className="brand-gradient-text">Quality</span></h2>

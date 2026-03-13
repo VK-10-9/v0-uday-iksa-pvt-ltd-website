@@ -34,7 +34,7 @@ export default function AwardsSection() {
 
         <div className="max-w-5xl mx-auto">
           <motion.div
-            className="bg-white/[0.03] backdrop-blur-2xl p-10 lg:p-16 rounded-[60px] border border-white/10 shadow-2xl overflow-hidden relative group hover:border-brand-orange-500/40 transition-all duration-700"
+            className="bg-white/[0.03] backdrop-blur-2xl p-8 lg:p-12 rounded-[48px] border border-white/10 shadow-2xl overflow-hidden relative group hover:border-brand-orange-500/40 transition-all duration-700"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

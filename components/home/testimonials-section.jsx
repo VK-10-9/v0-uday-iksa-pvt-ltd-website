@@ -96,7 +96,7 @@ export default function TestimonialsSection() {
 
         <div className="max-w-6xl mx-auto">
           <motion.div
-            className="relative bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-[60px] p-10 lg:p-20 shadow-2xl overflow-hidden"
+            className="relative bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-[48px] p-8 lg:p-12 shadow-2xl overflow-hidden"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -174,7 +174,7 @@ export default function TestimonialsSection() {
               </AnimatePresence>
 
               {/* Navigation Controls */}
-              <div className="flex items-center justify-between mt-20 pt-10 border-t border-white/5">
+              <div className="flex items-center justify-between mt-8 pt-6 border-t border-white/5">
                 <div className="flex gap-3">
                   {testimonials.map((_, index) => (
                     <button

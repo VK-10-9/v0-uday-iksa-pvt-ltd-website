@@ -32,7 +32,7 @@ export default function AboutSection() {
   ]
 
   return (
-    <section id="about" className="py-24 relative bg-slate-950 px-6 lg:px-12 overflow-hidden border-t border-white/5">
+    <section id="about" className="py-12 relative bg-slate-950 px-6 lg:px-12 overflow-hidden border-t border-white/5">
       {/* Structural Backdrop */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-brand-orange-500/20 to-transparent" />
@@ -41,7 +41,7 @@ export default function AboutSection() {
       </div>
 
       <div className="container mx-auto relative z-10">
-        <div className="grid lg:grid-cols-2 gap-20 lg:gap-32 items-center mb-32">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-12">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -133,7 +133,7 @@ export default function AboutSection() {
         </div>
 
         {/* Values & Certifications Bento */}
-        <div className="grid lg:grid-cols-2 gap-20 items-stretch">
+        <div className="grid lg:grid-cols-2 gap-12 items-stretch">
           <div className="grid sm:grid-cols-2 gap-4">
             <motion.div
               className="bg-white/[0.03] border border-brand-orange-500/20 rounded-[48px] p-8 md:p-12 relative overflow-hidden group col-span-2"
