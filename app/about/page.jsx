@@ -83,8 +83,10 @@ export default function AboutPage() {
       </section>
 
       {/* Leadership & Advisors Section — 2nd Section */}
-      <section id="team" className="py-20 relative px-6 border-t border-white/5">
-        <div className="container mx-auto">
+      <section id="team" className="py-20 relative px-6 border-t border-white/5 overflow-hidden">
+        {/* Decorative background element */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-7xl h-full bg-brand-orange-500/5 blur-[120px] rounded-full pointer-events-none" />
+        <div className="container mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4">Leadership & Advisors</h2>
             <div className="h-0.5 w-16 bg-brand-orange-500 rounded-full mx-auto"></div>
@@ -104,12 +106,12 @@ export default function AboutPage() {
               },
               {
                 name: "Mr. B.R. Indushekar",
-                role: "TECHNICAL ADVISOR — LEAN OPERATIONS",
+                role: "STRATEGIC ADVISOR — OPERATIONS & LEADERSHIP",
                 image: "/images/image.png",
                 position: "object-center",
                 linkedin: "https://www.linkedin.com/in/indushekar-bangalore-rajan-15bbb8308/",
-                bio: "With 38+ years of senior leadership across Ingersoll-Rand and Volvo, B.R. Indushekar is one of India's most accomplished operations and manufacturing executives. A Certified Six Sigma Black Belt (CII) and Lean Specialist trained in Gifu, Japan, he brings world-class manufacturing discipline to Uday IKSA's production processes. As former Vice President & General Manager at Volvo CE India — where he led a plant transformation that won 40+ national awards — his Japanese-tier lean methodologies help us maintain manufacturing efficiency without compromising the engineered integrity of our products.",
-                quote: "38+ years of leadership at Volvo and Ingersoll-Rand. His lean methodologies ensure we build at the highest efficiency without ever cutting corners on quality."
+                bio: "With over 38 years of global leadership, B.R. Indushekar served as Director of Volvo Group Real Estate and VP at Volvo CE India, leading plant transformations that won 40+ national awards. A BMS College of Engineering alumnus with a PG Diploma in Marketing Management, he is a Certified Six Sigma Black Belt and Lean Leader (Japan). Currently a Professor of Practice and Industry Coach, he brings Level 5 Leadership principles and world-class lean methodologies to Uday IKSA, ensuring our manufacturing processes meet the highest global standards.",
+                quote: "Former Director at Volvo Group Real Estate and VP at Volvo CE. A practitioner of Level 5 Leadership and lean excellence."
               },
               ].map((member, index) => (
                 <motion.div
@@ -128,6 +130,16 @@ export default function AboutPage() {
                       className={`object-cover ${member.position || 'object-center'} opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700`}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
+                    {member.linkedin && member.linkedin !== "#" && (
+                      <a 
+                        href={member.linkedin} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="absolute top-6 left-6 w-10 h-10 bg-white/10 backdrop-blur-md rounded-xl flex items-center justify-center border border-white/10 hover:bg-brand-orange-500 transition-all z-20 group/link"
+                      >
+                        <Linkedin className="h-4 w-4 text-white group-hover:scale-110 transition-transform" />
+                      </a>
+                    )}
                   </div>
                   <div className="p-8 flex-1 flex flex-col relative z-20">
                     <p className="text-brand-orange-500 font-black uppercase tracking-[0.2em] text-[10px] mb-2">{member.role}</p>
