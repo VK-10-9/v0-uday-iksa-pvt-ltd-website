@@ -10,7 +10,7 @@ export default function ProductShowcase({ activeProduct, setActiveProduct, hover
   const currentProduct = products[activeProduct]
 
   return (
-    <div className="relative space-y-12">
+    <div className="relative space-y-12 lg:space-y-16">
       {/* Featured Image Frame */}
       <motion.div
         className="relative h-[420px] sm:h-[450px] md:h-[500px] w-full rounded-3xl overflow-hidden brand-glass-premium border-2 border-brand-orange-500/30 group"
@@ -104,22 +104,40 @@ export default function ProductShowcase({ activeProduct, setActiveProduct, hover
         </div>
       </motion.div>
 
-      {/* Product Selection - Clean & Responsive */}
+      {/* Product Selection Dock - Premium Industrial Control */}
       <div className="relative w-full">
-        <div className="flex flex-row md:flex-wrap gap-2 md:gap-3 overflow-x-auto md:overflow-x-visible pb-4 md:pb-0 scrollbar-hide snap-x">
+        <div className="flex flex-row md:flex-wrap gap-2 md:gap-4 overflow-x-auto md:overflow-x-visible pb-6 md:pb-0 scrollbar-hide snap-x pt-4">
           {products.map((product, index) => (
             <motion.button
               key={product.id}
               onClick={() => setActiveProduct(index)}
-              className={`flex-shrink-0 px-4 md:px-5 py-3 md:py-3.5 rounded-xl md:rounded-2xl font-black transition-all duration-500 flex items-center gap-2.5 snap-center border ${activeProduct === index
-                ? "bg-brand-orange-500 text-white border-brand-orange-500 shadow-lg shadow-brand-orange-500/20 scale-[1.02]"
-                : "bg-white/5 text-gray-400 hover:bg-white/10 border-white/5 active:scale-95"
-                } text-[9px] md:text-[10px] uppercase tracking-wider`}
+              className={`flex-shrink-0 min-w-[140px] md:min-w-[180px] p-0.5 rounded-xl md:rounded-2xl transition-all duration-500 snap-center group border ${
+                activeProduct === index
+                  ? "border-brand-orange-500/50 bg-brand-orange-500/10 shadow-[0_0_20px_rgba(244,121,32,0.1)]"
+                  : "border-white/5 bg-white/[0.02] hover:border-white/20"
+              }`}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.98 }}
             >
-              <div className={`w-1.5 h-1.5 rounded-full ${activeProduct === index ? "bg-white shadow-[0_0_8px_white] animate-pulse" : "bg-gray-600"}`} />
-              <span className="whitespace-nowrap">{product.name}</span>
+              <div className={`w-full h-full px-4 py-3 md:py-4 rounded-[10px] md:rounded-[14px] flex flex-col items-start transition-all duration-500 ${
+                activeProduct === index ? "bg-brand-orange-500 text-white" : "text-gray-400"
+              }`}>
+                <div className="flex items-center justify-between w-full mb-1">
+                  <span className={`text-[7px] md:text-[8px] font-black uppercase tracking-[0.2em] ${
+                    activeProduct === index ? "text-white/80" : "text-brand-orange-500"
+                  }`}>
+                    {product.brandName}
+                  </span>
+                  <div className={`w-1.5 h-1.5 rounded-full transition-all duration-500 ${
+                    activeProduct === index 
+                      ? "bg-white shadow-[0_0_8px_rgba(255,255,255,1)] animate-pulse" 
+                      : "bg-white/10"
+                  }`} />
+                </div>
+                <span className="text-[9px] md:text-[11px] font-black uppercase tracking-tight whitespace-nowrap">
+                  {product.name.split(' (')[0]}
+                </span>
+              </div>
             </motion.button>
           ))}
         </div>

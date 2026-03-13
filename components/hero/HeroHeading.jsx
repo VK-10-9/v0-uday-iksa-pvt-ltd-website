@@ -12,7 +12,7 @@ export default function HeroHeading() {
       transition={{ delay: 0.4, duration: 1 }}
       className="space-y-6 md:space-y-8 text-left"
     >
-      <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[0.9] md:leading-[0.95] tracking-tighter uppercase flex flex-col items-start transition-all duration-500">
+      <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[0.9] md:leading-[0.95] tracking-tighter uppercase flex flex-col items-start transition-all duration-500">
         <motion.span
           className="block text-white"
           initial={{ opacity: 0, x: -50 }}
@@ -40,26 +40,31 @@ export default function HeroHeading() {
       </h1>
 
       <motion.div
-        className="max-w-xl space-y-4 md:space-y-5"
+        className="max-w-xl space-y-5 md:space-y-6"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2, duration: 0.8 }}
       >
-        <div className="flex items-center gap-3">
-          <div className="h-0.5 w-10 bg-brand-orange-500"></div>
-          <p className="text-brand-orange-500 font-extrabold uppercase tracking-[0.4em] text-[10px]">Manufacturer & Service Provider</p>
-        </div>
+        <div className="flex flex-col gap-4">
+          <div className="flex items-center gap-3">
+            <div className="h-0.5 w-10 bg-brand-orange-500"></div>
+            <p className="text-brand-orange-500 font-black uppercase tracking-[0.4em] text-[10px]">Manufacturer & Service Provider</p>
+          </div>
 
-        <p className="text-sm md:text-base text-gray-400 leading-relaxed font-medium">
-          Bringing natural daylighting and ventilation solutions to industrial, commercial, and residential buildings across India. Patented technology for a sustainable future.
-        </p>
+          <p className="text-[13px] md:text-[15px] text-gray-400 leading-relaxed font-medium max-w-lg">
+            Engineering natural daylight and ventilation solutions for 1,900+ installations across India. Patented technology for a high-performance future.
+          </p>
 
-        <div className="flex flex-wrap items-center gap-3 md:gap-4 text-[10px] md:text-[11px] font-black uppercase tracking-[0.3em]">
-          <span className="text-brand-orange-500 whitespace-nowrap">Patented Technology</span>
-          <span className="text-gray-600">•</span>
-          <span className="text-brand-amber-500 whitespace-nowrap">ISO 9001:2015</span>
-          <span className="text-gray-600 hidden sm:inline">•</span>
-          <span className="text-brand-yellow-500 whitespace-nowrap">CII National Award</span>
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-[10px] font-black uppercase tracking-widest text-gray-400 h-6">
+            <div className="flex items-center gap-2">
+              <div className="w-1 h-1 rounded-full bg-brand-orange-500" />
+              <span>ISO 9001:2015</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-1 h-1 rounded-full bg-brand-orange-500" />
+              <span>Patented Tech</span>
+            </div>
+          </div>
         </div>
 
         <div className="flex flex-wrap gap-4 pt-4">
