@@ -78,11 +78,6 @@ export default function MobileMenu({ isOpen, onClose }) {
       href: "/about",
       icon: <Info className="h-5 w-5" />,
       color: "text-brand-amber-500",
-      subLinks: [
-        { name: "Our Story", href: "/about" },
-        { name: "Vision & Mission", href: "/about" },
-        { name: "Engineering Leadership", href: "/about" },
-      ]
     },
     {
       name: "Products",

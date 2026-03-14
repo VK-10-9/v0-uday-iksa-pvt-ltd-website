@@ -41,23 +41,12 @@ export default function DesktopNav({ active, setActive }) {
           Home
         </Link>
 
-        <MenuItem setActive={setActive} active={active} item="About">
-          <div className="flex flex-col space-y-4 w-64 p-2">
-            <div className="text-[7px] font-black text-gray-500 uppercase tracking-widest border-b border-white/5 pb-2 ml-3">Identity</div>
-            <div className="space-y-1">
-              <HoveredLink href="/about">Our Story</HoveredLink>
-              <HoveredLink href="/about">Vision & Mission</HoveredLink>
-              <HoveredLink href="/about">Engineering Leadership</HoveredLink>
-            </div>
-            
-            <div className="pt-4 mt-2 border-t border-white/10 px-3 pb-2">
-               <div className="flex items-baseline gap-2">
-                  <span className="text-brand-orange-500 text-lg font-black tracking-tighter">15+</span>
-                  <span className="text-[6px] font-black text-gray-500 uppercase tracking-widest">Years Experience</span>
-               </div>
-            </div>
-          </div>
-        </MenuItem>
+        <Link
+          href="/about"
+          className="text-gray-400 hover:text-white text-xs font-black uppercase tracking-[0.2em] transition-all duration-300 hover:text-brand-orange-400 px-4"
+        >
+          About
+        </Link>
 
         <MenuItem setActive={setActive} active={active} item="Products">
           <div className="grid grid-cols-2 gap-x-6 gap-y-6 p-2 w-[820px]">
