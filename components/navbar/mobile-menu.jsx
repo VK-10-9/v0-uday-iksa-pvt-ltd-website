@@ -91,8 +91,8 @@ export default function MobileMenu({ isOpen, onClose }) {
       color: "text-brand-orange-500",
       subLinks: [
         { name: "Skylight Series (NANOSUN™)", href: "/products", isHeader: true },
-        { name: "Skylight for Metal Roofs", href: "/products/nanosun" },
-        { name: "Skylight for Concrete Roofs", href: "/products/nanosun-rcc" },
+        { name: "Skylight for Pitched Roofs", href: "/products/nanosun" },
+        { name: "Flat Roof Product", href: "/products/nanosun-rcc" },
         { name: "Skylight for Tile Roofs", href: "/products/nanosun-tiles" },
         { name: "Openable Premium Skylight", href: "/products/skylight" },
         

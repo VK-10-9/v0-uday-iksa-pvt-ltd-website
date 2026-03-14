@@ -60,7 +60,7 @@ export default function NanosunRccPage() {
             id: "530mm",
             diameter: "530mm",
             bestFor: "Large halls, open offices, hospital wards",
-            description: "High-output daylighting for broader areas in concrete buildings. Can replace multiple artificial lights.",
+            description: "High-output daylighting for broader areas in flat roof buildings. Can replace multiple artificial lights.",
             lux: "250 – 400 Lux",
             height: "Below 20 Feet",
             specs: [
@@ -74,7 +74,7 @@ export default function NanosunRccPage() {
             id: "750mm",
             diameter: "750mm",
             bestFor: "Auditoriums, hotel lobbies, massive halls",
-            description: "Industrial strength daylighting for massive RCC projects. Designed for maximum light penetration.",
+            description: "Industrial strength daylighting for massive flat roof projects. Designed for maximum light penetration.",
             lux: "250 – 400 Lux",
             height: "Below 30 Feet",
             specs: [
@@ -147,7 +147,7 @@ export default function NanosunRccPage() {
             id: "1000x3000",
             diameter: "1000x3000 mm",
             bestFor: "Massive hangars, wide-span factories, major showrooms",
-            description: "The largest rectangular daylighting system available for concrete roof integration.",
+            description: "The largest rectangular daylighting system available for flat roof integration.",
             lux: "800+ Lux",
             height: "Below 45 Feet",
             specs: [
@@ -174,10 +174,10 @@ export default function NanosunRccPage() {
                 <h2 className="text-[9px] font-black text-gray-400 uppercase tracking-widest leading-none">Flat Roof Solutions (NANOSUN™)</h2>
               </div>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-8 tracking-tighter uppercase leading-[0.95]">
-                Skylight for <br /> <span className="brand-gradient-text">Concrete Roofs</span>
+                Flat Roof <br /> <span className="brand-gradient-text">Product</span>
               </h1>
               <p className="text-base md:text-lg text-gray-400 mb-10 leading-relaxed max-w-xl font-medium">
-                Live in an apartment? Own an office? If your building has a flat concrete (RCC) roof, this was made for you. It fits cleanly into your slab — no leaks, no electricity.
+                Live in an apartment? Own an office? If your building has a flat roof, this was made for you. It fits cleanly into your slab — no leaks, no electricity.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button asChild className="bg-white text-black hover:bg-slate-900 hover:text-white rounded-xl px-12 py-5 text-xs font-black uppercase tracking-widest shadow-2xl transition-all">
@@ -211,7 +211,7 @@ export default function NanosunRccPage() {
               <div className="absolute bottom-12 left-12 right-12 z-10">
                 <div className="bg-white/5 backdrop-blur-2xl border border-white/10 p-8 rounded-[32px]">
                    <p className="text-2xl font-black text-white uppercase tracking-tighter mb-1">Flush Integration</p>
-                   <p className="text-gray-400 text-xs font-medium">Clean, compact, and structurally bonded for concrete architecture.</p>
+                   <p className="text-gray-400 text-xs font-medium">Clean, compact, and structurally bonded for flat roof architecture.</p>
                 </div>
               </div>
             </motion.div>
@@ -226,8 +226,8 @@ export default function NanosunRccPage() {
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-black text-white mb-4 uppercase tracking-tighter leading-none">Built for <span className="brand-gradient-text">Concrete</span></h2>
-              <p className="text-sm md:text-base text-gray-500 font-medium italic">"How is this different from the metal roof version?"</p>
+              <h2 className="text-3xl md:text-5xl font-black text-white mb-4 uppercase tracking-tighter leading-none">Built for <span className="brand-gradient-text">Flat Roofs</span></h2>
+              <p className="text-sm md:text-base text-gray-500 font-medium italic">"How is this different from the pitched roof version?"</p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -238,7 +238,7 @@ export default function NanosunRccPage() {
                 <h3 className="text-brand-orange-500 font-black uppercase text-[9px] tracking-widest mb-3">NANOSUN PEB</h3>
                 <p className="text-white text-2xl font-black mb-8 tracking-tighter uppercase leading-tight">Factories & <br />Warehouses</p>
                 <div className="space-y-3">
-                  <p className="text-gray-500 text-[10px] font-black uppercase tracking-widest pb-3 border-b border-white/5">Metal / PEB Roof Type</p>
+                  <p className="text-gray-500 text-[10px] font-black uppercase tracking-widest pb-3 border-b border-white/5">Pitched / PEB Roof Type</p>
                   <p className="text-gray-500 text-[10px] font-black uppercase tracking-widest pb-3 border-b border-white/5">600mm Reflector Height</p>
                   <p className="text-gray-500 text-[10px] font-black uppercase tracking-widest">Standard Lux Output</p>
                 </div>
@@ -251,7 +251,7 @@ export default function NanosunRccPage() {
                 <h3 className="text-brand-orange-500 font-black uppercase text-[9px] tracking-widest mb-3">NANOSUN RCC</h3>
                 <p className="text-white text-2xl font-black mb-8 tracking-tighter uppercase leading-tight">Homes, Offices <br />& Hospitals</p>
                 <div className="space-y-3">
-                  <p className="text-gray-300 text-[10px] font-black uppercase tracking-widest pb-3 border-b border-white/10">Flat Concrete Slab Type</p>
+                  <p className="text-gray-300 text-[10px] font-black uppercase tracking-widest pb-3 border-b border-white/10">Flat Roof Type</p>
                   <p className="text-gray-300 text-[10px] font-black uppercase tracking-widest pb-3 border-b border-white/10">Compact Reflector Height</p>
                   <p className="text-gray-300 text-[10px] font-black uppercase tracking-widest">Enhanced Lux Output</p>
                 </div>
@@ -287,7 +287,7 @@ export default function NanosunRccPage() {
               </div>
               <div className="p-10 relative z-10 text-center">
                 <h3 className="text-xl md:text-2xl font-black text-white uppercase tracking-tighter mb-4">Manual Control Models</h3>
-                <p className="text-gray-500 text-xs md:text-sm leading-relaxed mb-8 font-medium italic">"Fixed or Openable — built for concrete slabs."</p>
+                <p className="text-gray-500 text-xs md:text-sm leading-relaxed mb-8 font-medium italic">"Fixed or Openable — built for flat roofs."</p>
                 <div className="flex flex-wrap justify-center gap-2.5">
                   <span className="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-[9px] font-black text-gray-500 uppercase tracking-widest">Fixed</span>
                   <span className="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-[9px] font-black text-gray-500 uppercase tracking-widest">Openable</span>

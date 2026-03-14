@@ -33,7 +33,7 @@ export default function NanosunPage() {
       id: "peb-300",
       name: "PEB 300mm",
       bestFor: "Small factory sections, storage bays, utility rooms",
-      description: "A professional everyday size for standard factory sheds. This unit sits above your metal roof profile to harvest skylight effectively.",
+      description: "A professional everyday size for standard factory sheds. This unit sits above your pitched roof profile to harvest skylight effectively.",
       specs: [
         { label: "Dome Size", value: "300mm" },
         { label: "Suitable Roof Height", value: "Below 12 Feet", highlight: true },
@@ -150,7 +150,7 @@ export default function NanosunPage() {
     { label: "Reflectance", value: "≥ 95% Pure Reflectance" },
     { label: "Flame Rating", value: "Flame Retardant (FR Rated)" },
     { label: "Leak Protection", value: "Monsoon-Ready Flanged Dome (Zero Joints)" },
-    { label: "Roof Compatibility", value: "PEB / Metal Sheet Roofs" },
+    { label: "Roof Compatibility", value: "PEB / Pitched Roofs" },
     { label: "Maintenance", value: "Zero Moving Parts, No Wiring" },
   ]
 
@@ -167,10 +167,10 @@ export default function NanosunPage() {
                 <h2 className="text-[9px] font-black text-gray-400 uppercase tracking-[0.3em]">Natural Daylighting (NANOSUN™)</h2>
               </div>
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-6 uppercase tracking-tighter leading-[0.9]">
-                Skylight for Metal <br /> <span className="brand-gradient-text">Roofs (NANOSUN™)</span>
+                Skylight for Pitched <br /> <span className="brand-gradient-text">Roofs (NANOSUN™)</span>
               </h1>
               <p className="text-sm md:text-base text-gray-400 mb-10 leading-relaxed max-w-xl font-medium">
-                Natural Sunlight for Your Factory or Warehouse — All Day, <span className="text-white font-bold">No Electricity</span>. Designed specifically for metal roofs to bring pure, comfortable light without the heat gain.
+                Natural Sunlight for Your Factory or Warehouse — All Day, <span className="text-white font-bold">No Electricity</span>. Designed specifically for pitched roofs to bring pure, comfortable light without the heat gain.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button asChild className="bg-white text-black hover:bg-slate-900 hover:text-white rounded-xl px-10 py-4 text-xs font-black uppercase tracking-widest shadow-2xl transition-all">

@@ -71,7 +71,7 @@ export default function FAQPage() {
                 },
                 {
                     question: "Can it be installed on my type of roof?",
-                    answer: "Most likely yes. We have models for Metal / PEB sheet roofs (NANOSUN™ PEB), Flat concrete (RCC) slabs (NANOSUN™ RCC), and Mangalore or modern tile roofs (NANOSUN™ Tiles). If you're unsure, just call us or book a site visit — we'll assess your roof and recommend the right product.",
+                    answer: "We have models for Pitched / PEB sheet roofs (NANOSUN™ PEB), Flat roof slabs (NANOSUN™ RCC), and Mangalore or modern tile roofs (NANOSUN™ Tiles). If you're unsure, just call us or book a site visit — we'll assess your roof and recommend the right product.",
                 },
                 {
                     question: "Can it be installed on an existing building or only during construction?",

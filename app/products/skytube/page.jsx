@@ -261,7 +261,7 @@ export default function SkytubePage() {
     { label: "Light Pattern", circular: "Circular pool of light", skytube: "Long strip — lights entire bay" },
     { label: "Best For", circular: "Individual rooms, specific zones", skytube: "Factory aisles, warehouse bays, corridors" },
     { label: "Profile on Roof", circular: "Dome (raised)", skytube: "Low-profile panel (80–175mm flat)" },
-    { label: "Roof Types", circular: "PEB, RCC, Tile", skytube: "PEB / Metal Sheet" },
+    { label: "Roof Types", circular: "PEB, RCC, Tile", skytube: "PEB / Pitched Roof" },
     { label: "How It Works", circular: "Single reflector pipe", skytube: "Multiple reflectors spread along length" },
   ]
 
@@ -427,7 +427,7 @@ export default function SkytubePage() {
                 step: "01",
                 title: "Roof Panel",
                 subtitle: "Light Collector",
-                description: "A flat rectangular panel sits on your metal roof — low profile, barely visible from the outside. It collects natural daylight across its entire length, not just from one point.",
+                description: "A flat rectangular panel sits on your pitched roof — low profile, barely visible from the outside. It collects natural daylight across its entire length, not just from one point.",
                 icon: Sun,
               },
               {
@@ -659,7 +659,7 @@ export default function SkytubePage() {
               { icon: Layout, title: "Commercial Buildings", desc: "Long corridors, open-plan floors, retail areas" },
               { icon: Box, title: "Schools & Institutions", desc: "Long corridors, sports halls, canteens" },
               { icon: HardHat, title: "Stations & Public Infrastructure", desc: "Long covered platforms and walkways" },
-              { icon: Settings, title: "Any PEB / Metal Roof", desc: "Where bay-length lighting is needed" },
+              { icon: Settings, title: "Any PEB / Pitched Roof", desc: "Where bay-length lighting is needed" },
             ].map((use, i) => (
               <motion.div
                 key={i}

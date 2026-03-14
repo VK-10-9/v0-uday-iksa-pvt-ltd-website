@@ -110,7 +110,7 @@ export default function AboutPage() {
                 image: "/images/image.png",
                 position: "object-center",
                 linkedin: "https://www.linkedin.com/in/indushekar-bangalore-rajan-15bbb8308/",
-                bio: "With over 38 years of global leadership, B.R. Indushekar served as Director of Volvo Group Real Estate and VP at Volvo CE India, leading plant transformations that won 40+ national awards. A BMS College of Engineering alumnus with a PG Diploma in Marketing Management, he is a Certified Six Sigma Black Belt and Lean Leader (Japan). Currently a Professor of Practice and Industry Coach, he brings Level 5 Leadership principles and world-class lean methodologies to Uday IKSA, ensuring our manufacturing processes meet the highest global standards.",
+                bio: "With over 38 years of global leadership, B.R. Indushekar served as Director of Volvo Group Real Estate and VP at Volvo CE India, leading plant transformations that won 40+ awards. A BMS College of Engineering alumnus with a PG Diploma in Marketing Management, he is a Certified Six Sigma Black Belt and Lean Leader (Japan). Currently a Professor of Practice and Industry Coach, he brings Level 5 Leadership principles and world-class lean methodologies to Uday IKSA, ensuring our manufacturing processes meet the highest global standards.",
                 quote: "Former Director at Volvo Group Real Estate and VP at Volvo CE. A practitioner of Level 5 Leadership and lean excellence."
               },
               ].map((member, index) => (

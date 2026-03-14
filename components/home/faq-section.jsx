@@ -28,7 +28,7 @@ export default function FAQSection() {
             answer: "Yes! With angled pipes and bends, we can bring daylight down up to 7–8 metres. Even underground rooms and basements are possible.",
         },
         {
-            question: "Can I install it on an RCC / concrete roof?",
+            question: "Can I install it on an RCC / flat roof?",
             answer: "Absolutely. Our NANOSUN RCC model is specifically designed to be built into the slab during construction or retrofitted later.",
         },
         {

@@ -68,13 +68,13 @@ export default function DesktopNav({ active, setActive }) {
               </div>
               <div className="space-y-1">
                 <ProductItem 
-                  title="Skylight for Metal Roofs" 
+                  title="Skylight for Pitched Roofs" 
                   description="Industrial factory daylighting"
                   href="/products/nanosun"
                   src="/images/products/nanosun/IMG20250806155716.jpg"
                 />
                 <ProductItem 
-                  title="Skylight for Concrete Roofs" 
+                  title="Flat Roof Product" 
                   description="Solution for flat RCC roofs"
                   href="/products/nanosun-rcc"
                   src="/images/products/nanosun-rcc/circular dome design 300mm 1.1.jpg"

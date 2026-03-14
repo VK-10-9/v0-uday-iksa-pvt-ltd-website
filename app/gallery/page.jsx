@@ -68,7 +68,7 @@ const installations = [
         location: "Corporate Office Hub",
         image: "/images/web site images/WhatsApp Image 2026-03-13 at 19.03.09.jpeg",
         category: "Skylights",
-        desc: "Architectural integration on flat concrete slabs for premium commercial spaces."
+        desc: "Architectural integration on flat roof products for premium commercial spaces."
     },
     {
         title: "Circular Daylighting",
