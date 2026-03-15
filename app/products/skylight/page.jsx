@@ -133,37 +133,6 @@ export default function SkylightPage() {
         </div>
       </section>
 
-      {/* Comparison Section - Optimized Density */}
-      <section className="py-24 relative px-6 lg:px-12 bg-slate-900/30">
-        <div className="container mx-auto">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-black text-white mb-4 uppercase tracking-tighter leading-none">What Makes It <span className="brand-gradient-text">Different?</span></h2>
-              <p className="text-sm md:text-base text-gray-500 font-medium">Natural light AND natural ventilation from the same unit.</p>
-            </div>
-
-            <div className="bg-white/[0.02] border border-white/5 rounded-[40px] overflow-hidden">
-              <div className="grid grid-cols-3 gap-0 border-b border-white/10 p-6 bg-white/[0.02]">
-                <div className="text-[9px] font-black text-gray-500 uppercase tracking-widest">Feature</div>
-                <div className="text-center text-[9px] font-black text-gray-500 uppercase tracking-widest">NANOSUN RCC</div>
-                <div className="text-center text-[9px] font-black text-brand-orange-500 uppercase tracking-widest">Premium Skylight</div>
-              </div>
-              {comparisonData.map((row, i) => (
-                <div key={i} className={`grid grid-cols-3 gap-0 px-6 py-5 ${i < comparisonData.length - 1 ? "border-b border-white/5" : ""}`}>
-                  <div className="text-[10px] uppercase font-black tracking-widest text-gray-500">{row.feature}</div>
-                  <div className="text-center text-xs font-bold text-gray-500">
-                    {row.rcc === true ? <CheckCircle2 className="h-4 w-4 text-green-500 mx-auto" /> : row.rcc === false ? <span className="text-gray-600">✗</span> : row.rcc}
-                  </div>
-                  <div className="text-center text-xs font-bold text-white">
-                    {row.skylight === true ? <CheckCircle2 className="h-4 w-4 text-brand-orange-500 mx-auto" /> : row.skylight}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Shapes Section */}
       <section className="py-24 relative px-6 lg:px-12 bg-slate-950/50">
         <div className="container mx-auto">
@@ -240,6 +209,101 @@ export default function SkylightPage() {
                 <div className="text-[9px] font-black text-brand-orange-500 uppercase tracking-widest">Up to 1000x3000mm</div>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Specialized RCC Models */}
+      <section className="py-10 relative px-6 lg:px-12 bg-slate-950 overflow-hidden">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-black text-white mb-4 uppercase tracking-tighter leading-none">Specialized <br /><span className="brand-gradient-text">RCC Models</span></h2>
+            <p className="text-sm md:text-base text-gray-500 max-w-xl mx-auto font-medium">Standard industrial units or electrically controlled premium systems.</p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-white/[0.02] border border-white/5 rounded-[48px] overflow-hidden group shadow-2xl relative"
+            >
+              <div className="relative h-56 w-full overflow-hidden">
+                <Image
+                  src="/images/web site images/WhatsApp Image 2026-03-13 at 18.56.32.jpeg"
+                  alt="Manual Control RCC Skylight"
+                  fill
+                  className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
+              </div>
+              <div className="p-10 relative z-10 text-center">
+                <h3 className="text-xl md:text-2xl font-black text-white uppercase tracking-tighter mb-4">Manual Control Models</h3>
+                <p className="text-gray-500 text-xs md:text-sm leading-relaxed mb-8 font-medium italic">"Fixed or Openable — built for flat roofs."</p>
+                <div className="flex flex-wrap justify-center gap-2.5">
+                  <span className="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-[9px] font-black text-gray-500 uppercase tracking-widest">Fixed</span>
+                  <span className="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-[9px] font-black text-gray-500 uppercase tracking-widest">Openable</span>
+                  <span className="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-[9px] font-black text-gray-500 uppercase tracking-widest">Optional Mesh</span>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-white/[0.02] border border-white/5 rounded-[48px] overflow-hidden group shadow-2xl relative"
+            >
+              <div className="relative h-56 w-full overflow-hidden">
+                <Image
+                  src="/images/web site images/WhatsApp Image 2026-03-13 at 18.56.48.jpeg"
+                  alt="Electrical Skylight System"
+                  fill
+                  className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
+              </div>
+              <div className="p-10 relative z-10 text-center">
+                <h3 className="text-xl md:text-2xl font-black text-white uppercase tracking-tighter mb-4">Electrical Systems</h3>
+                <p className="text-gray-500 text-xs md:text-sm leading-relaxed mb-8 font-medium italic">"Smart Remote. Motorized. Auto-Seal."</p>
+                <div className="flex flex-wrap justify-center gap-2.5">
+                  <span className="bg-brand-orange-500/10 border border-brand-orange-500/20 px-4 py-1.5 rounded-full text-[9px] font-black text-brand-orange-500 uppercase tracking-widest">Smart Remote</span>
+                  <span className="bg-brand-orange-500/10 border border-brand-orange-500/20 px-4 py-1.5 rounded-full text-[9px] font-black text-brand-orange-500 uppercase tracking-widest">Motorized</span>
+                  <span className="bg-brand-orange-500/10 border border-brand-orange-500/20 px-4 py-1.5 rounded-full text-[9px] font-black text-brand-orange-500 uppercase tracking-widest">Auto-Seal</span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Comparison Section - Optimized Density */}
+      <section className="py-24 relative px-6 lg:px-12 bg-slate-900/30">
+        <div className="container mx-auto">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-5xl font-black text-white mb-4 uppercase tracking-tighter leading-none">What Makes It <span className="brand-gradient-text">Different?</span></h2>
+              <p className="text-sm md:text-base text-gray-500 font-medium">Natural light AND natural ventilation from the same unit.</p>
+            </div>
+
+            <div className="bg-white/[0.02] border border-white/5 rounded-[40px] overflow-hidden">
+              <div className="grid grid-cols-3 gap-0 border-b border-white/10 p-6 bg-white/[0.02]">
+                <div className="text-[9px] font-black text-gray-500 uppercase tracking-widest">Feature</div>
+                <div className="text-center text-[9px] font-black text-gray-500 uppercase tracking-widest">NANOSUN RCC</div>
+                <div className="text-center text-[9px] font-black text-brand-orange-500 uppercase tracking-widest">Premium Skylight</div>
+              </div>
+              {comparisonData.map((row, i) => (
+                <div key={i} className={`grid grid-cols-3 gap-0 px-6 py-5 ${i < comparisonData.length - 1 ? "border-b border-white/5" : ""}`}>
+                  <div className="text-[10px] uppercase font-black tracking-widest text-gray-500">{row.feature}</div>
+                  <div className="text-center text-xs font-bold text-gray-500">
+                    {row.rcc === true ? <CheckCircle2 className="h-4 w-4 text-green-500 mx-auto" /> : row.rcc === false ? <span className="text-gray-600">✗</span> : row.rcc}
+                  </div>
+                  <div className="text-center text-xs font-bold text-white">
+                    {row.skylight === true ? <CheckCircle2 className="h-4 w-4 text-brand-orange-500 mx-auto" /> : row.skylight}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

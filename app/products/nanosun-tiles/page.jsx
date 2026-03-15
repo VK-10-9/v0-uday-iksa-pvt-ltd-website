@@ -7,7 +7,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { HoverButton } from "@/components/ui/hover-button"
-import CredentialStrip from "@/components/product/CredentialStrip"
+
 import ProductTrustSection from "@/components/product/ProductTrustSection"
 
 export default function NanosunTilesPage() {
@@ -191,7 +191,93 @@ export default function NanosunTilesPage() {
         </div>
       </section>
 
-      <CredentialStrip />
+      {/* Size Selector Section - Refined UI */}
+      <section className="py-10 relative px-6 lg:px-12 bg-slate-900/20">
+        <div className="container mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 items-start pb-16 border-b border-white/5 mb-16">
+            <div>
+              <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter leading-none mb-6">Choose <br /><span className="brand-gradient-text">Your Size</span></h2>
+              <p className="text-sm md:text-base text-gray-500 max-w-md font-medium leading-relaxed">
+                Available in 4 sizes optimized for residential and hospitality pitched-roof buildings.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2.5 pt-4">
+              {sizes.map((size, idx) => (
+                <button
+                  key={size.id}
+                  onClick={() => setActiveSize(idx)}
+                  className={`px-6 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all ${activeSize === idx
+                    ? "bg-brand-orange-500 text-white shadow-xl shadow-brand-orange-500/10"
+                    : "bg-white/5 text-gray-500 hover:bg-white/10"
+                    }`}
+                >
+                  {size.diameter}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={sizes[activeSize].id}
+                initial={{ opacity: 0, scale: 0.99 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.99 }}
+                transition={{ duration: 0.4 }}
+                className="grid lg:grid-cols-12 gap-12 items-center"
+              >
+                <div className="lg:col-span-5 space-y-10">
+                  <div className="inline-flex items-center gap-2 bg-brand-orange-500/10 border border-brand-orange-500/20 rounded-full px-4 py-1">
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand-orange-500 animate-pulse" />
+                    <span className="text-[9px] font-black text-white uppercase tracking-widest">{sizes[activeSize].diameter}</span>
+                  </div>
+                  <h3 className="text-2xl md:text-4xl font-black text-white uppercase tracking-tighter leading-tight">Best For: <br /><span className="text-gray-500">{sizes[activeSize].bestFor.split(' — ')[1]}</span></h3>
+                  <p className="text-sm md:text-base text-gray-500 leading-relaxed font-medium">{sizes[activeSize].description}</p>
+
+                  <div className="grid grid-cols-3 gap-3">
+                    <div className="bg-white/5 border border-white/5 px-4 py-3.5 rounded-2xl">
+                      <p className="text-[8px] font-black text-gray-600 uppercase tracking-widest mb-1">Lux Level</p>
+                      <p className="text-xs font-black text-brand-orange-500">{sizes[activeSize].lux}</p>
+                    </div>
+                    <div className="bg-white/5 border border-white/5 px-4 py-3.5 rounded-2xl">
+                      <p className="text-[8px] font-black text-gray-600 uppercase tracking-widest mb-1">Roof Max</p>
+                      <p className="text-xs font-black text-brand-orange-500">{sizes[activeSize].height}</p>
+                    </div>
+                    <div className="bg-white/5 border border-white/5 px-4 py-3.5 rounded-2xl">
+                      <p className="text-[8px] font-black text-gray-600 uppercase tracking-widest mb-1">Coverage</p>
+                      <p className="text-xs font-black text-brand-orange-500">{sizes[activeSize].coverage.split(' ')[0]}</p>
+                    </div>
+                  </div>
+
+                  <Button asChild className="bg-white text-black hover:bg-slate-900 hover:text-white rounded-xl px-12 py-5 text-xs font-black uppercase tracking-widest transition-all">
+                    <Link href="/contact">
+                      Request Pricing <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
+
+                <div className="lg:col-span-1 hidden lg:block border-l border-white/5 h-64 mx-auto" />
+
+                <div className="lg:col-span-6 grid grid-cols-1 gap-3">
+                  {sizes[activeSize].specs.map((spec, i) => (
+                    <div
+                      key={i}
+                      className={`flex justify-between items-center px-8 py-5 rounded-[24px] border ${spec.highlight
+                        ? "bg-brand-orange-500/5 border-brand-orange-500/20"
+                        : "bg-white/5 border-white/5"
+                        }`}
+                    >
+                      <span className="text-[9px] font-black text-gray-600 uppercase tracking-widest">{spec.label}</span>
+                      <span className={`text-sm md:text-base font-black ${spec.highlight ? "text-brand-orange-500" : "text-white"}`}>{spec.value}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+        </div>
+      </section>
 
       <ProductTrustSection />
 
@@ -281,94 +367,6 @@ export default function NanosunTilesPage() {
                 <span className="text-[10px] md:text-xs font-bold text-gray-400 leading-tight uppercase tracking-wider">{component}</span>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Size Selector Section - Refined UI */}
-      <section className="py-10 relative px-6 lg:px-12 bg-slate-900/20">
-        <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-start pb-16 border-b border-white/5 mb-16">
-            <div>
-              <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter leading-none mb-6">Choose <br /><span className="brand-gradient-text">Your Size</span></h2>
-              <p className="text-sm md:text-base text-gray-500 max-w-md font-medium leading-relaxed">
-                Available in 4 sizes optimized for residential and hospitality pitched-roof buildings.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-2.5 pt-4">
-              {sizes.map((size, idx) => (
-                <button
-                  key={size.id}
-                  onClick={() => setActiveSize(idx)}
-                  className={`px-6 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all ${activeSize === idx
-                    ? "bg-brand-orange-500 text-white shadow-xl shadow-brand-orange-500/10"
-                    : "bg-white/5 text-gray-500 hover:bg-white/10"
-                    }`}
-                >
-                  {size.diameter}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={sizes[activeSize].id}
-                initial={{ opacity: 0, scale: 0.99 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.99 }}
-                transition={{ duration: 0.4 }}
-                className="grid lg:grid-cols-12 gap-12 items-center"
-              >
-                <div className="lg:col-span-5 space-y-10">
-                  <div className="inline-flex items-center gap-2 bg-brand-orange-500/10 border border-brand-orange-500/20 rounded-full px-4 py-1">
-                    <span className="w-1.5 h-1.5 rounded-full bg-brand-orange-500 animate-pulse" />
-                    <span className="text-[9px] font-black text-white uppercase tracking-widest">{sizes[activeSize].diameter}</span>
-                  </div>
-                  <h3 className="text-2xl md:text-4xl font-black text-white uppercase tracking-tighter leading-tight">Best For: <br /><span className="text-gray-500">{sizes[activeSize].bestFor.split(' — ')[1]}</span></h3>
-                  <p className="text-sm md:text-base text-gray-500 leading-relaxed font-medium">{sizes[activeSize].description}</p>
-
-                  <div className="grid grid-cols-3 gap-3">
-                    <div className="bg-white/5 border border-white/5 px-4 py-3.5 rounded-2xl">
-                      <p className="text-[8px] font-black text-gray-600 uppercase tracking-widest mb-1">Lux Level</p>
-                      <p className="text-xs font-black text-brand-orange-500">{sizes[activeSize].lux}</p>
-                    </div>
-                    <div className="bg-white/5 border border-white/5 px-4 py-3.5 rounded-2xl">
-                      <p className="text-[8px] font-black text-gray-600 uppercase tracking-widest mb-1">Roof Max</p>
-                      <p className="text-xs font-black text-brand-orange-500">{sizes[activeSize].height}</p>
-                    </div>
-                    <div className="bg-white/5 border border-white/5 px-4 py-3.5 rounded-2xl">
-                      <p className="text-[8px] font-black text-gray-600 uppercase tracking-widest mb-1">Coverage</p>
-                      <p className="text-xs font-black text-brand-orange-500">{sizes[activeSize].coverage.split(' ')[0]}</p>
-                    </div>
-                  </div>
-
-                  <Button asChild className="bg-white text-black hover:bg-slate-900 hover:text-white rounded-xl px-12 py-5 text-xs font-black uppercase tracking-widest transition-all">
-                    <Link href="/contact">
-                      Request Pricing <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
-                </div>
-
-                <div className="lg:col-span-1 hidden lg:block border-l border-white/5 h-64 mx-auto" />
-
-                <div className="lg:col-span-6 grid grid-cols-1 gap-3">
-                  {sizes[activeSize].specs.map((spec, i) => (
-                    <div
-                      key={i}
-                      className={`flex justify-between items-center px-8 py-5 rounded-[24px] border ${spec.highlight
-                        ? "bg-brand-orange-500/5 border-brand-orange-500/20"
-                        : "bg-white/5 border-white/5"
-                        }`}
-                    >
-                      <span className="text-[9px] font-black text-gray-600 uppercase tracking-widest">{spec.label}</span>
-                      <span className={`text-sm md:text-base font-black ${spec.highlight ? "text-brand-orange-500" : "text-white"}`}>{spec.value}</span>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            </AnimatePresence>
           </div>
         </div>
       </section>
