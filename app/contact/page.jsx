@@ -10,13 +10,14 @@ import { Button } from "@/components/ui/button"
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
     phone: "",
-    company: "",
-    message: "",
+    city: "",
+    buildingType: "Factory / Industrial",
+    details: "",
   })
 
   const [formStatus, setFormStatus] = useState({
+    submitting: false,
     submitted: false,
     success: false,
     message: "",
@@ -30,13 +31,40 @@ export default function ContactPage() {
     }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    setFormStatus({
-      submitted: true,
-      success: true,
-      message: "Thank you for your message! Our expert team will get back to you shortly.",
-    })
+    setFormStatus((prev) => ({ ...prev, submitting: true }))
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setFormStatus({
+          submitting: false,
+          submitted: true,
+          success: true,
+          message: "Thank you for your message! Our expert team will get back to you shortly.",
+        });
+      } else {
+        setFormStatus({
+          submitting: false,
+          submitted: true,
+          success: false,
+          message: "Sorry, there was an issue sending your request. Please try again or call us directly.",
+        });
+      }
+    } catch (error) {
+      setFormStatus({
+        submitting: false,
+        submitted: true,
+        success: false,
+        message: "An error occurred. Please check your connection and try again.",
+      });
+    }
   }
 
   const officeLocations = [
@@ -44,13 +72,13 @@ export default function ContactPage() {
       city: "Hubballi HQ",
       address: "#147, 4th Phase, Akshay Colony, Vidyanagar, Hubballi – 580021, Karnataka",
       phone: "+91 8792182631",
-      email: "info@udayiksa.com",
+      email: "contact@udayiksa.com",
     },
     {
       city: "Manufacturing Unit",
       address: "C-391, Gokul Industrial Estate, 2nd Gate Gokul Road, Hubballi – 580030",
       phone: "+91 8792182631",
-      email: "info@udayiksa.com",
+      email: "contact@udayiksa.com",
     },
   ]
 
@@ -112,6 +140,9 @@ export default function ContactPage() {
                       <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest pl-1">Your Name</label>
                       <input
                         required
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
                         className="w-full px-5 py-3.5 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:ring-1 focus:ring-brand-orange-500 text-white text-sm transition-all hover:bg-white/10"
                         placeholder="e.g. Akash Patil"
                       />
@@ -120,7 +151,10 @@ export default function ContactPage() {
                       <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest pl-1">Phone Number</label>
                       <input
                         required
+                        name="phone"
                         type="tel"
+                        value={formData.phone}
+                        onChange={handleChange}
                         className="w-full px-5 py-3.5 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:ring-1 focus:ring-brand-orange-500 text-white text-sm transition-all hover:bg-white/10"
                         placeholder="+91 87921 82631"
                       />
@@ -131,17 +165,20 @@ export default function ContactPage() {
                     <div className="space-y-2">
                       <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest pl-1">City / Location</label>
                       <input
+                        name="city"
+                        value={formData.city}
+                        onChange={handleChange}
                         className="w-full px-5 py-3.5 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:ring-1 focus:ring-brand-orange-500 text-white text-sm transition-all hover:bg-white/10"
                         placeholder="Hubballi"
                       />
                     </div>
                     <div className="space-y-2">
                       <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest pl-1">Building Type</label>
-                      <select className="w-full px-5 py-3.5 bg-slate-900 border border-white/10 rounded-xl focus:outline-none focus:ring-1 focus:ring-brand-orange-500 text-white text-sm transition-all hover:bg-white/10 appearance-none">
-                        <option>Factory / Industrial</option>
-                        <option>Residential</option>
-                        <option>Commercial Office</option>
-                        <option>School / Institution</option>
+                      <select name="buildingType" value={formData.buildingType} onChange={handleChange} className="w-full px-5 py-3.5 bg-slate-900 border border-white/10 rounded-xl focus:outline-none focus:ring-1 focus:ring-brand-orange-500 text-white text-sm transition-all hover:bg-white/10 appearance-none">
+                        <option value="Factory / Industrial">Factory / Industrial</option>
+                        <option value="Residential">Residential</option>
+                        <option value="Commercial Office">Commercial Office</option>
+                        <option value="School / Institution">School / Institution</option>
                       </select>
                     </div>
                   </div>
@@ -149,14 +186,17 @@ export default function ContactPage() {
                   <div className="space-y-2">
                     <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest pl-1">Project Details</label>
                     <textarea
+                      name="details"
+                      value={formData.details}
+                      onChange={handleChange}
                       rows={3}
                       className="w-full px-5 py-3.5 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:ring-1 focus:ring-brand-orange-500 text-white text-sm transition-all hover:bg-white/10"
                       placeholder="Tell us about your space..."
                     />
                   </div>
 
-                  <HoverButton type="submit" className="w-full py-4 text-white bg-brand-orange-500 hover:bg-white hover:text-black rounded-xl text-[10px] font-black uppercase tracking-[0.2em] transition-all shadow-xl shadow-brand-orange-500/10">
-                    Send My Enquiry <ArrowRight className="ml-2 h-4 w-4" />
+                  <HoverButton disabled={formStatus.submitting} type="submit" className="w-full py-4 text-white bg-brand-orange-500 hover:bg-white hover:text-black rounded-xl text-[10px] font-black uppercase tracking-[0.2em] transition-all shadow-xl shadow-brand-orange-500/10 disabled:opacity-50 disabled:cursor-not-allowed">
+                    {formStatus.submitting ? "SENDING..." : "SEND MY ENQUIRY"} <ArrowRight className="ml-2 h-4 w-4" />
                   </HoverButton>
                 </form>
               )}
@@ -199,7 +239,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-[9px] font-black text-gray-500 uppercase tracking-widest mb-1">Email</p>
-                      <p className="text-white text-sm font-medium underline decoration-brand-orange-500/50">info@udayiksa.com</p>
+                      <p className="text-white text-sm font-medium underline decoration-brand-orange-500/50">contact@udayiksa.com</p>
                     </div>
                   </div>
                 </div>
@@ -249,7 +289,7 @@ export default function ContactPage() {
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
               { icon: Phone, title: "Call Support", detail: "+91 87921 82631", link: "tel:+918792182631", label: "Speak with Experts" },
-              { icon: Mail, title: "Email Inquiry", detail: "info@udayiksa.com", link: "mailto:info@udayiksa.com", label: "Get Free Quote" },
+              { icon: Mail, title: "Email Inquiry", detail: "contact@udayiksa.com", link: "mailto:contact@udayiksa.com", label: "Get Free Quote" },
               { icon: MessageSquare, title: "Quick Chat", detail: "WhatsApp Available", link: "https://wa.me/918792182631", label: "Message Directly" },
             ].map((item, idx) => (
               <motion.div

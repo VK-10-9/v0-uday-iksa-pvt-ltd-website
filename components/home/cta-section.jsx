@@ -126,7 +126,7 @@ export default function CTASection() {
                   </div>
                   <div className="text-center md:text-left">
                     <p className="text-[7px] font-black text-gray-500 uppercase tracking-widest mb-1">Engineering Support</p>
-                    <p className="text-white text-base md:text-lg font-black tracking-tight">info@udayiksa.com</p>
+                    <p className="text-white text-base md:text-lg font-black tracking-tight">contact@udayiksa.com</p>
                   </div>
                 </div>
               </motion.div>

@@ -125,7 +125,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-1">Email Inquiry</p>
-                    <p className="text-white text-lg font-bold">info@udayiksa.com</p>
+                    <p className="text-white text-lg font-bold">contact@udayiksa.com</p>
                   </div>
                 </div>
               </div>

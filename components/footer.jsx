@@ -69,9 +69,9 @@ export default function Footer() {
                   <span className="text-gray-400 text-[8px] group-hover:text-white transition-colors font-bold tracking-tight">+91 87921 82631</span>
                 </a>
 
-                <a href="mailto:info@udayiksa.com" className="flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 hover:bg-brand-orange-500 hover:border-brand-orange-500 transition-all group">
+                <a href="mailto:contact@udayiksa.com" className="flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 hover:bg-brand-orange-500 hover:border-brand-orange-500 transition-all group">
                   <Mail className="h-4 w-4 text-brand-orange-500 group-hover:text-white" />
-                  <span className="text-gray-400 text-[8px] group-hover:text-white transition-colors font-bold uppercase tracking-wider">info@udayiksa.com</span>
+                  <span className="text-gray-400 text-[8px] group-hover:text-white transition-colors font-bold uppercase tracking-wider">contact@udayiksa.com</span>
                 </a>
               </div>
             </div>
