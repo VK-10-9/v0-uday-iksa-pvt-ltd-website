@@ -17,6 +17,7 @@ export default function SkytubeAngledPage() {
       subtitle: "Light Collector on Top",
       description: "An optical dome or flat panel sits on your roof — exactly like the Standard SKYTUBE. This captures ambient daylight from the sky, even on cloudy days.",
       icon: Sun,
+      image: "/images/products/nanosun/PEB MODEL.png",
     },
     {
       step: "02",
@@ -24,6 +25,7 @@ export default function SkytubeAngledPage() {
       subtitle: "Bends Around Obstacles",
       description: "Instead of a straight vertical drop, the reflector pipe uses 45° or 90° bends to navigate around beams, ducts, walls, or structural elements. Light bounces through the highly reflective aluminium pipe with minimal loss — even through multiple bends.",
       icon: CornerDownRight,
+      image: "/images/products/nanosun/Skypipe installation at Tata Motors Lucknow.jpg",
     },
     {
       step: "03",
@@ -31,6 +33,7 @@ export default function SkytubeAngledPage() {
       subtitle: "Up to 7–8 Metres Deep",
       description: "The pipe can extend well beyond a single floor — reaching rooms on lower floors, side walls, or deep interior spaces that have no direct roof access. Our team designs the exact routing during the site visit.",
       icon: Maximize2,
+      image: "/images/gallery/skytube/standing seam roof sheeting 1.png",
     },
     {
       step: "04",
@@ -38,6 +41,7 @@ export default function SkytubeAngledPage() {
       subtitle: "Clean Light at Ceiling Level",
       description: "A frosted diffuser panel at the ceiling delivers soft, even natural light below — whether it's a false ceiling, exposed slab, or any finished interior. Looks like a premium light fitting, powered by the sun.",
       icon: Lightbulb,
+      image: "/images/gallery/nanosun/Gujarat Berger Paints India Ltd.6.jpeg",
     },
   ]
 
@@ -231,21 +235,31 @@ export default function SkytubeAngledPage() {
             {howItWorks.map((item, idx) => (
               <motion.div
                 key={idx}
-                className="bg-white/[0.02] border border-white/5 p-8 rounded-[32px] hover:border-brand-orange-500/20 transition-all group relative"
+                className="bg-white/[0.02] border border-white/5 rounded-[32px] hover:border-brand-orange-500/20 transition-all group relative overflow-hidden flex flex-col shadow-2xl"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
               >
-                <div className="absolute -top-3 -left-3 bg-brand-orange-500 text-white px-4 py-1.5 rounded-xl font-black text-sm shadow-lg border-2 border-slate-950 group-hover:bg-white group-hover:text-black transition-all">
-                  {item.step}
+                <div className="relative h-40 w-full bg-slate-900 border-b border-white/5 overflow-hidden">
+                  <Image 
+                    src={item.image} 
+                    alt={item.title}
+                    fill
+                    className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700 grayscale-[0.3] group-hover:grayscale-0"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
+                  <div className="absolute top-5 right-5 text-4xl font-black text-white/50 leading-none uppercase z-10">{item.step}</div>
+                  <div className="absolute top-5 left-5 bg-brand-orange-500 w-10 h-10 rounded-[12px] flex items-center justify-center shadow-lg shadow-brand-orange-500/20 z-10">
+                    <item.icon className="h-5 w-5 text-white" />
+                  </div>
                 </div>
-                <div className="bg-brand-orange-500/10 w-12 h-12 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-orange-500 transition-all duration-500">
-                  <item.icon className="h-5 w-5 text-brand-orange-500 group-hover:text-white" />
+
+                <div className="p-6 flex-1 flex flex-col pb-8">
+                  <h3 className="text-[9px] font-black text-brand-orange-500 uppercase tracking-widest mb-2 leading-none">Step {item.step} — {item.subtitle}</h3>
+                  <h4 className="text-lg font-black text-white uppercase tracking-tighter mb-3 border-l-2 border-brand-orange-500 pl-3 leading-none">{item.title}</h4>
+                  <p className="text-gray-500 text-[11px] leading-relaxed font-medium flex-1">{item.description}</p>
                 </div>
-                <h3 className="text-[9px] font-black text-brand-orange-500 uppercase tracking-widest mb-2 leading-none">{item.subtitle}</h3>
-                <h4 className="text-lg font-black text-white uppercase tracking-tighter mb-4">{item.title}</h4>
-                <p className="text-gray-500 text-[11px] font-medium leading-relaxed">{item.description}</p>
               </motion.div>
             ))}
           </div>

@@ -87,6 +87,7 @@ export default function NanosunTilesPage() {
             subtitle: "Collects Daylight",
             description: "A clear optical dome sits above your tile line, collecting ambient daylight from the sky — including on overcast days.",
             icon: Sun,
+            image: "/images/products/nanosun-tiles/ChatGPT Image Feb 19, 2026, 06_13_49 PM.png",
         },
         {
             step: "02",
@@ -94,6 +95,7 @@ export default function NanosunTilesPage() {
             subtitle: "Channels Light Downward",
             description: "A highly reflective circular pipe channels the light downward through the roof structure into the room below. Can use 45° or 90° bends to navigate around beams or walls if needed.",
             icon: Layers,
+            image: "/images/products/nanosun/Skypipe installation at Tata Motors Lucknow.jpg",
         },
         {
             step: "03",
@@ -101,6 +103,7 @@ export default function NanosunTilesPage() {
             subtitle: "Spreads Light Evenly",
             description: "A soft diffuser panel at ceiling level spreads the light evenly across your room. Glare-free, heat-free, UV-free.",
             icon: Maximize2,
+            image: "/images/gallery/nanosun/Gujarat Berger Paints India Ltd.6.jpeg",
         }
     ]
 
@@ -321,19 +324,31 @@ export default function NanosunTilesPage() {
             {howItWorks.map((step, idx) => (
               <motion.div
                 key={idx}
-                className="bg-white/[0.02] border border-white/5 p-10 rounded-[40px] hover:border-brand-orange-500/20 transition-all group relative"
+                className="bg-white/[0.02] border border-white/5 rounded-[40px] hover:border-brand-orange-500/20 transition-all group relative overflow-hidden flex flex-col shadow-2xl"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05 }}
               >
-                <div className="absolute top-6 right-6 text-5xl font-black text-white/[0.03] leading-none uppercase">{step.step}</div>
-                <div className="bg-brand-orange-500/10 w-14 h-14 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-orange-500 transition-all duration-500">
-                  <step.icon className="h-6 w-6 text-brand-orange-500 group-hover:text-white" />
+                <div className="relative h-48 w-full bg-slate-900 border-b border-white/5 overflow-hidden">
+                  <Image 
+                    src={step.image} 
+                    alt={step.title}
+                    fill
+                    className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700 grayscale-[0.3] group-hover:grayscale-0"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
+                  <div className="absolute top-6 right-6 text-5xl font-black text-white/50 leading-none uppercase z-10">{step.step}</div>
+                  <div className="absolute top-6 left-6 bg-brand-orange-500 w-12 h-12 rounded-[14px] flex items-center justify-center shadow-lg shadow-brand-orange-500/20 z-10">
+                    <step.icon className="h-6 w-6 text-white" />
+                  </div>
                 </div>
-                <h3 className="text-[9px] font-black text-brand-orange-500 uppercase tracking-widest mb-3 leading-none">Step {step.step} — {step.subtitle}</h3>
-                <h4 className="text-xl md:text-2xl font-black text-white uppercase tracking-tighter mb-6 leading-none">{step.title}</h4>
-                <p className="text-gray-500 text-xs leading-relaxed font-medium">{step.description}</p>
+
+                <div className="p-8 flex-1 flex flex-col pb-10">
+                  <h3 className="text-[9px] font-black text-brand-orange-500 uppercase tracking-widest mb-3 leading-none">Step {step.step} — {step.subtitle}</h3>
+                  <h4 className="text-xl md:text-2xl font-black text-white uppercase tracking-tighter mb-4 border-l-2 border-brand-orange-500 pl-3 leading-none">{step.title}</h4>
+                  <p className="text-gray-500 text-xs leading-relaxed font-medium flex-1">{step.description}</p>
+                </div>
               </motion.div>
             ))}
           </div>

@@ -7,28 +7,12 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { HoverButton } from "@/components/ui/hover-button"
 import { useState } from "react"
-import CredentialStrip from "@/components/product/CredentialStrip"
 import ProductTrustSection from "@/components/product/ProductTrustSection"
 
 export default function NanosunPage() {
   const [activeSize, setActiveSize] = useState("PEB 530mm")
 
   const sizes = [
-    {
-      id: "peb-200",
-      name: "PEB 200mm",
-      bestFor: "Small rooms, storage areas, narrow bays with low ceilings",
-      description: "If your roof is low (under 10 feet) and you need to brighten up a small or narrow area, the 200mm is your starting point. Compact, lightweight, and easy to install.",
-      specs: [
-        { label: "Dome Size", value: "200mm (±5%)" },
-        { label: "Suitable Roof Height", value: "Below 10 Feet", highlight: true },
-        { label: "Reflector Diameter", value: "200mm" },
-        { label: "Diffuser Size", value: "180mm" },
-        { label: "Light Output", value: "100 – 250 Lux", highlight: true },
-        { label: "Dome Material", value: "Optical Polycarbonate" },
-        { label: "Reflector Material", value: "Aluminium (95%+ reflective)" },
-      ]
-    },
     {
       id: "peb-300",
       name: "PEB 300mm",
@@ -125,6 +109,7 @@ export default function NanosunPage() {
       subtitle: "The Dome on Your Roof",
       description: "Captures natural daylight from the sky — even on cloudy days — and blocks out harmful UV rays and excess heat. Made from high-grade optical polycarbonate.",
       icon: Sun,
+      image: "/images/products/nanosun/PEB MODEL.png",
       points: ["No joints. No leaks.", "UV & Heat Filtration", "Built for Indian Dust"]
     },
     {
@@ -132,6 +117,7 @@ export default function NanosunPage() {
       subtitle: "The Pipe That Carries Light",
       description: "An aluminium reflector pipe (95%+ reflectance) channels light straight down. Think of it as a mirror tunnel—light bounces through without losing intensity.",
       icon: Layers,
+      image: "/images/products/nanosun/Skypipe installation at Tata Motors Lucknow.jpg",
       points: ["95% Reflective Surface", "Zero Loss Channeling", "Telescopic Design"]
     },
     {
@@ -139,6 +125,7 @@ export default function NanosunPage() {
       subtitle: "The Ceiling Panel That Spreads Light",
       description: "Spreads the light evenly across your floor — soft, glare-free, and comfortable to work under. No harsh bright spots. No dark corners.",
       icon: Maximize2,
+      image: "/images/gallery/nanosun/Gujarat Berger Paints India Ltd.6.jpeg",
       points: ["Even Light Distribution", "Glare-Free Softness", "Diamond Embossed"]
     }
   ]
@@ -190,7 +177,7 @@ export default function NanosunPage() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1 }}
             >
-              <Image 
+              <Image
                 src="/images/products/nanosun/PEB MODEL.png"
                 alt="NANOSUN Product"
                 fill
@@ -202,70 +189,11 @@ export default function NanosunPage() {
               </div>
               <div className="absolute bottom-12 left-12 right-12 z-10">
                 <div className="bg-white/5 backdrop-blur-2xl border border-white/10 p-8 rounded-[32px]">
-                   <p className="text-xl md:text-2xl font-black text-white uppercase tracking-tighter mb-1">Zero Power</p>
-                   <p className="text-gray-400 text-[11px] font-medium max-w-xs">Engineered to light up massive industrial floorplates using pure sunlight.</p>
+                  <p className="text-xl md:text-2xl font-black text-white uppercase tracking-tighter mb-1">Zero Power</p>
+                  <p className="text-gray-400 text-[11px] font-medium max-w-xs">Engineered to light up massive industrial floorplates using pure sunlight.</p>
                 </div>
               </div>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      <CredentialStrip />
-
-      {/* What's Inside Section - Optimized Density */}
-      <section className="py-10 relative px-6 lg:px-12 bg-slate-950/50">
-        <div className="container mx-auto">
-          <div className="text-center mb-8 px-4">
-            <h2 className="text-2xl md:text-4xl font-black text-white mb-4 uppercase tracking-tighter leading-none">What's Inside <span className="brand-gradient-text">Every Unit</span></h2>
-            <div className="h-0.5 w-16 bg-brand-orange-500 rounded-full mx-auto mb-6"></div>
-            <p className="text-sm md:text-base text-gray-500 max-w-xl mx-auto font-medium">Three high-performance components working together to bring nature deep into your space.</p>
-          </div>
-
-          <div className="grid lg:grid-cols-3 gap-6">
-            {coreComponents.map((component, idx) => (
-              <motion.div
-                key={idx}
-                className="bg-white/[0.02] border border-white/5 p-10 rounded-[40px] hover:border-brand-orange-500/20 transition-all group"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-              >
-                <div className="bg-brand-orange-500/10 w-14 h-14 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-orange-500 transition-all duration-500">
-                  <component.icon className="h-6 w-6 text-brand-orange-500 group-hover:text-white" />
-                </div>
-                <h3 className="text-[9px] font-black text-brand-orange-500 uppercase tracking-widest mb-3 leading-none">{component.subtitle}</h3>
-                <h4 className="text-xl md:text-2xl font-black text-white uppercase tracking-tighter mb-6 underline decoration-white/5 underline-offset-8">{component.title}</h4>
-                <p className="text-gray-500 mb-8 text-xs font-medium leading-relaxed">{component.description}</p>
-                <div className="space-y-3 pt-8 border-t border-white/5">
-                  {component.points.map((point, i) => (
-                    <div key={i} className="flex items-center gap-2.5 text-[10px] font-black text-gray-500 uppercase tracking-widest">
-                      <CheckCircle2 className="h-3 w-3 text-brand-orange-500" />
-                      {point}
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Bar - Minimalist */}
-      <section className="py-12 bg-slate-950 border-y border-white/5">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8">
-            {[
-              "Zero Electricity", "Blocks UV & Heat", "Leak-Proof", "Flame Retardant", "Low Maintenance", "Healthier Space", "Made in India"
-            ].map((benefit, i) => (
-              <div key={i} className="flex flex-col items-center text-center gap-3 group">
-                <div className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center group-hover:bg-brand-orange-500 transition-colors">
-                  <CheckCircle2 className="h-4 w-4 text-brand-orange-500 group-hover:text-white" />
-                </div>
-                <span className="text-[9px] font-black text-gray-500 uppercase tracking-widest leading-tight">{benefit}</span>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -336,6 +264,76 @@ export default function NanosunPage() {
                   ))}
                 </div>
               </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* What's Inside Section - Optimized Density */}
+      <section className="py-10 relative px-6 lg:px-12 bg-slate-950/50">
+        <div className="container mx-auto">
+          <div className="text-center mb-8 px-4">
+            <h2 className="text-2xl md:text-4xl font-black text-white mb-4 uppercase tracking-tighter leading-none">What's Inside <span className="brand-gradient-text"> Pitched Roofs</span></h2>
+            <div className="h-0.5 w-16 bg-brand-orange-500 rounded-full mx-auto mb-6"></div>
+            <p className="text-sm md:text-base text-gray-500 max-w-xl mx-auto font-medium">Three high-performance components working together to bring nature deep into your space.</p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-6">
+            {coreComponents.map((component, idx) => (
+              <motion.div
+                key={idx}
+                className="bg-white/[0.02] border border-white/5 rounded-[40px] hover:border-brand-orange-500/20 transition-all group overflow-hidden flex flex-col shadow-2xl"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+              >
+                <div className="relative h-48 w-full bg-slate-900 border-b border-white/5 overflow-hidden">
+                  <Image 
+                    src={component.image} 
+                    alt={component.title}
+                    fill
+                    className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700 grayscale-[0.3] group-hover:grayscale-0"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
+                  <div className="absolute top-6 left-6 bg-brand-orange-500 w-12 h-12 rounded-[14px] flex items-center justify-center shadow-lg shadow-brand-orange-500/20">
+                    <component.icon className="h-6 w-6 text-white" />
+                  </div>
+                </div>
+                
+                <div className="p-8 flex-1 flex flex-col pb-10">
+                  <h3 className="text-[9px] font-black text-brand-orange-500 uppercase tracking-widest mb-3 leading-none">{component.subtitle}</h3>
+                  <h4 className="text-xl md:text-2xl font-black text-white uppercase tracking-tighter mb-4 border-l-2 border-brand-orange-500 pl-3">{component.title}</h4>
+                  <p className="text-gray-500 mb-8 text-xs font-medium leading-relaxed flex-1">{component.description}</p>
+                  
+                  <div className="space-y-3 pt-6 border-t border-white/5 mt-auto">
+                    {component.points.map((point, i) => (
+                      <div key={i} className="flex items-center gap-2.5 text-[10px] font-black text-gray-500 uppercase tracking-widest">
+                        <CheckCircle2 className="h-3 w-3 text-brand-orange-500 shrink-0" />
+                        {point}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Bar - Minimalist */}
+      <section className="py-12 bg-slate-950 border-y border-white/5">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8">
+            {[
+              "Zero Electricity", "Blocks UV & Heat", "Leak-Proof", "Flame Retardant", "Low Maintenance", "Healthier Space", "Made in India"
+            ].map((benefit, i) => (
+              <div key={i} className="flex flex-col items-center text-center gap-3 group">
+                <div className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center group-hover:bg-brand-orange-500 transition-colors">
+                  <CheckCircle2 className="h-4 w-4 text-brand-orange-500 group-hover:text-white" />
+                </div>
+                <span className="text-[9px] font-black text-gray-500 uppercase tracking-widest leading-tight">{benefit}</span>
+              </div>
             ))}
           </div>
         </div>
