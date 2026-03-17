@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowRight, Mail, MapPin, Phone, Linkedin, Instagram, Twitter, Facebook, Sparkles } from "lucide-react"
+import { ArrowRight, Mail, MapPin, Phone, Linkedin, Instagram, Facebook, Youtube, Sparkles } from "lucide-react"
 import Image from "next/image"
 
 export default function Footer() {
@@ -140,9 +140,9 @@ export default function Footer() {
             <h3 className="text-[7px] font-black text-white mb-10 uppercase tracking-[0.4em] pl-4 border-l-2 border-brand-orange-500">Digital Network</h3>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com/company/uday-iksa-private-limited' },
+                { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/company/udayiksa' },
+                { icon: Youtube, label: 'YouTube', href: 'https://www.youtube.com/@udayiksa' },
                 { icon: Instagram, label: 'Instagram', href: 'https://instagram.com/udayiksa' },
-                { icon: Twitter, label: 'Twitter', href: '#' },
                 { icon: Facebook, label: 'Facebook', href: 'https://facebook.com/udayiksa' }
               ].map((social) => (
                 <a

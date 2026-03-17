@@ -109,7 +109,7 @@ export default function NanosunPage() {
       subtitle: "The Dome on Your Roof",
       description: "Captures natural daylight from the sky — even on cloudy days — and blocks out harmful UV rays and excess heat. Made from high-grade optical polycarbonate.",
       icon: Sun,
-      image: "/images/products/nanosun/PEB MODEL.png",
+      image: "/images/WhatsApp Image 2026-03-16 at 10.59.07.jpeg",
       points: ["No joints. No leaks.", "UV & Heat Filtration", "Built for Indian Dust"]
     },
     {
@@ -117,7 +117,7 @@ export default function NanosunPage() {
       subtitle: "The Pipe That Carries Light",
       description: "An aluminium reflector pipe (95%+ reflectance) channels light straight down. Think of it as a mirror tunnel—light bounces through without losing intensity.",
       icon: Layers,
-      image: "/images/products/nanosun/Skypipe installation at Tata Motors Lucknow.jpg",
+      image: "/images/WhatsApp Image 2026-03-16 at 11.04.26.jpeg",
       points: ["95% Reflective Surface", "Zero Loss Channeling", "Telescopic Design"]
     },
     {
@@ -125,7 +125,7 @@ export default function NanosunPage() {
       subtitle: "The Ceiling Panel That Spreads Light",
       description: "Spreads the light evenly across your floor — soft, glare-free, and comfortable to work under. No harsh bright spots. No dark corners.",
       icon: Maximize2,
-      image: "/images/gallery/nanosun/Gujarat Berger Paints India Ltd.6.jpeg",
+      image: "/images/WhatsApp Image 2026-03-16 at 11.05.03.jpeg",
       points: ["Even Light Distribution", "Glare-Free Softness", "Diamond Embossed"]
     }
   ]

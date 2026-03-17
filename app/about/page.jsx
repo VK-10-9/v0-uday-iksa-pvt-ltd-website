@@ -65,7 +65,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <Image
+              <Image 
                 src="/images/gallery/about/WhatsApp Image 2026-02-14 at 12.37.16 PM.jpeg"
                 alt="Uday IKSA Team"
                 fill
@@ -96,23 +96,23 @@ export default function AboutPage() {
             {/* Advisor Tier - Expert Council */}
             <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
-                {
-                  name: "Prof. S.B. Kurubar",
-                  role: "TECHNICAL ADVISOR — QUALITY SYSTEMS",
-                  image: "/images/image copy.png",
-                  position: "object-top",
-                  linkedin: "#",
-                  bio: "A distinguished engineer and academic with over five decades of experience, Professor S.B. Kurubar brings deep technical rigour to Uday IKSA's product quality and engineering processes. A graduate of KREC Suratkal (1968) with a post-graduation from SJCE Mysore, he has spent his career at the intersection of electrical engineering, computer science, and academic leadership — serving as Head of Department for both CSE and ISE, Visiting Professor at Karnatak University Dharwad, and Dean of Examination Affairs at BVBCET Hubballi. His oversight ensures that every NANOSUN™ product we manufacture meets the highest standards of consistency and durability."
-                },
-                {
-                  name: "Mr. B.R. Indushekar",
-                  role: "STRATEGIC ADVISOR — OPERATIONS & LEADERSHIP",
-                  image: "/images/image.png",
-                  position: "object-center",
-                  linkedin: "https://www.linkedin.com/in/indushekar-bangalore-rajan-15bbb8308/",
-                  bio: "With over 38 years of Industry experience, B.R. Indushekar served as Director of Volvo Group Real Estate and VP at Volvo CE India, leading plant transformations that won 40+ awards. A BMS College of Engineering alumnus with a PG Diploma in Marketing Management, he is a Certified Six Sigma Black Belt and Lean Leader (Japan). Currently a Professor of Practice and Industry Coach, he brings Level 5 Leadership principles and world-class lean methodologies to Uday IKSA, ensuring our manufacturing processes meet the highest global standards.",
-                  quote: "Former Director at Volvo Group Real Estate and VP at Volvo CE. A practitioner of Level 5 Leadership and lean excellence."
-                },
+              {
+                name: "Prof. S.B. Kurubar",
+                role: "TECHNICAL ADVISOR — QUALITY SYSTEMS",
+                image: "/images/image copy.png",
+                position: "object-top",
+                linkedin: "#",
+                bio: "A distinguished engineer and academic with over five decades of experience, Professor S.B. Kurubar brings deep technical rigour to Uday IKSA's product quality and engineering processes. A graduate of KREC Suratkal (1968) with a post-graduation from SJCE Mysore, he has spent his career at the intersection of electrical engineering, computer science, and academic leadership — serving as Head of Department for both CSE and ISE, Visiting Professor at Karnatak University Dharwad, and Dean of Examination Affairs at BVBCET Hubballi. His oversight ensures that every NANOSUN™ product we manufacture meets the highest standards of consistency and durability."
+              },
+              {
+                name: "Mr. B.R. Indushekar",
+                role: "STRATEGIC ADVISOR — OPERATIONS & LEADERSHIP",
+                image: "/images/image.png",
+                position: "object-center",
+                linkedin: "https://www.linkedin.com/in/indushekar-bangalore-rajan-15bbb8308/",
+                bio: "With over 38 years of global leadership, B.R. Indushekar served as Director of Volvo Group Real Estate and VP at Volvo CE India, leading plant transformations that won 40+ awards. A BMS College of Engineering alumnus with a PG Diploma in Marketing Management, he is a Certified Six Sigma Black Belt and Lean Leader (Japan). Currently a Professor of Practice and Industry Coach, he brings Level 5 Leadership principles and world-class lean methodologies to Uday IKSA, ensuring our manufacturing processes meet the highest global standards.",
+                quote: "Former Director at Volvo Group Real Estate and VP at Volvo CE. A practitioner of Level 5 Leadership and lean excellence."
+              },
               ].map((member, index) => (
                 <motion.div
                   key={index}
@@ -123,7 +123,7 @@ export default function AboutPage() {
                   transition={{ delay: index * 0.1 }}
                 >
                   <div className="relative h-80 overflow-hidden">
-                    <Image
+                    <Image 
                       src={member.image}
                       alt={member.name}
                       fill
@@ -131,10 +131,10 @@ export default function AboutPage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
                     {member.linkedin && member.linkedin !== "#" && (
-                      <a
-                        href={member.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <a 
+                        href={member.linkedin} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
                         className="absolute top-6 left-6 w-10 h-10 bg-white/10 backdrop-blur-md rounded-xl flex items-center justify-center border border-white/10 hover:bg-brand-orange-500 transition-all z-20 group/link"
                       >
                         <Linkedin className="h-4 w-4 text-white group-hover:scale-110 transition-transform" />
