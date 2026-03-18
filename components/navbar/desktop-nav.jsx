@@ -133,12 +133,12 @@ export default function DesktopNav({ active, setActive }) {
           </div>
         </MenuItem>
 
-         <Link
+        {/* <Link
           href="/awards"
           className="text-gray-400 hover:text-white text-xs font-black uppercase tracking-[0.2em] transition-all duration-300 hover:text-brand-orange-400 px-4"
         >
           Awards
-        </Link>
+        </Link> */}
       </NavMenu>
     </div>
   )

@@ -101,12 +101,12 @@ export default function MobileMenu({ isOpen, onClose }) {
       icon: <Briefcase className="h-5 w-5" />,
       color: "text-brand-red-500",
     },
-    {
+    /* {
       name: "Awards",
       href: "/awards",
       icon: <Award className="h-5 w-5" />,
       color: "text-brand-yellow-500",
-    },
+    }, */
     {
       name: "Gallery",
       href: "/gallery",
