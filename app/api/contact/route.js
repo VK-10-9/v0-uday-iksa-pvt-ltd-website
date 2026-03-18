@@ -12,9 +12,9 @@ export async function POST(request) {
       from: 'Acme <onboarding@resend.dev>', // The default testing address from Resend.
       to: ['contact@udayiksa.com'],            // Where the emails should go
       reply_to: email,                      // The user's email for replies
-      subject: `New Lead: ${name} from ${city}`,
+      subject: `[Website Enquiry] New Lead: ${name} from ${city}`,
       html: `
-        <h2>New Enquiry Received!</h2>
+        <h2>New Enquiry Received from the Website!</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone}</p>
