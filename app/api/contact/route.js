@@ -9,7 +9,7 @@ export async function POST(request) {
     const { name, email, phone, city, buildingType, details } = data;
 
     const { data: emailData, error } = await resend.emails.send({
-      from: 'Acme <onboarding@resend.dev>', // The default testing address from Resend.
+      from: 'Web <onboarding@resend.dev>', // The default testing address from Resend.
       to: ['contact@udayiksa.com'],            // Where the emails should go
       reply_to: email,                      // The user's email for replies
       subject: `[Website Enquiry] New Lead: ${name} from ${city}`,
