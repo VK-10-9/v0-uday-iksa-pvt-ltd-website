@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button"
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
+    email: "",
     phone: "",
     city: "",
     buildingType: "Factory / Industrial",
@@ -148,6 +149,21 @@ export default function ContactPage() {
                       />
                     </div>
                     <div className="space-y-2">
+                      <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest pl-1">Email Address</label>
+                      <input
+                        required
+                        name="email"
+                        type="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className="w-full px-5 py-3.5 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:ring-1 focus:ring-brand-orange-500 text-white text-sm transition-all hover:bg-white/10"
+                        placeholder="you@example.com"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="space-y-2">
                       <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest pl-1">Phone Number</label>
                       <input
                         required
@@ -159,9 +175,6 @@ export default function ContactPage() {
                         placeholder="+91 87921 82631"
                       />
                     </div>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest pl-1">City / Location</label>
                       <input
@@ -172,15 +185,16 @@ export default function ContactPage() {
                         placeholder="Hubballi"
                       />
                     </div>
-                    <div className="space-y-2">
-                      <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest pl-1">Building Type</label>
-                      <select name="buildingType" value={formData.buildingType} onChange={handleChange} className="w-full px-5 py-3.5 bg-slate-900 border border-white/10 rounded-xl focus:outline-none focus:ring-1 focus:ring-brand-orange-500 text-white text-sm transition-all hover:bg-white/10 appearance-none">
-                        <option value="Factory / Industrial">Factory / Industrial</option>
-                        <option value="Residential">Residential</option>
-                        <option value="Commercial Office">Commercial Office</option>
-                        <option value="School / Institution">School / Institution</option>
-                      </select>
-                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest pl-1">Building Type</label>
+                    <select name="buildingType" value={formData.buildingType} onChange={handleChange} className="w-full px-5 py-3.5 bg-slate-900 border border-white/10 rounded-xl focus:outline-none focus:ring-1 focus:ring-brand-orange-500 text-white text-sm transition-all hover:bg-white/10 appearance-none">
+                      <option value="Factory / Industrial">Factory / Industrial</option>
+                      <option value="Residential">Residential</option>
+                      <option value="Commercial Office">Commercial Office</option>
+                      <option value="School / Institution">School / Institution</option>
+                    </select>
                   </div>
 
                   <div className="space-y-2">

@@ -1,36 +1,31 @@
 import { NextResponse } from 'next/server';
+import { Resend } from 'resend';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request) {
   try {
     const data = await request.json();
-    const { name, phone, city, buildingType, details } = data;
+    const { name, email, phone, city, buildingType, details } = data;
 
-    // Send the email using Resend REST API to avoid npm install issues
-    const res = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        from: 'Acme <onboarding@resend.dev>', // The default testing address from Resend.
-        to: ['info@udayiksa.com'],            // Where the emails should go
-        subject: `New Lead: ${name} from ${city}`,
-        html: `
-          <h2>New Enquiry Received!</h2>
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Phone:</strong> ${phone}</p>
-          <p><strong>City:</strong> ${city}</p>
-          <p><strong>Building Type:</strong> ${buildingType}</p>
-          <p><strong>Details:</strong> ${details}</p>
-        `
-      })
+    const { data: emailData, error } = await resend.emails.send({
+      from: 'Acme <onboarding@resend.dev>', // The default testing address from Resend.
+      to: ['contact@udayiksa.com'],            // Where the emails should go
+      reply_to: email,                      // The user's email for replies
+      subject: `New Lead: ${name} from ${city}`,
+      html: `
+        <h2>New Enquiry Received!</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>City:</strong> ${city}</p>
+        <p><strong>Building Type:</strong> ${buildingType}</p>
+        <p><strong>Details:</strong> ${details}</p>
+      `
     });
 
-    const emailData = await res.json();
-
-    if (!res.ok || emailData.error) {
-      console.error('Error sending email:', emailData.error || emailData);
+    if (error) {
+      console.error('Error sending email:', error);
       return NextResponse.json({ error: 'Failed to send enquiry.' }, { status: 500 });
     }
 

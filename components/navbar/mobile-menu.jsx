@@ -60,11 +60,7 @@ export default function MobileMenu({ isOpen, onClose }) {
     setExpandedItem(expandedItem === name ? null : name)
   }
 
-  const projectCategories = [
-    { name: "Industrial", href: "/projects", icon: <Factory className="h-4 w-4" /> },
-    { name: "Commercial", href: "/projects", icon: <Building className="h-4 w-4" /> },
-    { name: "Institutional", href: "/projects", icon: <Award className="h-4 w-4" /> },
-  ]
+
 
   const mobileNavLinks = [
     {
@@ -104,7 +100,6 @@ export default function MobileMenu({ isOpen, onClose }) {
       href: "/projects",
       icon: <Briefcase className="h-5 w-5" />,
       color: "text-brand-red-500",
-      subLinks: projectCategories.map(c => ({ name: c.name, href: c.href, icon: c.icon }))
     },
     {
       name: "Awards",

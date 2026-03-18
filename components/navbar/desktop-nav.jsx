@@ -5,29 +5,7 @@ import { ExternalLink, Star, Award, Building, Factory, Sun, Wind, Zap, Camera, C
 import { HoveredLink, Menu as NavMenu, MenuItem, ProductItem } from "@/components/ui/navbar-menu"
 import { motion } from "framer-motion"
 
-const projectCategories = [
-  {
-    name: "Industrial Projects",
-    href: "/projects",
-    icon: <Factory className="h-4 w-4" />,
-    description: "Large-scale factory solutions",
-    count: "50+ Sites",
-  },
-  {
-    name: "Commercial Projects",
-    href: "/projects",
-    icon: <Building className="h-4 w-4" />,
-    description: "Retail and corporate offices",
-    count: "30+ Sites",
-  },
-  {
-    name: "Institutional Projects",
-    href: "/projects",
-    icon: <Award className="h-4 w-4" />,
-    description: "Schools and Healthcare",
-    count: "25+ Sites",
-  },
-]
+
 
 export default function DesktopNav({ active, setActive }) {
   return (
@@ -122,31 +100,12 @@ export default function DesktopNav({ active, setActive }) {
           </div>
         </MenuItem>
 
-        <MenuItem setActive={setActive} active={active} item="Portfolio">
-           <div className="flex flex-col space-y-4 w-[380px] p-2">
-            <div className="text-[7px] font-black text-gray-500 uppercase tracking-widest border-b border-white/5 pb-2 ml-4">National Impact</div>
-            <div className="grid grid-cols-1 gap-2">
-              {projectCategories.map((category) => (
-                <Link 
-                  key={category.name}
-                  href={category.href}
-                  className="flex items-center gap-4 p-3 rounded-xl hover:bg-white/5 border border-transparent hover:border-white/5 transition-all group"
-                >
-                  <div className="bg-brand-orange-500/10 p-2.5 rounded-lg text-brand-orange-500 group-hover:bg-brand-orange-500 group-hover:text-white transition-all">
-                    {category.icon}
-                  </div>
-                  <div className="flex-1">
-                    <div className="font-black text-white group-hover:text-brand-orange-400 transition-colors uppercase text-[7px] tracking-wider">
-                      {category.name}
-                    </div>
-                    <div className="text-[7px] font-medium text-gray-500">{category.description}</div>
-                  </div>
-                  <div className="text-[7px] font-black text-brand-orange-500 bg-brand-orange-500/10 px-2 py-0.5 rounded-full">{category.count}</div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </MenuItem>
+        <Link
+          href="/projects"
+          className="text-gray-400 hover:text-white text-xs font-black uppercase tracking-[0.2em] transition-all duration-300 hover:text-brand-orange-400 px-4"
+        >
+          Portfolio
+        </Link>
 
         <Link
           href="/gallery"
